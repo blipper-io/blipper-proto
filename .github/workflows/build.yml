@@ -26,13 +26,13 @@ jobs:
       run: |
         go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
         go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
-        dotnet tool install -g Grpc.Tools
+        dotnet add csharp/Blipper.Proto/Blipper.Proto.csproj package Grpc.Tools
 
     - name: Install buf
       uses: bufbuild/buf-setup-action@v1
 
     - name: Generate code
-      run: buf generate
+      run: buf generate --template buf.gen.yaml --path proto
 
     - name: Check for changes
       run: |

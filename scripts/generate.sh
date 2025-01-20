@@ -11,7 +11,7 @@ if ! command -v buf &> /dev/null; then
     exit 1
 fi
 
-echo "Generating Golang code..."
+echo "Generating Golang & Dotnet code..."
 buf generate --template buf.gen.yaml --path proto
 
 echo "Code generation completed successfully."

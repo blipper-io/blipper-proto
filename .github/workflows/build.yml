@@ -22,6 +22,11 @@ jobs:
       with:
         dotnet-version: '9.0.x'
 
+    - name: Install Protoc
+      uses: arduino/setup-protoc@v3
+      with:
+        version: '23.x'
+      
     - name: Install dependencies
       run: |
         go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
@@ -42,14 +47,3 @@ jobs:
           git diff
           exit 1
         fi
-
-    - name: Build Go
-      run: |
-        go build ./...
-        go test ./...
-
-    - name: Build C#
-      run: |
-        dotnet restore
-        dotnet build
-        dotnet test

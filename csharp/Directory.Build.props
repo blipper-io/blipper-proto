@@ -1,0 +1,11 @@
+<Project>
+  <PropertyGroup>
+    <Authors>Corentin GS</Authors>
+    <Company>Blipper</Company>
+    <Copyright>Copyright (c) Blipper 2025</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/blipper-io/blipper-proto</PackageProjectUrl>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+  </PropertyGroup>
+</Project>

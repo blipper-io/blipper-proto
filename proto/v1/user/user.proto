@@ -1,0 +1,205 @@
+// proto/v1/user/user.proto
+syntax = "proto3";
+
+package blipper.v1;
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
+
+option go_package = "github.com/blipper-io/blipper-proto/gen/go/proto/v1/user";
+
+option csharp_namespace = "Blipper.Proto.UserService";
+
+// User management service
+service UserProtoService {
+  // Authentication
+  rpc Register (RegisterRequest) returns (RegisterResponse);
+  rpc Login (LoginRequest) returns (LoginResponse);
+  rpc Logout (LogoutRequest) returns (google.protobuf.Empty);
+  rpc RefreshToken (RefreshTokenRequest) returns (RefreshTokenResponse);
+
+  // Profile management
+  rpc GetUser (GetUserRequest) returns (UserResponse);
+  rpc UpdateProfile (UpdateProfileRequest) returns (UserResponse);
+  rpc UpdatePassword (UpdatePasswordRequest) returns (google.protobuf.Empty);
+  rpc DeleteAccount (DeleteAccountRequest) returns (google.protobuf.Empty);
+
+  // Circle membership
+  rpc JoinCircle (JoinCircleRequest) returns (google.protobuf.Empty);
+  rpc LeaveCircle (LeaveCircleRequest) returns (google.protobuf.Empty);
+  rpc GetUserCircles (GetUserCirclesRequest) returns (GetUserCirclesResponse);
+  rpc UpdateCircleRole (UpdateCircleRoleRequest) returns (google.protobuf.Empty);
+  
+  // Search and discovery
+  rpc SearchUsers (SearchUsersRequest) returns (SearchUsersResponse);
+}
+
+// User profile data
+message User {
+  string id = 1;
+  string username = 2;
+  string email = 3;
+  string display_name = 4;
+  string bio = 5;
+  string avatar_url = 6;
+  UserRole role = 7;
+  google.protobuf.Timestamp created_at = 8;
+  google.protobuf.Timestamp updated_at = 9;
+  bool is_active = 10;
+}
+
+// Authentication messages
+message RegisterRequest {
+  string username = 1;
+  string email = 2;
+  string password = 3;
+}
+
+message RegisterResponse {
+  string id = 1;
+  string access_token = 2;
+  string refresh_token = 3;
+}
+
+message LoginRequest {
+  string username_or_email = 1;
+  string password = 2;
+}
+
+message LoginResponse {
+  string access_token = 1;
+  string refresh_token = 2;
+  User user = 3;
+}
+
+message LogoutRequest {
+  string refresh_token = 1;
+}
+
+message RefreshTokenRequest {
+  string refresh_token = 1;
+}
+
+message RefreshTokenResponse {
+  string access_token = 1;
+  string refresh_token = 2;
+}
+
+// Profile management messages
+message GetUserRequest {
+  string user_id = 1;
+}
+
+message UserResponse {
+  User user = 1;
+}
+
+message UpdateProfileRequest {
+  string display_name = 1;
+  string bio = 2;
+  string avatar_url = 3;
+}
+
+message UpdatePasswordRequest {
+  string current_password = 1;
+  string new_password = 2;
+}
+
+message DeleteAccountRequest {
+  string password = 1;
+}
+
+// Circle membership messages
+message JoinCircleRequest {
+  string circle_id = 1;
+}
+
+message LeaveCircleRequest {
+  string circle_id = 1;
+}
+
+message GetUserCirclesRequest {
+  string user_id = 1;
+  int32 page_size = 2;
+  string page_token = 3;
+}
+
+message GetUserCirclesResponse {
+  repeated UserCircle circles = 1;
+  string next_page_token = 2;
+}
+
+message UserCircle {
+  string circle_id = 1;
+  CircleRole role = 2;
+  google.protobuf.Timestamp joined_at = 3;
+}
+
+message UpdateCircleRoleRequest {
+  string circle_id = 1;
+  string user_id = 2;
+  CircleRole role = 3;
+}
+
+// Following messages
+message FollowUserRequest {
+  string user_id = 1;
+}
+
+message UnfollowUserRequest {
+  string user_id = 1;
+}
+
+message GetFollowersRequest {
+  string user_id = 1;
+  int32 page_size = 2;
+  string page_token = 3;
+}
+
+message GetFollowersResponse {
+  repeated UserFollow followers = 1;
+  string next_page_token = 2;
+}
+
+message GetFollowingRequest {
+  string user_id = 1;
+  int32 page_size = 2;
+  string page_token = 3;
+}
+
+message GetFollowingResponse {
+  repeated UserFollow following = 1;
+  string next_page_token = 2;
+}
+
+message UserFollow {
+  User user = 1;
+  google.protobuf.Timestamp followed_at = 2;
+}
+
+// Search messages
+message SearchUsersRequest {
+  string query = 1;
+  int32 page_size = 2;
+  string page_token = 3;
+}
+
+message SearchUsersResponse {
+  repeated User users = 1;
+  string next_page_token = 2;
+}
+
+// Enums
+enum UserRole {
+  USER_ROLE_UNSPECIFIED = 0;
+  USER_ROLE_USER = 1;
+  USER_ROLE_MODERATOR = 2;
+  USER_ROLE_ADMIN = 3;
+}
+
+enum CircleRole {
+  CIRCLE_ROLE_UNSPECIFIED = 0;
+  CIRCLE_ROLE_MEMBER = 1;
+  CIRCLE_ROLE_MODERATOR = 2;
+  CIRCLE_ROLE_OWNER = 3;
+}

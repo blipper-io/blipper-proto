@@ -1,0 +1,55 @@
+name: Build and Check Generated Code
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Go
+      uses: actions/setup-go@v4
+      with:
+        go-version: '1.23'
+
+    - name: Set up .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '9.0.x'
+
+    - name: Install dependencies
+      run: |
+        go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
+        go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
+        dotnet tool install -g Grpc.Tools
+
+    - name: Install buf
+      uses: bufbuild/buf-setup-action@v1
+
+    - name: Generate code
+      run: buf generate
+
+    - name: Check for changes
+      run: |
+        if [[ `git status --porcelain` ]]; then
+          echo "Generated code is not up to date. Please run 'buf generate' and commit the changes."
+          git status
+          git diff
+          exit 1
+        fi
+
+    - name: Build Go
+      run: |
+        go build ./...
+        go test ./...
+
+    - name: Build C#
+      run: |
+        dotnet restore
+        dotnet build
+        dotnet test

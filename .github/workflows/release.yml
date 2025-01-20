@@ -1,0 +1,55 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  GO_VERSION: '1.23'
+  DOTNET_VERSION: '9.0.x'
+
+jobs:
+  build:
+    uses: ./.github/workflows/build.yml
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: ${{ env.GO_VERSION }}
+          
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: ${{ env.DOTNET_VERSION }}
+          source-url: https://nuget.pkg.github.com/blipper-io/index.json
+        env:
+          NUGET_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
+        
+      - name: Get version
+        id: get_version
+        run: echo "VERSION=${GITHUB_REF#refs/tags/}" >> $GITHUB_ENV
+        
+      - name: Build and publish Go package
+        run: |
+          cd gen/go
+          go mod init github.com/blipper-io/blipper-proto
+          go mod tidy
+          GOPROXY=proxy.golang.org go list -m github.com/blipper-io/blipper-proto@${{ env.VERSION }}
+          
+      - name: Build and publish NuGet package
+        run: |
+          cd gen/csharp/Blipper.Proto
+          dotnet pack -c Release -p:Version=${VERSION#v} -p:RepositoryUrl=https://github.com/blipper-io/blipper-proto
+          dotnet nuget push "bin/Release/*.nupkg" --source "github"

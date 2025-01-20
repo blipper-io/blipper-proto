@@ -1,0 +1,12 @@
+version: v1
+plugins:
+  # Go
+  - plugin: go
+    out: gen/go
+    opt: paths=source_relative
+  # C#
+  - plugin: csharp
+    out: gen/csharp/Blipper.Proto
+    opt: 
+      - base_namespace=Blipper.Proto
+      - internal_access=true

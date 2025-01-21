@@ -40,7 +40,6 @@ jobs:
       - name: Build and publish Go package
         run: |
           cd gen/go/v1
-          go mod init github.com/blipper-io/blipper-proto
           go mod tidy
           
       - name: Build and publish NuGet package

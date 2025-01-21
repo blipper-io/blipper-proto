@@ -22,7 +22,7 @@ proto/v1/**/*.proto
 
 protoc \
 --proto_path=proto/v1 \
---go_out=gen/ \
+--go_out=paths=source_relative:gen/ \
 --go-grpc_out=gen/ \
 proto/v1/**/*.proto
 

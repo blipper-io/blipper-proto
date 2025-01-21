@@ -22,19 +22,16 @@ import (
 const _ = grpc.SupportPackageIsVersion9
 
 const (
-	UserProtoService_Register_FullMethodName         = "/blipper.v1.UserProtoService/Register"
-	UserProtoService_Login_FullMethodName            = "/blipper.v1.UserProtoService/Login"
-	UserProtoService_Logout_FullMethodName           = "/blipper.v1.UserProtoService/Logout"
-	UserProtoService_RefreshToken_FullMethodName     = "/blipper.v1.UserProtoService/RefreshToken"
-	UserProtoService_GetUser_FullMethodName          = "/blipper.v1.UserProtoService/GetUser"
-	UserProtoService_UpdateProfile_FullMethodName    = "/blipper.v1.UserProtoService/UpdateProfile"
-	UserProtoService_UpdatePassword_FullMethodName   = "/blipper.v1.UserProtoService/UpdatePassword"
-	UserProtoService_DeleteAccount_FullMethodName    = "/blipper.v1.UserProtoService/DeleteAccount"
-	UserProtoService_JoinCircle_FullMethodName       = "/blipper.v1.UserProtoService/JoinCircle"
-	UserProtoService_LeaveCircle_FullMethodName      = "/blipper.v1.UserProtoService/LeaveCircle"
-	UserProtoService_GetUserCircles_FullMethodName   = "/blipper.v1.UserProtoService/GetUserCircles"
-	UserProtoService_UpdateCircleRole_FullMethodName = "/blipper.v1.UserProtoService/UpdateCircleRole"
-	UserProtoService_SearchUsers_FullMethodName      = "/blipper.v1.UserProtoService/SearchUsers"
+	UserProtoService_Register_FullMethodName       = "/blipper.v1.UserProtoService/Register"
+	UserProtoService_Login_FullMethodName          = "/blipper.v1.UserProtoService/Login"
+	UserProtoService_Logout_FullMethodName         = "/blipper.v1.UserProtoService/Logout"
+	UserProtoService_RefreshToken_FullMethodName   = "/blipper.v1.UserProtoService/RefreshToken"
+	UserProtoService_ValidateToken_FullMethodName  = "/blipper.v1.UserProtoService/ValidateToken"
+	UserProtoService_GetUser_FullMethodName        = "/blipper.v1.UserProtoService/GetUser"
+	UserProtoService_UpdateProfile_FullMethodName  = "/blipper.v1.UserProtoService/UpdateProfile"
+	UserProtoService_UpdatePassword_FullMethodName = "/blipper.v1.UserProtoService/UpdatePassword"
+	UserProtoService_DeleteAccount_FullMethodName  = "/blipper.v1.UserProtoService/DeleteAccount"
+	UserProtoService_SearchUsers_FullMethodName    = "/blipper.v1.UserProtoService/SearchUsers"
 )
 
 // UserProtoServiceClient is the client API for UserProtoService service.
@@ -48,16 +45,12 @@ type UserProtoServiceClient interface {
 	Login(ctx context.Context, in *LoginRequest, opts ...grpc.CallOption) (*LoginResponse, error)
 	Logout(ctx context.Context, in *LogoutRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
 	RefreshToken(ctx context.Context, in *RefreshTokenRequest, opts ...grpc.CallOption) (*RefreshTokenResponse, error)
+	ValidateToken(ctx context.Context, in *ValidateTokenRequest, opts ...grpc.CallOption) (*ValidateTokenResponse, error)
 	// Profile management
 	GetUser(ctx context.Context, in *GetUserRequest, opts ...grpc.CallOption) (*UserResponse, error)
 	UpdateProfile(ctx context.Context, in *UpdateProfileRequest, opts ...grpc.CallOption) (*UserResponse, error)
 	UpdatePassword(ctx context.Context, in *UpdatePasswordRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
 	DeleteAccount(ctx context.Context, in *DeleteAccountRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
-	// Circle membership
-	JoinCircle(ctx context.Context, in *JoinCircleRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
-	LeaveCircle(ctx context.Context, in *LeaveCircleRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
-	GetUserCircles(ctx context.Context, in *GetUserCirclesRequest, opts ...grpc.CallOption) (*GetUserCirclesResponse, error)
-	UpdateCircleRole(ctx context.Context, in *UpdateCircleRoleRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
 	// Search and discovery
 	SearchUsers(ctx context.Context, in *SearchUsersRequest, opts ...grpc.CallOption) (*SearchUsersResponse, error)
 }
@@ -110,6 +103,16 @@ func (c *userProtoServiceClient) RefreshToken(ctx context.Context, in *RefreshTo
 	return out, nil
 }
 
+func (c *userProtoServiceClient) ValidateToken(ctx context.Context, in *ValidateTokenRequest, opts ...grpc.CallOption) (*ValidateTokenResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(ValidateTokenResponse)
+	err := c.cc.Invoke(ctx, UserProtoService_ValidateToken_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 func (c *userProtoServiceClient) GetUser(ctx context.Context, in *GetUserRequest, opts ...grpc.CallOption) (*UserResponse, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(UserResponse)
@@ -150,46 +153,6 @@ func (c *userProtoServiceClient) DeleteAccount(ctx context.Context, in *DeleteAc
 	return out, nil
 }
 
-func (c *userProtoServiceClient) JoinCircle(ctx context.Context, in *JoinCircleRequest, opts ...grpc.CallOption) (*emptypb.Empty, error) {
-	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
-	out := new(emptypb.Empty)
-	err := c.cc.Invoke(ctx, UserProtoService_JoinCircle_FullMethodName, in, out, cOpts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *userProtoServiceClient) LeaveCircle(ctx context.Context, in *LeaveCircleRequest, opts ...grpc.CallOption) (*emptypb.Empty, error) {
-	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
-	out := new(emptypb.Empty)
-	err := c.cc.Invoke(ctx, UserProtoService_LeaveCircle_FullMethodName, in, out, cOpts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *userProtoServiceClient) GetUserCircles(ctx context.Context, in *GetUserCirclesRequest, opts ...grpc.CallOption) (*GetUserCirclesResponse, error) {
-	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
-	out := new(GetUserCirclesResponse)
-	err := c.cc.Invoke(ctx, UserProtoService_GetUserCircles_FullMethodName, in, out, cOpts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *userProtoServiceClient) UpdateCircleRole(ctx context.Context, in *UpdateCircleRoleRequest, opts ...grpc.CallOption) (*emptypb.Empty, error) {
-	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
-	out := new(emptypb.Empty)
-	err := c.cc.Invoke(ctx, UserProtoService_UpdateCircleRole_FullMethodName, in, out, cOpts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
 func (c *userProtoServiceClient) SearchUsers(ctx context.Context, in *SearchUsersRequest, opts ...grpc.CallOption) (*SearchUsersResponse, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(SearchUsersResponse)
@@ -211,16 +174,12 @@ type UserProtoServiceServer interface {
 	Login(context.Context, *LoginRequest) (*LoginResponse, error)
 	Logout(context.Context, *LogoutRequest) (*emptypb.Empty, error)
 	RefreshToken(context.Context, *RefreshTokenRequest) (*RefreshTokenResponse, error)
+	ValidateToken(context.Context, *ValidateTokenRequest) (*ValidateTokenResponse, error)
 	// Profile management
 	GetUser(context.Context, *GetUserRequest) (*UserResponse, error)
 	UpdateProfile(context.Context, *UpdateProfileRequest) (*UserResponse, error)
 	UpdatePassword(context.Context, *UpdatePasswordRequest) (*emptypb.Empty, error)
 	DeleteAccount(context.Context, *DeleteAccountRequest) (*emptypb.Empty, error)
-	// Circle membership
-	JoinCircle(context.Context, *JoinCircleRequest) (*emptypb.Empty, error)
-	LeaveCircle(context.Context, *LeaveCircleRequest) (*emptypb.Empty, error)
-	GetUserCircles(context.Context, *GetUserCirclesRequest) (*GetUserCirclesResponse, error)
-	UpdateCircleRole(context.Context, *UpdateCircleRoleRequest) (*emptypb.Empty, error)
 	// Search and discovery
 	SearchUsers(context.Context, *SearchUsersRequest) (*SearchUsersResponse, error)
 	mustEmbedUnimplementedUserProtoServiceServer()
@@ -245,6 +204,9 @@ func (UnimplementedUserProtoServiceServer) Logout(context.Context, *LogoutReques
 func (UnimplementedUserProtoServiceServer) RefreshToken(context.Context, *RefreshTokenRequest) (*RefreshTokenResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method RefreshToken not implemented")
 }
+func (UnimplementedUserProtoServiceServer) ValidateToken(context.Context, *ValidateTokenRequest) (*ValidateTokenResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method ValidateToken not implemented")
+}
 func (UnimplementedUserProtoServiceServer) GetUser(context.Context, *GetUserRequest) (*UserResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetUser not implemented")
 }
@@ -256,18 +218,6 @@ func (UnimplementedUserProtoServiceServer) UpdatePassword(context.Context, *Upda
 }
 func (UnimplementedUserProtoServiceServer) DeleteAccount(context.Context, *DeleteAccountRequest) (*emptypb.Empty, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method DeleteAccount not implemented")
-}
-func (UnimplementedUserProtoServiceServer) JoinCircle(context.Context, *JoinCircleRequest) (*emptypb.Empty, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method JoinCircle not implemented")
-}
-func (UnimplementedUserProtoServiceServer) LeaveCircle(context.Context, *LeaveCircleRequest) (*emptypb.Empty, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method LeaveCircle not implemented")
-}
-func (UnimplementedUserProtoServiceServer) GetUserCircles(context.Context, *GetUserCirclesRequest) (*GetUserCirclesResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetUserCircles not implemented")
-}
-func (UnimplementedUserProtoServiceServer) UpdateCircleRole(context.Context, *UpdateCircleRoleRequest) (*emptypb.Empty, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method UpdateCircleRole not implemented")
 }
 func (UnimplementedUserProtoServiceServer) SearchUsers(context.Context, *SearchUsersRequest) (*SearchUsersResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SearchUsers not implemented")
@@ -365,6 +315,24 @@ func _UserProtoService_RefreshToken_Handler(srv interface{}, ctx context.Context
 	return interceptor(ctx, in, info, handler)
 }
 
+func _UserProtoService_ValidateToken_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ValidateTokenRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(UserProtoServiceServer).ValidateToken(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: UserProtoService_ValidateToken_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(UserProtoServiceServer).ValidateToken(ctx, req.(*ValidateTokenRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 func _UserProtoService_GetUser_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetUserRequest)
 	if err := dec(in); err != nil {
@@ -437,78 +405,6 @@ func _UserProtoService_DeleteAccount_Handler(srv interface{}, ctx context.Contex
 	return interceptor(ctx, in, info, handler)
 }
 
-func _UserProtoService_JoinCircle_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(JoinCircleRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(UserProtoServiceServer).JoinCircle(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: UserProtoService_JoinCircle_FullMethodName,
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(UserProtoServiceServer).JoinCircle(ctx, req.(*JoinCircleRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _UserProtoService_LeaveCircle_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(LeaveCircleRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(UserProtoServiceServer).LeaveCircle(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: UserProtoService_LeaveCircle_FullMethodName,
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(UserProtoServiceServer).LeaveCircle(ctx, req.(*LeaveCircleRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _UserProtoService_GetUserCircles_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(GetUserCirclesRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(UserProtoServiceServer).GetUserCircles(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: UserProtoService_GetUserCircles_FullMethodName,
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(UserProtoServiceServer).GetUserCircles(ctx, req.(*GetUserCirclesRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _UserProtoService_UpdateCircleRole_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(UpdateCircleRoleRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(UserProtoServiceServer).UpdateCircleRole(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: UserProtoService_UpdateCircleRole_FullMethodName,
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(UserProtoServiceServer).UpdateCircleRole(ctx, req.(*UpdateCircleRoleRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
 func _UserProtoService_SearchUsers_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(SearchUsersRequest)
 	if err := dec(in); err != nil {
@@ -551,6 +447,10 @@ var UserProtoService_ServiceDesc = grpc.ServiceDesc{
 			Handler:    _UserProtoService_RefreshToken_Handler,
 		},
 		{
+			MethodName: "ValidateToken",
+			Handler:    _UserProtoService_ValidateToken_Handler,
+		},
+		{
 			MethodName: "GetUser",
 			Handler:    _UserProtoService_GetUser_Handler,
 		},
@@ -565,22 +465,6 @@ var UserProtoService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "DeleteAccount",
 			Handler:    _UserProtoService_DeleteAccount_Handler,
-		},
-		{
-			MethodName: "JoinCircle",
-			Handler:    _UserProtoService_JoinCircle_Handler,
-		},
-		{
-			MethodName: "LeaveCircle",
-			Handler:    _UserProtoService_LeaveCircle_Handler,
-		},
-		{
-			MethodName: "GetUserCircles",
-			Handler:    _UserProtoService_GetUserCircles_Handler,
-		},
-		{
-			MethodName: "UpdateCircleRole",
-			Handler:    _UserProtoService_UpdateCircleRole_Handler,
 		},
 		{
 			MethodName: "SearchUsers",

@@ -10,6 +10,7 @@ option go_package = "/user";
 
 option csharp_namespace = "Blipper.Proto.UserService";
 
+
 // User management service
 service UserProtoService {
   // Authentication
@@ -17,18 +18,13 @@ service UserProtoService {
   rpc Login (LoginRequest) returns (LoginResponse);
   rpc Logout (LogoutRequest) returns (google.protobuf.Empty);
   rpc RefreshToken (RefreshTokenRequest) returns (RefreshTokenResponse);
+  rpc ValidateToken(ValidateTokenRequest) returns (ValidateTokenResponse);
 
   // Profile management
   rpc GetUser (GetUserRequest) returns (UserResponse);
   rpc UpdateProfile (UpdateProfileRequest) returns (UserResponse);
   rpc UpdatePassword (UpdatePasswordRequest) returns (google.protobuf.Empty);
   rpc DeleteAccount (DeleteAccountRequest) returns (google.protobuf.Empty);
-
-  // Circle membership
-  rpc JoinCircle (JoinCircleRequest) returns (google.protobuf.Empty);
-  rpc LeaveCircle (LeaveCircleRequest) returns (google.protobuf.Empty);
-  rpc GetUserCircles (GetUserCirclesRequest) returns (GetUserCirclesResponse);
-  rpc UpdateCircleRole (UpdateCircleRoleRequest) returns (google.protobuf.Empty);
   
   // Search and discovery
   rpc SearchUsers (SearchUsersRequest) returns (SearchUsersResponse);
@@ -45,7 +41,23 @@ message User {
   UserRole role = 7;
   google.protobuf.Timestamp created_at = 8;
   google.protobuf.Timestamp updated_at = 9;
-  bool is_active = 10;
+  UserStatus status = 10;
+}
+
+enum UserStatus {
+  USER_STATUS_UNSPECIFIED = 0;
+  USER_STATUS_ACTIVE = 1;
+  USER_STATUS_SUSPENDED = 2;
+  USER_STATUS_DELETED = 3;
+}
+
+message ValidateTokenRequest {
+  string token = 1;
+}
+
+message ValidateTokenResponse {
+  bool is_valid = 1;
+  optional string user_id = 2;
 }
 
 // Authentication messages
@@ -109,74 +121,6 @@ message DeleteAccountRequest {
   string password = 1;
 }
 
-// Circle membership messages
-message JoinCircleRequest {
-  string circle_id = 1;
-}
-
-message LeaveCircleRequest {
-  string circle_id = 1;
-}
-
-message GetUserCirclesRequest {
-  string user_id = 1;
-  int32 page_size = 2;
-  string page_token = 3;
-}
-
-message GetUserCirclesResponse {
-  repeated UserCircle circles = 1;
-  string next_page_token = 2;
-}
-
-message UserCircle {
-  string circle_id = 1;
-  CircleRole role = 2;
-  google.protobuf.Timestamp joined_at = 3;
-}
-
-message UpdateCircleRoleRequest {
-  string circle_id = 1;
-  string user_id = 2;
-  CircleRole role = 3;
-}
-
-// Following messages
-message FollowUserRequest {
-  string user_id = 1;
-}
-
-message UnfollowUserRequest {
-  string user_id = 1;
-}
-
-message GetFollowersRequest {
-  string user_id = 1;
-  int32 page_size = 2;
-  string page_token = 3;
-}
-
-message GetFollowersResponse {
-  repeated UserFollow followers = 1;
-  string next_page_token = 2;
-}
-
-message GetFollowingRequest {
-  string user_id = 1;
-  int32 page_size = 2;
-  string page_token = 3;
-}
-
-message GetFollowingResponse {
-  repeated UserFollow following = 1;
-  string next_page_token = 2;
-}
-
-message UserFollow {
-  User user = 1;
-  google.protobuf.Timestamp followed_at = 2;
-}
-
 // Search messages
 message SearchUsersRequest {
   string query = 1;
@@ -195,11 +139,4 @@ enum UserRole {
   USER_ROLE_USER = 1;
   USER_ROLE_MODERATOR = 2;
   USER_ROLE_ADMIN = 3;
-}
-
-enum CircleRole {
-  CIRCLE_ROLE_UNSPECIFIED = 0;
-  CIRCLE_ROLE_MEMBER = 1;
-  CIRCLE_ROLE_MODERATOR = 2;
-  CIRCLE_ROLE_OWNER = 3;
 }

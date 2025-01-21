@@ -1,0 +1,144 @@
+syntax = "proto3";
+
+package blipper.circle.v1;
+
+option csharp_namespace = "Blipper.Circle.V1";
+option go_package = "/circle";
+
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
+import "shared/shared.proto";
+
+service CircleService {
+  // Circle management
+  rpc CreateCircle(CreateCircleRequest) returns (Circle);
+  rpc GetCircle(GetCircleRequest) returns (Circle);
+  rpc ListCircles(ListCirclesRequest) returns (ListCirclesResponse);
+  rpc UpdateCircle(UpdateCircleRequest) returns (Circle);
+  rpc DeleteCircle(DeleteCircleRequest) returns (google.protobuf.Empty);
+  
+  // Membership management
+  rpc JoinCircle(JoinCircleRequest) returns (blipper.shared.v1.MembershipInfo);
+  rpc LeaveCircle(LeaveCircleRequest) returns (google.protobuf.Empty);
+  rpc GetUserCircles(GetUserCirclesRequest) returns (GetUserCirclesResponse);
+  rpc GetCircleMembers(GetCircleMembersRequest) returns (GetCircleMembersResponse);
+  rpc UpdateMemberRole(UpdateMemberRoleRequest) returns (blipper.shared.v1.MembershipInfo);
+  rpc GetMembership(GetMembershipRequest) returns (blipper.shared.v1.MembershipInfo);
+  
+  // Join requests (for private circles)
+  rpc ListJoinRequests(ListJoinRequestsRequest) returns (ListJoinRequestsResponse);
+  rpc ApproveJoinRequest(ApproveJoinRequestRequest) returns (blipper.shared.v1.MembershipInfo);
+  rpc RejectJoinRequest(RejectJoinRequestRequest) returns (google.protobuf.Empty);
+}
+
+message Circle {
+  string id = 1;
+  string name = 2;
+  string description = 3;
+  string logo_url = 4;
+  bool is_private = 5;
+  string owner_id = 6;
+  int32 member_count = 7;
+  google.protobuf.Timestamp created_at = 8;
+  google.protobuf.Timestamp updated_at = 9;
+  blipper.shared.v1.UserInfo owner = 10;
+}
+
+// Request/Response messages
+message CreateCircleRequest {
+  string name = 1;
+  string description = 2;
+  bool is_private = 3;
+  string logo_url = 4;
+  string owner_id = 5;
+}
+
+message GetCircleRequest {
+  string circle_id = 1;
+}
+
+message UpdateCircleRequest {
+  string circle_id = 1;
+  optional string description = 2;
+  optional string logo_url = 3;
+  optional bool is_private = 4;
+}
+
+message ListCirclesRequest {
+  blipper.shared.v1.PaginationRequest pagination = 1;
+  optional string search_term = 2;
+}
+
+message ListCirclesResponse {
+  repeated Circle circles = 1;
+  blipper.shared.v1.PaginationResponse pagination = 2;
+}
+
+message DeleteCircleRequest {
+  string circle_id = 1;
+}
+
+message JoinCircleRequest {
+  string circle_id = 1;
+  string user_id = 2;
+}
+
+message LeaveCircleRequest {
+  string circle_id = 1;
+  string user_id = 2;
+}
+
+message GetUserCirclesRequest {
+  string user_id = 1;
+  blipper.shared.v1.PaginationRequest pagination = 2;
+}
+
+message GetUserCirclesResponse {
+  repeated Circle circles = 1;
+  repeated blipper.shared.v1.MembershipInfo memberships = 2;
+  blipper.shared.v1.PaginationResponse pagination = 3;
+}
+
+message GetCircleMembersRequest {
+  string circle_id = 1;
+  blipper.shared.v1.PaginationRequest pagination = 2;
+}
+
+message GetCircleMembersResponse {
+  repeated blipper.shared.v1.UserInfo users = 1;
+  repeated blipper.shared.v1.MembershipInfo memberships = 2;
+  blipper.shared.v1.PaginationResponse pagination = 3;
+}
+
+message UpdateMemberRoleRequest {
+  string circle_id = 1;
+  string user_id = 2;
+  blipper.shared.v1.Role new_role = 3;
+}
+
+message GetMembershipRequest {
+  string circle_id = 1;
+  string user_id = 2;
+}
+
+message ListJoinRequestsRequest {
+  string circle_id = 1;
+  blipper.shared.v1.PaginationRequest pagination = 2;
+}
+
+message ListJoinRequestsResponse {
+  repeated blipper.shared.v1.UserInfo users = 1;
+  repeated blipper.shared.v1.MembershipInfo memberships = 2;
+  blipper.shared.v1.PaginationResponse pagination = 3;
+}
+
+message ApproveJoinRequestRequest {
+  string circle_id = 1;
+  string user_id = 2;
+}
+
+message RejectJoinRequestRequest {
+  string circle_id = 1;
+  string user_id = 2;
+}

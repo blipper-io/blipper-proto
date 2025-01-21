@@ -22,8 +22,8 @@ proto/v1/**/*.proto
 
 protoc \
 --proto_path=proto/v1 \
---go_out=gen/go/ \
---go-grpc_out=gen/go/ \
+--go_out=gen/ \
+--go-grpc_out=gen/ \
 proto/v1/**/*.proto
 
 echo "Code generation completed successfully."

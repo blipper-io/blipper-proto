@@ -1,4 +1,4 @@
-module github.com/blipper-io/blipper-proto
+module github.com/blipper-io/blipper-proto/gen
 
 go 1.23.4
 

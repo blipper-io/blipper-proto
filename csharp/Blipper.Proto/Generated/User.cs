@@ -100,8 +100,8 @@ namespace Blipper.Proto.UserService {
             "cmNsZVJvbGUSIy5ibGlwcGVyLnYxLlVwZGF0ZUNpcmNsZVJvbGVSZXF1ZXN0",
             "GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5Ek4KC1NlYXJjaFVzZXJzEh4uYmxp",
             "cHBlci52MS5TZWFyY2hVc2Vyc1JlcXVlc3QaHy5ibGlwcGVyLnYxLlNlYXJj",
-            "aFVzZXJzUmVzcG9uc2VCJloIL3YxL3VzZXKqAhlCbGlwcGVyLlByb3RvLlVz",
-            "ZXJTZXJ2aWNlYgZwcm90bzM="));
+            "aFVzZXJzUmVzcG9uc2VCI1oFL3VzZXKqAhlCbGlwcGVyLlByb3RvLlVzZXJT",
+            "ZXJ2aWNlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Blipper.Proto.UserService.UserRole), typeof(global::Blipper.Proto.UserService.CircleRole), }, null, new pbr::GeneratedClrTypeInfo[] {

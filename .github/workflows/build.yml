@@ -34,17 +34,17 @@ jobs:
         dotnet add csharp/Blipper.Proto/Blipper.Proto.csproj package Grpc.Tools
 
     - name: Generate C# code
-      run: protoc --csharp_out=csharp/Blipper.Proto/Generated \
-        --grpc_out=csharp/Blipper.Proto/Generated \
+      run: protoc --csharp_out=./csharp/Blipper.Proto/Generated \
+        --grpc_out=./csharp/Blipper.Proto/Generated \
         --plugin=protoc-gen-grpc=$(which grpc_csharp_plugin) \
-        --proto_path=proto/v1 \
-        proto/v1/user/user.proto
+        --proto_path=./proto/v1 \
+        ./proto/v1/user/user.proto
       
     - name: Generate Go code
-      run: protoc --proto_path=proto/v1 \
-        --go_out=gen/go/ \
-        --go-grpc_out=gen/go/ \
-        proto/v1/user/user.proto
+      run: protoc --proto_path=./proto/v1 \
+        --go_out=./gen/go/ \
+        --go-grpc_out=./gen/go/ \
+        ./proto/v1/user/user.proto
 
     - name: Check for changes
       run: |

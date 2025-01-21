@@ -6,7 +6,7 @@ package blipper.v1;
 import "google/protobuf/timestamp.proto";
 import "google/protobuf/empty.proto";
 
-option go_package = "github.com/blipper-io/blipper-proto/gen/go/proto/v1/user";
+option go_package = "/v1/user";
 
 option csharp_namespace = "Blipper.Proto.UserService";
 

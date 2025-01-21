@@ -2,6 +2,10 @@
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>Blipper.Proto</AssemblyName>
+    <Version>0.1.2</Version>
+    <Authors>CorentinGS</Authors>
+    <PackageTags>protobuf;grpc</PackageTags>
     <Nullable>enable</Nullable>
     <Description>Blipper Protocol Buffers generated code</Description>
   </PropertyGroup>

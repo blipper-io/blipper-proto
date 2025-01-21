@@ -12,6 +12,18 @@ if ! command -v buf &> /dev/null; then
 fi
 
 echo "Generating Golang & Dotnet code..."
-buf generate --template buf.gen.yaml --path proto
+protoc \
+--csharp_out=csharp/Blipper.Proto/Generated \
+--grpc_out=csharp/Blipper.Proto/Generated \
+--plugin=protoc-gen-grpc=$(which grpc_csharp_plugin) \
+--proto_path=proto/v1 \
+proto/v1/**/*.proto
+
+
+protoc \
+--proto_path=proto/v1 \
+--go_out=gen/go/ \
+--go-grpc_out=gen/go/ \
+proto/v1/**/*.proto
 
 echo "Code generation completed successfully."

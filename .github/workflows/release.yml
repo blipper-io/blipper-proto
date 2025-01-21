@@ -6,16 +6,12 @@ on:
       - 'v*'
 
 env:
-  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
   GO_VERSION: '1.23'
   DOTNET_VERSION: '9.0.x'
 
 jobs:
-  build:
-    uses: ./.github/workflows/build.yml
-
   release:
-    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -34,7 +30,7 @@ jobs:
           dotnet-version: ${{ env.DOTNET_VERSION }}
           source-url: https://nuget.pkg.github.com/blipper-io/index.json
         env:
-          NUGET_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NUGET_AUTH_TOKEN: ${{ secrets.GH_TOKEN }}
           
         
       - name: Get version
@@ -43,10 +39,9 @@ jobs:
         
       - name: Build and publish Go package
         run: |
-          cd gen/go
+          cd gen/go/v1
           go mod init github.com/blipper-io/blipper-proto
           go mod tidy
-          GOPROXY=proxy.golang.org go list -m github.com/blipper-io/blipper-proto@${{ env.VERSION }}
           
       - name: Build and publish NuGet package
         run: |

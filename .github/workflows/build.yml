@@ -34,7 +34,7 @@ jobs:
         dotnet add csharp/Blipper.Proto/Blipper.Proto.csproj package Grpc.Tools
 
     - name: Generate C# code
-      run: protoc \                            
+      run: protoc \
           --csharp_out=csharp/Blipper.Proto/Generated \
           --grpc_out=csharp/Blipper.Proto/Generated \
           --plugin=protoc-gen-grpc=$(which grpc_csharp_plugin) \

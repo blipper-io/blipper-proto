@@ -20,11 +20,13 @@ import (
 const _ = grpc.SupportPackageIsVersion9
 
 const (
-	AuthService_Register_FullMethodName      = "/blipper.auth.v1.AuthService/Register"
-	AuthService_Login_FullMethodName         = "/blipper.auth.v1.AuthService/Login"
-	AuthService_Logout_FullMethodName        = "/blipper.auth.v1.AuthService/Logout"
-	AuthService_RefreshToken_FullMethodName  = "/blipper.auth.v1.AuthService/RefreshToken"
-	AuthService_ValidateToken_FullMethodName = "/blipper.auth.v1.AuthService/ValidateToken"
+	AuthService_Register_FullMethodName       = "/blipper.auth.v1.AuthService/Register"
+	AuthService_Login_FullMethodName          = "/blipper.auth.v1.AuthService/Login"
+	AuthService_Logout_FullMethodName         = "/blipper.auth.v1.AuthService/Logout"
+	AuthService_RefreshToken_FullMethodName   = "/blipper.auth.v1.AuthService/RefreshToken"
+	AuthService_ValidateToken_FullMethodName  = "/blipper.auth.v1.AuthService/ValidateToken"
+	AuthService_BlacklistToken_FullMethodName = "/blipper.auth.v1.AuthService/BlacklistToken"
+	AuthService_DeleteUser_FullMethodName     = "/blipper.auth.v1.AuthService/DeleteUser"
 )
 
 // AuthServiceClient is the client API for AuthService service.
@@ -36,6 +38,8 @@ type AuthServiceClient interface {
 	Logout(ctx context.Context, in *LogoutRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
 	RefreshToken(ctx context.Context, in *RefreshTokenRequest, opts ...grpc.CallOption) (*RefreshTokenResponse, error)
 	ValidateToken(ctx context.Context, in *ValidateTokenRequest, opts ...grpc.CallOption) (*ValidateTokenResponse, error)
+	BlacklistToken(ctx context.Context, in *BlacklistTokenRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
+	DeleteUser(ctx context.Context, in *DeleteUserRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
 }
 
 type authServiceClient struct {
@@ -96,6 +100,26 @@ func (c *authServiceClient) ValidateToken(ctx context.Context, in *ValidateToken
 	return out, nil
 }
 
+func (c *authServiceClient) BlacklistToken(ctx context.Context, in *BlacklistTokenRequest, opts ...grpc.CallOption) (*emptypb.Empty, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(emptypb.Empty)
+	err := c.cc.Invoke(ctx, AuthService_BlacklistToken_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *authServiceClient) DeleteUser(ctx context.Context, in *DeleteUserRequest, opts ...grpc.CallOption) (*emptypb.Empty, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(emptypb.Empty)
+	err := c.cc.Invoke(ctx, AuthService_DeleteUser_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // AuthServiceServer is the server API for AuthService service.
 // All implementations must embed UnimplementedAuthServiceServer
 // for forward compatibility.
@@ -105,6 +129,8 @@ type AuthServiceServer interface {
 	Logout(context.Context, *LogoutRequest) (*emptypb.Empty, error)
 	RefreshToken(context.Context, *RefreshTokenRequest) (*RefreshTokenResponse, error)
 	ValidateToken(context.Context, *ValidateTokenRequest) (*ValidateTokenResponse, error)
+	BlacklistToken(context.Context, *BlacklistTokenRequest) (*emptypb.Empty, error)
+	DeleteUser(context.Context, *DeleteUserRequest) (*emptypb.Empty, error)
 	mustEmbedUnimplementedAuthServiceServer()
 }
 
@@ -129,6 +155,12 @@ func (UnimplementedAuthServiceServer) RefreshToken(context.Context, *RefreshToke
 }
 func (UnimplementedAuthServiceServer) ValidateToken(context.Context, *ValidateTokenRequest) (*ValidateTokenResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ValidateToken not implemented")
+}
+func (UnimplementedAuthServiceServer) BlacklistToken(context.Context, *BlacklistTokenRequest) (*emptypb.Empty, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method BlacklistToken not implemented")
+}
+func (UnimplementedAuthServiceServer) DeleteUser(context.Context, *DeleteUserRequest) (*emptypb.Empty, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method DeleteUser not implemented")
 }
 func (UnimplementedAuthServiceServer) mustEmbedUnimplementedAuthServiceServer() {}
 func (UnimplementedAuthServiceServer) testEmbeddedByValue()                     {}
@@ -241,6 +273,42 @@ func _AuthService_ValidateToken_Handler(srv interface{}, ctx context.Context, de
 	return interceptor(ctx, in, info, handler)
 }
 
+func _AuthService_BlacklistToken_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(BlacklistTokenRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(AuthServiceServer).BlacklistToken(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: AuthService_BlacklistToken_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(AuthServiceServer).BlacklistToken(ctx, req.(*BlacklistTokenRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _AuthService_DeleteUser_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(DeleteUserRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(AuthServiceServer).DeleteUser(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: AuthService_DeleteUser_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(AuthServiceServer).DeleteUser(ctx, req.(*DeleteUserRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // AuthService_ServiceDesc is the grpc.ServiceDesc for AuthService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -267,6 +335,14 @@ var AuthService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "ValidateToken",
 			Handler:    _AuthService_ValidateToken_Handler,
+		},
+		{
+			MethodName: "BlacklistToken",
+			Handler:    _AuthService_BlacklistToken_Handler,
+		},
+		{
+			MethodName: "DeleteUser",
+			Handler:    _AuthService_DeleteUser_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

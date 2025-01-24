@@ -65,6 +65,10 @@ namespace Blipper.Proto.AuthService {
     static readonly grpc::Marshaller<global::Blipper.Proto.AuthService.ValidateTokenRequest> __Marshaller_blipper_auth_v1_ValidateTokenRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Proto.AuthService.ValidateTokenRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Blipper.Proto.AuthService.ValidateTokenResponse> __Marshaller_blipper_auth_v1_ValidateTokenResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Proto.AuthService.ValidateTokenResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Blipper.Proto.AuthService.BlacklistTokenRequest> __Marshaller_blipper_auth_v1_BlacklistTokenRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Proto.AuthService.BlacklistTokenRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Blipper.Proto.AuthService.DeleteUserRequest> __Marshaller_blipper_auth_v1_DeleteUserRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Proto.AuthService.DeleteUserRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Blipper.Proto.AuthService.RegisterRequest, global::Blipper.Proto.AuthService.RegisterResponse> __Method_Register = new grpc::Method<global::Blipper.Proto.AuthService.RegisterRequest, global::Blipper.Proto.AuthService.RegisterResponse>(
@@ -106,6 +110,22 @@ namespace Blipper.Proto.AuthService {
         __Marshaller_blipper_auth_v1_ValidateTokenRequest,
         __Marshaller_blipper_auth_v1_ValidateTokenResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Blipper.Proto.AuthService.BlacklistTokenRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_BlacklistToken = new grpc::Method<global::Blipper.Proto.AuthService.BlacklistTokenRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BlacklistToken",
+        __Marshaller_blipper_auth_v1_BlacklistTokenRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Blipper.Proto.AuthService.DeleteUserRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteUser = new grpc::Method<global::Blipper.Proto.AuthService.DeleteUserRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteUser",
+        __Marshaller_blipper_auth_v1_DeleteUserRequest,
+        __Marshaller_google_protobuf_Empty);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -142,6 +162,18 @@ namespace Blipper.Proto.AuthService {
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Blipper.Proto.AuthService.ValidateTokenResponse> ValidateToken(global::Blipper.Proto.AuthService.ValidateTokenRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> BlacklistToken(global::Blipper.Proto.AuthService.BlacklistTokenRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteUser(global::Blipper.Proto.AuthService.DeleteUserRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -275,6 +307,46 @@ namespace Blipper.Proto.AuthService {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ValidateToken, null, options, request);
       }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty BlacklistToken(global::Blipper.Proto.AuthService.BlacklistTokenRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BlacklistToken(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty BlacklistToken(global::Blipper.Proto.AuthService.BlacklistTokenRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BlacklistToken, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> BlacklistTokenAsync(global::Blipper.Proto.AuthService.BlacklistTokenRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BlacklistTokenAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> BlacklistTokenAsync(global::Blipper.Proto.AuthService.BlacklistTokenRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BlacklistToken, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteUser(global::Blipper.Proto.AuthService.DeleteUserRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteUser(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteUser(global::Blipper.Proto.AuthService.DeleteUserRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteUser, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteUserAsync(global::Blipper.Proto.AuthService.DeleteUserRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteUserAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteUserAsync(global::Blipper.Proto.AuthService.DeleteUserRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteUser, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override AuthServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -293,7 +365,9 @@ namespace Blipper.Proto.AuthService {
           .AddMethod(__Method_Login, serviceImpl.Login)
           .AddMethod(__Method_Logout, serviceImpl.Logout)
           .AddMethod(__Method_RefreshToken, serviceImpl.RefreshToken)
-          .AddMethod(__Method_ValidateToken, serviceImpl.ValidateToken).Build();
+          .AddMethod(__Method_ValidateToken, serviceImpl.ValidateToken)
+          .AddMethod(__Method_BlacklistToken, serviceImpl.BlacklistToken)
+          .AddMethod(__Method_DeleteUser, serviceImpl.DeleteUser).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -308,6 +382,8 @@ namespace Blipper.Proto.AuthService {
       serviceBinder.AddMethod(__Method_Logout, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Blipper.Proto.AuthService.LogoutRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.Logout));
       serviceBinder.AddMethod(__Method_RefreshToken, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Blipper.Proto.AuthService.RefreshTokenRequest, global::Blipper.Proto.AuthService.RefreshTokenResponse>(serviceImpl.RefreshToken));
       serviceBinder.AddMethod(__Method_ValidateToken, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Blipper.Proto.AuthService.ValidateTokenRequest, global::Blipper.Proto.AuthService.ValidateTokenResponse>(serviceImpl.ValidateToken));
+      serviceBinder.AddMethod(__Method_BlacklistToken, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Blipper.Proto.AuthService.BlacklistTokenRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.BlacklistToken));
+      serviceBinder.AddMethod(__Method_DeleteUser, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Blipper.Proto.AuthService.DeleteUserRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteUser));
     }
 
   }

@@ -21,31 +21,31 @@ import (
 const _ = grpc.SupportPackageIsVersion9
 
 const (
-	CircleService_CreateCircle_FullMethodName       = "/blipper.circle.v1.CircleService/CreateCircle"
-	CircleService_GetCircle_FullMethodName          = "/blipper.circle.v1.CircleService/GetCircle"
-	CircleService_ListCircles_FullMethodName        = "/blipper.circle.v1.CircleService/ListCircles"
-	CircleService_UpdateCircle_FullMethodName       = "/blipper.circle.v1.CircleService/UpdateCircle"
-	CircleService_DeleteCircle_FullMethodName       = "/blipper.circle.v1.CircleService/DeleteCircle"
-	CircleService_JoinCircle_FullMethodName         = "/blipper.circle.v1.CircleService/JoinCircle"
-	CircleService_LeaveCircle_FullMethodName        = "/blipper.circle.v1.CircleService/LeaveCircle"
-	CircleService_GetUserCircles_FullMethodName     = "/blipper.circle.v1.CircleService/GetUserCircles"
-	CircleService_GetCircleMembers_FullMethodName   = "/blipper.circle.v1.CircleService/GetCircleMembers"
-	CircleService_UpdateMemberRole_FullMethodName   = "/blipper.circle.v1.CircleService/UpdateMemberRole"
-	CircleService_GetMembership_FullMethodName      = "/blipper.circle.v1.CircleService/GetMembership"
-	CircleService_ListJoinRequests_FullMethodName   = "/blipper.circle.v1.CircleService/ListJoinRequests"
-	CircleService_ApproveJoinRequest_FullMethodName = "/blipper.circle.v1.CircleService/ApproveJoinRequest"
-	CircleService_RejectJoinRequest_FullMethodName  = "/blipper.circle.v1.CircleService/RejectJoinRequest"
+	CircleProtoService_CreateCircle_FullMethodName       = "/blipper.circle.v1.CircleProtoService/CreateCircle"
+	CircleProtoService_GetCircle_FullMethodName          = "/blipper.circle.v1.CircleProtoService/GetCircle"
+	CircleProtoService_ListCircles_FullMethodName        = "/blipper.circle.v1.CircleProtoService/ListCircles"
+	CircleProtoService_UpdateCircle_FullMethodName       = "/blipper.circle.v1.CircleProtoService/UpdateCircle"
+	CircleProtoService_DeleteCircle_FullMethodName       = "/blipper.circle.v1.CircleProtoService/DeleteCircle"
+	CircleProtoService_JoinCircle_FullMethodName         = "/blipper.circle.v1.CircleProtoService/JoinCircle"
+	CircleProtoService_LeaveCircle_FullMethodName        = "/blipper.circle.v1.CircleProtoService/LeaveCircle"
+	CircleProtoService_GetUserCircles_FullMethodName     = "/blipper.circle.v1.CircleProtoService/GetUserCircles"
+	CircleProtoService_GetCircleMembers_FullMethodName   = "/blipper.circle.v1.CircleProtoService/GetCircleMembers"
+	CircleProtoService_UpdateMemberRole_FullMethodName   = "/blipper.circle.v1.CircleProtoService/UpdateMemberRole"
+	CircleProtoService_GetMembership_FullMethodName      = "/blipper.circle.v1.CircleProtoService/GetMembership"
+	CircleProtoService_ListJoinRequests_FullMethodName   = "/blipper.circle.v1.CircleProtoService/ListJoinRequests"
+	CircleProtoService_ApproveJoinRequest_FullMethodName = "/blipper.circle.v1.CircleProtoService/ApproveJoinRequest"
+	CircleProtoService_RejectJoinRequest_FullMethodName  = "/blipper.circle.v1.CircleProtoService/RejectJoinRequest"
 )
 
-// CircleServiceClient is the client API for CircleService service.
+// CircleProtoServiceClient is the client API for CircleProtoService service.
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
-type CircleServiceClient interface {
+type CircleProtoServiceClient interface {
 	// Circle management
-	CreateCircle(ctx context.Context, in *CreateCircleRequest, opts ...grpc.CallOption) (*Circle, error)
-	GetCircle(ctx context.Context, in *GetCircleRequest, opts ...grpc.CallOption) (*Circle, error)
+	CreateCircle(ctx context.Context, in *CreateCircleRequest, opts ...grpc.CallOption) (*shared.Circle, error)
+	GetCircle(ctx context.Context, in *GetCircleRequest, opts ...grpc.CallOption) (*shared.Circle, error)
 	ListCircles(ctx context.Context, in *ListCirclesRequest, opts ...grpc.CallOption) (*ListCirclesResponse, error)
-	UpdateCircle(ctx context.Context, in *UpdateCircleRequest, opts ...grpc.CallOption) (*Circle, error)
+	UpdateCircle(ctx context.Context, in *UpdateCircleRequest, opts ...grpc.CallOption) (*shared.Circle, error)
 	DeleteCircle(ctx context.Context, in *DeleteCircleRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
 	// Membership management
 	JoinCircle(ctx context.Context, in *JoinCircleRequest, opts ...grpc.CallOption) (*shared.MembershipInfo, error)
@@ -54,169 +54,169 @@ type CircleServiceClient interface {
 	GetCircleMembers(ctx context.Context, in *GetCircleMembersRequest, opts ...grpc.CallOption) (*GetCircleMembersResponse, error)
 	UpdateMemberRole(ctx context.Context, in *UpdateMemberRoleRequest, opts ...grpc.CallOption) (*shared.MembershipInfo, error)
 	GetMembership(ctx context.Context, in *GetMembershipRequest, opts ...grpc.CallOption) (*shared.MembershipInfo, error)
-	// Join requests (for private circles)
+	// Join requests
 	ListJoinRequests(ctx context.Context, in *ListJoinRequestsRequest, opts ...grpc.CallOption) (*ListJoinRequestsResponse, error)
 	ApproveJoinRequest(ctx context.Context, in *ApproveJoinRequestRequest, opts ...grpc.CallOption) (*shared.MembershipInfo, error)
 	RejectJoinRequest(ctx context.Context, in *RejectJoinRequestRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
 }
 
-type circleServiceClient struct {
+type circleProtoServiceClient struct {
 	cc grpc.ClientConnInterface
 }
 
-func NewCircleServiceClient(cc grpc.ClientConnInterface) CircleServiceClient {
-	return &circleServiceClient{cc}
+func NewCircleProtoServiceClient(cc grpc.ClientConnInterface) CircleProtoServiceClient {
+	return &circleProtoServiceClient{cc}
 }
 
-func (c *circleServiceClient) CreateCircle(ctx context.Context, in *CreateCircleRequest, opts ...grpc.CallOption) (*Circle, error) {
+func (c *circleProtoServiceClient) CreateCircle(ctx context.Context, in *CreateCircleRequest, opts ...grpc.CallOption) (*shared.Circle, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
-	out := new(Circle)
-	err := c.cc.Invoke(ctx, CircleService_CreateCircle_FullMethodName, in, out, cOpts...)
+	out := new(shared.Circle)
+	err := c.cc.Invoke(ctx, CircleProtoService_CreateCircle_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *circleServiceClient) GetCircle(ctx context.Context, in *GetCircleRequest, opts ...grpc.CallOption) (*Circle, error) {
+func (c *circleProtoServiceClient) GetCircle(ctx context.Context, in *GetCircleRequest, opts ...grpc.CallOption) (*shared.Circle, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
-	out := new(Circle)
-	err := c.cc.Invoke(ctx, CircleService_GetCircle_FullMethodName, in, out, cOpts...)
+	out := new(shared.Circle)
+	err := c.cc.Invoke(ctx, CircleProtoService_GetCircle_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *circleServiceClient) ListCircles(ctx context.Context, in *ListCirclesRequest, opts ...grpc.CallOption) (*ListCirclesResponse, error) {
+func (c *circleProtoServiceClient) ListCircles(ctx context.Context, in *ListCirclesRequest, opts ...grpc.CallOption) (*ListCirclesResponse, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(ListCirclesResponse)
-	err := c.cc.Invoke(ctx, CircleService_ListCircles_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, CircleProtoService_ListCircles_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *circleServiceClient) UpdateCircle(ctx context.Context, in *UpdateCircleRequest, opts ...grpc.CallOption) (*Circle, error) {
+func (c *circleProtoServiceClient) UpdateCircle(ctx context.Context, in *UpdateCircleRequest, opts ...grpc.CallOption) (*shared.Circle, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
-	out := new(Circle)
-	err := c.cc.Invoke(ctx, CircleService_UpdateCircle_FullMethodName, in, out, cOpts...)
+	out := new(shared.Circle)
+	err := c.cc.Invoke(ctx, CircleProtoService_UpdateCircle_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *circleServiceClient) DeleteCircle(ctx context.Context, in *DeleteCircleRequest, opts ...grpc.CallOption) (*emptypb.Empty, error) {
+func (c *circleProtoServiceClient) DeleteCircle(ctx context.Context, in *DeleteCircleRequest, opts ...grpc.CallOption) (*emptypb.Empty, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(emptypb.Empty)
-	err := c.cc.Invoke(ctx, CircleService_DeleteCircle_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, CircleProtoService_DeleteCircle_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *circleServiceClient) JoinCircle(ctx context.Context, in *JoinCircleRequest, opts ...grpc.CallOption) (*shared.MembershipInfo, error) {
+func (c *circleProtoServiceClient) JoinCircle(ctx context.Context, in *JoinCircleRequest, opts ...grpc.CallOption) (*shared.MembershipInfo, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(shared.MembershipInfo)
-	err := c.cc.Invoke(ctx, CircleService_JoinCircle_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, CircleProtoService_JoinCircle_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *circleServiceClient) LeaveCircle(ctx context.Context, in *LeaveCircleRequest, opts ...grpc.CallOption) (*emptypb.Empty, error) {
+func (c *circleProtoServiceClient) LeaveCircle(ctx context.Context, in *LeaveCircleRequest, opts ...grpc.CallOption) (*emptypb.Empty, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(emptypb.Empty)
-	err := c.cc.Invoke(ctx, CircleService_LeaveCircle_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, CircleProtoService_LeaveCircle_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *circleServiceClient) GetUserCircles(ctx context.Context, in *GetUserCirclesRequest, opts ...grpc.CallOption) (*GetUserCirclesResponse, error) {
+func (c *circleProtoServiceClient) GetUserCircles(ctx context.Context, in *GetUserCirclesRequest, opts ...grpc.CallOption) (*GetUserCirclesResponse, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetUserCirclesResponse)
-	err := c.cc.Invoke(ctx, CircleService_GetUserCircles_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, CircleProtoService_GetUserCircles_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *circleServiceClient) GetCircleMembers(ctx context.Context, in *GetCircleMembersRequest, opts ...grpc.CallOption) (*GetCircleMembersResponse, error) {
+func (c *circleProtoServiceClient) GetCircleMembers(ctx context.Context, in *GetCircleMembersRequest, opts ...grpc.CallOption) (*GetCircleMembersResponse, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetCircleMembersResponse)
-	err := c.cc.Invoke(ctx, CircleService_GetCircleMembers_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, CircleProtoService_GetCircleMembers_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *circleServiceClient) UpdateMemberRole(ctx context.Context, in *UpdateMemberRoleRequest, opts ...grpc.CallOption) (*shared.MembershipInfo, error) {
+func (c *circleProtoServiceClient) UpdateMemberRole(ctx context.Context, in *UpdateMemberRoleRequest, opts ...grpc.CallOption) (*shared.MembershipInfo, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(shared.MembershipInfo)
-	err := c.cc.Invoke(ctx, CircleService_UpdateMemberRole_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, CircleProtoService_UpdateMemberRole_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *circleServiceClient) GetMembership(ctx context.Context, in *GetMembershipRequest, opts ...grpc.CallOption) (*shared.MembershipInfo, error) {
+func (c *circleProtoServiceClient) GetMembership(ctx context.Context, in *GetMembershipRequest, opts ...grpc.CallOption) (*shared.MembershipInfo, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(shared.MembershipInfo)
-	err := c.cc.Invoke(ctx, CircleService_GetMembership_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, CircleProtoService_GetMembership_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *circleServiceClient) ListJoinRequests(ctx context.Context, in *ListJoinRequestsRequest, opts ...grpc.CallOption) (*ListJoinRequestsResponse, error) {
+func (c *circleProtoServiceClient) ListJoinRequests(ctx context.Context, in *ListJoinRequestsRequest, opts ...grpc.CallOption) (*ListJoinRequestsResponse, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(ListJoinRequestsResponse)
-	err := c.cc.Invoke(ctx, CircleService_ListJoinRequests_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, CircleProtoService_ListJoinRequests_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *circleServiceClient) ApproveJoinRequest(ctx context.Context, in *ApproveJoinRequestRequest, opts ...grpc.CallOption) (*shared.MembershipInfo, error) {
+func (c *circleProtoServiceClient) ApproveJoinRequest(ctx context.Context, in *ApproveJoinRequestRequest, opts ...grpc.CallOption) (*shared.MembershipInfo, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(shared.MembershipInfo)
-	err := c.cc.Invoke(ctx, CircleService_ApproveJoinRequest_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, CircleProtoService_ApproveJoinRequest_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *circleServiceClient) RejectJoinRequest(ctx context.Context, in *RejectJoinRequestRequest, opts ...grpc.CallOption) (*emptypb.Empty, error) {
+func (c *circleProtoServiceClient) RejectJoinRequest(ctx context.Context, in *RejectJoinRequestRequest, opts ...grpc.CallOption) (*emptypb.Empty, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(emptypb.Empty)
-	err := c.cc.Invoke(ctx, CircleService_RejectJoinRequest_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, CircleProtoService_RejectJoinRequest_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-// CircleServiceServer is the server API for CircleService service.
-// All implementations must embed UnimplementedCircleServiceServer
+// CircleProtoServiceServer is the server API for CircleProtoService service.
+// All implementations must embed UnimplementedCircleProtoServiceServer
 // for forward compatibility.
-type CircleServiceServer interface {
+type CircleProtoServiceServer interface {
 	// Circle management
-	CreateCircle(context.Context, *CreateCircleRequest) (*Circle, error)
-	GetCircle(context.Context, *GetCircleRequest) (*Circle, error)
+	CreateCircle(context.Context, *CreateCircleRequest) (*shared.Circle, error)
+	GetCircle(context.Context, *GetCircleRequest) (*shared.Circle, error)
 	ListCircles(context.Context, *ListCirclesRequest) (*ListCirclesResponse, error)
-	UpdateCircle(context.Context, *UpdateCircleRequest) (*Circle, error)
+	UpdateCircle(context.Context, *UpdateCircleRequest) (*shared.Circle, error)
 	DeleteCircle(context.Context, *DeleteCircleRequest) (*emptypb.Empty, error)
 	// Membership management
 	JoinCircle(context.Context, *JoinCircleRequest) (*shared.MembershipInfo, error)
@@ -225,397 +225,397 @@ type CircleServiceServer interface {
 	GetCircleMembers(context.Context, *GetCircleMembersRequest) (*GetCircleMembersResponse, error)
 	UpdateMemberRole(context.Context, *UpdateMemberRoleRequest) (*shared.MembershipInfo, error)
 	GetMembership(context.Context, *GetMembershipRequest) (*shared.MembershipInfo, error)
-	// Join requests (for private circles)
+	// Join requests
 	ListJoinRequests(context.Context, *ListJoinRequestsRequest) (*ListJoinRequestsResponse, error)
 	ApproveJoinRequest(context.Context, *ApproveJoinRequestRequest) (*shared.MembershipInfo, error)
 	RejectJoinRequest(context.Context, *RejectJoinRequestRequest) (*emptypb.Empty, error)
-	mustEmbedUnimplementedCircleServiceServer()
+	mustEmbedUnimplementedCircleProtoServiceServer()
 }
 
-// UnimplementedCircleServiceServer must be embedded to have
+// UnimplementedCircleProtoServiceServer must be embedded to have
 // forward compatible implementations.
 //
 // NOTE: this should be embedded by value instead of pointer to avoid a nil
 // pointer dereference when methods are called.
-type UnimplementedCircleServiceServer struct{}
+type UnimplementedCircleProtoServiceServer struct{}
 
-func (UnimplementedCircleServiceServer) CreateCircle(context.Context, *CreateCircleRequest) (*Circle, error) {
+func (UnimplementedCircleProtoServiceServer) CreateCircle(context.Context, *CreateCircleRequest) (*shared.Circle, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CreateCircle not implemented")
 }
-func (UnimplementedCircleServiceServer) GetCircle(context.Context, *GetCircleRequest) (*Circle, error) {
+func (UnimplementedCircleProtoServiceServer) GetCircle(context.Context, *GetCircleRequest) (*shared.Circle, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetCircle not implemented")
 }
-func (UnimplementedCircleServiceServer) ListCircles(context.Context, *ListCirclesRequest) (*ListCirclesResponse, error) {
+func (UnimplementedCircleProtoServiceServer) ListCircles(context.Context, *ListCirclesRequest) (*ListCirclesResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ListCircles not implemented")
 }
-func (UnimplementedCircleServiceServer) UpdateCircle(context.Context, *UpdateCircleRequest) (*Circle, error) {
+func (UnimplementedCircleProtoServiceServer) UpdateCircle(context.Context, *UpdateCircleRequest) (*shared.Circle, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method UpdateCircle not implemented")
 }
-func (UnimplementedCircleServiceServer) DeleteCircle(context.Context, *DeleteCircleRequest) (*emptypb.Empty, error) {
+func (UnimplementedCircleProtoServiceServer) DeleteCircle(context.Context, *DeleteCircleRequest) (*emptypb.Empty, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method DeleteCircle not implemented")
 }
-func (UnimplementedCircleServiceServer) JoinCircle(context.Context, *JoinCircleRequest) (*shared.MembershipInfo, error) {
+func (UnimplementedCircleProtoServiceServer) JoinCircle(context.Context, *JoinCircleRequest) (*shared.MembershipInfo, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method JoinCircle not implemented")
 }
-func (UnimplementedCircleServiceServer) LeaveCircle(context.Context, *LeaveCircleRequest) (*emptypb.Empty, error) {
+func (UnimplementedCircleProtoServiceServer) LeaveCircle(context.Context, *LeaveCircleRequest) (*emptypb.Empty, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method LeaveCircle not implemented")
 }
-func (UnimplementedCircleServiceServer) GetUserCircles(context.Context, *GetUserCirclesRequest) (*GetUserCirclesResponse, error) {
+func (UnimplementedCircleProtoServiceServer) GetUserCircles(context.Context, *GetUserCirclesRequest) (*GetUserCirclesResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetUserCircles not implemented")
 }
-func (UnimplementedCircleServiceServer) GetCircleMembers(context.Context, *GetCircleMembersRequest) (*GetCircleMembersResponse, error) {
+func (UnimplementedCircleProtoServiceServer) GetCircleMembers(context.Context, *GetCircleMembersRequest) (*GetCircleMembersResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetCircleMembers not implemented")
 }
-func (UnimplementedCircleServiceServer) UpdateMemberRole(context.Context, *UpdateMemberRoleRequest) (*shared.MembershipInfo, error) {
+func (UnimplementedCircleProtoServiceServer) UpdateMemberRole(context.Context, *UpdateMemberRoleRequest) (*shared.MembershipInfo, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method UpdateMemberRole not implemented")
 }
-func (UnimplementedCircleServiceServer) GetMembership(context.Context, *GetMembershipRequest) (*shared.MembershipInfo, error) {
+func (UnimplementedCircleProtoServiceServer) GetMembership(context.Context, *GetMembershipRequest) (*shared.MembershipInfo, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetMembership not implemented")
 }
-func (UnimplementedCircleServiceServer) ListJoinRequests(context.Context, *ListJoinRequestsRequest) (*ListJoinRequestsResponse, error) {
+func (UnimplementedCircleProtoServiceServer) ListJoinRequests(context.Context, *ListJoinRequestsRequest) (*ListJoinRequestsResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ListJoinRequests not implemented")
 }
-func (UnimplementedCircleServiceServer) ApproveJoinRequest(context.Context, *ApproveJoinRequestRequest) (*shared.MembershipInfo, error) {
+func (UnimplementedCircleProtoServiceServer) ApproveJoinRequest(context.Context, *ApproveJoinRequestRequest) (*shared.MembershipInfo, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ApproveJoinRequest not implemented")
 }
-func (UnimplementedCircleServiceServer) RejectJoinRequest(context.Context, *RejectJoinRequestRequest) (*emptypb.Empty, error) {
+func (UnimplementedCircleProtoServiceServer) RejectJoinRequest(context.Context, *RejectJoinRequestRequest) (*emptypb.Empty, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method RejectJoinRequest not implemented")
 }
-func (UnimplementedCircleServiceServer) mustEmbedUnimplementedCircleServiceServer() {}
-func (UnimplementedCircleServiceServer) testEmbeddedByValue()                       {}
+func (UnimplementedCircleProtoServiceServer) mustEmbedUnimplementedCircleProtoServiceServer() {}
+func (UnimplementedCircleProtoServiceServer) testEmbeddedByValue()                            {}
 
-// UnsafeCircleServiceServer may be embedded to opt out of forward compatibility for this service.
-// Use of this interface is not recommended, as added methods to CircleServiceServer will
+// UnsafeCircleProtoServiceServer may be embedded to opt out of forward compatibility for this service.
+// Use of this interface is not recommended, as added methods to CircleProtoServiceServer will
 // result in compilation errors.
-type UnsafeCircleServiceServer interface {
-	mustEmbedUnimplementedCircleServiceServer()
+type UnsafeCircleProtoServiceServer interface {
+	mustEmbedUnimplementedCircleProtoServiceServer()
 }
 
-func RegisterCircleServiceServer(s grpc.ServiceRegistrar, srv CircleServiceServer) {
-	// If the following call pancis, it indicates UnimplementedCircleServiceServer was
+func RegisterCircleProtoServiceServer(s grpc.ServiceRegistrar, srv CircleProtoServiceServer) {
+	// If the following call pancis, it indicates UnimplementedCircleProtoServiceServer was
 	// embedded by pointer and is nil.  This will cause panics if an
 	// unimplemented method is ever invoked, so we test this at initialization
 	// time to prevent it from happening at runtime later due to I/O.
 	if t, ok := srv.(interface{ testEmbeddedByValue() }); ok {
 		t.testEmbeddedByValue()
 	}
-	s.RegisterService(&CircleService_ServiceDesc, srv)
+	s.RegisterService(&CircleProtoService_ServiceDesc, srv)
 }
 
-func _CircleService_CreateCircle_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _CircleProtoService_CreateCircle_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(CreateCircleRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(CircleServiceServer).CreateCircle(ctx, in)
+		return srv.(CircleProtoServiceServer).CreateCircle(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: CircleService_CreateCircle_FullMethodName,
+		FullMethod: CircleProtoService_CreateCircle_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(CircleServiceServer).CreateCircle(ctx, req.(*CreateCircleRequest))
+		return srv.(CircleProtoServiceServer).CreateCircle(ctx, req.(*CreateCircleRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _CircleService_GetCircle_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _CircleProtoService_GetCircle_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetCircleRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(CircleServiceServer).GetCircle(ctx, in)
+		return srv.(CircleProtoServiceServer).GetCircle(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: CircleService_GetCircle_FullMethodName,
+		FullMethod: CircleProtoService_GetCircle_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(CircleServiceServer).GetCircle(ctx, req.(*GetCircleRequest))
+		return srv.(CircleProtoServiceServer).GetCircle(ctx, req.(*GetCircleRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _CircleService_ListCircles_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _CircleProtoService_ListCircles_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(ListCirclesRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(CircleServiceServer).ListCircles(ctx, in)
+		return srv.(CircleProtoServiceServer).ListCircles(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: CircleService_ListCircles_FullMethodName,
+		FullMethod: CircleProtoService_ListCircles_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(CircleServiceServer).ListCircles(ctx, req.(*ListCirclesRequest))
+		return srv.(CircleProtoServiceServer).ListCircles(ctx, req.(*ListCirclesRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _CircleService_UpdateCircle_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _CircleProtoService_UpdateCircle_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(UpdateCircleRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(CircleServiceServer).UpdateCircle(ctx, in)
+		return srv.(CircleProtoServiceServer).UpdateCircle(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: CircleService_UpdateCircle_FullMethodName,
+		FullMethod: CircleProtoService_UpdateCircle_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(CircleServiceServer).UpdateCircle(ctx, req.(*UpdateCircleRequest))
+		return srv.(CircleProtoServiceServer).UpdateCircle(ctx, req.(*UpdateCircleRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _CircleService_DeleteCircle_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _CircleProtoService_DeleteCircle_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(DeleteCircleRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(CircleServiceServer).DeleteCircle(ctx, in)
+		return srv.(CircleProtoServiceServer).DeleteCircle(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: CircleService_DeleteCircle_FullMethodName,
+		FullMethod: CircleProtoService_DeleteCircle_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(CircleServiceServer).DeleteCircle(ctx, req.(*DeleteCircleRequest))
+		return srv.(CircleProtoServiceServer).DeleteCircle(ctx, req.(*DeleteCircleRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _CircleService_JoinCircle_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _CircleProtoService_JoinCircle_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(JoinCircleRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(CircleServiceServer).JoinCircle(ctx, in)
+		return srv.(CircleProtoServiceServer).JoinCircle(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: CircleService_JoinCircle_FullMethodName,
+		FullMethod: CircleProtoService_JoinCircle_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(CircleServiceServer).JoinCircle(ctx, req.(*JoinCircleRequest))
+		return srv.(CircleProtoServiceServer).JoinCircle(ctx, req.(*JoinCircleRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _CircleService_LeaveCircle_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _CircleProtoService_LeaveCircle_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(LeaveCircleRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(CircleServiceServer).LeaveCircle(ctx, in)
+		return srv.(CircleProtoServiceServer).LeaveCircle(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: CircleService_LeaveCircle_FullMethodName,
+		FullMethod: CircleProtoService_LeaveCircle_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(CircleServiceServer).LeaveCircle(ctx, req.(*LeaveCircleRequest))
+		return srv.(CircleProtoServiceServer).LeaveCircle(ctx, req.(*LeaveCircleRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _CircleService_GetUserCircles_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _CircleProtoService_GetUserCircles_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetUserCirclesRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(CircleServiceServer).GetUserCircles(ctx, in)
+		return srv.(CircleProtoServiceServer).GetUserCircles(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: CircleService_GetUserCircles_FullMethodName,
+		FullMethod: CircleProtoService_GetUserCircles_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(CircleServiceServer).GetUserCircles(ctx, req.(*GetUserCirclesRequest))
+		return srv.(CircleProtoServiceServer).GetUserCircles(ctx, req.(*GetUserCirclesRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _CircleService_GetCircleMembers_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _CircleProtoService_GetCircleMembers_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetCircleMembersRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(CircleServiceServer).GetCircleMembers(ctx, in)
+		return srv.(CircleProtoServiceServer).GetCircleMembers(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: CircleService_GetCircleMembers_FullMethodName,
+		FullMethod: CircleProtoService_GetCircleMembers_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(CircleServiceServer).GetCircleMembers(ctx, req.(*GetCircleMembersRequest))
+		return srv.(CircleProtoServiceServer).GetCircleMembers(ctx, req.(*GetCircleMembersRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _CircleService_UpdateMemberRole_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _CircleProtoService_UpdateMemberRole_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(UpdateMemberRoleRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(CircleServiceServer).UpdateMemberRole(ctx, in)
+		return srv.(CircleProtoServiceServer).UpdateMemberRole(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: CircleService_UpdateMemberRole_FullMethodName,
+		FullMethod: CircleProtoService_UpdateMemberRole_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(CircleServiceServer).UpdateMemberRole(ctx, req.(*UpdateMemberRoleRequest))
+		return srv.(CircleProtoServiceServer).UpdateMemberRole(ctx, req.(*UpdateMemberRoleRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _CircleService_GetMembership_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _CircleProtoService_GetMembership_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetMembershipRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(CircleServiceServer).GetMembership(ctx, in)
+		return srv.(CircleProtoServiceServer).GetMembership(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: CircleService_GetMembership_FullMethodName,
+		FullMethod: CircleProtoService_GetMembership_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(CircleServiceServer).GetMembership(ctx, req.(*GetMembershipRequest))
+		return srv.(CircleProtoServiceServer).GetMembership(ctx, req.(*GetMembershipRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _CircleService_ListJoinRequests_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _CircleProtoService_ListJoinRequests_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(ListJoinRequestsRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(CircleServiceServer).ListJoinRequests(ctx, in)
+		return srv.(CircleProtoServiceServer).ListJoinRequests(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: CircleService_ListJoinRequests_FullMethodName,
+		FullMethod: CircleProtoService_ListJoinRequests_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(CircleServiceServer).ListJoinRequests(ctx, req.(*ListJoinRequestsRequest))
+		return srv.(CircleProtoServiceServer).ListJoinRequests(ctx, req.(*ListJoinRequestsRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _CircleService_ApproveJoinRequest_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _CircleProtoService_ApproveJoinRequest_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(ApproveJoinRequestRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(CircleServiceServer).ApproveJoinRequest(ctx, in)
+		return srv.(CircleProtoServiceServer).ApproveJoinRequest(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: CircleService_ApproveJoinRequest_FullMethodName,
+		FullMethod: CircleProtoService_ApproveJoinRequest_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(CircleServiceServer).ApproveJoinRequest(ctx, req.(*ApproveJoinRequestRequest))
+		return srv.(CircleProtoServiceServer).ApproveJoinRequest(ctx, req.(*ApproveJoinRequestRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _CircleService_RejectJoinRequest_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _CircleProtoService_RejectJoinRequest_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(RejectJoinRequestRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(CircleServiceServer).RejectJoinRequest(ctx, in)
+		return srv.(CircleProtoServiceServer).RejectJoinRequest(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: CircleService_RejectJoinRequest_FullMethodName,
+		FullMethod: CircleProtoService_RejectJoinRequest_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(CircleServiceServer).RejectJoinRequest(ctx, req.(*RejectJoinRequestRequest))
+		return srv.(CircleProtoServiceServer).RejectJoinRequest(ctx, req.(*RejectJoinRequestRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-// CircleService_ServiceDesc is the grpc.ServiceDesc for CircleService service.
+// CircleProtoService_ServiceDesc is the grpc.ServiceDesc for CircleProtoService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
-var CircleService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "blipper.circle.v1.CircleService",
-	HandlerType: (*CircleServiceServer)(nil),
+var CircleProtoService_ServiceDesc = grpc.ServiceDesc{
+	ServiceName: "blipper.circle.v1.CircleProtoService",
+	HandlerType: (*CircleProtoServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
 			MethodName: "CreateCircle",
-			Handler:    _CircleService_CreateCircle_Handler,
+			Handler:    _CircleProtoService_CreateCircle_Handler,
 		},
 		{
 			MethodName: "GetCircle",
-			Handler:    _CircleService_GetCircle_Handler,
+			Handler:    _CircleProtoService_GetCircle_Handler,
 		},
 		{
 			MethodName: "ListCircles",
-			Handler:    _CircleService_ListCircles_Handler,
+			Handler:    _CircleProtoService_ListCircles_Handler,
 		},
 		{
 			MethodName: "UpdateCircle",
-			Handler:    _CircleService_UpdateCircle_Handler,
+			Handler:    _CircleProtoService_UpdateCircle_Handler,
 		},
 		{
 			MethodName: "DeleteCircle",
-			Handler:    _CircleService_DeleteCircle_Handler,
+			Handler:    _CircleProtoService_DeleteCircle_Handler,
 		},
 		{
 			MethodName: "JoinCircle",
-			Handler:    _CircleService_JoinCircle_Handler,
+			Handler:    _CircleProtoService_JoinCircle_Handler,
 		},
 		{
 			MethodName: "LeaveCircle",
-			Handler:    _CircleService_LeaveCircle_Handler,
+			Handler:    _CircleProtoService_LeaveCircle_Handler,
 		},
 		{
 			MethodName: "GetUserCircles",
-			Handler:    _CircleService_GetUserCircles_Handler,
+			Handler:    _CircleProtoService_GetUserCircles_Handler,
 		},
 		{
 			MethodName: "GetCircleMembers",
-			Handler:    _CircleService_GetCircleMembers_Handler,
+			Handler:    _CircleProtoService_GetCircleMembers_Handler,
 		},
 		{
 			MethodName: "UpdateMemberRole",
-			Handler:    _CircleService_UpdateMemberRole_Handler,
+			Handler:    _CircleProtoService_UpdateMemberRole_Handler,
 		},
 		{
 			MethodName: "GetMembership",
-			Handler:    _CircleService_GetMembership_Handler,
+			Handler:    _CircleProtoService_GetMembership_Handler,
 		},
 		{
 			MethodName: "ListJoinRequests",
-			Handler:    _CircleService_ListJoinRequests_Handler,
+			Handler:    _CircleProtoService_ListJoinRequests_Handler,
 		},
 		{
 			MethodName: "ApproveJoinRequest",
-			Handler:    _CircleService_ApproveJoinRequest_Handler,
+			Handler:    _CircleProtoService_ApproveJoinRequest_Handler,
 		},
 		{
 			MethodName: "RejectJoinRequest",
-			Handler:    _CircleService_RejectJoinRequest_Handler,
+			Handler:    _CircleProtoService_RejectJoinRequest_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

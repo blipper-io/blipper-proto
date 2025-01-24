@@ -7,10 +7,10 @@
 
 using grpc = global::Grpc.Core;
 
-namespace Blipper.Circle.V1 {
-  public static partial class CircleService
+namespace Blipper.Proto.CircleService {
+  public static partial class CircleProtoService
   {
-    static readonly string __ServiceName = "blipper.circle.v1.CircleService";
+    static readonly string __ServiceName = "blipper.circle.v1.CircleProtoService";
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
@@ -46,66 +46,66 @@ namespace Blipper.Circle.V1 {
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Blipper.Circle.V1.CreateCircleRequest> __Marshaller_blipper_circle_v1_CreateCircleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Circle.V1.CreateCircleRequest.Parser));
+    static readonly grpc::Marshaller<global::Blipper.Proto.CircleService.CreateCircleRequest> __Marshaller_blipper_circle_v1_CreateCircleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Proto.CircleService.CreateCircleRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Blipper.Circle.V1.Circle> __Marshaller_blipper_circle_v1_Circle = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Circle.V1.Circle.Parser));
+    static readonly grpc::Marshaller<global::Blipper.Proto.Shared.Circle> __Marshaller_blipper_shared_v1_Circle = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Proto.Shared.Circle.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Blipper.Circle.V1.GetCircleRequest> __Marshaller_blipper_circle_v1_GetCircleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Circle.V1.GetCircleRequest.Parser));
+    static readonly grpc::Marshaller<global::Blipper.Proto.CircleService.GetCircleRequest> __Marshaller_blipper_circle_v1_GetCircleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Proto.CircleService.GetCircleRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Blipper.Circle.V1.ListCirclesRequest> __Marshaller_blipper_circle_v1_ListCirclesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Circle.V1.ListCirclesRequest.Parser));
+    static readonly grpc::Marshaller<global::Blipper.Proto.CircleService.ListCirclesRequest> __Marshaller_blipper_circle_v1_ListCirclesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Proto.CircleService.ListCirclesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Blipper.Circle.V1.ListCirclesResponse> __Marshaller_blipper_circle_v1_ListCirclesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Circle.V1.ListCirclesResponse.Parser));
+    static readonly grpc::Marshaller<global::Blipper.Proto.CircleService.ListCirclesResponse> __Marshaller_blipper_circle_v1_ListCirclesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Proto.CircleService.ListCirclesResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Blipper.Circle.V1.UpdateCircleRequest> __Marshaller_blipper_circle_v1_UpdateCircleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Circle.V1.UpdateCircleRequest.Parser));
+    static readonly grpc::Marshaller<global::Blipper.Proto.CircleService.UpdateCircleRequest> __Marshaller_blipper_circle_v1_UpdateCircleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Proto.CircleService.UpdateCircleRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Blipper.Circle.V1.DeleteCircleRequest> __Marshaller_blipper_circle_v1_DeleteCircleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Circle.V1.DeleteCircleRequest.Parser));
+    static readonly grpc::Marshaller<global::Blipper.Proto.CircleService.DeleteCircleRequest> __Marshaller_blipper_circle_v1_DeleteCircleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Proto.CircleService.DeleteCircleRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Blipper.Circle.V1.JoinCircleRequest> __Marshaller_blipper_circle_v1_JoinCircleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Circle.V1.JoinCircleRequest.Parser));
+    static readonly grpc::Marshaller<global::Blipper.Proto.CircleService.JoinCircleRequest> __Marshaller_blipper_circle_v1_JoinCircleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Proto.CircleService.JoinCircleRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Blipper.Shared.V1.MembershipInfo> __Marshaller_blipper_shared_v1_MembershipInfo = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Shared.V1.MembershipInfo.Parser));
+    static readonly grpc::Marshaller<global::Blipper.Proto.Shared.MembershipInfo> __Marshaller_blipper_shared_v1_MembershipInfo = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Proto.Shared.MembershipInfo.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Blipper.Circle.V1.LeaveCircleRequest> __Marshaller_blipper_circle_v1_LeaveCircleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Circle.V1.LeaveCircleRequest.Parser));
+    static readonly grpc::Marshaller<global::Blipper.Proto.CircleService.LeaveCircleRequest> __Marshaller_blipper_circle_v1_LeaveCircleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Proto.CircleService.LeaveCircleRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Blipper.Circle.V1.GetUserCirclesRequest> __Marshaller_blipper_circle_v1_GetUserCirclesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Circle.V1.GetUserCirclesRequest.Parser));
+    static readonly grpc::Marshaller<global::Blipper.Proto.CircleService.GetUserCirclesRequest> __Marshaller_blipper_circle_v1_GetUserCirclesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Proto.CircleService.GetUserCirclesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Blipper.Circle.V1.GetUserCirclesResponse> __Marshaller_blipper_circle_v1_GetUserCirclesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Circle.V1.GetUserCirclesResponse.Parser));
+    static readonly grpc::Marshaller<global::Blipper.Proto.CircleService.GetUserCirclesResponse> __Marshaller_blipper_circle_v1_GetUserCirclesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Proto.CircleService.GetUserCirclesResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Blipper.Circle.V1.GetCircleMembersRequest> __Marshaller_blipper_circle_v1_GetCircleMembersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Circle.V1.GetCircleMembersRequest.Parser));
+    static readonly grpc::Marshaller<global::Blipper.Proto.CircleService.GetCircleMembersRequest> __Marshaller_blipper_circle_v1_GetCircleMembersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Proto.CircleService.GetCircleMembersRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Blipper.Circle.V1.GetCircleMembersResponse> __Marshaller_blipper_circle_v1_GetCircleMembersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Circle.V1.GetCircleMembersResponse.Parser));
+    static readonly grpc::Marshaller<global::Blipper.Proto.CircleService.GetCircleMembersResponse> __Marshaller_blipper_circle_v1_GetCircleMembersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Proto.CircleService.GetCircleMembersResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Blipper.Circle.V1.UpdateMemberRoleRequest> __Marshaller_blipper_circle_v1_UpdateMemberRoleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Circle.V1.UpdateMemberRoleRequest.Parser));
+    static readonly grpc::Marshaller<global::Blipper.Proto.CircleService.UpdateMemberRoleRequest> __Marshaller_blipper_circle_v1_UpdateMemberRoleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Proto.CircleService.UpdateMemberRoleRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Blipper.Circle.V1.GetMembershipRequest> __Marshaller_blipper_circle_v1_GetMembershipRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Circle.V1.GetMembershipRequest.Parser));
+    static readonly grpc::Marshaller<global::Blipper.Proto.CircleService.GetMembershipRequest> __Marshaller_blipper_circle_v1_GetMembershipRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Proto.CircleService.GetMembershipRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Blipper.Circle.V1.ListJoinRequestsRequest> __Marshaller_blipper_circle_v1_ListJoinRequestsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Circle.V1.ListJoinRequestsRequest.Parser));
+    static readonly grpc::Marshaller<global::Blipper.Proto.CircleService.ListJoinRequestsRequest> __Marshaller_blipper_circle_v1_ListJoinRequestsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Proto.CircleService.ListJoinRequestsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Blipper.Circle.V1.ListJoinRequestsResponse> __Marshaller_blipper_circle_v1_ListJoinRequestsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Circle.V1.ListJoinRequestsResponse.Parser));
+    static readonly grpc::Marshaller<global::Blipper.Proto.CircleService.ListJoinRequestsResponse> __Marshaller_blipper_circle_v1_ListJoinRequestsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Proto.CircleService.ListJoinRequestsResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Blipper.Circle.V1.ApproveJoinRequestRequest> __Marshaller_blipper_circle_v1_ApproveJoinRequestRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Circle.V1.ApproveJoinRequestRequest.Parser));
+    static readonly grpc::Marshaller<global::Blipper.Proto.CircleService.ApproveJoinRequestRequest> __Marshaller_blipper_circle_v1_ApproveJoinRequestRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Proto.CircleService.ApproveJoinRequestRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Blipper.Circle.V1.RejectJoinRequestRequest> __Marshaller_blipper_circle_v1_RejectJoinRequestRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Circle.V1.RejectJoinRequestRequest.Parser));
+    static readonly grpc::Marshaller<global::Blipper.Proto.CircleService.RejectJoinRequestRequest> __Marshaller_blipper_circle_v1_RejectJoinRequestRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Proto.CircleService.RejectJoinRequestRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Blipper.Circle.V1.CreateCircleRequest, global::Blipper.Circle.V1.Circle> __Method_CreateCircle = new grpc::Method<global::Blipper.Circle.V1.CreateCircleRequest, global::Blipper.Circle.V1.Circle>(
+    static readonly grpc::Method<global::Blipper.Proto.CircleService.CreateCircleRequest, global::Blipper.Proto.Shared.Circle> __Method_CreateCircle = new grpc::Method<global::Blipper.Proto.CircleService.CreateCircleRequest, global::Blipper.Proto.Shared.Circle>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CreateCircle",
         __Marshaller_blipper_circle_v1_CreateCircleRequest,
-        __Marshaller_blipper_circle_v1_Circle);
+        __Marshaller_blipper_shared_v1_Circle);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Blipper.Circle.V1.GetCircleRequest, global::Blipper.Circle.V1.Circle> __Method_GetCircle = new grpc::Method<global::Blipper.Circle.V1.GetCircleRequest, global::Blipper.Circle.V1.Circle>(
+    static readonly grpc::Method<global::Blipper.Proto.CircleService.GetCircleRequest, global::Blipper.Proto.Shared.Circle> __Method_GetCircle = new grpc::Method<global::Blipper.Proto.CircleService.GetCircleRequest, global::Blipper.Proto.Shared.Circle>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetCircle",
         __Marshaller_blipper_circle_v1_GetCircleRequest,
-        __Marshaller_blipper_circle_v1_Circle);
+        __Marshaller_blipper_shared_v1_Circle);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Blipper.Circle.V1.ListCirclesRequest, global::Blipper.Circle.V1.ListCirclesResponse> __Method_ListCircles = new grpc::Method<global::Blipper.Circle.V1.ListCirclesRequest, global::Blipper.Circle.V1.ListCirclesResponse>(
+    static readonly grpc::Method<global::Blipper.Proto.CircleService.ListCirclesRequest, global::Blipper.Proto.CircleService.ListCirclesResponse> __Method_ListCircles = new grpc::Method<global::Blipper.Proto.CircleService.ListCirclesRequest, global::Blipper.Proto.CircleService.ListCirclesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListCircles",
@@ -113,15 +113,15 @@ namespace Blipper.Circle.V1 {
         __Marshaller_blipper_circle_v1_ListCirclesResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Blipper.Circle.V1.UpdateCircleRequest, global::Blipper.Circle.V1.Circle> __Method_UpdateCircle = new grpc::Method<global::Blipper.Circle.V1.UpdateCircleRequest, global::Blipper.Circle.V1.Circle>(
+    static readonly grpc::Method<global::Blipper.Proto.CircleService.UpdateCircleRequest, global::Blipper.Proto.Shared.Circle> __Method_UpdateCircle = new grpc::Method<global::Blipper.Proto.CircleService.UpdateCircleRequest, global::Blipper.Proto.Shared.Circle>(
         grpc::MethodType.Unary,
         __ServiceName,
         "UpdateCircle",
         __Marshaller_blipper_circle_v1_UpdateCircleRequest,
-        __Marshaller_blipper_circle_v1_Circle);
+        __Marshaller_blipper_shared_v1_Circle);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Blipper.Circle.V1.DeleteCircleRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteCircle = new grpc::Method<global::Blipper.Circle.V1.DeleteCircleRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+    static readonly grpc::Method<global::Blipper.Proto.CircleService.DeleteCircleRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteCircle = new grpc::Method<global::Blipper.Proto.CircleService.DeleteCircleRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DeleteCircle",
@@ -129,7 +129,7 @@ namespace Blipper.Circle.V1 {
         __Marshaller_google_protobuf_Empty);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Blipper.Circle.V1.JoinCircleRequest, global::Blipper.Shared.V1.MembershipInfo> __Method_JoinCircle = new grpc::Method<global::Blipper.Circle.V1.JoinCircleRequest, global::Blipper.Shared.V1.MembershipInfo>(
+    static readonly grpc::Method<global::Blipper.Proto.CircleService.JoinCircleRequest, global::Blipper.Proto.Shared.MembershipInfo> __Method_JoinCircle = new grpc::Method<global::Blipper.Proto.CircleService.JoinCircleRequest, global::Blipper.Proto.Shared.MembershipInfo>(
         grpc::MethodType.Unary,
         __ServiceName,
         "JoinCircle",
@@ -137,7 +137,7 @@ namespace Blipper.Circle.V1 {
         __Marshaller_blipper_shared_v1_MembershipInfo);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Blipper.Circle.V1.LeaveCircleRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_LeaveCircle = new grpc::Method<global::Blipper.Circle.V1.LeaveCircleRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+    static readonly grpc::Method<global::Blipper.Proto.CircleService.LeaveCircleRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_LeaveCircle = new grpc::Method<global::Blipper.Proto.CircleService.LeaveCircleRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
         "LeaveCircle",
@@ -145,7 +145,7 @@ namespace Blipper.Circle.V1 {
         __Marshaller_google_protobuf_Empty);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Blipper.Circle.V1.GetUserCirclesRequest, global::Blipper.Circle.V1.GetUserCirclesResponse> __Method_GetUserCircles = new grpc::Method<global::Blipper.Circle.V1.GetUserCirclesRequest, global::Blipper.Circle.V1.GetUserCirclesResponse>(
+    static readonly grpc::Method<global::Blipper.Proto.CircleService.GetUserCirclesRequest, global::Blipper.Proto.CircleService.GetUserCirclesResponse> __Method_GetUserCircles = new grpc::Method<global::Blipper.Proto.CircleService.GetUserCirclesRequest, global::Blipper.Proto.CircleService.GetUserCirclesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetUserCircles",
@@ -153,7 +153,7 @@ namespace Blipper.Circle.V1 {
         __Marshaller_blipper_circle_v1_GetUserCirclesResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Blipper.Circle.V1.GetCircleMembersRequest, global::Blipper.Circle.V1.GetCircleMembersResponse> __Method_GetCircleMembers = new grpc::Method<global::Blipper.Circle.V1.GetCircleMembersRequest, global::Blipper.Circle.V1.GetCircleMembersResponse>(
+    static readonly grpc::Method<global::Blipper.Proto.CircleService.GetCircleMembersRequest, global::Blipper.Proto.CircleService.GetCircleMembersResponse> __Method_GetCircleMembers = new grpc::Method<global::Blipper.Proto.CircleService.GetCircleMembersRequest, global::Blipper.Proto.CircleService.GetCircleMembersResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetCircleMembers",
@@ -161,7 +161,7 @@ namespace Blipper.Circle.V1 {
         __Marshaller_blipper_circle_v1_GetCircleMembersResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Blipper.Circle.V1.UpdateMemberRoleRequest, global::Blipper.Shared.V1.MembershipInfo> __Method_UpdateMemberRole = new grpc::Method<global::Blipper.Circle.V1.UpdateMemberRoleRequest, global::Blipper.Shared.V1.MembershipInfo>(
+    static readonly grpc::Method<global::Blipper.Proto.CircleService.UpdateMemberRoleRequest, global::Blipper.Proto.Shared.MembershipInfo> __Method_UpdateMemberRole = new grpc::Method<global::Blipper.Proto.CircleService.UpdateMemberRoleRequest, global::Blipper.Proto.Shared.MembershipInfo>(
         grpc::MethodType.Unary,
         __ServiceName,
         "UpdateMemberRole",
@@ -169,7 +169,7 @@ namespace Blipper.Circle.V1 {
         __Marshaller_blipper_shared_v1_MembershipInfo);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Blipper.Circle.V1.GetMembershipRequest, global::Blipper.Shared.V1.MembershipInfo> __Method_GetMembership = new grpc::Method<global::Blipper.Circle.V1.GetMembershipRequest, global::Blipper.Shared.V1.MembershipInfo>(
+    static readonly grpc::Method<global::Blipper.Proto.CircleService.GetMembershipRequest, global::Blipper.Proto.Shared.MembershipInfo> __Method_GetMembership = new grpc::Method<global::Blipper.Proto.CircleService.GetMembershipRequest, global::Blipper.Proto.Shared.MembershipInfo>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetMembership",
@@ -177,7 +177,7 @@ namespace Blipper.Circle.V1 {
         __Marshaller_blipper_shared_v1_MembershipInfo);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Blipper.Circle.V1.ListJoinRequestsRequest, global::Blipper.Circle.V1.ListJoinRequestsResponse> __Method_ListJoinRequests = new grpc::Method<global::Blipper.Circle.V1.ListJoinRequestsRequest, global::Blipper.Circle.V1.ListJoinRequestsResponse>(
+    static readonly grpc::Method<global::Blipper.Proto.CircleService.ListJoinRequestsRequest, global::Blipper.Proto.CircleService.ListJoinRequestsResponse> __Method_ListJoinRequests = new grpc::Method<global::Blipper.Proto.CircleService.ListJoinRequestsRequest, global::Blipper.Proto.CircleService.ListJoinRequestsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListJoinRequests",
@@ -185,7 +185,7 @@ namespace Blipper.Circle.V1 {
         __Marshaller_blipper_circle_v1_ListJoinRequestsResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Blipper.Circle.V1.ApproveJoinRequestRequest, global::Blipper.Shared.V1.MembershipInfo> __Method_ApproveJoinRequest = new grpc::Method<global::Blipper.Circle.V1.ApproveJoinRequestRequest, global::Blipper.Shared.V1.MembershipInfo>(
+    static readonly grpc::Method<global::Blipper.Proto.CircleService.ApproveJoinRequestRequest, global::Blipper.Proto.Shared.MembershipInfo> __Method_ApproveJoinRequest = new grpc::Method<global::Blipper.Proto.CircleService.ApproveJoinRequestRequest, global::Blipper.Proto.Shared.MembershipInfo>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ApproveJoinRequest",
@@ -193,7 +193,7 @@ namespace Blipper.Circle.V1 {
         __Marshaller_blipper_shared_v1_MembershipInfo);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Blipper.Circle.V1.RejectJoinRequestRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_RejectJoinRequest = new grpc::Method<global::Blipper.Circle.V1.RejectJoinRequestRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+    static readonly grpc::Method<global::Blipper.Proto.CircleService.RejectJoinRequestRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_RejectJoinRequest = new grpc::Method<global::Blipper.Proto.CircleService.RejectJoinRequestRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
         "RejectJoinRequest",
@@ -203,12 +203,12 @@ namespace Blipper.Circle.V1 {
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
-      get { return global::Blipper.Circle.V1.CircleReflection.Descriptor.Services[0]; }
+      get { return global::Blipper.Proto.CircleService.CircleReflection.Descriptor.Services[0]; }
     }
 
-    /// <summary>Base class for server-side implementations of CircleService</summary>
-    [grpc::BindServiceMethod(typeof(CircleService), "BindService")]
-    public abstract partial class CircleServiceBase
+    /// <summary>Base class for server-side implementations of CircleProtoService</summary>
+    [grpc::BindServiceMethod(typeof(CircleProtoService), "BindService")]
+    public abstract partial class CircleProtoServiceBase
     {
       /// <summary>
       /// Circle management
@@ -217,31 +217,31 @@ namespace Blipper.Circle.V1 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Blipper.Circle.V1.Circle> CreateCircle(global::Blipper.Circle.V1.CreateCircleRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Blipper.Proto.Shared.Circle> CreateCircle(global::Blipper.Proto.CircleService.CreateCircleRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Blipper.Circle.V1.Circle> GetCircle(global::Blipper.Circle.V1.GetCircleRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Blipper.Proto.Shared.Circle> GetCircle(global::Blipper.Proto.CircleService.GetCircleRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Blipper.Circle.V1.ListCirclesResponse> ListCircles(global::Blipper.Circle.V1.ListCirclesRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Blipper.Proto.CircleService.ListCirclesResponse> ListCircles(global::Blipper.Proto.CircleService.ListCirclesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Blipper.Circle.V1.Circle> UpdateCircle(global::Blipper.Circle.V1.UpdateCircleRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Blipper.Proto.Shared.Circle> UpdateCircle(global::Blipper.Proto.CircleService.UpdateCircleRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteCircle(global::Blipper.Circle.V1.DeleteCircleRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteCircle(global::Blipper.Proto.CircleService.DeleteCircleRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -253,91 +253,91 @@ namespace Blipper.Circle.V1 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Blipper.Shared.V1.MembershipInfo> JoinCircle(global::Blipper.Circle.V1.JoinCircleRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Blipper.Proto.Shared.MembershipInfo> JoinCircle(global::Blipper.Proto.CircleService.JoinCircleRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> LeaveCircle(global::Blipper.Circle.V1.LeaveCircleRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> LeaveCircle(global::Blipper.Proto.CircleService.LeaveCircleRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Blipper.Circle.V1.GetUserCirclesResponse> GetUserCircles(global::Blipper.Circle.V1.GetUserCirclesRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Blipper.Proto.CircleService.GetUserCirclesResponse> GetUserCircles(global::Blipper.Proto.CircleService.GetUserCirclesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Blipper.Circle.V1.GetCircleMembersResponse> GetCircleMembers(global::Blipper.Circle.V1.GetCircleMembersRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Blipper.Proto.CircleService.GetCircleMembersResponse> GetCircleMembers(global::Blipper.Proto.CircleService.GetCircleMembersRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Blipper.Shared.V1.MembershipInfo> UpdateMemberRole(global::Blipper.Circle.V1.UpdateMemberRoleRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Blipper.Proto.Shared.MembershipInfo> UpdateMemberRole(global::Blipper.Proto.CircleService.UpdateMemberRoleRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Blipper.Shared.V1.MembershipInfo> GetMembership(global::Blipper.Circle.V1.GetMembershipRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Blipper.Proto.Shared.MembershipInfo> GetMembership(global::Blipper.Proto.CircleService.GetMembershipRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
-      /// Join requests (for private circles)
+      /// Join requests
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Blipper.Circle.V1.ListJoinRequestsResponse> ListJoinRequests(global::Blipper.Circle.V1.ListJoinRequestsRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Blipper.Proto.CircleService.ListJoinRequestsResponse> ListJoinRequests(global::Blipper.Proto.CircleService.ListJoinRequestsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Blipper.Shared.V1.MembershipInfo> ApproveJoinRequest(global::Blipper.Circle.V1.ApproveJoinRequestRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Blipper.Proto.Shared.MembershipInfo> ApproveJoinRequest(global::Blipper.Proto.CircleService.ApproveJoinRequestRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> RejectJoinRequest(global::Blipper.Circle.V1.RejectJoinRequestRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> RejectJoinRequest(global::Blipper.Proto.CircleService.RejectJoinRequestRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
     }
 
-    /// <summary>Client for CircleService</summary>
-    public partial class CircleServiceClient : grpc::ClientBase<CircleServiceClient>
+    /// <summary>Client for CircleProtoService</summary>
+    public partial class CircleProtoServiceClient : grpc::ClientBase<CircleProtoServiceClient>
     {
-      /// <summary>Creates a new client for CircleService</summary>
+      /// <summary>Creates a new client for CircleProtoService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public CircleServiceClient(grpc::ChannelBase channel) : base(channel)
+      public CircleProtoServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
-      /// <summary>Creates a new client for CircleService that uses a custom <c>CallInvoker</c>.</summary>
+      /// <summary>Creates a new client for CircleProtoService that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public CircleServiceClient(grpc::CallInvoker callInvoker) : base(callInvoker)
+      public CircleProtoServiceClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      protected CircleServiceClient() : base()
+      protected CircleProtoServiceClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      protected CircleServiceClient(ClientBaseConfiguration configuration) : base(configuration)
+      protected CircleProtoServiceClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
 
@@ -350,7 +350,7 @@ namespace Blipper.Circle.V1 {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Blipper.Circle.V1.Circle CreateCircle(global::Blipper.Circle.V1.CreateCircleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Blipper.Proto.Shared.Circle CreateCircle(global::Blipper.Proto.CircleService.CreateCircleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateCircle(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -361,7 +361,7 @@ namespace Blipper.Circle.V1 {
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Blipper.Circle.V1.Circle CreateCircle(global::Blipper.Circle.V1.CreateCircleRequest request, grpc::CallOptions options)
+      public virtual global::Blipper.Proto.Shared.Circle CreateCircle(global::Blipper.Proto.CircleService.CreateCircleRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateCircle, null, options, request);
       }
@@ -374,7 +374,7 @@ namespace Blipper.Circle.V1 {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Blipper.Circle.V1.Circle> CreateCircleAsync(global::Blipper.Circle.V1.CreateCircleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Blipper.Proto.Shared.Circle> CreateCircleAsync(global::Blipper.Proto.CircleService.CreateCircleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateCircleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -385,87 +385,87 @@ namespace Blipper.Circle.V1 {
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Blipper.Circle.V1.Circle> CreateCircleAsync(global::Blipper.Circle.V1.CreateCircleRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Blipper.Proto.Shared.Circle> CreateCircleAsync(global::Blipper.Proto.CircleService.CreateCircleRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateCircle, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Blipper.Circle.V1.Circle GetCircle(global::Blipper.Circle.V1.GetCircleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Blipper.Proto.Shared.Circle GetCircle(global::Blipper.Proto.CircleService.GetCircleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetCircle(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Blipper.Circle.V1.Circle GetCircle(global::Blipper.Circle.V1.GetCircleRequest request, grpc::CallOptions options)
+      public virtual global::Blipper.Proto.Shared.Circle GetCircle(global::Blipper.Proto.CircleService.GetCircleRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetCircle, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Blipper.Circle.V1.Circle> GetCircleAsync(global::Blipper.Circle.V1.GetCircleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Blipper.Proto.Shared.Circle> GetCircleAsync(global::Blipper.Proto.CircleService.GetCircleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetCircleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Blipper.Circle.V1.Circle> GetCircleAsync(global::Blipper.Circle.V1.GetCircleRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Blipper.Proto.Shared.Circle> GetCircleAsync(global::Blipper.Proto.CircleService.GetCircleRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetCircle, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Blipper.Circle.V1.ListCirclesResponse ListCircles(global::Blipper.Circle.V1.ListCirclesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Blipper.Proto.CircleService.ListCirclesResponse ListCircles(global::Blipper.Proto.CircleService.ListCirclesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListCircles(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Blipper.Circle.V1.ListCirclesResponse ListCircles(global::Blipper.Circle.V1.ListCirclesRequest request, grpc::CallOptions options)
+      public virtual global::Blipper.Proto.CircleService.ListCirclesResponse ListCircles(global::Blipper.Proto.CircleService.ListCirclesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListCircles, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Blipper.Circle.V1.ListCirclesResponse> ListCirclesAsync(global::Blipper.Circle.V1.ListCirclesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Blipper.Proto.CircleService.ListCirclesResponse> ListCirclesAsync(global::Blipper.Proto.CircleService.ListCirclesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListCirclesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Blipper.Circle.V1.ListCirclesResponse> ListCirclesAsync(global::Blipper.Circle.V1.ListCirclesRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Blipper.Proto.CircleService.ListCirclesResponse> ListCirclesAsync(global::Blipper.Proto.CircleService.ListCirclesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListCircles, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Blipper.Circle.V1.Circle UpdateCircle(global::Blipper.Circle.V1.UpdateCircleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Blipper.Proto.Shared.Circle UpdateCircle(global::Blipper.Proto.CircleService.UpdateCircleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateCircle(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Blipper.Circle.V1.Circle UpdateCircle(global::Blipper.Circle.V1.UpdateCircleRequest request, grpc::CallOptions options)
+      public virtual global::Blipper.Proto.Shared.Circle UpdateCircle(global::Blipper.Proto.CircleService.UpdateCircleRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateCircle, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Blipper.Circle.V1.Circle> UpdateCircleAsync(global::Blipper.Circle.V1.UpdateCircleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Blipper.Proto.Shared.Circle> UpdateCircleAsync(global::Blipper.Proto.CircleService.UpdateCircleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateCircleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Blipper.Circle.V1.Circle> UpdateCircleAsync(global::Blipper.Circle.V1.UpdateCircleRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Blipper.Proto.Shared.Circle> UpdateCircleAsync(global::Blipper.Proto.CircleService.UpdateCircleRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateCircle, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteCircle(global::Blipper.Circle.V1.DeleteCircleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteCircle(global::Blipper.Proto.CircleService.DeleteCircleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteCircle(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteCircle(global::Blipper.Circle.V1.DeleteCircleRequest request, grpc::CallOptions options)
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteCircle(global::Blipper.Proto.CircleService.DeleteCircleRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteCircle, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteCircleAsync(global::Blipper.Circle.V1.DeleteCircleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteCircleAsync(global::Blipper.Proto.CircleService.DeleteCircleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteCircleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteCircleAsync(global::Blipper.Circle.V1.DeleteCircleRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteCircleAsync(global::Blipper.Proto.CircleService.DeleteCircleRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteCircle, null, options, request);
       }
@@ -478,7 +478,7 @@ namespace Blipper.Circle.V1 {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Blipper.Shared.V1.MembershipInfo JoinCircle(global::Blipper.Circle.V1.JoinCircleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Blipper.Proto.Shared.MembershipInfo JoinCircle(global::Blipper.Proto.CircleService.JoinCircleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return JoinCircle(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -489,7 +489,7 @@ namespace Blipper.Circle.V1 {
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Blipper.Shared.V1.MembershipInfo JoinCircle(global::Blipper.Circle.V1.JoinCircleRequest request, grpc::CallOptions options)
+      public virtual global::Blipper.Proto.Shared.MembershipInfo JoinCircle(global::Blipper.Proto.CircleService.JoinCircleRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_JoinCircle, null, options, request);
       }
@@ -502,7 +502,7 @@ namespace Blipper.Circle.V1 {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Blipper.Shared.V1.MembershipInfo> JoinCircleAsync(global::Blipper.Circle.V1.JoinCircleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Blipper.Proto.Shared.MembershipInfo> JoinCircleAsync(global::Blipper.Proto.CircleService.JoinCircleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return JoinCircleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -513,112 +513,112 @@ namespace Blipper.Circle.V1 {
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Blipper.Shared.V1.MembershipInfo> JoinCircleAsync(global::Blipper.Circle.V1.JoinCircleRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Blipper.Proto.Shared.MembershipInfo> JoinCircleAsync(global::Blipper.Proto.CircleService.JoinCircleRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_JoinCircle, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty LeaveCircle(global::Blipper.Circle.V1.LeaveCircleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty LeaveCircle(global::Blipper.Proto.CircleService.LeaveCircleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return LeaveCircle(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty LeaveCircle(global::Blipper.Circle.V1.LeaveCircleRequest request, grpc::CallOptions options)
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty LeaveCircle(global::Blipper.Proto.CircleService.LeaveCircleRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_LeaveCircle, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> LeaveCircleAsync(global::Blipper.Circle.V1.LeaveCircleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> LeaveCircleAsync(global::Blipper.Proto.CircleService.LeaveCircleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return LeaveCircleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> LeaveCircleAsync(global::Blipper.Circle.V1.LeaveCircleRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> LeaveCircleAsync(global::Blipper.Proto.CircleService.LeaveCircleRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_LeaveCircle, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Blipper.Circle.V1.GetUserCirclesResponse GetUserCircles(global::Blipper.Circle.V1.GetUserCirclesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Blipper.Proto.CircleService.GetUserCirclesResponse GetUserCircles(global::Blipper.Proto.CircleService.GetUserCirclesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetUserCircles(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Blipper.Circle.V1.GetUserCirclesResponse GetUserCircles(global::Blipper.Circle.V1.GetUserCirclesRequest request, grpc::CallOptions options)
+      public virtual global::Blipper.Proto.CircleService.GetUserCirclesResponse GetUserCircles(global::Blipper.Proto.CircleService.GetUserCirclesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetUserCircles, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Blipper.Circle.V1.GetUserCirclesResponse> GetUserCirclesAsync(global::Blipper.Circle.V1.GetUserCirclesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Blipper.Proto.CircleService.GetUserCirclesResponse> GetUserCirclesAsync(global::Blipper.Proto.CircleService.GetUserCirclesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetUserCirclesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Blipper.Circle.V1.GetUserCirclesResponse> GetUserCirclesAsync(global::Blipper.Circle.V1.GetUserCirclesRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Blipper.Proto.CircleService.GetUserCirclesResponse> GetUserCirclesAsync(global::Blipper.Proto.CircleService.GetUserCirclesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetUserCircles, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Blipper.Circle.V1.GetCircleMembersResponse GetCircleMembers(global::Blipper.Circle.V1.GetCircleMembersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Blipper.Proto.CircleService.GetCircleMembersResponse GetCircleMembers(global::Blipper.Proto.CircleService.GetCircleMembersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetCircleMembers(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Blipper.Circle.V1.GetCircleMembersResponse GetCircleMembers(global::Blipper.Circle.V1.GetCircleMembersRequest request, grpc::CallOptions options)
+      public virtual global::Blipper.Proto.CircleService.GetCircleMembersResponse GetCircleMembers(global::Blipper.Proto.CircleService.GetCircleMembersRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetCircleMembers, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Blipper.Circle.V1.GetCircleMembersResponse> GetCircleMembersAsync(global::Blipper.Circle.V1.GetCircleMembersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Blipper.Proto.CircleService.GetCircleMembersResponse> GetCircleMembersAsync(global::Blipper.Proto.CircleService.GetCircleMembersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetCircleMembersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Blipper.Circle.V1.GetCircleMembersResponse> GetCircleMembersAsync(global::Blipper.Circle.V1.GetCircleMembersRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Blipper.Proto.CircleService.GetCircleMembersResponse> GetCircleMembersAsync(global::Blipper.Proto.CircleService.GetCircleMembersRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetCircleMembers, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Blipper.Shared.V1.MembershipInfo UpdateMemberRole(global::Blipper.Circle.V1.UpdateMemberRoleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Blipper.Proto.Shared.MembershipInfo UpdateMemberRole(global::Blipper.Proto.CircleService.UpdateMemberRoleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateMemberRole(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Blipper.Shared.V1.MembershipInfo UpdateMemberRole(global::Blipper.Circle.V1.UpdateMemberRoleRequest request, grpc::CallOptions options)
+      public virtual global::Blipper.Proto.Shared.MembershipInfo UpdateMemberRole(global::Blipper.Proto.CircleService.UpdateMemberRoleRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateMemberRole, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Blipper.Shared.V1.MembershipInfo> UpdateMemberRoleAsync(global::Blipper.Circle.V1.UpdateMemberRoleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Blipper.Proto.Shared.MembershipInfo> UpdateMemberRoleAsync(global::Blipper.Proto.CircleService.UpdateMemberRoleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateMemberRoleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Blipper.Shared.V1.MembershipInfo> UpdateMemberRoleAsync(global::Blipper.Circle.V1.UpdateMemberRoleRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Blipper.Proto.Shared.MembershipInfo> UpdateMemberRoleAsync(global::Blipper.Proto.CircleService.UpdateMemberRoleRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateMemberRole, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Blipper.Shared.V1.MembershipInfo GetMembership(global::Blipper.Circle.V1.GetMembershipRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Blipper.Proto.Shared.MembershipInfo GetMembership(global::Blipper.Proto.CircleService.GetMembershipRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetMembership(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Blipper.Shared.V1.MembershipInfo GetMembership(global::Blipper.Circle.V1.GetMembershipRequest request, grpc::CallOptions options)
+      public virtual global::Blipper.Proto.Shared.MembershipInfo GetMembership(global::Blipper.Proto.CircleService.GetMembershipRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetMembership, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Blipper.Shared.V1.MembershipInfo> GetMembershipAsync(global::Blipper.Circle.V1.GetMembershipRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Blipper.Proto.Shared.MembershipInfo> GetMembershipAsync(global::Blipper.Proto.CircleService.GetMembershipRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetMembershipAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Blipper.Shared.V1.MembershipInfo> GetMembershipAsync(global::Blipper.Circle.V1.GetMembershipRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Blipper.Proto.Shared.MembershipInfo> GetMembershipAsync(global::Blipper.Proto.CircleService.GetMembershipRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetMembership, null, options, request);
       }
       /// <summary>
-      /// Join requests (for private circles)
+      /// Join requests
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -626,23 +626,23 @@ namespace Blipper.Circle.V1 {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Blipper.Circle.V1.ListJoinRequestsResponse ListJoinRequests(global::Blipper.Circle.V1.ListJoinRequestsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Blipper.Proto.CircleService.ListJoinRequestsResponse ListJoinRequests(global::Blipper.Proto.CircleService.ListJoinRequestsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListJoinRequests(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Join requests (for private circles)
+      /// Join requests
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Blipper.Circle.V1.ListJoinRequestsResponse ListJoinRequests(global::Blipper.Circle.V1.ListJoinRequestsRequest request, grpc::CallOptions options)
+      public virtual global::Blipper.Proto.CircleService.ListJoinRequestsResponse ListJoinRequests(global::Blipper.Proto.CircleService.ListJoinRequestsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListJoinRequests, null, options, request);
       }
       /// <summary>
-      /// Join requests (for private circles)
+      /// Join requests
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -650,73 +650,73 @@ namespace Blipper.Circle.V1 {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Blipper.Circle.V1.ListJoinRequestsResponse> ListJoinRequestsAsync(global::Blipper.Circle.V1.ListJoinRequestsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Blipper.Proto.CircleService.ListJoinRequestsResponse> ListJoinRequestsAsync(global::Blipper.Proto.CircleService.ListJoinRequestsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListJoinRequestsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Join requests (for private circles)
+      /// Join requests
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Blipper.Circle.V1.ListJoinRequestsResponse> ListJoinRequestsAsync(global::Blipper.Circle.V1.ListJoinRequestsRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Blipper.Proto.CircleService.ListJoinRequestsResponse> ListJoinRequestsAsync(global::Blipper.Proto.CircleService.ListJoinRequestsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListJoinRequests, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Blipper.Shared.V1.MembershipInfo ApproveJoinRequest(global::Blipper.Circle.V1.ApproveJoinRequestRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Blipper.Proto.Shared.MembershipInfo ApproveJoinRequest(global::Blipper.Proto.CircleService.ApproveJoinRequestRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ApproveJoinRequest(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Blipper.Shared.V1.MembershipInfo ApproveJoinRequest(global::Blipper.Circle.V1.ApproveJoinRequestRequest request, grpc::CallOptions options)
+      public virtual global::Blipper.Proto.Shared.MembershipInfo ApproveJoinRequest(global::Blipper.Proto.CircleService.ApproveJoinRequestRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ApproveJoinRequest, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Blipper.Shared.V1.MembershipInfo> ApproveJoinRequestAsync(global::Blipper.Circle.V1.ApproveJoinRequestRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Blipper.Proto.Shared.MembershipInfo> ApproveJoinRequestAsync(global::Blipper.Proto.CircleService.ApproveJoinRequestRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ApproveJoinRequestAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Blipper.Shared.V1.MembershipInfo> ApproveJoinRequestAsync(global::Blipper.Circle.V1.ApproveJoinRequestRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Blipper.Proto.Shared.MembershipInfo> ApproveJoinRequestAsync(global::Blipper.Proto.CircleService.ApproveJoinRequestRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ApproveJoinRequest, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty RejectJoinRequest(global::Blipper.Circle.V1.RejectJoinRequestRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty RejectJoinRequest(global::Blipper.Proto.CircleService.RejectJoinRequestRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RejectJoinRequest(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty RejectJoinRequest(global::Blipper.Circle.V1.RejectJoinRequestRequest request, grpc::CallOptions options)
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty RejectJoinRequest(global::Blipper.Proto.CircleService.RejectJoinRequestRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_RejectJoinRequest, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> RejectJoinRequestAsync(global::Blipper.Circle.V1.RejectJoinRequestRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> RejectJoinRequestAsync(global::Blipper.Proto.CircleService.RejectJoinRequestRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RejectJoinRequestAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> RejectJoinRequestAsync(global::Blipper.Circle.V1.RejectJoinRequestRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> RejectJoinRequestAsync(global::Blipper.Proto.CircleService.RejectJoinRequestRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_RejectJoinRequest, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      protected override CircleServiceClient NewInstance(ClientBaseConfiguration configuration)
+      protected override CircleProtoServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
-        return new CircleServiceClient(configuration);
+        return new CircleProtoServiceClient(configuration);
       }
     }
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    public static grpc::ServerServiceDefinition BindService(CircleServiceBase serviceImpl)
+    public static grpc::ServerServiceDefinition BindService(CircleProtoServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_CreateCircle, serviceImpl.CreateCircle)
@@ -740,22 +740,22 @@ namespace Blipper.Circle.V1 {
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    public static void BindService(grpc::ServiceBinderBase serviceBinder, CircleServiceBase serviceImpl)
+    public static void BindService(grpc::ServiceBinderBase serviceBinder, CircleProtoServiceBase serviceImpl)
     {
-      serviceBinder.AddMethod(__Method_CreateCircle, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Blipper.Circle.V1.CreateCircleRequest, global::Blipper.Circle.V1.Circle>(serviceImpl.CreateCircle));
-      serviceBinder.AddMethod(__Method_GetCircle, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Blipper.Circle.V1.GetCircleRequest, global::Blipper.Circle.V1.Circle>(serviceImpl.GetCircle));
-      serviceBinder.AddMethod(__Method_ListCircles, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Blipper.Circle.V1.ListCirclesRequest, global::Blipper.Circle.V1.ListCirclesResponse>(serviceImpl.ListCircles));
-      serviceBinder.AddMethod(__Method_UpdateCircle, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Blipper.Circle.V1.UpdateCircleRequest, global::Blipper.Circle.V1.Circle>(serviceImpl.UpdateCircle));
-      serviceBinder.AddMethod(__Method_DeleteCircle, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Blipper.Circle.V1.DeleteCircleRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteCircle));
-      serviceBinder.AddMethod(__Method_JoinCircle, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Blipper.Circle.V1.JoinCircleRequest, global::Blipper.Shared.V1.MembershipInfo>(serviceImpl.JoinCircle));
-      serviceBinder.AddMethod(__Method_LeaveCircle, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Blipper.Circle.V1.LeaveCircleRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.LeaveCircle));
-      serviceBinder.AddMethod(__Method_GetUserCircles, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Blipper.Circle.V1.GetUserCirclesRequest, global::Blipper.Circle.V1.GetUserCirclesResponse>(serviceImpl.GetUserCircles));
-      serviceBinder.AddMethod(__Method_GetCircleMembers, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Blipper.Circle.V1.GetCircleMembersRequest, global::Blipper.Circle.V1.GetCircleMembersResponse>(serviceImpl.GetCircleMembers));
-      serviceBinder.AddMethod(__Method_UpdateMemberRole, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Blipper.Circle.V1.UpdateMemberRoleRequest, global::Blipper.Shared.V1.MembershipInfo>(serviceImpl.UpdateMemberRole));
-      serviceBinder.AddMethod(__Method_GetMembership, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Blipper.Circle.V1.GetMembershipRequest, global::Blipper.Shared.V1.MembershipInfo>(serviceImpl.GetMembership));
-      serviceBinder.AddMethod(__Method_ListJoinRequests, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Blipper.Circle.V1.ListJoinRequestsRequest, global::Blipper.Circle.V1.ListJoinRequestsResponse>(serviceImpl.ListJoinRequests));
-      serviceBinder.AddMethod(__Method_ApproveJoinRequest, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Blipper.Circle.V1.ApproveJoinRequestRequest, global::Blipper.Shared.V1.MembershipInfo>(serviceImpl.ApproveJoinRequest));
-      serviceBinder.AddMethod(__Method_RejectJoinRequest, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Blipper.Circle.V1.RejectJoinRequestRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.RejectJoinRequest));
+      serviceBinder.AddMethod(__Method_CreateCircle, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Blipper.Proto.CircleService.CreateCircleRequest, global::Blipper.Proto.Shared.Circle>(serviceImpl.CreateCircle));
+      serviceBinder.AddMethod(__Method_GetCircle, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Blipper.Proto.CircleService.GetCircleRequest, global::Blipper.Proto.Shared.Circle>(serviceImpl.GetCircle));
+      serviceBinder.AddMethod(__Method_ListCircles, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Blipper.Proto.CircleService.ListCirclesRequest, global::Blipper.Proto.CircleService.ListCirclesResponse>(serviceImpl.ListCircles));
+      serviceBinder.AddMethod(__Method_UpdateCircle, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Blipper.Proto.CircleService.UpdateCircleRequest, global::Blipper.Proto.Shared.Circle>(serviceImpl.UpdateCircle));
+      serviceBinder.AddMethod(__Method_DeleteCircle, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Blipper.Proto.CircleService.DeleteCircleRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteCircle));
+      serviceBinder.AddMethod(__Method_JoinCircle, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Blipper.Proto.CircleService.JoinCircleRequest, global::Blipper.Proto.Shared.MembershipInfo>(serviceImpl.JoinCircle));
+      serviceBinder.AddMethod(__Method_LeaveCircle, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Blipper.Proto.CircleService.LeaveCircleRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.LeaveCircle));
+      serviceBinder.AddMethod(__Method_GetUserCircles, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Blipper.Proto.CircleService.GetUserCirclesRequest, global::Blipper.Proto.CircleService.GetUserCirclesResponse>(serviceImpl.GetUserCircles));
+      serviceBinder.AddMethod(__Method_GetCircleMembers, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Blipper.Proto.CircleService.GetCircleMembersRequest, global::Blipper.Proto.CircleService.GetCircleMembersResponse>(serviceImpl.GetCircleMembers));
+      serviceBinder.AddMethod(__Method_UpdateMemberRole, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Blipper.Proto.CircleService.UpdateMemberRoleRequest, global::Blipper.Proto.Shared.MembershipInfo>(serviceImpl.UpdateMemberRole));
+      serviceBinder.AddMethod(__Method_GetMembership, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Blipper.Proto.CircleService.GetMembershipRequest, global::Blipper.Proto.Shared.MembershipInfo>(serviceImpl.GetMembership));
+      serviceBinder.AddMethod(__Method_ListJoinRequests, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Blipper.Proto.CircleService.ListJoinRequestsRequest, global::Blipper.Proto.CircleService.ListJoinRequestsResponse>(serviceImpl.ListJoinRequests));
+      serviceBinder.AddMethod(__Method_ApproveJoinRequest, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Blipper.Proto.CircleService.ApproveJoinRequestRequest, global::Blipper.Proto.Shared.MembershipInfo>(serviceImpl.ApproveJoinRequest));
+      serviceBinder.AddMethod(__Method_RejectJoinRequest, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Blipper.Proto.CircleService.RejectJoinRequestRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.RejectJoinRequest));
     }
 
   }

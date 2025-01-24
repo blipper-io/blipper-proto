@@ -51,95 +51,65 @@ namespace Blipper.Proto.UserService {
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Blipper.Proto.UserService.RegisterRequest> __Marshaller_blipper_v1_RegisterRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Proto.UserService.RegisterRequest.Parser));
+    static readonly grpc::Marshaller<global::Blipper.Proto.UserService.CreateUserRequest> __Marshaller_blipper_v1_CreateUserRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Proto.UserService.CreateUserRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Blipper.Proto.UserService.RegisterResponse> __Marshaller_blipper_v1_RegisterResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Proto.UserService.RegisterResponse.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Blipper.Proto.UserService.LoginRequest> __Marshaller_blipper_v1_LoginRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Proto.UserService.LoginRequest.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Blipper.Proto.UserService.LoginResponse> __Marshaller_blipper_v1_LoginResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Proto.UserService.LoginResponse.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Blipper.Proto.UserService.LogoutRequest> __Marshaller_blipper_v1_LogoutRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Proto.UserService.LogoutRequest.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Blipper.Proto.UserService.RefreshTokenRequest> __Marshaller_blipper_v1_RefreshTokenRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Proto.UserService.RefreshTokenRequest.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Blipper.Proto.UserService.RefreshTokenResponse> __Marshaller_blipper_v1_RefreshTokenResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Proto.UserService.RefreshTokenResponse.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Blipper.Proto.UserService.ValidateTokenRequest> __Marshaller_blipper_v1_ValidateTokenRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Proto.UserService.ValidateTokenRequest.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Blipper.Proto.UserService.ValidateTokenResponse> __Marshaller_blipper_v1_ValidateTokenResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Proto.UserService.ValidateTokenResponse.Parser));
+    static readonly grpc::Marshaller<global::Blipper.Proto.Shared.User> __Marshaller_blipper_shared_v1_User = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Proto.Shared.User.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Blipper.Proto.UserService.GetUserRequest> __Marshaller_blipper_v1_GetUserRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Proto.UserService.GetUserRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Blipper.Proto.UserService.UserResponse> __Marshaller_blipper_v1_UserResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Proto.UserService.UserResponse.Parser));
+    static readonly grpc::Marshaller<global::Blipper.Proto.UserService.UpdateUserRequest> __Marshaller_blipper_v1_UpdateUserRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Proto.UserService.UpdateUserRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Blipper.Proto.UserService.DeleteUserRequest> __Marshaller_blipper_v1_DeleteUserRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Proto.UserService.DeleteUserRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Blipper.Proto.UserService.UpdateProfileRequest> __Marshaller_blipper_v1_UpdateProfileRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Proto.UserService.UpdateProfileRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Blipper.Proto.UserService.UpdatePasswordRequest> __Marshaller_blipper_v1_UpdatePasswordRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Proto.UserService.UpdatePasswordRequest.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Blipper.Proto.UserService.DeleteAccountRequest> __Marshaller_blipper_v1_DeleteAccountRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Proto.UserService.DeleteAccountRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Blipper.Proto.UserService.SearchUsersRequest> __Marshaller_blipper_v1_SearchUsersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Proto.UserService.SearchUsersRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Blipper.Proto.UserService.SearchUsersResponse> __Marshaller_blipper_v1_SearchUsersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Proto.UserService.SearchUsersResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Blipper.Proto.UserService.RegisterRequest, global::Blipper.Proto.UserService.RegisterResponse> __Method_Register = new grpc::Method<global::Blipper.Proto.UserService.RegisterRequest, global::Blipper.Proto.UserService.RegisterResponse>(
+    static readonly grpc::Method<global::Blipper.Proto.UserService.CreateUserRequest, global::Blipper.Proto.Shared.User> __Method_CreateUser = new grpc::Method<global::Blipper.Proto.UserService.CreateUserRequest, global::Blipper.Proto.Shared.User>(
         grpc::MethodType.Unary,
         __ServiceName,
-        "Register",
-        __Marshaller_blipper_v1_RegisterRequest,
-        __Marshaller_blipper_v1_RegisterResponse);
+        "CreateUser",
+        __Marshaller_blipper_v1_CreateUserRequest,
+        __Marshaller_blipper_shared_v1_User);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Blipper.Proto.UserService.LoginRequest, global::Blipper.Proto.UserService.LoginResponse> __Method_Login = new grpc::Method<global::Blipper.Proto.UserService.LoginRequest, global::Blipper.Proto.UserService.LoginResponse>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "Login",
-        __Marshaller_blipper_v1_LoginRequest,
-        __Marshaller_blipper_v1_LoginResponse);
-
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Blipper.Proto.UserService.LogoutRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_Logout = new grpc::Method<global::Blipper.Proto.UserService.LogoutRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "Logout",
-        __Marshaller_blipper_v1_LogoutRequest,
-        __Marshaller_google_protobuf_Empty);
-
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Blipper.Proto.UserService.RefreshTokenRequest, global::Blipper.Proto.UserService.RefreshTokenResponse> __Method_RefreshToken = new grpc::Method<global::Blipper.Proto.UserService.RefreshTokenRequest, global::Blipper.Proto.UserService.RefreshTokenResponse>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "RefreshToken",
-        __Marshaller_blipper_v1_RefreshTokenRequest,
-        __Marshaller_blipper_v1_RefreshTokenResponse);
-
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Blipper.Proto.UserService.ValidateTokenRequest, global::Blipper.Proto.UserService.ValidateTokenResponse> __Method_ValidateToken = new grpc::Method<global::Blipper.Proto.UserService.ValidateTokenRequest, global::Blipper.Proto.UserService.ValidateTokenResponse>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "ValidateToken",
-        __Marshaller_blipper_v1_ValidateTokenRequest,
-        __Marshaller_blipper_v1_ValidateTokenResponse);
-
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Blipper.Proto.UserService.GetUserRequest, global::Blipper.Proto.UserService.UserResponse> __Method_GetUser = new grpc::Method<global::Blipper.Proto.UserService.GetUserRequest, global::Blipper.Proto.UserService.UserResponse>(
+    static readonly grpc::Method<global::Blipper.Proto.UserService.GetUserRequest, global::Blipper.Proto.Shared.User> __Method_GetUser = new grpc::Method<global::Blipper.Proto.UserService.GetUserRequest, global::Blipper.Proto.Shared.User>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetUser",
         __Marshaller_blipper_v1_GetUserRequest,
-        __Marshaller_blipper_v1_UserResponse);
+        __Marshaller_blipper_shared_v1_User);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Blipper.Proto.UserService.UpdateProfileRequest, global::Blipper.Proto.UserService.UserResponse> __Method_UpdateProfile = new grpc::Method<global::Blipper.Proto.UserService.UpdateProfileRequest, global::Blipper.Proto.UserService.UserResponse>(
+    static readonly grpc::Method<global::Blipper.Proto.UserService.UpdateUserRequest, global::Blipper.Proto.Shared.User> __Method_UpdateUser = new grpc::Method<global::Blipper.Proto.UserService.UpdateUserRequest, global::Blipper.Proto.Shared.User>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateUser",
+        __Marshaller_blipper_v1_UpdateUserRequest,
+        __Marshaller_blipper_shared_v1_User);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Blipper.Proto.UserService.DeleteUserRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteUser = new grpc::Method<global::Blipper.Proto.UserService.DeleteUserRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteUser",
+        __Marshaller_blipper_v1_DeleteUserRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Blipper.Proto.UserService.UpdateProfileRequest, global::Blipper.Proto.Shared.User> __Method_UpdateProfile = new grpc::Method<global::Blipper.Proto.UserService.UpdateProfileRequest, global::Blipper.Proto.Shared.User>(
         grpc::MethodType.Unary,
         __ServiceName,
         "UpdateProfile",
         __Marshaller_blipper_v1_UpdateProfileRequest,
-        __Marshaller_blipper_v1_UserResponse);
+        __Marshaller_blipper_shared_v1_User);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Blipper.Proto.UserService.UpdatePasswordRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_UpdatePassword = new grpc::Method<global::Blipper.Proto.UserService.UpdatePasswordRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
@@ -147,14 +117,6 @@ namespace Blipper.Proto.UserService {
         __ServiceName,
         "UpdatePassword",
         __Marshaller_blipper_v1_UpdatePasswordRequest,
-        __Marshaller_google_protobuf_Empty);
-
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Blipper.Proto.UserService.DeleteAccountRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteAccount = new grpc::Method<global::Blipper.Proto.UserService.DeleteAccountRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "DeleteAccount",
-        __Marshaller_blipper_v1_DeleteAccountRequest,
         __Marshaller_google_protobuf_Empty);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -176,37 +138,31 @@ namespace Blipper.Proto.UserService {
     public abstract partial class UserProtoServiceBase
     {
       /// <summary>
-      /// Authentication
+      /// User management
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Blipper.Proto.UserService.RegisterResponse> Register(global::Blipper.Proto.UserService.RegisterRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Blipper.Proto.Shared.User> CreateUser(global::Blipper.Proto.UserService.CreateUserRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Blipper.Proto.UserService.LoginResponse> Login(global::Blipper.Proto.UserService.LoginRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Blipper.Proto.Shared.User> GetUser(global::Blipper.Proto.UserService.GetUserRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> Logout(global::Blipper.Proto.UserService.LogoutRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Blipper.Proto.Shared.User> UpdateUser(global::Blipper.Proto.UserService.UpdateUserRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Blipper.Proto.UserService.RefreshTokenResponse> RefreshToken(global::Blipper.Proto.UserService.RefreshTokenRequest request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Blipper.Proto.UserService.ValidateTokenResponse> ValidateToken(global::Blipper.Proto.UserService.ValidateTokenRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteUser(global::Blipper.Proto.UserService.DeleteUserRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -218,25 +174,13 @@ namespace Blipper.Proto.UserService {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Blipper.Proto.UserService.UserResponse> GetUser(global::Blipper.Proto.UserService.GetUserRequest request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Blipper.Proto.UserService.UserResponse> UpdateProfile(global::Blipper.Proto.UserService.UpdateProfileRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Blipper.Proto.Shared.User> UpdateProfile(global::Blipper.Proto.UserService.UpdateProfileRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> UpdatePassword(global::Blipper.Proto.UserService.UpdatePasswordRequest request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAccount(global::Blipper.Proto.UserService.DeleteAccountRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -283,7 +227,7 @@ namespace Blipper.Proto.UserService {
       }
 
       /// <summary>
-      /// Authentication
+      /// User management
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -291,23 +235,23 @@ namespace Blipper.Proto.UserService {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Blipper.Proto.UserService.RegisterResponse Register(global::Blipper.Proto.UserService.RegisterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Blipper.Proto.Shared.User CreateUser(global::Blipper.Proto.UserService.CreateUserRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return Register(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return CreateUser(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Authentication
+      /// User management
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Blipper.Proto.UserService.RegisterResponse Register(global::Blipper.Proto.UserService.RegisterRequest request, grpc::CallOptions options)
+      public virtual global::Blipper.Proto.Shared.User CreateUser(global::Blipper.Proto.UserService.CreateUserRequest request, grpc::CallOptions options)
       {
-        return CallInvoker.BlockingUnaryCall(__Method_Register, null, options, request);
+        return CallInvoker.BlockingUnaryCall(__Method_CreateUser, null, options, request);
       }
       /// <summary>
-      /// Authentication
+      /// User management
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -315,166 +259,126 @@ namespace Blipper.Proto.UserService {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Blipper.Proto.UserService.RegisterResponse> RegisterAsync(global::Blipper.Proto.UserService.RegisterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Blipper.Proto.Shared.User> CreateUserAsync(global::Blipper.Proto.UserService.CreateUserRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return RegisterAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return CreateUserAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Authentication
+      /// User management
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Blipper.Proto.UserService.RegisterResponse> RegisterAsync(global::Blipper.Proto.UserService.RegisterRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Blipper.Proto.Shared.User> CreateUserAsync(global::Blipper.Proto.UserService.CreateUserRequest request, grpc::CallOptions options)
       {
-        return CallInvoker.AsyncUnaryCall(__Method_Register, null, options, request);
+        return CallInvoker.AsyncUnaryCall(__Method_CreateUser, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Blipper.Proto.UserService.LoginResponse Login(global::Blipper.Proto.UserService.LoginRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return Login(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Blipper.Proto.UserService.LoginResponse Login(global::Blipper.Proto.UserService.LoginRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_Login, null, options, request);
-      }
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Blipper.Proto.UserService.LoginResponse> LoginAsync(global::Blipper.Proto.UserService.LoginRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return LoginAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Blipper.Proto.UserService.LoginResponse> LoginAsync(global::Blipper.Proto.UserService.LoginRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_Login, null, options, request);
-      }
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty Logout(global::Blipper.Proto.UserService.LogoutRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return Logout(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty Logout(global::Blipper.Proto.UserService.LogoutRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_Logout, null, options, request);
-      }
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> LogoutAsync(global::Blipper.Proto.UserService.LogoutRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return LogoutAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> LogoutAsync(global::Blipper.Proto.UserService.LogoutRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_Logout, null, options, request);
-      }
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Blipper.Proto.UserService.RefreshTokenResponse RefreshToken(global::Blipper.Proto.UserService.RefreshTokenRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return RefreshToken(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Blipper.Proto.UserService.RefreshTokenResponse RefreshToken(global::Blipper.Proto.UserService.RefreshTokenRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_RefreshToken, null, options, request);
-      }
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Blipper.Proto.UserService.RefreshTokenResponse> RefreshTokenAsync(global::Blipper.Proto.UserService.RefreshTokenRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return RefreshTokenAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Blipper.Proto.UserService.RefreshTokenResponse> RefreshTokenAsync(global::Blipper.Proto.UserService.RefreshTokenRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_RefreshToken, null, options, request);
-      }
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Blipper.Proto.UserService.ValidateTokenResponse ValidateToken(global::Blipper.Proto.UserService.ValidateTokenRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return ValidateToken(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Blipper.Proto.UserService.ValidateTokenResponse ValidateToken(global::Blipper.Proto.UserService.ValidateTokenRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_ValidateToken, null, options, request);
-      }
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Blipper.Proto.UserService.ValidateTokenResponse> ValidateTokenAsync(global::Blipper.Proto.UserService.ValidateTokenRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return ValidateTokenAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Blipper.Proto.UserService.ValidateTokenResponse> ValidateTokenAsync(global::Blipper.Proto.UserService.ValidateTokenRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_ValidateToken, null, options, request);
-      }
-      /// <summary>
-      /// Profile management
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Blipper.Proto.UserService.UserResponse GetUser(global::Blipper.Proto.UserService.GetUserRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Blipper.Proto.Shared.User GetUser(global::Blipper.Proto.UserService.GetUserRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetUser(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      /// <summary>
-      /// Profile management
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Blipper.Proto.UserService.UserResponse GetUser(global::Blipper.Proto.UserService.GetUserRequest request, grpc::CallOptions options)
+      public virtual global::Blipper.Proto.Shared.User GetUser(global::Blipper.Proto.UserService.GetUserRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetUser, null, options, request);
       }
-      /// <summary>
-      /// Profile management
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Blipper.Proto.UserService.UserResponse> GetUserAsync(global::Blipper.Proto.UserService.GetUserRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Blipper.Proto.Shared.User> GetUserAsync(global::Blipper.Proto.UserService.GetUserRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetUserAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      /// <summary>
-      /// Profile management
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Blipper.Proto.UserService.UserResponse> GetUserAsync(global::Blipper.Proto.UserService.GetUserRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Blipper.Proto.Shared.User> GetUserAsync(global::Blipper.Proto.UserService.GetUserRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetUser, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Blipper.Proto.UserService.UserResponse UpdateProfile(global::Blipper.Proto.UserService.UpdateProfileRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Blipper.Proto.Shared.User UpdateUser(global::Blipper.Proto.UserService.UpdateUserRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateUser(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Blipper.Proto.Shared.User UpdateUser(global::Blipper.Proto.UserService.UpdateUserRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateUser, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Blipper.Proto.Shared.User> UpdateUserAsync(global::Blipper.Proto.UserService.UpdateUserRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateUserAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Blipper.Proto.Shared.User> UpdateUserAsync(global::Blipper.Proto.UserService.UpdateUserRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateUser, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteUser(global::Blipper.Proto.UserService.DeleteUserRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteUser(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteUser(global::Blipper.Proto.UserService.DeleteUserRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteUser, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteUserAsync(global::Blipper.Proto.UserService.DeleteUserRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteUserAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteUserAsync(global::Blipper.Proto.UserService.DeleteUserRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteUser, null, options, request);
+      }
+      /// <summary>
+      /// Profile management
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Blipper.Proto.Shared.User UpdateProfile(global::Blipper.Proto.UserService.UpdateProfileRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateProfile(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
+      /// <summary>
+      /// Profile management
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Blipper.Proto.UserService.UserResponse UpdateProfile(global::Blipper.Proto.UserService.UpdateProfileRequest request, grpc::CallOptions options)
+      public virtual global::Blipper.Proto.Shared.User UpdateProfile(global::Blipper.Proto.UserService.UpdateProfileRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateProfile, null, options, request);
       }
+      /// <summary>
+      /// Profile management
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Blipper.Proto.UserService.UserResponse> UpdateProfileAsync(global::Blipper.Proto.UserService.UpdateProfileRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Blipper.Proto.Shared.User> UpdateProfileAsync(global::Blipper.Proto.UserService.UpdateProfileRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateProfileAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
+      /// <summary>
+      /// Profile management
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Blipper.Proto.UserService.UserResponse> UpdateProfileAsync(global::Blipper.Proto.UserService.UpdateProfileRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Blipper.Proto.Shared.User> UpdateProfileAsync(global::Blipper.Proto.UserService.UpdateProfileRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateProfile, null, options, request);
       }
@@ -497,26 +401,6 @@ namespace Blipper.Proto.UserService {
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> UpdatePasswordAsync(global::Blipper.Proto.UserService.UpdatePasswordRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdatePassword, null, options, request);
-      }
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteAccount(global::Blipper.Proto.UserService.DeleteAccountRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return DeleteAccount(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteAccount(global::Blipper.Proto.UserService.DeleteAccountRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_DeleteAccount, null, options, request);
-      }
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAccountAsync(global::Blipper.Proto.UserService.DeleteAccountRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return DeleteAccountAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAccountAsync(global::Blipper.Proto.UserService.DeleteAccountRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_DeleteAccount, null, options, request);
       }
       /// <summary>
       /// Search and discovery
@@ -580,15 +464,12 @@ namespace Blipper.Proto.UserService {
     public static grpc::ServerServiceDefinition BindService(UserProtoServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_Register, serviceImpl.Register)
-          .AddMethod(__Method_Login, serviceImpl.Login)
-          .AddMethod(__Method_Logout, serviceImpl.Logout)
-          .AddMethod(__Method_RefreshToken, serviceImpl.RefreshToken)
-          .AddMethod(__Method_ValidateToken, serviceImpl.ValidateToken)
+          .AddMethod(__Method_CreateUser, serviceImpl.CreateUser)
           .AddMethod(__Method_GetUser, serviceImpl.GetUser)
+          .AddMethod(__Method_UpdateUser, serviceImpl.UpdateUser)
+          .AddMethod(__Method_DeleteUser, serviceImpl.DeleteUser)
           .AddMethod(__Method_UpdateProfile, serviceImpl.UpdateProfile)
           .AddMethod(__Method_UpdatePassword, serviceImpl.UpdatePassword)
-          .AddMethod(__Method_DeleteAccount, serviceImpl.DeleteAccount)
           .AddMethod(__Method_SearchUsers, serviceImpl.SearchUsers).Build();
     }
 
@@ -599,15 +480,12 @@ namespace Blipper.Proto.UserService {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, UserProtoServiceBase serviceImpl)
     {
-      serviceBinder.AddMethod(__Method_Register, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Blipper.Proto.UserService.RegisterRequest, global::Blipper.Proto.UserService.RegisterResponse>(serviceImpl.Register));
-      serviceBinder.AddMethod(__Method_Login, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Blipper.Proto.UserService.LoginRequest, global::Blipper.Proto.UserService.LoginResponse>(serviceImpl.Login));
-      serviceBinder.AddMethod(__Method_Logout, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Blipper.Proto.UserService.LogoutRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.Logout));
-      serviceBinder.AddMethod(__Method_RefreshToken, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Blipper.Proto.UserService.RefreshTokenRequest, global::Blipper.Proto.UserService.RefreshTokenResponse>(serviceImpl.RefreshToken));
-      serviceBinder.AddMethod(__Method_ValidateToken, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Blipper.Proto.UserService.ValidateTokenRequest, global::Blipper.Proto.UserService.ValidateTokenResponse>(serviceImpl.ValidateToken));
-      serviceBinder.AddMethod(__Method_GetUser, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Blipper.Proto.UserService.GetUserRequest, global::Blipper.Proto.UserService.UserResponse>(serviceImpl.GetUser));
-      serviceBinder.AddMethod(__Method_UpdateProfile, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Blipper.Proto.UserService.UpdateProfileRequest, global::Blipper.Proto.UserService.UserResponse>(serviceImpl.UpdateProfile));
+      serviceBinder.AddMethod(__Method_CreateUser, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Blipper.Proto.UserService.CreateUserRequest, global::Blipper.Proto.Shared.User>(serviceImpl.CreateUser));
+      serviceBinder.AddMethod(__Method_GetUser, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Blipper.Proto.UserService.GetUserRequest, global::Blipper.Proto.Shared.User>(serviceImpl.GetUser));
+      serviceBinder.AddMethod(__Method_UpdateUser, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Blipper.Proto.UserService.UpdateUserRequest, global::Blipper.Proto.Shared.User>(serviceImpl.UpdateUser));
+      serviceBinder.AddMethod(__Method_DeleteUser, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Blipper.Proto.UserService.DeleteUserRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteUser));
+      serviceBinder.AddMethod(__Method_UpdateProfile, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Blipper.Proto.UserService.UpdateProfileRequest, global::Blipper.Proto.Shared.User>(serviceImpl.UpdateProfile));
       serviceBinder.AddMethod(__Method_UpdatePassword, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Blipper.Proto.UserService.UpdatePasswordRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.UpdatePassword));
-      serviceBinder.AddMethod(__Method_DeleteAccount, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Blipper.Proto.UserService.DeleteAccountRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteAccount));
       serviceBinder.AddMethod(__Method_SearchUsers, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Blipper.Proto.UserService.SearchUsersRequest, global::Blipper.Proto.UserService.SearchUsersResponse>(serviceImpl.SearchUsers));
     }
 

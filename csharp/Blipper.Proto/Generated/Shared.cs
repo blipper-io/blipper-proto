@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Blipper.Shared.V1 {
+namespace Blipper.Proto.Shared {
 
   /// <summary>Holder for reflection information generated from shared/shared.proto</summary>
   public static partial class SharedReflection {
@@ -25,78 +25,61 @@ namespace Blipper.Shared.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChNzaGFyZWQvc2hhcmVkLnByb3RvEhFibGlwcGVyLnNoYXJlZC52MRofZ29v",
-            "Z2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byI6ChFQYWdpbmF0aW9uUmVx",
-            "dWVzdBIRCglwYWdlX3NpemUYASABKAUSEgoKcGFnZV90b2tlbhgCIAEoCSJC",
-            "ChJQYWdpbmF0aW9uUmVzcG9uc2USFwoPbmV4dF9wYWdlX3Rva2VuGAEgASgJ",
-            "EhMKC3RvdGFsX2NvdW50GAIgASgFIlIKCFVzZXJJbmZvEgoKAmlkGAEgASgJ",
-            "EhAKCHVzZXJuYW1lGAIgASgJEhQKDGRpc3BsYXlfbmFtZRgDIAEoCRISCgph",
-            "dmF0YXJfdXJsGAQgASgJIr8BCg5NZW1iZXJzaGlwSW5mbxIPCgd1c2VyX2lk",
-            "GAEgASgJEhEKCWNpcmNsZV9pZBgCIAEoCRIlCgRyb2xlGAMgASgOMhcuYmxp",
-            "cHBlci5zaGFyZWQudjEuUm9sZRIzCgZzdGF0dXMYBCABKA4yIy5ibGlwcGVy",
-            "LnNoYXJlZC52MS5NZW1iZXJzaGlwU3RhdHVzEi0KCWpvaW5lZF9hdBgFIAEo",
-            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAqUQoEUm9sZRIUChBST0xF",
-            "X1VOU1BFQ0lGSUVEEAASDwoLUk9MRV9NRU1CRVIQARISCg5ST0xFX01PREVS",
-            "QVRPUhACEg4KClJPTEVfT1dORVIQAyqUAQoQTWVtYmVyc2hpcFN0YXR1cxIh",
-            "Ch1NRU1CRVJTSElQX1NUQVRVU19VTlNQRUNJRklFRBAAEh0KGU1FTUJFUlNI",
-            "SVBfU1RBVFVTX1BFTkRJTkcQARIeChpNRU1CRVJTSElQX1NUQVRVU19BUFBS",
-            "T1ZFRBACEh4KGk1FTUJFUlNISVBfU1RBVFVTX1JFSkVDVEVEEANCRFouZ2l0",
-            "aHViLmNvbS9ibGlwcGVyLWlvL2JsaXBwZXItcHJvdG8vZ2VuL3NoYXJlZKoC",
-            "EUJsaXBwZXIuU2hhcmVkLlYxYgZwcm90bzM="));
+            "Z2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byLKAQoEVXNlchIKCgJpZBgB",
+            "IAEoCRIQCgh1c2VybmFtZRgCIAEoCRINCgVlbWFpbBgDIAEoCRIUCgxkaXNw",
+            "bGF5X25hbWUYBCABKAkSCwoDYmlvGAUgASgJEhIKCmF2YXRhcl91cmwYBiAB",
+            "KAkSLgoKY3JlYXRlZF9hdBgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
+            "c3RhbXASLgoKdXBkYXRlZF9hdBgIIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
+            "aW1lc3RhbXAivwEKBkNpcmNsZRIKCgJpZBgBIAEoCRIMCgRuYW1lGAIgASgJ",
+            "EhMKC2Rlc2NyaXB0aW9uGAMgASgJEhIKCmlzX3ByaXZhdGUYBCABKAgSEgoK",
+            "Y3JlYXRvcl9pZBgFIAEoCRIuCgpjcmVhdGVkX2F0GAYgASgLMhouZ29vZ2xl",
+            "LnByb3RvYnVmLlRpbWVzdGFtcBIuCgp1cGRhdGVkX2F0GAcgASgLMhouZ29v",
+            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcCKKAQoOTWVtYmVyc2hpcEluZm8SDwoH",
+            "dXNlcl9pZBgBIAEoCRIRCgljaXJjbGVfaWQYAiABKAkSJQoEcm9sZRgDIAEo",
+            "DjIXLmJsaXBwZXIuc2hhcmVkLnYxLlJvbGUSLQoJam9pbmVkX2F0GAQgASgL",
+            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCpRCgRSb2xlEhQKEFJPTEVf",
+            "VU5TUEVDSUZJRUQQABIPCgtST0xFX01FTUJFUhABEhIKDlJPTEVfTU9ERVJB",
+            "VE9SEAISDgoKUk9MRV9BRE1JThADQkdaLmdpdGh1Yi5jb20vYmxpcHBlci1p",
+            "by9ibGlwcGVyLXByb3RvL2dlbi9zaGFyZWSqAhRCbGlwcGVyLlByb3RvLlNo",
+            "YXJlZGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Blipper.Shared.V1.Role), typeof(global::Blipper.Shared.V1.MembershipStatus), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Blipper.Shared.V1.PaginationRequest), global::Blipper.Shared.V1.PaginationRequest.Parser, new[]{ "PageSize", "PageToken" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Blipper.Shared.V1.PaginationResponse), global::Blipper.Shared.V1.PaginationResponse.Parser, new[]{ "NextPageToken", "TotalCount" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Blipper.Shared.V1.UserInfo), global::Blipper.Shared.V1.UserInfo.Parser, new[]{ "Id", "Username", "DisplayName", "AvatarUrl" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Blipper.Shared.V1.MembershipInfo), global::Blipper.Shared.V1.MembershipInfo.Parser, new[]{ "UserId", "CircleId", "Role", "Status", "JoinedAt" }, null, null, null, null)
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Blipper.Proto.Shared.Role), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Blipper.Proto.Shared.User), global::Blipper.Proto.Shared.User.Parser, new[]{ "Id", "Username", "Email", "DisplayName", "Bio", "AvatarUrl", "CreatedAt", "UpdatedAt" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Blipper.Proto.Shared.Circle), global::Blipper.Proto.Shared.Circle.Parser, new[]{ "Id", "Name", "Description", "IsPrivate", "CreatorId", "CreatedAt", "UpdatedAt" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Blipper.Proto.Shared.MembershipInfo), global::Blipper.Proto.Shared.MembershipInfo.Parser, new[]{ "UserId", "CircleId", "Role", "JoinedAt" }, null, null, null, null)
           }));
     }
     #endregion
 
   }
   #region Enums
-  /// <summary>
-  /// Common role definitions used across services
-  /// </summary>
   public enum Role {
     [pbr::OriginalName("ROLE_UNSPECIFIED")] Unspecified = 0,
     [pbr::OriginalName("ROLE_MEMBER")] Member = 1,
     [pbr::OriginalName("ROLE_MODERATOR")] Moderator = 2,
-    [pbr::OriginalName("ROLE_OWNER")] Owner = 3,
-  }
-
-  /// <summary>
-  /// Common status definitions for membership
-  /// </summary>
-  public enum MembershipStatus {
-    [pbr::OriginalName("MEMBERSHIP_STATUS_UNSPECIFIED")] Unspecified = 0,
-    [pbr::OriginalName("MEMBERSHIP_STATUS_PENDING")] Pending = 1,
-    [pbr::OriginalName("MEMBERSHIP_STATUS_APPROVED")] Approved = 2,
-    [pbr::OriginalName("MEMBERSHIP_STATUS_REJECTED")] Rejected = 3,
+    [pbr::OriginalName("ROLE_ADMIN")] Admin = 3,
   }
 
   #endregion
 
   #region Messages
-  /// <summary>
-  /// Shared pagination message
-  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class PaginationRequest : pb::IMessage<PaginationRequest>
+  public sealed partial class User : pb::IMessage<User>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<PaginationRequest> _parser = new pb::MessageParser<PaginationRequest>(() => new PaginationRequest());
+    private static readonly pb::MessageParser<User> _parser = new pb::MessageParser<User>(() => new User());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<PaginationRequest> Parser { get { return _parser; } }
+    public static pb::MessageParser<User> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Blipper.Shared.V1.SharedReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Blipper.Proto.Shared.SharedReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -107,7 +90,7 @@ namespace Blipper.Shared.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public PaginationRequest() {
+    public User() {
       OnConstruction();
     }
 
@@ -115,491 +98,22 @@ namespace Blipper.Shared.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public PaginationRequest(PaginationRequest other) : this() {
-      pageSize_ = other.pageSize_;
-      pageToken_ = other.pageToken_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public PaginationRequest Clone() {
-      return new PaginationRequest(this);
-    }
-
-    /// <summary>Field number for the "page_size" field.</summary>
-    public const int PageSizeFieldNumber = 1;
-    private int pageSize_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int PageSize {
-      get { return pageSize_; }
-      set {
-        pageSize_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "page_token" field.</summary>
-    public const int PageTokenFieldNumber = 2;
-    private string pageToken_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string PageToken {
-      get { return pageToken_; }
-      set {
-        pageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as PaginationRequest);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(PaginationRequest other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (PageSize != other.PageSize) return false;
-      if (PageToken != other.PageToken) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (PageSize != 0) hash ^= PageSize.GetHashCode();
-      if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (PageSize != 0) {
-        output.WriteRawTag(8);
-        output.WriteInt32(PageSize);
-      }
-      if (PageToken.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(PageToken);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (PageSize != 0) {
-        output.WriteRawTag(8);
-        output.WriteInt32(PageSize);
-      }
-      if (PageToken.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(PageToken);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (PageSize != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageSize);
-      }
-      if (PageToken.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(PaginationRequest other) {
-      if (other == null) {
-        return;
-      }
-      if (other.PageSize != 0) {
-        PageSize = other.PageSize;
-      }
-      if (other.PageToken.Length != 0) {
-        PageToken = other.PageToken;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 8: {
-            PageSize = input.ReadInt32();
-            break;
-          }
-          case 18: {
-            PageToken = input.ReadString();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 8: {
-            PageSize = input.ReadInt32();
-            break;
-          }
-          case 18: {
-            PageToken = input.ReadString();
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class PaginationResponse : pb::IMessage<PaginationResponse>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<PaginationResponse> _parser = new pb::MessageParser<PaginationResponse>(() => new PaginationResponse());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<PaginationResponse> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Blipper.Shared.V1.SharedReflection.Descriptor.MessageTypes[1]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public PaginationResponse() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public PaginationResponse(PaginationResponse other) : this() {
-      nextPageToken_ = other.nextPageToken_;
-      totalCount_ = other.totalCount_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public PaginationResponse Clone() {
-      return new PaginationResponse(this);
-    }
-
-    /// <summary>Field number for the "next_page_token" field.</summary>
-    public const int NextPageTokenFieldNumber = 1;
-    private string nextPageToken_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string NextPageToken {
-      get { return nextPageToken_; }
-      set {
-        nextPageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "total_count" field.</summary>
-    public const int TotalCountFieldNumber = 2;
-    private int totalCount_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int TotalCount {
-      get { return totalCount_; }
-      set {
-        totalCount_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as PaginationResponse);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(PaginationResponse other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (NextPageToken != other.NextPageToken) return false;
-      if (TotalCount != other.TotalCount) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
-      if (TotalCount != 0) hash ^= TotalCount.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (NextPageToken.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(NextPageToken);
-      }
-      if (TotalCount != 0) {
-        output.WriteRawTag(16);
-        output.WriteInt32(TotalCount);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (NextPageToken.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(NextPageToken);
-      }
-      if (TotalCount != 0) {
-        output.WriteRawTag(16);
-        output.WriteInt32(TotalCount);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (NextPageToken.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(NextPageToken);
-      }
-      if (TotalCount != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(TotalCount);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(PaginationResponse other) {
-      if (other == null) {
-        return;
-      }
-      if (other.NextPageToken.Length != 0) {
-        NextPageToken = other.NextPageToken;
-      }
-      if (other.TotalCount != 0) {
-        TotalCount = other.TotalCount;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            NextPageToken = input.ReadString();
-            break;
-          }
-          case 16: {
-            TotalCount = input.ReadInt32();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            NextPageToken = input.ReadString();
-            break;
-          }
-          case 16: {
-            TotalCount = input.ReadInt32();
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  /// <summary>
-  /// Basic user info shared between services
-  /// </summary>
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class UserInfo : pb::IMessage<UserInfo>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<UserInfo> _parser = new pb::MessageParser<UserInfo>(() => new UserInfo());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<UserInfo> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Blipper.Shared.V1.SharedReflection.Descriptor.MessageTypes[2]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public UserInfo() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public UserInfo(UserInfo other) : this() {
+    public User(User other) : this() {
       id_ = other.id_;
       username_ = other.username_;
+      email_ = other.email_;
       displayName_ = other.displayName_;
+      bio_ = other.bio_;
       avatarUrl_ = other.avatarUrl_;
+      createdAt_ = other.createdAt_ != null ? other.createdAt_.Clone() : null;
+      updatedAt_ = other.updatedAt_ != null ? other.updatedAt_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public UserInfo Clone() {
-      return new UserInfo(this);
+    public User Clone() {
+      return new User(this);
     }
 
     /// <summary>Field number for the "id" field.</summary>
@@ -626,8 +140,20 @@ namespace Blipper.Shared.V1 {
       }
     }
 
+    /// <summary>Field number for the "email" field.</summary>
+    public const int EmailFieldNumber = 3;
+    private string email_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Email {
+      get { return email_; }
+      set {
+        email_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "display_name" field.</summary>
-    public const int DisplayNameFieldNumber = 3;
+    public const int DisplayNameFieldNumber = 4;
     private string displayName_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -638,8 +164,20 @@ namespace Blipper.Shared.V1 {
       }
     }
 
+    /// <summary>Field number for the "bio" field.</summary>
+    public const int BioFieldNumber = 5;
+    private string bio_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Bio {
+      get { return bio_; }
+      set {
+        bio_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "avatar_url" field.</summary>
-    public const int AvatarUrlFieldNumber = 4;
+    public const int AvatarUrlFieldNumber = 6;
     private string avatarUrl_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -650,15 +188,39 @@ namespace Blipper.Shared.V1 {
       }
     }
 
+    /// <summary>Field number for the "created_at" field.</summary>
+    public const int CreatedAtFieldNumber = 7;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp createdAt_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as UserInfo);
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CreatedAt {
+      get { return createdAt_; }
+      set {
+        createdAt_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "updated_at" field.</summary>
+    public const int UpdatedAtFieldNumber = 8;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp updatedAt_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp UpdatedAt {
+      get { return updatedAt_; }
+      set {
+        updatedAt_ = value;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(UserInfo other) {
+    public override bool Equals(object other) {
+      return Equals(other as User);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(User other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -667,8 +229,12 @@ namespace Blipper.Shared.V1 {
       }
       if (Id != other.Id) return false;
       if (Username != other.Username) return false;
+      if (Email != other.Email) return false;
       if (DisplayName != other.DisplayName) return false;
+      if (Bio != other.Bio) return false;
       if (AvatarUrl != other.AvatarUrl) return false;
+      if (!object.Equals(CreatedAt, other.CreatedAt)) return false;
+      if (!object.Equals(UpdatedAt, other.UpdatedAt)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -678,8 +244,12 @@ namespace Blipper.Shared.V1 {
       int hash = 1;
       if (Id.Length != 0) hash ^= Id.GetHashCode();
       if (Username.Length != 0) hash ^= Username.GetHashCode();
+      if (Email.Length != 0) hash ^= Email.GetHashCode();
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
+      if (Bio.Length != 0) hash ^= Bio.GetHashCode();
       if (AvatarUrl.Length != 0) hash ^= AvatarUrl.GetHashCode();
+      if (createdAt_ != null) hash ^= CreatedAt.GetHashCode();
+      if (updatedAt_ != null) hash ^= UpdatedAt.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -706,13 +276,29 @@ namespace Blipper.Shared.V1 {
         output.WriteRawTag(18);
         output.WriteString(Username);
       }
-      if (DisplayName.Length != 0) {
+      if (Email.Length != 0) {
         output.WriteRawTag(26);
+        output.WriteString(Email);
+      }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(34);
         output.WriteString(DisplayName);
       }
+      if (Bio.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(Bio);
+      }
       if (AvatarUrl.Length != 0) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(50);
         output.WriteString(AvatarUrl);
+      }
+      if (createdAt_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(CreatedAt);
+      }
+      if (updatedAt_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(UpdatedAt);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -732,13 +318,29 @@ namespace Blipper.Shared.V1 {
         output.WriteRawTag(18);
         output.WriteString(Username);
       }
-      if (DisplayName.Length != 0) {
+      if (Email.Length != 0) {
         output.WriteRawTag(26);
+        output.WriteString(Email);
+      }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(34);
         output.WriteString(DisplayName);
       }
+      if (Bio.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(Bio);
+      }
       if (AvatarUrl.Length != 0) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(50);
         output.WriteString(AvatarUrl);
+      }
+      if (createdAt_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(CreatedAt);
+      }
+      if (updatedAt_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(UpdatedAt);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -756,11 +358,23 @@ namespace Blipper.Shared.V1 {
       if (Username.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Username);
       }
+      if (Email.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Email);
+      }
       if (DisplayName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
       }
+      if (Bio.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Bio);
+      }
       if (AvatarUrl.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(AvatarUrl);
+      }
+      if (createdAt_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreatedAt);
+      }
+      if (updatedAt_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdatedAt);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -770,7 +384,7 @@ namespace Blipper.Shared.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(UserInfo other) {
+    public void MergeFrom(User other) {
       if (other == null) {
         return;
       }
@@ -780,11 +394,29 @@ namespace Blipper.Shared.V1 {
       if (other.Username.Length != 0) {
         Username = other.Username;
       }
+      if (other.Email.Length != 0) {
+        Email = other.Email;
+      }
       if (other.DisplayName.Length != 0) {
         DisplayName = other.DisplayName;
       }
+      if (other.Bio.Length != 0) {
+        Bio = other.Bio;
+      }
       if (other.AvatarUrl.Length != 0) {
         AvatarUrl = other.AvatarUrl;
+      }
+      if (other.createdAt_ != null) {
+        if (createdAt_ == null) {
+          CreatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CreatedAt.MergeFrom(other.CreatedAt);
+      }
+      if (other.updatedAt_ != null) {
+        if (updatedAt_ == null) {
+          UpdatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        UpdatedAt.MergeFrom(other.UpdatedAt);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -814,11 +446,33 @@ namespace Blipper.Shared.V1 {
             break;
           }
           case 26: {
-            DisplayName = input.ReadString();
+            Email = input.ReadString();
             break;
           }
           case 34: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 42: {
+            Bio = input.ReadString();
+            break;
+          }
+          case 50: {
             AvatarUrl = input.ReadString();
+            break;
+          }
+          case 58: {
+            if (createdAt_ == null) {
+              CreatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreatedAt);
+            break;
+          }
+          case 66: {
+            if (updatedAt_ == null) {
+              UpdatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdatedAt);
             break;
           }
         }
@@ -849,11 +503,33 @@ namespace Blipper.Shared.V1 {
             break;
           }
           case 26: {
-            DisplayName = input.ReadString();
+            Email = input.ReadString();
             break;
           }
           case 34: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 42: {
+            Bio = input.ReadString();
+            break;
+          }
+          case 50: {
             AvatarUrl = input.ReadString();
+            break;
+          }
+          case 58: {
+            if (createdAt_ == null) {
+              CreatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreatedAt);
+            break;
+          }
+          case 66: {
+            if (updatedAt_ == null) {
+              UpdatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdatedAt);
             break;
           }
         }
@@ -863,9 +539,444 @@ namespace Blipper.Shared.V1 {
 
   }
 
-  /// <summary>
-  /// Membership info shared between services
-  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class Circle : pb::IMessage<Circle>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<Circle> _parser = new pb::MessageParser<Circle>(() => new Circle());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<Circle> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Blipper.Proto.Shared.SharedReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Circle() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Circle(Circle other) : this() {
+      id_ = other.id_;
+      name_ = other.name_;
+      description_ = other.description_;
+      isPrivate_ = other.isPrivate_;
+      creatorId_ = other.creatorId_;
+      createdAt_ = other.createdAt_ != null ? other.createdAt_.Clone() : null;
+      updatedAt_ = other.updatedAt_ != null ? other.updatedAt_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Circle Clone() {
+      return new Circle(this);
+    }
+
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 1;
+    private string id_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Id {
+      get { return id_; }
+      set {
+        id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 2;
+    private string name_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "description" field.</summary>
+    public const int DescriptionFieldNumber = 3;
+    private string description_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Description {
+      get { return description_; }
+      set {
+        description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "is_private" field.</summary>
+    public const int IsPrivateFieldNumber = 4;
+    private bool isPrivate_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IsPrivate {
+      get { return isPrivate_; }
+      set {
+        isPrivate_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "creator_id" field.</summary>
+    public const int CreatorIdFieldNumber = 5;
+    private string creatorId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CreatorId {
+      get { return creatorId_; }
+      set {
+        creatorId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "created_at" field.</summary>
+    public const int CreatedAtFieldNumber = 6;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp createdAt_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CreatedAt {
+      get { return createdAt_; }
+      set {
+        createdAt_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "updated_at" field.</summary>
+    public const int UpdatedAtFieldNumber = 7;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp updatedAt_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp UpdatedAt {
+      get { return updatedAt_; }
+      set {
+        updatedAt_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as Circle);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(Circle other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Id != other.Id) return false;
+      if (Name != other.Name) return false;
+      if (Description != other.Description) return false;
+      if (IsPrivate != other.IsPrivate) return false;
+      if (CreatorId != other.CreatorId) return false;
+      if (!object.Equals(CreatedAt, other.CreatedAt)) return false;
+      if (!object.Equals(UpdatedAt, other.UpdatedAt)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Id.Length != 0) hash ^= Id.GetHashCode();
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (Description.Length != 0) hash ^= Description.GetHashCode();
+      if (IsPrivate != false) hash ^= IsPrivate.GetHashCode();
+      if (CreatorId.Length != 0) hash ^= CreatorId.GetHashCode();
+      if (createdAt_ != null) hash ^= CreatedAt.GetHashCode();
+      if (updatedAt_ != null) hash ^= UpdatedAt.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
+      }
+      if (Name.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Name);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Description);
+      }
+      if (IsPrivate != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(IsPrivate);
+      }
+      if (CreatorId.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(CreatorId);
+      }
+      if (createdAt_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(CreatedAt);
+      }
+      if (updatedAt_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(UpdatedAt);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
+      }
+      if (Name.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Name);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Description);
+      }
+      if (IsPrivate != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(IsPrivate);
+      }
+      if (CreatorId.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(CreatorId);
+      }
+      if (createdAt_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(CreatedAt);
+      }
+      if (updatedAt_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(UpdatedAt);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Id.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
+      }
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (Description.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
+      }
+      if (IsPrivate != false) {
+        size += 1 + 1;
+      }
+      if (CreatorId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CreatorId);
+      }
+      if (createdAt_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreatedAt);
+      }
+      if (updatedAt_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdatedAt);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(Circle other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Id.Length != 0) {
+        Id = other.Id;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.Description.Length != 0) {
+        Description = other.Description;
+      }
+      if (other.IsPrivate != false) {
+        IsPrivate = other.IsPrivate;
+      }
+      if (other.CreatorId.Length != 0) {
+        CreatorId = other.CreatorId;
+      }
+      if (other.createdAt_ != null) {
+        if (createdAt_ == null) {
+          CreatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CreatedAt.MergeFrom(other.CreatedAt);
+      }
+      if (other.updatedAt_ != null) {
+        if (updatedAt_ == null) {
+          UpdatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        UpdatedAt.MergeFrom(other.UpdatedAt);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Id = input.ReadString();
+            break;
+          }
+          case 18: {
+            Name = input.ReadString();
+            break;
+          }
+          case 26: {
+            Description = input.ReadString();
+            break;
+          }
+          case 32: {
+            IsPrivate = input.ReadBool();
+            break;
+          }
+          case 42: {
+            CreatorId = input.ReadString();
+            break;
+          }
+          case 50: {
+            if (createdAt_ == null) {
+              CreatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreatedAt);
+            break;
+          }
+          case 58: {
+            if (updatedAt_ == null) {
+              UpdatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdatedAt);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Id = input.ReadString();
+            break;
+          }
+          case 18: {
+            Name = input.ReadString();
+            break;
+          }
+          case 26: {
+            Description = input.ReadString();
+            break;
+          }
+          case 32: {
+            IsPrivate = input.ReadBool();
+            break;
+          }
+          case 42: {
+            CreatorId = input.ReadString();
+            break;
+          }
+          case 50: {
+            if (createdAt_ == null) {
+              CreatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreatedAt);
+            break;
+          }
+          case 58: {
+            if (updatedAt_ == null) {
+              UpdatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdatedAt);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MembershipInfo : pb::IMessage<MembershipInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -881,7 +992,7 @@ namespace Blipper.Shared.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Blipper.Shared.V1.SharedReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Blipper.Proto.Shared.SharedReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -904,7 +1015,6 @@ namespace Blipper.Shared.V1 {
       userId_ = other.userId_;
       circleId_ = other.circleId_;
       role_ = other.role_;
-      status_ = other.status_;
       joinedAt_ = other.joinedAt_ != null ? other.joinedAt_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -941,30 +1051,18 @@ namespace Blipper.Shared.V1 {
 
     /// <summary>Field number for the "role" field.</summary>
     public const int RoleFieldNumber = 3;
-    private global::Blipper.Shared.V1.Role role_ = global::Blipper.Shared.V1.Role.Unspecified;
+    private global::Blipper.Proto.Shared.Role role_ = global::Blipper.Proto.Shared.Role.Unspecified;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Blipper.Shared.V1.Role Role {
+    public global::Blipper.Proto.Shared.Role Role {
       get { return role_; }
       set {
         role_ = value;
       }
     }
 
-    /// <summary>Field number for the "status" field.</summary>
-    public const int StatusFieldNumber = 4;
-    private global::Blipper.Shared.V1.MembershipStatus status_ = global::Blipper.Shared.V1.MembershipStatus.Unspecified;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Blipper.Shared.V1.MembershipStatus Status {
-      get { return status_; }
-      set {
-        status_ = value;
-      }
-    }
-
     /// <summary>Field number for the "joined_at" field.</summary>
-    public const int JoinedAtFieldNumber = 5;
+    public const int JoinedAtFieldNumber = 4;
     private global::Google.Protobuf.WellKnownTypes.Timestamp joinedAt_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -993,7 +1091,6 @@ namespace Blipper.Shared.V1 {
       if (UserId != other.UserId) return false;
       if (CircleId != other.CircleId) return false;
       if (Role != other.Role) return false;
-      if (Status != other.Status) return false;
       if (!object.Equals(JoinedAt, other.JoinedAt)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1004,8 +1101,7 @@ namespace Blipper.Shared.V1 {
       int hash = 1;
       if (UserId.Length != 0) hash ^= UserId.GetHashCode();
       if (CircleId.Length != 0) hash ^= CircleId.GetHashCode();
-      if (Role != global::Blipper.Shared.V1.Role.Unspecified) hash ^= Role.GetHashCode();
-      if (Status != global::Blipper.Shared.V1.MembershipStatus.Unspecified) hash ^= Status.GetHashCode();
+      if (Role != global::Blipper.Proto.Shared.Role.Unspecified) hash ^= Role.GetHashCode();
       if (joinedAt_ != null) hash ^= JoinedAt.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1033,16 +1129,12 @@ namespace Blipper.Shared.V1 {
         output.WriteRawTag(18);
         output.WriteString(CircleId);
       }
-      if (Role != global::Blipper.Shared.V1.Role.Unspecified) {
+      if (Role != global::Blipper.Proto.Shared.Role.Unspecified) {
         output.WriteRawTag(24);
         output.WriteEnum((int) Role);
       }
-      if (Status != global::Blipper.Shared.V1.MembershipStatus.Unspecified) {
-        output.WriteRawTag(32);
-        output.WriteEnum((int) Status);
-      }
       if (joinedAt_ != null) {
-        output.WriteRawTag(42);
+        output.WriteRawTag(34);
         output.WriteMessage(JoinedAt);
       }
       if (_unknownFields != null) {
@@ -1063,16 +1155,12 @@ namespace Blipper.Shared.V1 {
         output.WriteRawTag(18);
         output.WriteString(CircleId);
       }
-      if (Role != global::Blipper.Shared.V1.Role.Unspecified) {
+      if (Role != global::Blipper.Proto.Shared.Role.Unspecified) {
         output.WriteRawTag(24);
         output.WriteEnum((int) Role);
       }
-      if (Status != global::Blipper.Shared.V1.MembershipStatus.Unspecified) {
-        output.WriteRawTag(32);
-        output.WriteEnum((int) Status);
-      }
       if (joinedAt_ != null) {
-        output.WriteRawTag(42);
+        output.WriteRawTag(34);
         output.WriteMessage(JoinedAt);
       }
       if (_unknownFields != null) {
@@ -1091,11 +1179,8 @@ namespace Blipper.Shared.V1 {
       if (CircleId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(CircleId);
       }
-      if (Role != global::Blipper.Shared.V1.Role.Unspecified) {
+      if (Role != global::Blipper.Proto.Shared.Role.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Role);
-      }
-      if (Status != global::Blipper.Shared.V1.MembershipStatus.Unspecified) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
       }
       if (joinedAt_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(JoinedAt);
@@ -1118,11 +1203,8 @@ namespace Blipper.Shared.V1 {
       if (other.CircleId.Length != 0) {
         CircleId = other.CircleId;
       }
-      if (other.Role != global::Blipper.Shared.V1.Role.Unspecified) {
+      if (other.Role != global::Blipper.Proto.Shared.Role.Unspecified) {
         Role = other.Role;
-      }
-      if (other.Status != global::Blipper.Shared.V1.MembershipStatus.Unspecified) {
-        Status = other.Status;
       }
       if (other.joinedAt_ != null) {
         if (joinedAt_ == null) {
@@ -1158,14 +1240,10 @@ namespace Blipper.Shared.V1 {
             break;
           }
           case 24: {
-            Role = (global::Blipper.Shared.V1.Role) input.ReadEnum();
+            Role = (global::Blipper.Proto.Shared.Role) input.ReadEnum();
             break;
           }
-          case 32: {
-            Status = (global::Blipper.Shared.V1.MembershipStatus) input.ReadEnum();
-            break;
-          }
-          case 42: {
+          case 34: {
             if (joinedAt_ == null) {
               JoinedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
@@ -1200,14 +1278,10 @@ namespace Blipper.Shared.V1 {
             break;
           }
           case 24: {
-            Role = (global::Blipper.Shared.V1.Role) input.ReadEnum();
+            Role = (global::Blipper.Proto.Shared.Role) input.ReadEnum();
             break;
           }
-          case 32: {
-            Status = (global::Blipper.Shared.V1.MembershipStatus) input.ReadEnum();
-            break;
-          }
-          case 42: {
+          case 34: {
             if (joinedAt_ == null) {
               JoinedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }

@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Blipper.Circle.V1 {
+namespace Blipper.Proto.CircleService {
 
   /// <summary>Holder for reflection information generated from circle/circle.proto</summary>
   public static partial class CircleReflection {
@@ -26,674 +26,102 @@ namespace Blipper.Circle.V1 {
           string.Concat(
             "ChNjaXJjbGUvY2lyY2xlLnByb3RvEhFibGlwcGVyLmNpcmNsZS52MRofZ29v",
             "Z2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90bxobZ29vZ2xlL3Byb3RvYnVm",
-            "L2VtcHR5LnByb3RvGhNzaGFyZWQvc2hhcmVkLnByb3RvIpECCgZDaXJjbGUS",
-            "CgoCaWQYASABKAkSDAoEbmFtZRgCIAEoCRITCgtkZXNjcmlwdGlvbhgDIAEo",
-            "CRIQCghsb2dvX3VybBgEIAEoCRISCgppc19wcml2YXRlGAUgASgIEhAKCG93",
-            "bmVyX2lkGAYgASgJEhQKDG1lbWJlcl9jb3VudBgHIAEoBRIuCgpjcmVhdGVk",
-            "X2F0GAggASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIuCgp1cGRh",
-            "dGVkX2F0GAkgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIqCgVv",
-            "d25lchgKIAEoCzIbLmJsaXBwZXIuc2hhcmVkLnYxLlVzZXJJbmZvInAKE0Ny",
-            "ZWF0ZUNpcmNsZVJlcXVlc3QSDAoEbmFtZRgBIAEoCRITCgtkZXNjcmlwdGlv",
-            "bhgCIAEoCRISCgppc19wcml2YXRlGAMgASgIEhAKCGxvZ29fdXJsGAQgASgJ",
-            "EhAKCG93bmVyX2lkGAUgASgJIiUKEEdldENpcmNsZVJlcXVlc3QSEQoJY2ly",
-            "Y2xlX2lkGAEgASgJIp4BChNVcGRhdGVDaXJjbGVSZXF1ZXN0EhEKCWNpcmNs",
-            "ZV9pZBgBIAEoCRIYCgtkZXNjcmlwdGlvbhgCIAEoCUgAiAEBEhUKCGxvZ29f",
-            "dXJsGAMgASgJSAGIAQESFwoKaXNfcHJpdmF0ZRgEIAEoCEgCiAEBQg4KDF9k",
-            "ZXNjcmlwdGlvbkILCglfbG9nb191cmxCDQoLX2lzX3ByaXZhdGUieAoSTGlz",
-            "dENpcmNsZXNSZXF1ZXN0EjgKCnBhZ2luYXRpb24YASABKAsyJC5ibGlwcGVy",
-            "LnNoYXJlZC52MS5QYWdpbmF0aW9uUmVxdWVzdBIYCgtzZWFyY2hfdGVybRgC",
-            "IAEoCUgAiAEBQg4KDF9zZWFyY2hfdGVybSJ8ChNMaXN0Q2lyY2xlc1Jlc3Bv",
-            "bnNlEioKB2NpcmNsZXMYASADKAsyGS5ibGlwcGVyLmNpcmNsZS52MS5DaXJj",
-            "bGUSOQoKcGFnaW5hdGlvbhgCIAEoCzIlLmJsaXBwZXIuc2hhcmVkLnYxLlBh",
-            "Z2luYXRpb25SZXNwb25zZSIoChNEZWxldGVDaXJjbGVSZXF1ZXN0EhEKCWNp",
-            "cmNsZV9pZBgBIAEoCSI3ChFKb2luQ2lyY2xlUmVxdWVzdBIRCgljaXJjbGVf",
-            "aWQYASABKAkSDwoHdXNlcl9pZBgCIAEoCSI4ChJMZWF2ZUNpcmNsZVJlcXVl",
-            "c3QSEQoJY2lyY2xlX2lkGAEgASgJEg8KB3VzZXJfaWQYAiABKAkiYgoVR2V0",
-            "VXNlckNpcmNsZXNSZXF1ZXN0Eg8KB3VzZXJfaWQYASABKAkSOAoKcGFnaW5h",
-            "dGlvbhgCIAEoCzIkLmJsaXBwZXIuc2hhcmVkLnYxLlBhZ2luYXRpb25SZXF1",
-            "ZXN0IrcBChZHZXRVc2VyQ2lyY2xlc1Jlc3BvbnNlEioKB2NpcmNsZXMYASAD",
-            "KAsyGS5ibGlwcGVyLmNpcmNsZS52MS5DaXJjbGUSNgoLbWVtYmVyc2hpcHMY",
-            "AiADKAsyIS5ibGlwcGVyLnNoYXJlZC52MS5NZW1iZXJzaGlwSW5mbxI5Cgpw",
-            "YWdpbmF0aW9uGAMgASgLMiUuYmxpcHBlci5zaGFyZWQudjEuUGFnaW5hdGlv",
-            "blJlc3BvbnNlImYKF0dldENpcmNsZU1lbWJlcnNSZXF1ZXN0EhEKCWNpcmNs",
-            "ZV9pZBgBIAEoCRI4CgpwYWdpbmF0aW9uGAIgASgLMiQuYmxpcHBlci5zaGFy",
-            "ZWQudjEuUGFnaW5hdGlvblJlcXVlc3QiuQEKGEdldENpcmNsZU1lbWJlcnNS",
-            "ZXNwb25zZRIqCgV1c2VycxgBIAMoCzIbLmJsaXBwZXIuc2hhcmVkLnYxLlVz",
-            "ZXJJbmZvEjYKC21lbWJlcnNoaXBzGAIgAygLMiEuYmxpcHBlci5zaGFyZWQu",
-            "djEuTWVtYmVyc2hpcEluZm8SOQoKcGFnaW5hdGlvbhgDIAEoCzIlLmJsaXBw",
-            "ZXIuc2hhcmVkLnYxLlBhZ2luYXRpb25SZXNwb25zZSJoChdVcGRhdGVNZW1i",
-            "ZXJSb2xlUmVxdWVzdBIRCgljaXJjbGVfaWQYASABKAkSDwoHdXNlcl9pZBgC",
-            "IAEoCRIpCghuZXdfcm9sZRgDIAEoDjIXLmJsaXBwZXIuc2hhcmVkLnYxLlJv",
-            "bGUiOgoUR2V0TWVtYmVyc2hpcFJlcXVlc3QSEQoJY2lyY2xlX2lkGAEgASgJ",
-            "Eg8KB3VzZXJfaWQYAiABKAkiZgoXTGlzdEpvaW5SZXF1ZXN0c1JlcXVlc3QS",
-            "EQoJY2lyY2xlX2lkGAEgASgJEjgKCnBhZ2luYXRpb24YAiABKAsyJC5ibGlw",
-            "cGVyLnNoYXJlZC52MS5QYWdpbmF0aW9uUmVxdWVzdCK5AQoYTGlzdEpvaW5S",
-            "ZXF1ZXN0c1Jlc3BvbnNlEioKBXVzZXJzGAEgAygLMhsuYmxpcHBlci5zaGFy",
-            "ZWQudjEuVXNlckluZm8SNgoLbWVtYmVyc2hpcHMYAiADKAsyIS5ibGlwcGVy",
-            "LnNoYXJlZC52MS5NZW1iZXJzaGlwSW5mbxI5CgpwYWdpbmF0aW9uGAMgASgL",
-            "MiUuYmxpcHBlci5zaGFyZWQudjEuUGFnaW5hdGlvblJlc3BvbnNlIj8KGUFw",
-            "cHJvdmVKb2luUmVxdWVzdFJlcXVlc3QSEQoJY2lyY2xlX2lkGAEgASgJEg8K",
-            "B3VzZXJfaWQYAiABKAkiPgoYUmVqZWN0Sm9pblJlcXVlc3RSZXF1ZXN0EhEK",
-            "CWNpcmNsZV9pZBgBIAEoCRIPCgd1c2VyX2lkGAIgASgJMpcKCg1DaXJjbGVT",
-            "ZXJ2aWNlElEKDENyZWF0ZUNpcmNsZRImLmJsaXBwZXIuY2lyY2xlLnYxLkNy",
-            "ZWF0ZUNpcmNsZVJlcXVlc3QaGS5ibGlwcGVyLmNpcmNsZS52MS5DaXJjbGUS",
-            "SwoJR2V0Q2lyY2xlEiMuYmxpcHBlci5jaXJjbGUudjEuR2V0Q2lyY2xlUmVx",
-            "dWVzdBoZLmJsaXBwZXIuY2lyY2xlLnYxLkNpcmNsZRJcCgtMaXN0Q2lyY2xl",
-            "cxIlLmJsaXBwZXIuY2lyY2xlLnYxLkxpc3RDaXJjbGVzUmVxdWVzdBomLmJs",
-            "aXBwZXIuY2lyY2xlLnYxLkxpc3RDaXJjbGVzUmVzcG9uc2USUQoMVXBkYXRl",
-            "Q2lyY2xlEiYuYmxpcHBlci5jaXJjbGUudjEuVXBkYXRlQ2lyY2xlUmVxdWVz",
-            "dBoZLmJsaXBwZXIuY2lyY2xlLnYxLkNpcmNsZRJOCgxEZWxldGVDaXJjbGUS",
-            "Ji5ibGlwcGVyLmNpcmNsZS52MS5EZWxldGVDaXJjbGVSZXF1ZXN0GhYuZ29v",
-            "Z2xlLnByb3RvYnVmLkVtcHR5ElUKCkpvaW5DaXJjbGUSJC5ibGlwcGVyLmNp",
-            "cmNsZS52MS5Kb2luQ2lyY2xlUmVxdWVzdBohLmJsaXBwZXIuc2hhcmVkLnYx",
-            "Lk1lbWJlcnNoaXBJbmZvEkwKC0xlYXZlQ2lyY2xlEiUuYmxpcHBlci5jaXJj",
-            "bGUudjEuTGVhdmVDaXJjbGVSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVt",
-            "cHR5EmUKDkdldFVzZXJDaXJjbGVzEiguYmxpcHBlci5jaXJjbGUudjEuR2V0",
-            "VXNlckNpcmNsZXNSZXF1ZXN0GikuYmxpcHBlci5jaXJjbGUudjEuR2V0VXNl",
-            "ckNpcmNsZXNSZXNwb25zZRJrChBHZXRDaXJjbGVNZW1iZXJzEiouYmxpcHBl",
-            "ci5jaXJjbGUudjEuR2V0Q2lyY2xlTWVtYmVyc1JlcXVlc3QaKy5ibGlwcGVy",
-            "LmNpcmNsZS52MS5HZXRDaXJjbGVNZW1iZXJzUmVzcG9uc2USYQoQVXBkYXRl",
-            "TWVtYmVyUm9sZRIqLmJsaXBwZXIuY2lyY2xlLnYxLlVwZGF0ZU1lbWJlclJv",
-            "bGVSZXF1ZXN0GiEuYmxpcHBlci5zaGFyZWQudjEuTWVtYmVyc2hpcEluZm8S",
-            "WwoNR2V0TWVtYmVyc2hpcBInLmJsaXBwZXIuY2lyY2xlLnYxLkdldE1lbWJl",
-            "cnNoaXBSZXF1ZXN0GiEuYmxpcHBlci5zaGFyZWQudjEuTWVtYmVyc2hpcElu",
-            "Zm8SawoQTGlzdEpvaW5SZXF1ZXN0cxIqLmJsaXBwZXIuY2lyY2xlLnYxLkxp",
-            "c3RKb2luUmVxdWVzdHNSZXF1ZXN0GisuYmxpcHBlci5jaXJjbGUudjEuTGlz",
-            "dEpvaW5SZXF1ZXN0c1Jlc3BvbnNlEmUKEkFwcHJvdmVKb2luUmVxdWVzdBIs",
-            "LmJsaXBwZXIuY2lyY2xlLnYxLkFwcHJvdmVKb2luUmVxdWVzdFJlcXVlc3Qa",
-            "IS5ibGlwcGVyLnNoYXJlZC52MS5NZW1iZXJzaGlwSW5mbxJYChFSZWplY3RK",
-            "b2luUmVxdWVzdBIrLmJsaXBwZXIuY2lyY2xlLnYxLlJlamVjdEpvaW5SZXF1",
-            "ZXN0UmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eUIdWgcvY2lyY2xl",
-            "qgIRQmxpcHBlci5DaXJjbGUuVjFiBnByb3RvMw=="));
+            "L2VtcHR5LnByb3RvGhNzaGFyZWQvc2hhcmVkLnByb3RvImAKE0NyZWF0ZUNp",
+            "cmNsZVJlcXVlc3QSDAoEbmFtZRgBIAEoCRITCgtkZXNjcmlwdGlvbhgCIAEo",
+            "CRISCgppc19wcml2YXRlGAMgASgIEhIKCmNyZWF0b3JfaWQYBCABKAkiJQoQ",
+            "R2V0Q2lyY2xlUmVxdWVzdBIRCgljaXJjbGVfaWQYASABKAkiNQoSTGlzdENp",
+            "cmNsZXNSZXF1ZXN0EgwKBHBhZ2UYASABKAUSEQoJcGFnZV9zaXplGAIgASgF",
+            "IlYKE0xpc3RDaXJjbGVzUmVzcG9uc2USKgoHY2lyY2xlcxgBIAMoCzIZLmJs",
+            "aXBwZXIuc2hhcmVkLnYxLkNpcmNsZRITCgt0b3RhbF9jb3VudBgCIAEoBSKW",
+            "AQoTVXBkYXRlQ2lyY2xlUmVxdWVzdBIRCgljaXJjbGVfaWQYASABKAkSEQoE",
+            "bmFtZRgCIAEoCUgAiAEBEhgKC2Rlc2NyaXB0aW9uGAMgASgJSAGIAQESFwoK",
+            "aXNfcHJpdmF0ZRgEIAEoCEgCiAEBQgcKBV9uYW1lQg4KDF9kZXNjcmlwdGlv",
+            "bkINCgtfaXNfcHJpdmF0ZSIoChNEZWxldGVDaXJjbGVSZXF1ZXN0EhEKCWNp",
+            "cmNsZV9pZBgBIAEoCSI3ChFKb2luQ2lyY2xlUmVxdWVzdBIPCgd1c2VyX2lk",
+            "GAEgASgJEhEKCWNpcmNsZV9pZBgCIAEoCSI4ChJMZWF2ZUNpcmNsZVJlcXVl",
+            "c3QSDwoHdXNlcl9pZBgBIAEoCRIRCgljaXJjbGVfaWQYAiABKAkiSQoVR2V0",
+            "VXNlckNpcmNsZXNSZXF1ZXN0Eg8KB3VzZXJfaWQYASABKAkSDAoEcGFnZRgC",
+            "IAEoBRIRCglwYWdlX3NpemUYAyABKAUikQEKFkdldFVzZXJDaXJjbGVzUmVz",
+            "cG9uc2USKgoHY2lyY2xlcxgBIAMoCzIZLmJsaXBwZXIuc2hhcmVkLnYxLkNp",
+            "cmNsZRI2CgttZW1iZXJzaGlwcxgCIAMoCzIhLmJsaXBwZXIuc2hhcmVkLnYx",
+            "Lk1lbWJlcnNoaXBJbmZvEhMKC3RvdGFsX2NvdW50GAMgASgFIk0KF0dldENp",
+            "cmNsZU1lbWJlcnNSZXF1ZXN0EhEKCWNpcmNsZV9pZBgBIAEoCRIMCgRwYWdl",
+            "GAIgASgFEhEKCXBhZ2Vfc2l6ZRgDIAEoBSKPAQoYR2V0Q2lyY2xlTWVtYmVy",
+            "c1Jlc3BvbnNlEiYKBXVzZXJzGAEgAygLMhcuYmxpcHBlci5zaGFyZWQudjEu",
+            "VXNlchI2CgttZW1iZXJzaGlwcxgCIAMoCzIhLmJsaXBwZXIuc2hhcmVkLnYx",
+            "Lk1lbWJlcnNoaXBJbmZvEhMKC3RvdGFsX2NvdW50GAMgASgFImgKF1VwZGF0",
+            "ZU1lbWJlclJvbGVSZXF1ZXN0Eg8KB3VzZXJfaWQYASABKAkSEQoJY2lyY2xl",
+            "X2lkGAIgASgJEikKCG5ld19yb2xlGAMgASgOMhcuYmxpcHBlci5zaGFyZWQu",
+            "djEuUm9sZSI6ChRHZXRNZW1iZXJzaGlwUmVxdWVzdBIPCgd1c2VyX2lkGAEg",
+            "ASgJEhEKCWNpcmNsZV9pZBgCIAEoCSJNChdMaXN0Sm9pblJlcXVlc3RzUmVx",
+            "dWVzdBIRCgljaXJjbGVfaWQYASABKAkSDAoEcGFnZRgCIAEoBRIRCglwYWdl",
+            "X3NpemUYAyABKAUihwIKGExpc3RKb2luUmVxdWVzdHNSZXNwb25zZRJJCghy",
+            "ZXF1ZXN0cxgBIAMoCzI3LmJsaXBwZXIuY2lyY2xlLnYxLkxpc3RKb2luUmVx",
+            "dWVzdHNSZXNwb25zZS5Kb2luUmVxdWVzdBITCgt0b3RhbF9jb3VudBgCIAEo",
+            "BRqKAQoLSm9pblJlcXVlc3QSDwoHdXNlcl9pZBgBIAEoCRIRCgljaXJjbGVf",
+            "aWQYAiABKAkSMAoMcmVxdWVzdGVkX2F0GAMgASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcBIlCgR1c2VyGAQgASgLMhcuYmxpcHBlci5zaGFyZWQu",
+            "djEuVXNlciI/ChlBcHByb3ZlSm9pblJlcXVlc3RSZXF1ZXN0Eg8KB3VzZXJf",
+            "aWQYASABKAkSEQoJY2lyY2xlX2lkGAIgASgJIj4KGFJlamVjdEpvaW5SZXF1",
+            "ZXN0UmVxdWVzdBIPCgd1c2VyX2lkGAEgASgJEhEKCWNpcmNsZV9pZBgCIAEo",
+            "CTKcCgoSQ2lyY2xlUHJvdG9TZXJ2aWNlElEKDENyZWF0ZUNpcmNsZRImLmJs",
+            "aXBwZXIuY2lyY2xlLnYxLkNyZWF0ZUNpcmNsZVJlcXVlc3QaGS5ibGlwcGVy",
+            "LnNoYXJlZC52MS5DaXJjbGUSSwoJR2V0Q2lyY2xlEiMuYmxpcHBlci5jaXJj",
+            "bGUudjEuR2V0Q2lyY2xlUmVxdWVzdBoZLmJsaXBwZXIuc2hhcmVkLnYxLkNp",
+            "cmNsZRJcCgtMaXN0Q2lyY2xlcxIlLmJsaXBwZXIuY2lyY2xlLnYxLkxpc3RD",
+            "aXJjbGVzUmVxdWVzdBomLmJsaXBwZXIuY2lyY2xlLnYxLkxpc3RDaXJjbGVz",
+            "UmVzcG9uc2USUQoMVXBkYXRlQ2lyY2xlEiYuYmxpcHBlci5jaXJjbGUudjEu",
+            "VXBkYXRlQ2lyY2xlUmVxdWVzdBoZLmJsaXBwZXIuc2hhcmVkLnYxLkNpcmNs",
+            "ZRJOCgxEZWxldGVDaXJjbGUSJi5ibGlwcGVyLmNpcmNsZS52MS5EZWxldGVD",
+            "aXJjbGVSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5ElUKCkpvaW5D",
+            "aXJjbGUSJC5ibGlwcGVyLmNpcmNsZS52MS5Kb2luQ2lyY2xlUmVxdWVzdBoh",
+            "LmJsaXBwZXIuc2hhcmVkLnYxLk1lbWJlcnNoaXBJbmZvEkwKC0xlYXZlQ2ly",
+            "Y2xlEiUuYmxpcHBlci5jaXJjbGUudjEuTGVhdmVDaXJjbGVSZXF1ZXN0GhYu",
+            "Z29vZ2xlLnByb3RvYnVmLkVtcHR5EmUKDkdldFVzZXJDaXJjbGVzEiguYmxp",
+            "cHBlci5jaXJjbGUudjEuR2V0VXNlckNpcmNsZXNSZXF1ZXN0GikuYmxpcHBl",
+            "ci5jaXJjbGUudjEuR2V0VXNlckNpcmNsZXNSZXNwb25zZRJrChBHZXRDaXJj",
+            "bGVNZW1iZXJzEiouYmxpcHBlci5jaXJjbGUudjEuR2V0Q2lyY2xlTWVtYmVy",
+            "c1JlcXVlc3QaKy5ibGlwcGVyLmNpcmNsZS52MS5HZXRDaXJjbGVNZW1iZXJz",
+            "UmVzcG9uc2USYQoQVXBkYXRlTWVtYmVyUm9sZRIqLmJsaXBwZXIuY2lyY2xl",
+            "LnYxLlVwZGF0ZU1lbWJlclJvbGVSZXF1ZXN0GiEuYmxpcHBlci5zaGFyZWQu",
+            "djEuTWVtYmVyc2hpcEluZm8SWwoNR2V0TWVtYmVyc2hpcBInLmJsaXBwZXIu",
+            "Y2lyY2xlLnYxLkdldE1lbWJlcnNoaXBSZXF1ZXN0GiEuYmxpcHBlci5zaGFy",
+            "ZWQudjEuTWVtYmVyc2hpcEluZm8SawoQTGlzdEpvaW5SZXF1ZXN0cxIqLmJs",
+            "aXBwZXIuY2lyY2xlLnYxLkxpc3RKb2luUmVxdWVzdHNSZXF1ZXN0GisuYmxp",
+            "cHBlci5jaXJjbGUudjEuTGlzdEpvaW5SZXF1ZXN0c1Jlc3BvbnNlEmUKEkFw",
+            "cHJvdmVKb2luUmVxdWVzdBIsLmJsaXBwZXIuY2lyY2xlLnYxLkFwcHJvdmVK",
+            "b2luUmVxdWVzdFJlcXVlc3QaIS5ibGlwcGVyLnNoYXJlZC52MS5NZW1iZXJz",
+            "aGlwSW5mbxJYChFSZWplY3RKb2luUmVxdWVzdBIrLmJsaXBwZXIuY2lyY2xl",
+            "LnYxLlJlamVjdEpvaW5SZXF1ZXN0UmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1",
+            "Zi5FbXB0eUInWgcvY2lyY2xlqgIbQmxpcHBlci5Qcm90by5DaXJjbGVTZXJ2",
+            "aWNlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Blipper.Shared.V1.SharedReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Blipper.Proto.Shared.SharedReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Blipper.Circle.V1.Circle), global::Blipper.Circle.V1.Circle.Parser, new[]{ "Id", "Name", "Description", "LogoUrl", "IsPrivate", "OwnerId", "MemberCount", "CreatedAt", "UpdatedAt", "Owner" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Blipper.Circle.V1.CreateCircleRequest), global::Blipper.Circle.V1.CreateCircleRequest.Parser, new[]{ "Name", "Description", "IsPrivate", "LogoUrl", "OwnerId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Blipper.Circle.V1.GetCircleRequest), global::Blipper.Circle.V1.GetCircleRequest.Parser, new[]{ "CircleId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Blipper.Circle.V1.UpdateCircleRequest), global::Blipper.Circle.V1.UpdateCircleRequest.Parser, new[]{ "CircleId", "Description", "LogoUrl", "IsPrivate" }, new[]{ "Description", "LogoUrl", "IsPrivate" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Blipper.Circle.V1.ListCirclesRequest), global::Blipper.Circle.V1.ListCirclesRequest.Parser, new[]{ "Pagination", "SearchTerm" }, new[]{ "SearchTerm" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Blipper.Circle.V1.ListCirclesResponse), global::Blipper.Circle.V1.ListCirclesResponse.Parser, new[]{ "Circles", "Pagination" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Blipper.Circle.V1.DeleteCircleRequest), global::Blipper.Circle.V1.DeleteCircleRequest.Parser, new[]{ "CircleId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Blipper.Circle.V1.JoinCircleRequest), global::Blipper.Circle.V1.JoinCircleRequest.Parser, new[]{ "CircleId", "UserId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Blipper.Circle.V1.LeaveCircleRequest), global::Blipper.Circle.V1.LeaveCircleRequest.Parser, new[]{ "CircleId", "UserId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Blipper.Circle.V1.GetUserCirclesRequest), global::Blipper.Circle.V1.GetUserCirclesRequest.Parser, new[]{ "UserId", "Pagination" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Blipper.Circle.V1.GetUserCirclesResponse), global::Blipper.Circle.V1.GetUserCirclesResponse.Parser, new[]{ "Circles", "Memberships", "Pagination" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Blipper.Circle.V1.GetCircleMembersRequest), global::Blipper.Circle.V1.GetCircleMembersRequest.Parser, new[]{ "CircleId", "Pagination" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Blipper.Circle.V1.GetCircleMembersResponse), global::Blipper.Circle.V1.GetCircleMembersResponse.Parser, new[]{ "Users", "Memberships", "Pagination" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Blipper.Circle.V1.UpdateMemberRoleRequest), global::Blipper.Circle.V1.UpdateMemberRoleRequest.Parser, new[]{ "CircleId", "UserId", "NewRole" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Blipper.Circle.V1.GetMembershipRequest), global::Blipper.Circle.V1.GetMembershipRequest.Parser, new[]{ "CircleId", "UserId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Blipper.Circle.V1.ListJoinRequestsRequest), global::Blipper.Circle.V1.ListJoinRequestsRequest.Parser, new[]{ "CircleId", "Pagination" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Blipper.Circle.V1.ListJoinRequestsResponse), global::Blipper.Circle.V1.ListJoinRequestsResponse.Parser, new[]{ "Users", "Memberships", "Pagination" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Blipper.Circle.V1.ApproveJoinRequestRequest), global::Blipper.Circle.V1.ApproveJoinRequestRequest.Parser, new[]{ "CircleId", "UserId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Blipper.Circle.V1.RejectJoinRequestRequest), global::Blipper.Circle.V1.RejectJoinRequestRequest.Parser, new[]{ "CircleId", "UserId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Blipper.Proto.CircleService.CreateCircleRequest), global::Blipper.Proto.CircleService.CreateCircleRequest.Parser, new[]{ "Name", "Description", "IsPrivate", "CreatorId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Blipper.Proto.CircleService.GetCircleRequest), global::Blipper.Proto.CircleService.GetCircleRequest.Parser, new[]{ "CircleId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Blipper.Proto.CircleService.ListCirclesRequest), global::Blipper.Proto.CircleService.ListCirclesRequest.Parser, new[]{ "Page", "PageSize" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Blipper.Proto.CircleService.ListCirclesResponse), global::Blipper.Proto.CircleService.ListCirclesResponse.Parser, new[]{ "Circles", "TotalCount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Blipper.Proto.CircleService.UpdateCircleRequest), global::Blipper.Proto.CircleService.UpdateCircleRequest.Parser, new[]{ "CircleId", "Name", "Description", "IsPrivate" }, new[]{ "Name", "Description", "IsPrivate" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Blipper.Proto.CircleService.DeleteCircleRequest), global::Blipper.Proto.CircleService.DeleteCircleRequest.Parser, new[]{ "CircleId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Blipper.Proto.CircleService.JoinCircleRequest), global::Blipper.Proto.CircleService.JoinCircleRequest.Parser, new[]{ "UserId", "CircleId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Blipper.Proto.CircleService.LeaveCircleRequest), global::Blipper.Proto.CircleService.LeaveCircleRequest.Parser, new[]{ "UserId", "CircleId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Blipper.Proto.CircleService.GetUserCirclesRequest), global::Blipper.Proto.CircleService.GetUserCirclesRequest.Parser, new[]{ "UserId", "Page", "PageSize" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Blipper.Proto.CircleService.GetUserCirclesResponse), global::Blipper.Proto.CircleService.GetUserCirclesResponse.Parser, new[]{ "Circles", "Memberships", "TotalCount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Blipper.Proto.CircleService.GetCircleMembersRequest), global::Blipper.Proto.CircleService.GetCircleMembersRequest.Parser, new[]{ "CircleId", "Page", "PageSize" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Blipper.Proto.CircleService.GetCircleMembersResponse), global::Blipper.Proto.CircleService.GetCircleMembersResponse.Parser, new[]{ "Users", "Memberships", "TotalCount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Blipper.Proto.CircleService.UpdateMemberRoleRequest), global::Blipper.Proto.CircleService.UpdateMemberRoleRequest.Parser, new[]{ "UserId", "CircleId", "NewRole" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Blipper.Proto.CircleService.GetMembershipRequest), global::Blipper.Proto.CircleService.GetMembershipRequest.Parser, new[]{ "UserId", "CircleId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Blipper.Proto.CircleService.ListJoinRequestsRequest), global::Blipper.Proto.CircleService.ListJoinRequestsRequest.Parser, new[]{ "CircleId", "Page", "PageSize" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Blipper.Proto.CircleService.ListJoinRequestsResponse), global::Blipper.Proto.CircleService.ListJoinRequestsResponse.Parser, new[]{ "Requests", "TotalCount" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Blipper.Proto.CircleService.ListJoinRequestsResponse.Types.JoinRequest), global::Blipper.Proto.CircleService.ListJoinRequestsResponse.Types.JoinRequest.Parser, new[]{ "UserId", "CircleId", "RequestedAt", "User" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Blipper.Proto.CircleService.ApproveJoinRequestRequest), global::Blipper.Proto.CircleService.ApproveJoinRequestRequest.Parser, new[]{ "UserId", "CircleId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Blipper.Proto.CircleService.RejectJoinRequestRequest), global::Blipper.Proto.CircleService.RejectJoinRequestRequest.Parser, new[]{ "UserId", "CircleId" }, null, null, null, null)
           }));
     }
     #endregion
 
   }
   #region Messages
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class Circle : pb::IMessage<Circle>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<Circle> _parser = new pb::MessageParser<Circle>(() => new Circle());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<Circle> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Blipper.Circle.V1.CircleReflection.Descriptor.MessageTypes[0]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public Circle() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public Circle(Circle other) : this() {
-      id_ = other.id_;
-      name_ = other.name_;
-      description_ = other.description_;
-      logoUrl_ = other.logoUrl_;
-      isPrivate_ = other.isPrivate_;
-      ownerId_ = other.ownerId_;
-      memberCount_ = other.memberCount_;
-      createdAt_ = other.createdAt_ != null ? other.createdAt_.Clone() : null;
-      updatedAt_ = other.updatedAt_ != null ? other.updatedAt_.Clone() : null;
-      owner_ = other.owner_ != null ? other.owner_.Clone() : null;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public Circle Clone() {
-      return new Circle(this);
-    }
-
-    /// <summary>Field number for the "id" field.</summary>
-    public const int IdFieldNumber = 1;
-    private string id_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Id {
-      get { return id_; }
-      set {
-        id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "name" field.</summary>
-    public const int NameFieldNumber = 2;
-    private string name_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Name {
-      get { return name_; }
-      set {
-        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "description" field.</summary>
-    public const int DescriptionFieldNumber = 3;
-    private string description_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Description {
-      get { return description_; }
-      set {
-        description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "logo_url" field.</summary>
-    public const int LogoUrlFieldNumber = 4;
-    private string logoUrl_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string LogoUrl {
-      get { return logoUrl_; }
-      set {
-        logoUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "is_private" field.</summary>
-    public const int IsPrivateFieldNumber = 5;
-    private bool isPrivate_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsPrivate {
-      get { return isPrivate_; }
-      set {
-        isPrivate_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "owner_id" field.</summary>
-    public const int OwnerIdFieldNumber = 6;
-    private string ownerId_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string OwnerId {
-      get { return ownerId_; }
-      set {
-        ownerId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "member_count" field.</summary>
-    public const int MemberCountFieldNumber = 7;
-    private int memberCount_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int MemberCount {
-      get { return memberCount_; }
-      set {
-        memberCount_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "created_at" field.</summary>
-    public const int CreatedAtFieldNumber = 8;
-    private global::Google.Protobuf.WellKnownTypes.Timestamp createdAt_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Google.Protobuf.WellKnownTypes.Timestamp CreatedAt {
-      get { return createdAt_; }
-      set {
-        createdAt_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "updated_at" field.</summary>
-    public const int UpdatedAtFieldNumber = 9;
-    private global::Google.Protobuf.WellKnownTypes.Timestamp updatedAt_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Google.Protobuf.WellKnownTypes.Timestamp UpdatedAt {
-      get { return updatedAt_; }
-      set {
-        updatedAt_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "owner" field.</summary>
-    public const int OwnerFieldNumber = 10;
-    private global::Blipper.Shared.V1.UserInfo owner_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Blipper.Shared.V1.UserInfo Owner {
-      get { return owner_; }
-      set {
-        owner_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as Circle);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(Circle other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (Id != other.Id) return false;
-      if (Name != other.Name) return false;
-      if (Description != other.Description) return false;
-      if (LogoUrl != other.LogoUrl) return false;
-      if (IsPrivate != other.IsPrivate) return false;
-      if (OwnerId != other.OwnerId) return false;
-      if (MemberCount != other.MemberCount) return false;
-      if (!object.Equals(CreatedAt, other.CreatedAt)) return false;
-      if (!object.Equals(UpdatedAt, other.UpdatedAt)) return false;
-      if (!object.Equals(Owner, other.Owner)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (Id.Length != 0) hash ^= Id.GetHashCode();
-      if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (Description.Length != 0) hash ^= Description.GetHashCode();
-      if (LogoUrl.Length != 0) hash ^= LogoUrl.GetHashCode();
-      if (IsPrivate != false) hash ^= IsPrivate.GetHashCode();
-      if (OwnerId.Length != 0) hash ^= OwnerId.GetHashCode();
-      if (MemberCount != 0) hash ^= MemberCount.GetHashCode();
-      if (createdAt_ != null) hash ^= CreatedAt.GetHashCode();
-      if (updatedAt_ != null) hash ^= UpdatedAt.GetHashCode();
-      if (owner_ != null) hash ^= Owner.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (Id.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Id);
-      }
-      if (Name.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(Name);
-      }
-      if (Description.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(Description);
-      }
-      if (LogoUrl.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(LogoUrl);
-      }
-      if (IsPrivate != false) {
-        output.WriteRawTag(40);
-        output.WriteBool(IsPrivate);
-      }
-      if (OwnerId.Length != 0) {
-        output.WriteRawTag(50);
-        output.WriteString(OwnerId);
-      }
-      if (MemberCount != 0) {
-        output.WriteRawTag(56);
-        output.WriteInt32(MemberCount);
-      }
-      if (createdAt_ != null) {
-        output.WriteRawTag(66);
-        output.WriteMessage(CreatedAt);
-      }
-      if (updatedAt_ != null) {
-        output.WriteRawTag(74);
-        output.WriteMessage(UpdatedAt);
-      }
-      if (owner_ != null) {
-        output.WriteRawTag(82);
-        output.WriteMessage(Owner);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Id.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Id);
-      }
-      if (Name.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(Name);
-      }
-      if (Description.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(Description);
-      }
-      if (LogoUrl.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(LogoUrl);
-      }
-      if (IsPrivate != false) {
-        output.WriteRawTag(40);
-        output.WriteBool(IsPrivate);
-      }
-      if (OwnerId.Length != 0) {
-        output.WriteRawTag(50);
-        output.WriteString(OwnerId);
-      }
-      if (MemberCount != 0) {
-        output.WriteRawTag(56);
-        output.WriteInt32(MemberCount);
-      }
-      if (createdAt_ != null) {
-        output.WriteRawTag(66);
-        output.WriteMessage(CreatedAt);
-      }
-      if (updatedAt_ != null) {
-        output.WriteRawTag(74);
-        output.WriteMessage(UpdatedAt);
-      }
-      if (owner_ != null) {
-        output.WriteRawTag(82);
-        output.WriteMessage(Owner);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (Id.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
-      }
-      if (Name.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
-      }
-      if (Description.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
-      }
-      if (LogoUrl.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(LogoUrl);
-      }
-      if (IsPrivate != false) {
-        size += 1 + 1;
-      }
-      if (OwnerId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(OwnerId);
-      }
-      if (MemberCount != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MemberCount);
-      }
-      if (createdAt_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreatedAt);
-      }
-      if (updatedAt_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdatedAt);
-      }
-      if (owner_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Owner);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(Circle other) {
-      if (other == null) {
-        return;
-      }
-      if (other.Id.Length != 0) {
-        Id = other.Id;
-      }
-      if (other.Name.Length != 0) {
-        Name = other.Name;
-      }
-      if (other.Description.Length != 0) {
-        Description = other.Description;
-      }
-      if (other.LogoUrl.Length != 0) {
-        LogoUrl = other.LogoUrl;
-      }
-      if (other.IsPrivate != false) {
-        IsPrivate = other.IsPrivate;
-      }
-      if (other.OwnerId.Length != 0) {
-        OwnerId = other.OwnerId;
-      }
-      if (other.MemberCount != 0) {
-        MemberCount = other.MemberCount;
-      }
-      if (other.createdAt_ != null) {
-        if (createdAt_ == null) {
-          CreatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-        }
-        CreatedAt.MergeFrom(other.CreatedAt);
-      }
-      if (other.updatedAt_ != null) {
-        if (updatedAt_ == null) {
-          UpdatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-        }
-        UpdatedAt.MergeFrom(other.UpdatedAt);
-      }
-      if (other.owner_ != null) {
-        if (owner_ == null) {
-          Owner = new global::Blipper.Shared.V1.UserInfo();
-        }
-        Owner.MergeFrom(other.Owner);
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            Id = input.ReadString();
-            break;
-          }
-          case 18: {
-            Name = input.ReadString();
-            break;
-          }
-          case 26: {
-            Description = input.ReadString();
-            break;
-          }
-          case 34: {
-            LogoUrl = input.ReadString();
-            break;
-          }
-          case 40: {
-            IsPrivate = input.ReadBool();
-            break;
-          }
-          case 50: {
-            OwnerId = input.ReadString();
-            break;
-          }
-          case 56: {
-            MemberCount = input.ReadInt32();
-            break;
-          }
-          case 66: {
-            if (createdAt_ == null) {
-              CreatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-            }
-            input.ReadMessage(CreatedAt);
-            break;
-          }
-          case 74: {
-            if (updatedAt_ == null) {
-              UpdatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-            }
-            input.ReadMessage(UpdatedAt);
-            break;
-          }
-          case 82: {
-            if (owner_ == null) {
-              Owner = new global::Blipper.Shared.V1.UserInfo();
-            }
-            input.ReadMessage(Owner);
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            Id = input.ReadString();
-            break;
-          }
-          case 18: {
-            Name = input.ReadString();
-            break;
-          }
-          case 26: {
-            Description = input.ReadString();
-            break;
-          }
-          case 34: {
-            LogoUrl = input.ReadString();
-            break;
-          }
-          case 40: {
-            IsPrivate = input.ReadBool();
-            break;
-          }
-          case 50: {
-            OwnerId = input.ReadString();
-            break;
-          }
-          case 56: {
-            MemberCount = input.ReadInt32();
-            break;
-          }
-          case 66: {
-            if (createdAt_ == null) {
-              CreatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-            }
-            input.ReadMessage(CreatedAt);
-            break;
-          }
-          case 74: {
-            if (updatedAt_ == null) {
-              UpdatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-            }
-            input.ReadMessage(UpdatedAt);
-            break;
-          }
-          case 82: {
-            if (owner_ == null) {
-              Owner = new global::Blipper.Shared.V1.UserInfo();
-            }
-            input.ReadMessage(Owner);
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  /// <summary>
-  /// Request/Response messages
-  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateCircleRequest : pb::IMessage<CreateCircleRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -709,7 +137,7 @@ namespace Blipper.Circle.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Blipper.Circle.V1.CircleReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Blipper.Proto.CircleService.CircleReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -732,8 +160,7 @@ namespace Blipper.Circle.V1 {
       name_ = other.name_;
       description_ = other.description_;
       isPrivate_ = other.isPrivate_;
-      logoUrl_ = other.logoUrl_;
-      ownerId_ = other.ownerId_;
+      creatorId_ = other.creatorId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -779,27 +206,15 @@ namespace Blipper.Circle.V1 {
       }
     }
 
-    /// <summary>Field number for the "logo_url" field.</summary>
-    public const int LogoUrlFieldNumber = 4;
-    private string logoUrl_ = "";
+    /// <summary>Field number for the "creator_id" field.</summary>
+    public const int CreatorIdFieldNumber = 4;
+    private string creatorId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string LogoUrl {
-      get { return logoUrl_; }
+    public string CreatorId {
+      get { return creatorId_; }
       set {
-        logoUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "owner_id" field.</summary>
-    public const int OwnerIdFieldNumber = 5;
-    private string ownerId_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string OwnerId {
-      get { return ownerId_; }
-      set {
-        ownerId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        creatorId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -821,8 +236,7 @@ namespace Blipper.Circle.V1 {
       if (Name != other.Name) return false;
       if (Description != other.Description) return false;
       if (IsPrivate != other.IsPrivate) return false;
-      if (LogoUrl != other.LogoUrl) return false;
-      if (OwnerId != other.OwnerId) return false;
+      if (CreatorId != other.CreatorId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -833,8 +247,7 @@ namespace Blipper.Circle.V1 {
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Description.Length != 0) hash ^= Description.GetHashCode();
       if (IsPrivate != false) hash ^= IsPrivate.GetHashCode();
-      if (LogoUrl.Length != 0) hash ^= LogoUrl.GetHashCode();
-      if (OwnerId.Length != 0) hash ^= OwnerId.GetHashCode();
+      if (CreatorId.Length != 0) hash ^= CreatorId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -865,13 +278,9 @@ namespace Blipper.Circle.V1 {
         output.WriteRawTag(24);
         output.WriteBool(IsPrivate);
       }
-      if (LogoUrl.Length != 0) {
+      if (CreatorId.Length != 0) {
         output.WriteRawTag(34);
-        output.WriteString(LogoUrl);
-      }
-      if (OwnerId.Length != 0) {
-        output.WriteRawTag(42);
-        output.WriteString(OwnerId);
+        output.WriteString(CreatorId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -895,13 +304,9 @@ namespace Blipper.Circle.V1 {
         output.WriteRawTag(24);
         output.WriteBool(IsPrivate);
       }
-      if (LogoUrl.Length != 0) {
+      if (CreatorId.Length != 0) {
         output.WriteRawTag(34);
-        output.WriteString(LogoUrl);
-      }
-      if (OwnerId.Length != 0) {
-        output.WriteRawTag(42);
-        output.WriteString(OwnerId);
+        output.WriteString(CreatorId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -922,11 +327,8 @@ namespace Blipper.Circle.V1 {
       if (IsPrivate != false) {
         size += 1 + 1;
       }
-      if (LogoUrl.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(LogoUrl);
-      }
-      if (OwnerId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(OwnerId);
+      if (CreatorId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CreatorId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -949,11 +351,8 @@ namespace Blipper.Circle.V1 {
       if (other.IsPrivate != false) {
         IsPrivate = other.IsPrivate;
       }
-      if (other.LogoUrl.Length != 0) {
-        LogoUrl = other.LogoUrl;
-      }
-      if (other.OwnerId.Length != 0) {
-        OwnerId = other.OwnerId;
+      if (other.CreatorId.Length != 0) {
+        CreatorId = other.CreatorId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -987,11 +386,7 @@ namespace Blipper.Circle.V1 {
             break;
           }
           case 34: {
-            LogoUrl = input.ReadString();
-            break;
-          }
-          case 42: {
-            OwnerId = input.ReadString();
+            CreatorId = input.ReadString();
             break;
           }
         }
@@ -1026,11 +421,7 @@ namespace Blipper.Circle.V1 {
             break;
           }
           case 34: {
-            LogoUrl = input.ReadString();
-            break;
-          }
-          case 42: {
-            OwnerId = input.ReadString();
+            CreatorId = input.ReadString();
             break;
           }
         }
@@ -1055,7 +446,7 @@ namespace Blipper.Circle.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Blipper.Circle.V1.CircleReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Blipper.Proto.CircleService.CircleReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1239,6 +630,465 @@ namespace Blipper.Circle.V1 {
   }
 
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ListCirclesRequest : pb::IMessage<ListCirclesRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ListCirclesRequest> _parser = new pb::MessageParser<ListCirclesRequest>(() => new ListCirclesRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ListCirclesRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Blipper.Proto.CircleService.CircleReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListCirclesRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListCirclesRequest(ListCirclesRequest other) : this() {
+      page_ = other.page_;
+      pageSize_ = other.pageSize_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListCirclesRequest Clone() {
+      return new ListCirclesRequest(this);
+    }
+
+    /// <summary>Field number for the "page" field.</summary>
+    public const int PageFieldNumber = 1;
+    private int page_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int Page {
+      get { return page_; }
+      set {
+        page_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "page_size" field.</summary>
+    public const int PageSizeFieldNumber = 2;
+    private int pageSize_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int PageSize {
+      get { return pageSize_; }
+      set {
+        pageSize_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ListCirclesRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ListCirclesRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Page != other.Page) return false;
+      if (PageSize != other.PageSize) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Page != 0) hash ^= Page.GetHashCode();
+      if (PageSize != 0) hash ^= PageSize.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Page != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(Page);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(PageSize);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Page != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(Page);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(PageSize);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Page != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Page);
+      }
+      if (PageSize != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageSize);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ListCirclesRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Page != 0) {
+        Page = other.Page;
+      }
+      if (other.PageSize != 0) {
+        PageSize = other.PageSize;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Page = input.ReadInt32();
+            break;
+          }
+          case 16: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Page = input.ReadInt32();
+            break;
+          }
+          case 16: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ListCirclesResponse : pb::IMessage<ListCirclesResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ListCirclesResponse> _parser = new pb::MessageParser<ListCirclesResponse>(() => new ListCirclesResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ListCirclesResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Blipper.Proto.CircleService.CircleReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListCirclesResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListCirclesResponse(ListCirclesResponse other) : this() {
+      circles_ = other.circles_.Clone();
+      totalCount_ = other.totalCount_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListCirclesResponse Clone() {
+      return new ListCirclesResponse(this);
+    }
+
+    /// <summary>Field number for the "circles" field.</summary>
+    public const int CirclesFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Blipper.Proto.Shared.Circle> _repeated_circles_codec
+        = pb::FieldCodec.ForMessage(10, global::Blipper.Proto.Shared.Circle.Parser);
+    private readonly pbc::RepeatedField<global::Blipper.Proto.Shared.Circle> circles_ = new pbc::RepeatedField<global::Blipper.Proto.Shared.Circle>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Blipper.Proto.Shared.Circle> Circles {
+      get { return circles_; }
+    }
+
+    /// <summary>Field number for the "total_count" field.</summary>
+    public const int TotalCountFieldNumber = 2;
+    private int totalCount_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int TotalCount {
+      get { return totalCount_; }
+      set {
+        totalCount_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ListCirclesResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ListCirclesResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!circles_.Equals(other.circles_)) return false;
+      if (TotalCount != other.TotalCount) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= circles_.GetHashCode();
+      if (TotalCount != 0) hash ^= TotalCount.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      circles_.WriteTo(output, _repeated_circles_codec);
+      if (TotalCount != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(TotalCount);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      circles_.WriteTo(ref output, _repeated_circles_codec);
+      if (TotalCount != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(TotalCount);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += circles_.CalculateSize(_repeated_circles_codec);
+      if (TotalCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(TotalCount);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ListCirclesResponse other) {
+      if (other == null) {
+        return;
+      }
+      circles_.Add(other.circles_);
+      if (other.TotalCount != 0) {
+        TotalCount = other.TotalCount;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            circles_.AddEntriesFrom(input, _repeated_circles_codec);
+            break;
+          }
+          case 16: {
+            TotalCount = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            circles_.AddEntriesFrom(ref input, _repeated_circles_codec);
+            break;
+          }
+          case 16: {
+            TotalCount = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateCircleRequest : pb::IMessage<UpdateCircleRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1254,7 +1104,7 @@ namespace Blipper.Circle.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Blipper.Circle.V1.CircleReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Blipper.Proto.CircleService.CircleReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1276,8 +1126,8 @@ namespace Blipper.Circle.V1 {
     public UpdateCircleRequest(UpdateCircleRequest other) : this() {
       _hasBits0 = other._hasBits0;
       circleId_ = other.circleId_;
+      name_ = other.name_;
       description_ = other.description_;
-      logoUrl_ = other.logoUrl_;
       isPrivate_ = other.isPrivate_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -1300,8 +1150,34 @@ namespace Blipper.Circle.V1 {
       }
     }
 
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 2;
+    private readonly static string NameDefaultValue = "";
+
+    private string name_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_ ?? NameDefaultValue; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasName {
+      get { return name_ != null; }
+    }
+    /// <summary>Clears the value of the "name" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearName() {
+      name_ = null;
+    }
+
     /// <summary>Field number for the "description" field.</summary>
-    public const int DescriptionFieldNumber = 2;
+    public const int DescriptionFieldNumber = 3;
     private readonly static string DescriptionDefaultValue = "";
 
     private string description_;
@@ -1324,32 +1200,6 @@ namespace Blipper.Circle.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearDescription() {
       description_ = null;
-    }
-
-    /// <summary>Field number for the "logo_url" field.</summary>
-    public const int LogoUrlFieldNumber = 3;
-    private readonly static string LogoUrlDefaultValue = "";
-
-    private string logoUrl_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string LogoUrl {
-      get { return logoUrl_ ?? LogoUrlDefaultValue; }
-      set {
-        logoUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-    /// <summary>Gets whether the "logo_url" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasLogoUrl {
-      get { return logoUrl_ != null; }
-    }
-    /// <summary>Clears the value of the "logo_url" field</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearLogoUrl() {
-      logoUrl_ = null;
     }
 
     /// <summary>Field number for the "is_private" field.</summary>
@@ -1395,8 +1245,8 @@ namespace Blipper.Circle.V1 {
         return true;
       }
       if (CircleId != other.CircleId) return false;
+      if (Name != other.Name) return false;
       if (Description != other.Description) return false;
-      if (LogoUrl != other.LogoUrl) return false;
       if (IsPrivate != other.IsPrivate) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1406,8 +1256,8 @@ namespace Blipper.Circle.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (CircleId.Length != 0) hash ^= CircleId.GetHashCode();
+      if (HasName) hash ^= Name.GetHashCode();
       if (HasDescription) hash ^= Description.GetHashCode();
-      if (HasLogoUrl) hash ^= LogoUrl.GetHashCode();
       if (HasIsPrivate) hash ^= IsPrivate.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1431,13 +1281,13 @@ namespace Blipper.Circle.V1 {
         output.WriteRawTag(10);
         output.WriteString(CircleId);
       }
-      if (HasDescription) {
+      if (HasName) {
         output.WriteRawTag(18);
-        output.WriteString(Description);
+        output.WriteString(Name);
       }
-      if (HasLogoUrl) {
+      if (HasDescription) {
         output.WriteRawTag(26);
-        output.WriteString(LogoUrl);
+        output.WriteString(Description);
       }
       if (HasIsPrivate) {
         output.WriteRawTag(32);
@@ -1457,13 +1307,13 @@ namespace Blipper.Circle.V1 {
         output.WriteRawTag(10);
         output.WriteString(CircleId);
       }
-      if (HasDescription) {
+      if (HasName) {
         output.WriteRawTag(18);
-        output.WriteString(Description);
+        output.WriteString(Name);
       }
-      if (HasLogoUrl) {
+      if (HasDescription) {
         output.WriteRawTag(26);
-        output.WriteString(LogoUrl);
+        output.WriteString(Description);
       }
       if (HasIsPrivate) {
         output.WriteRawTag(32);
@@ -1482,11 +1332,11 @@ namespace Blipper.Circle.V1 {
       if (CircleId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(CircleId);
       }
+      if (HasName) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
       if (HasDescription) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
-      }
-      if (HasLogoUrl) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(LogoUrl);
       }
       if (HasIsPrivate) {
         size += 1 + 1;
@@ -1506,11 +1356,11 @@ namespace Blipper.Circle.V1 {
       if (other.CircleId.Length != 0) {
         CircleId = other.CircleId;
       }
+      if (other.HasName) {
+        Name = other.Name;
+      }
       if (other.HasDescription) {
         Description = other.Description;
-      }
-      if (other.HasLogoUrl) {
-        LogoUrl = other.LogoUrl;
       }
       if (other.HasIsPrivate) {
         IsPrivate = other.IsPrivate;
@@ -1539,11 +1389,11 @@ namespace Blipper.Circle.V1 {
             break;
           }
           case 18: {
-            Description = input.ReadString();
+            Name = input.ReadString();
             break;
           }
           case 26: {
-            LogoUrl = input.ReadString();
+            Description = input.ReadString();
             break;
           }
           case 32: {
@@ -1574,506 +1424,15 @@ namespace Blipper.Circle.V1 {
             break;
           }
           case 18: {
-            Description = input.ReadString();
+            Name = input.ReadString();
             break;
           }
           case 26: {
-            LogoUrl = input.ReadString();
+            Description = input.ReadString();
             break;
           }
           case 32: {
             IsPrivate = input.ReadBool();
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class ListCirclesRequest : pb::IMessage<ListCirclesRequest>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<ListCirclesRequest> _parser = new pb::MessageParser<ListCirclesRequest>(() => new ListCirclesRequest());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<ListCirclesRequest> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Blipper.Circle.V1.CircleReflection.Descriptor.MessageTypes[4]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ListCirclesRequest() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ListCirclesRequest(ListCirclesRequest other) : this() {
-      pagination_ = other.pagination_ != null ? other.pagination_.Clone() : null;
-      searchTerm_ = other.searchTerm_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ListCirclesRequest Clone() {
-      return new ListCirclesRequest(this);
-    }
-
-    /// <summary>Field number for the "pagination" field.</summary>
-    public const int PaginationFieldNumber = 1;
-    private global::Blipper.Shared.V1.PaginationRequest pagination_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Blipper.Shared.V1.PaginationRequest Pagination {
-      get { return pagination_; }
-      set {
-        pagination_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "search_term" field.</summary>
-    public const int SearchTermFieldNumber = 2;
-    private readonly static string SearchTermDefaultValue = "";
-
-    private string searchTerm_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string SearchTerm {
-      get { return searchTerm_ ?? SearchTermDefaultValue; }
-      set {
-        searchTerm_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-    /// <summary>Gets whether the "search_term" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasSearchTerm {
-      get { return searchTerm_ != null; }
-    }
-    /// <summary>Clears the value of the "search_term" field</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearSearchTerm() {
-      searchTerm_ = null;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as ListCirclesRequest);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(ListCirclesRequest other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (!object.Equals(Pagination, other.Pagination)) return false;
-      if (SearchTerm != other.SearchTerm) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (pagination_ != null) hash ^= Pagination.GetHashCode();
-      if (HasSearchTerm) hash ^= SearchTerm.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (pagination_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(Pagination);
-      }
-      if (HasSearchTerm) {
-        output.WriteRawTag(18);
-        output.WriteString(SearchTerm);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (pagination_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(Pagination);
-      }
-      if (HasSearchTerm) {
-        output.WriteRawTag(18);
-        output.WriteString(SearchTerm);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (pagination_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Pagination);
-      }
-      if (HasSearchTerm) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(SearchTerm);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(ListCirclesRequest other) {
-      if (other == null) {
-        return;
-      }
-      if (other.pagination_ != null) {
-        if (pagination_ == null) {
-          Pagination = new global::Blipper.Shared.V1.PaginationRequest();
-        }
-        Pagination.MergeFrom(other.Pagination);
-      }
-      if (other.HasSearchTerm) {
-        SearchTerm = other.SearchTerm;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            if (pagination_ == null) {
-              Pagination = new global::Blipper.Shared.V1.PaginationRequest();
-            }
-            input.ReadMessage(Pagination);
-            break;
-          }
-          case 18: {
-            SearchTerm = input.ReadString();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            if (pagination_ == null) {
-              Pagination = new global::Blipper.Shared.V1.PaginationRequest();
-            }
-            input.ReadMessage(Pagination);
-            break;
-          }
-          case 18: {
-            SearchTerm = input.ReadString();
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class ListCirclesResponse : pb::IMessage<ListCirclesResponse>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<ListCirclesResponse> _parser = new pb::MessageParser<ListCirclesResponse>(() => new ListCirclesResponse());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<ListCirclesResponse> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Blipper.Circle.V1.CircleReflection.Descriptor.MessageTypes[5]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ListCirclesResponse() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ListCirclesResponse(ListCirclesResponse other) : this() {
-      circles_ = other.circles_.Clone();
-      pagination_ = other.pagination_ != null ? other.pagination_.Clone() : null;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ListCirclesResponse Clone() {
-      return new ListCirclesResponse(this);
-    }
-
-    /// <summary>Field number for the "circles" field.</summary>
-    public const int CirclesFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Blipper.Circle.V1.Circle> _repeated_circles_codec
-        = pb::FieldCodec.ForMessage(10, global::Blipper.Circle.V1.Circle.Parser);
-    private readonly pbc::RepeatedField<global::Blipper.Circle.V1.Circle> circles_ = new pbc::RepeatedField<global::Blipper.Circle.V1.Circle>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Blipper.Circle.V1.Circle> Circles {
-      get { return circles_; }
-    }
-
-    /// <summary>Field number for the "pagination" field.</summary>
-    public const int PaginationFieldNumber = 2;
-    private global::Blipper.Shared.V1.PaginationResponse pagination_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Blipper.Shared.V1.PaginationResponse Pagination {
-      get { return pagination_; }
-      set {
-        pagination_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as ListCirclesResponse);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(ListCirclesResponse other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if(!circles_.Equals(other.circles_)) return false;
-      if (!object.Equals(Pagination, other.Pagination)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      hash ^= circles_.GetHashCode();
-      if (pagination_ != null) hash ^= Pagination.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      circles_.WriteTo(output, _repeated_circles_codec);
-      if (pagination_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(Pagination);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      circles_.WriteTo(ref output, _repeated_circles_codec);
-      if (pagination_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(Pagination);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      size += circles_.CalculateSize(_repeated_circles_codec);
-      if (pagination_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Pagination);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(ListCirclesResponse other) {
-      if (other == null) {
-        return;
-      }
-      circles_.Add(other.circles_);
-      if (other.pagination_ != null) {
-        if (pagination_ == null) {
-          Pagination = new global::Blipper.Shared.V1.PaginationResponse();
-        }
-        Pagination.MergeFrom(other.Pagination);
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            circles_.AddEntriesFrom(input, _repeated_circles_codec);
-            break;
-          }
-          case 18: {
-            if (pagination_ == null) {
-              Pagination = new global::Blipper.Shared.V1.PaginationResponse();
-            }
-            input.ReadMessage(Pagination);
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            circles_.AddEntriesFrom(ref input, _repeated_circles_codec);
-            break;
-          }
-          case 18: {
-            if (pagination_ == null) {
-              Pagination = new global::Blipper.Shared.V1.PaginationResponse();
-            }
-            input.ReadMessage(Pagination);
             break;
           }
         }
@@ -2098,7 +1457,7 @@ namespace Blipper.Circle.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Blipper.Circle.V1.CircleReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Blipper.Proto.CircleService.CircleReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2296,7 +1655,7 @@ namespace Blipper.Circle.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Blipper.Circle.V1.CircleReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Blipper.Proto.CircleService.CircleReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2316,8 +1675,8 @@ namespace Blipper.Circle.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public JoinCircleRequest(JoinCircleRequest other) : this() {
-      circleId_ = other.circleId_;
       userId_ = other.userId_;
+      circleId_ = other.circleId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2327,20 +1686,8 @@ namespace Blipper.Circle.V1 {
       return new JoinCircleRequest(this);
     }
 
-    /// <summary>Field number for the "circle_id" field.</summary>
-    public const int CircleIdFieldNumber = 1;
-    private string circleId_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string CircleId {
-      get { return circleId_; }
-      set {
-        circleId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
     /// <summary>Field number for the "user_id" field.</summary>
-    public const int UserIdFieldNumber = 2;
+    public const int UserIdFieldNumber = 1;
     private string userId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2348,6 +1695,18 @@ namespace Blipper.Circle.V1 {
       get { return userId_; }
       set {
         userId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "circle_id" field.</summary>
+    public const int CircleIdFieldNumber = 2;
+    private string circleId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CircleId {
+      get { return circleId_; }
+      set {
+        circleId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -2366,8 +1725,8 @@ namespace Blipper.Circle.V1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (CircleId != other.CircleId) return false;
       if (UserId != other.UserId) return false;
+      if (CircleId != other.CircleId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2375,8 +1734,8 @@ namespace Blipper.Circle.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (CircleId.Length != 0) hash ^= CircleId.GetHashCode();
       if (UserId.Length != 0) hash ^= UserId.GetHashCode();
+      if (CircleId.Length != 0) hash ^= CircleId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2395,13 +1754,13 @@ namespace Blipper.Circle.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (CircleId.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(CircleId);
-      }
       if (UserId.Length != 0) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(10);
         output.WriteString(UserId);
+      }
+      if (CircleId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(CircleId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -2413,13 +1772,13 @@ namespace Blipper.Circle.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (CircleId.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(CircleId);
-      }
       if (UserId.Length != 0) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(10);
         output.WriteString(UserId);
+      }
+      if (CircleId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(CircleId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -2431,11 +1790,11 @@ namespace Blipper.Circle.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (CircleId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(CircleId);
-      }
       if (UserId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(UserId);
+      }
+      if (CircleId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CircleId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2449,11 +1808,11 @@ namespace Blipper.Circle.V1 {
       if (other == null) {
         return;
       }
-      if (other.CircleId.Length != 0) {
-        CircleId = other.CircleId;
-      }
       if (other.UserId.Length != 0) {
         UserId = other.UserId;
+      }
+      if (other.CircleId.Length != 0) {
+        CircleId = other.CircleId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2475,11 +1834,11 @@ namespace Blipper.Circle.V1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            CircleId = input.ReadString();
+            UserId = input.ReadString();
             break;
           }
           case 18: {
-            UserId = input.ReadString();
+            CircleId = input.ReadString();
             break;
           }
         }
@@ -2502,11 +1861,11 @@ namespace Blipper.Circle.V1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            CircleId = input.ReadString();
+            UserId = input.ReadString();
             break;
           }
           case 18: {
-            UserId = input.ReadString();
+            CircleId = input.ReadString();
             break;
           }
         }
@@ -2531,7 +1890,7 @@ namespace Blipper.Circle.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Blipper.Circle.V1.CircleReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Blipper.Proto.CircleService.CircleReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2551,8 +1910,8 @@ namespace Blipper.Circle.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LeaveCircleRequest(LeaveCircleRequest other) : this() {
-      circleId_ = other.circleId_;
       userId_ = other.userId_;
+      circleId_ = other.circleId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2562,20 +1921,8 @@ namespace Blipper.Circle.V1 {
       return new LeaveCircleRequest(this);
     }
 
-    /// <summary>Field number for the "circle_id" field.</summary>
-    public const int CircleIdFieldNumber = 1;
-    private string circleId_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string CircleId {
-      get { return circleId_; }
-      set {
-        circleId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
     /// <summary>Field number for the "user_id" field.</summary>
-    public const int UserIdFieldNumber = 2;
+    public const int UserIdFieldNumber = 1;
     private string userId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2583,6 +1930,18 @@ namespace Blipper.Circle.V1 {
       get { return userId_; }
       set {
         userId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "circle_id" field.</summary>
+    public const int CircleIdFieldNumber = 2;
+    private string circleId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CircleId {
+      get { return circleId_; }
+      set {
+        circleId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -2601,8 +1960,8 @@ namespace Blipper.Circle.V1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (CircleId != other.CircleId) return false;
       if (UserId != other.UserId) return false;
+      if (CircleId != other.CircleId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2610,8 +1969,8 @@ namespace Blipper.Circle.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (CircleId.Length != 0) hash ^= CircleId.GetHashCode();
       if (UserId.Length != 0) hash ^= UserId.GetHashCode();
+      if (CircleId.Length != 0) hash ^= CircleId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2630,13 +1989,13 @@ namespace Blipper.Circle.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (CircleId.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(CircleId);
-      }
       if (UserId.Length != 0) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(10);
         output.WriteString(UserId);
+      }
+      if (CircleId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(CircleId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -2648,13 +2007,13 @@ namespace Blipper.Circle.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (CircleId.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(CircleId);
-      }
       if (UserId.Length != 0) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(10);
         output.WriteString(UserId);
+      }
+      if (CircleId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(CircleId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -2666,11 +2025,11 @@ namespace Blipper.Circle.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (CircleId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(CircleId);
-      }
       if (UserId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(UserId);
+      }
+      if (CircleId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CircleId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2684,11 +2043,11 @@ namespace Blipper.Circle.V1 {
       if (other == null) {
         return;
       }
-      if (other.CircleId.Length != 0) {
-        CircleId = other.CircleId;
-      }
       if (other.UserId.Length != 0) {
         UserId = other.UserId;
+      }
+      if (other.CircleId.Length != 0) {
+        CircleId = other.CircleId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2710,11 +2069,11 @@ namespace Blipper.Circle.V1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            CircleId = input.ReadString();
+            UserId = input.ReadString();
             break;
           }
           case 18: {
-            UserId = input.ReadString();
+            CircleId = input.ReadString();
             break;
           }
         }
@@ -2737,11 +2096,11 @@ namespace Blipper.Circle.V1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            CircleId = input.ReadString();
+            UserId = input.ReadString();
             break;
           }
           case 18: {
-            UserId = input.ReadString();
+            CircleId = input.ReadString();
             break;
           }
         }
@@ -2766,7 +2125,7 @@ namespace Blipper.Circle.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Blipper.Circle.V1.CircleReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Blipper.Proto.CircleService.CircleReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2787,7 +2146,8 @@ namespace Blipper.Circle.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetUserCirclesRequest(GetUserCirclesRequest other) : this() {
       userId_ = other.userId_;
-      pagination_ = other.pagination_ != null ? other.pagination_.Clone() : null;
+      page_ = other.page_;
+      pageSize_ = other.pageSize_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2809,15 +2169,27 @@ namespace Blipper.Circle.V1 {
       }
     }
 
-    /// <summary>Field number for the "pagination" field.</summary>
-    public const int PaginationFieldNumber = 2;
-    private global::Blipper.Shared.V1.PaginationRequest pagination_;
+    /// <summary>Field number for the "page" field.</summary>
+    public const int PageFieldNumber = 2;
+    private int page_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Blipper.Shared.V1.PaginationRequest Pagination {
-      get { return pagination_; }
+    public int Page {
+      get { return page_; }
       set {
-        pagination_ = value;
+        page_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "page_size" field.</summary>
+    public const int PageSizeFieldNumber = 3;
+    private int pageSize_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int PageSize {
+      get { return pageSize_; }
+      set {
+        pageSize_ = value;
       }
     }
 
@@ -2837,7 +2209,8 @@ namespace Blipper.Circle.V1 {
         return true;
       }
       if (UserId != other.UserId) return false;
-      if (!object.Equals(Pagination, other.Pagination)) return false;
+      if (Page != other.Page) return false;
+      if (PageSize != other.PageSize) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2846,7 +2219,8 @@ namespace Blipper.Circle.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (UserId.Length != 0) hash ^= UserId.GetHashCode();
-      if (pagination_ != null) hash ^= Pagination.GetHashCode();
+      if (Page != 0) hash ^= Page.GetHashCode();
+      if (PageSize != 0) hash ^= PageSize.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2869,9 +2243,13 @@ namespace Blipper.Circle.V1 {
         output.WriteRawTag(10);
         output.WriteString(UserId);
       }
-      if (pagination_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(Pagination);
+      if (Page != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(Page);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(PageSize);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -2887,9 +2265,13 @@ namespace Blipper.Circle.V1 {
         output.WriteRawTag(10);
         output.WriteString(UserId);
       }
-      if (pagination_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(Pagination);
+      if (Page != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(Page);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(PageSize);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -2904,8 +2286,11 @@ namespace Blipper.Circle.V1 {
       if (UserId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(UserId);
       }
-      if (pagination_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Pagination);
+      if (Page != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Page);
+      }
+      if (PageSize != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageSize);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2922,11 +2307,11 @@ namespace Blipper.Circle.V1 {
       if (other.UserId.Length != 0) {
         UserId = other.UserId;
       }
-      if (other.pagination_ != null) {
-        if (pagination_ == null) {
-          Pagination = new global::Blipper.Shared.V1.PaginationRequest();
-        }
-        Pagination.MergeFrom(other.Pagination);
+      if (other.Page != 0) {
+        Page = other.Page;
+      }
+      if (other.PageSize != 0) {
+        PageSize = other.PageSize;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2951,11 +2336,12 @@ namespace Blipper.Circle.V1 {
             UserId = input.ReadString();
             break;
           }
-          case 18: {
-            if (pagination_ == null) {
-              Pagination = new global::Blipper.Shared.V1.PaginationRequest();
-            }
-            input.ReadMessage(Pagination);
+          case 16: {
+            Page = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            PageSize = input.ReadInt32();
             break;
           }
         }
@@ -2981,11 +2367,12 @@ namespace Blipper.Circle.V1 {
             UserId = input.ReadString();
             break;
           }
-          case 18: {
-            if (pagination_ == null) {
-              Pagination = new global::Blipper.Shared.V1.PaginationRequest();
-            }
-            input.ReadMessage(Pagination);
+          case 16: {
+            Page = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            PageSize = input.ReadInt32();
             break;
           }
         }
@@ -3010,7 +2397,7 @@ namespace Blipper.Circle.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Blipper.Circle.V1.CircleReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Blipper.Proto.CircleService.CircleReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3032,7 +2419,7 @@ namespace Blipper.Circle.V1 {
     public GetUserCirclesResponse(GetUserCirclesResponse other) : this() {
       circles_ = other.circles_.Clone();
       memberships_ = other.memberships_.Clone();
-      pagination_ = other.pagination_ != null ? other.pagination_.Clone() : null;
+      totalCount_ = other.totalCount_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3044,35 +2431,35 @@ namespace Blipper.Circle.V1 {
 
     /// <summary>Field number for the "circles" field.</summary>
     public const int CirclesFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Blipper.Circle.V1.Circle> _repeated_circles_codec
-        = pb::FieldCodec.ForMessage(10, global::Blipper.Circle.V1.Circle.Parser);
-    private readonly pbc::RepeatedField<global::Blipper.Circle.V1.Circle> circles_ = new pbc::RepeatedField<global::Blipper.Circle.V1.Circle>();
+    private static readonly pb::FieldCodec<global::Blipper.Proto.Shared.Circle> _repeated_circles_codec
+        = pb::FieldCodec.ForMessage(10, global::Blipper.Proto.Shared.Circle.Parser);
+    private readonly pbc::RepeatedField<global::Blipper.Proto.Shared.Circle> circles_ = new pbc::RepeatedField<global::Blipper.Proto.Shared.Circle>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Blipper.Circle.V1.Circle> Circles {
+    public pbc::RepeatedField<global::Blipper.Proto.Shared.Circle> Circles {
       get { return circles_; }
     }
 
     /// <summary>Field number for the "memberships" field.</summary>
     public const int MembershipsFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::Blipper.Shared.V1.MembershipInfo> _repeated_memberships_codec
-        = pb::FieldCodec.ForMessage(18, global::Blipper.Shared.V1.MembershipInfo.Parser);
-    private readonly pbc::RepeatedField<global::Blipper.Shared.V1.MembershipInfo> memberships_ = new pbc::RepeatedField<global::Blipper.Shared.V1.MembershipInfo>();
+    private static readonly pb::FieldCodec<global::Blipper.Proto.Shared.MembershipInfo> _repeated_memberships_codec
+        = pb::FieldCodec.ForMessage(18, global::Blipper.Proto.Shared.MembershipInfo.Parser);
+    private readonly pbc::RepeatedField<global::Blipper.Proto.Shared.MembershipInfo> memberships_ = new pbc::RepeatedField<global::Blipper.Proto.Shared.MembershipInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Blipper.Shared.V1.MembershipInfo> Memberships {
+    public pbc::RepeatedField<global::Blipper.Proto.Shared.MembershipInfo> Memberships {
       get { return memberships_; }
     }
 
-    /// <summary>Field number for the "pagination" field.</summary>
-    public const int PaginationFieldNumber = 3;
-    private global::Blipper.Shared.V1.PaginationResponse pagination_;
+    /// <summary>Field number for the "total_count" field.</summary>
+    public const int TotalCountFieldNumber = 3;
+    private int totalCount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Blipper.Shared.V1.PaginationResponse Pagination {
-      get { return pagination_; }
+    public int TotalCount {
+      get { return totalCount_; }
       set {
-        pagination_ = value;
+        totalCount_ = value;
       }
     }
 
@@ -3093,7 +2480,7 @@ namespace Blipper.Circle.V1 {
       }
       if(!circles_.Equals(other.circles_)) return false;
       if(!memberships_.Equals(other.memberships_)) return false;
-      if (!object.Equals(Pagination, other.Pagination)) return false;
+      if (TotalCount != other.TotalCount) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3103,7 +2490,7 @@ namespace Blipper.Circle.V1 {
       int hash = 1;
       hash ^= circles_.GetHashCode();
       hash ^= memberships_.GetHashCode();
-      if (pagination_ != null) hash ^= Pagination.GetHashCode();
+      if (TotalCount != 0) hash ^= TotalCount.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3124,9 +2511,9 @@ namespace Blipper.Circle.V1 {
     #else
       circles_.WriteTo(output, _repeated_circles_codec);
       memberships_.WriteTo(output, _repeated_memberships_codec);
-      if (pagination_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(Pagination);
+      if (TotalCount != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(TotalCount);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -3140,9 +2527,9 @@ namespace Blipper.Circle.V1 {
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       circles_.WriteTo(ref output, _repeated_circles_codec);
       memberships_.WriteTo(ref output, _repeated_memberships_codec);
-      if (pagination_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(Pagination);
+      if (TotalCount != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(TotalCount);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -3156,8 +2543,8 @@ namespace Blipper.Circle.V1 {
       int size = 0;
       size += circles_.CalculateSize(_repeated_circles_codec);
       size += memberships_.CalculateSize(_repeated_memberships_codec);
-      if (pagination_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Pagination);
+      if (TotalCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(TotalCount);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3173,11 +2560,8 @@ namespace Blipper.Circle.V1 {
       }
       circles_.Add(other.circles_);
       memberships_.Add(other.memberships_);
-      if (other.pagination_ != null) {
-        if (pagination_ == null) {
-          Pagination = new global::Blipper.Shared.V1.PaginationResponse();
-        }
-        Pagination.MergeFrom(other.Pagination);
+      if (other.TotalCount != 0) {
+        TotalCount = other.TotalCount;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3206,11 +2590,8 @@ namespace Blipper.Circle.V1 {
             memberships_.AddEntriesFrom(input, _repeated_memberships_codec);
             break;
           }
-          case 26: {
-            if (pagination_ == null) {
-              Pagination = new global::Blipper.Shared.V1.PaginationResponse();
-            }
-            input.ReadMessage(Pagination);
+          case 24: {
+            TotalCount = input.ReadInt32();
             break;
           }
         }
@@ -3240,11 +2621,8 @@ namespace Blipper.Circle.V1 {
             memberships_.AddEntriesFrom(ref input, _repeated_memberships_codec);
             break;
           }
-          case 26: {
-            if (pagination_ == null) {
-              Pagination = new global::Blipper.Shared.V1.PaginationResponse();
-            }
-            input.ReadMessage(Pagination);
+          case 24: {
+            TotalCount = input.ReadInt32();
             break;
           }
         }
@@ -3269,7 +2647,7 @@ namespace Blipper.Circle.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Blipper.Circle.V1.CircleReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Blipper.Proto.CircleService.CircleReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3290,7 +2668,8 @@ namespace Blipper.Circle.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetCircleMembersRequest(GetCircleMembersRequest other) : this() {
       circleId_ = other.circleId_;
-      pagination_ = other.pagination_ != null ? other.pagination_.Clone() : null;
+      page_ = other.page_;
+      pageSize_ = other.pageSize_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3312,15 +2691,27 @@ namespace Blipper.Circle.V1 {
       }
     }
 
-    /// <summary>Field number for the "pagination" field.</summary>
-    public const int PaginationFieldNumber = 2;
-    private global::Blipper.Shared.V1.PaginationRequest pagination_;
+    /// <summary>Field number for the "page" field.</summary>
+    public const int PageFieldNumber = 2;
+    private int page_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Blipper.Shared.V1.PaginationRequest Pagination {
-      get { return pagination_; }
+    public int Page {
+      get { return page_; }
       set {
-        pagination_ = value;
+        page_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "page_size" field.</summary>
+    public const int PageSizeFieldNumber = 3;
+    private int pageSize_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int PageSize {
+      get { return pageSize_; }
+      set {
+        pageSize_ = value;
       }
     }
 
@@ -3340,7 +2731,8 @@ namespace Blipper.Circle.V1 {
         return true;
       }
       if (CircleId != other.CircleId) return false;
-      if (!object.Equals(Pagination, other.Pagination)) return false;
+      if (Page != other.Page) return false;
+      if (PageSize != other.PageSize) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3349,7 +2741,8 @@ namespace Blipper.Circle.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (CircleId.Length != 0) hash ^= CircleId.GetHashCode();
-      if (pagination_ != null) hash ^= Pagination.GetHashCode();
+      if (Page != 0) hash ^= Page.GetHashCode();
+      if (PageSize != 0) hash ^= PageSize.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3372,9 +2765,13 @@ namespace Blipper.Circle.V1 {
         output.WriteRawTag(10);
         output.WriteString(CircleId);
       }
-      if (pagination_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(Pagination);
+      if (Page != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(Page);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(PageSize);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -3390,9 +2787,13 @@ namespace Blipper.Circle.V1 {
         output.WriteRawTag(10);
         output.WriteString(CircleId);
       }
-      if (pagination_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(Pagination);
+      if (Page != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(Page);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(PageSize);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -3407,8 +2808,11 @@ namespace Blipper.Circle.V1 {
       if (CircleId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(CircleId);
       }
-      if (pagination_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Pagination);
+      if (Page != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Page);
+      }
+      if (PageSize != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageSize);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3425,11 +2829,11 @@ namespace Blipper.Circle.V1 {
       if (other.CircleId.Length != 0) {
         CircleId = other.CircleId;
       }
-      if (other.pagination_ != null) {
-        if (pagination_ == null) {
-          Pagination = new global::Blipper.Shared.V1.PaginationRequest();
-        }
-        Pagination.MergeFrom(other.Pagination);
+      if (other.Page != 0) {
+        Page = other.Page;
+      }
+      if (other.PageSize != 0) {
+        PageSize = other.PageSize;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3454,11 +2858,12 @@ namespace Blipper.Circle.V1 {
             CircleId = input.ReadString();
             break;
           }
-          case 18: {
-            if (pagination_ == null) {
-              Pagination = new global::Blipper.Shared.V1.PaginationRequest();
-            }
-            input.ReadMessage(Pagination);
+          case 16: {
+            Page = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            PageSize = input.ReadInt32();
             break;
           }
         }
@@ -3484,11 +2889,12 @@ namespace Blipper.Circle.V1 {
             CircleId = input.ReadString();
             break;
           }
-          case 18: {
-            if (pagination_ == null) {
-              Pagination = new global::Blipper.Shared.V1.PaginationRequest();
-            }
-            input.ReadMessage(Pagination);
+          case 16: {
+            Page = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            PageSize = input.ReadInt32();
             break;
           }
         }
@@ -3513,7 +2919,7 @@ namespace Blipper.Circle.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Blipper.Circle.V1.CircleReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Blipper.Proto.CircleService.CircleReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3535,7 +2941,7 @@ namespace Blipper.Circle.V1 {
     public GetCircleMembersResponse(GetCircleMembersResponse other) : this() {
       users_ = other.users_.Clone();
       memberships_ = other.memberships_.Clone();
-      pagination_ = other.pagination_ != null ? other.pagination_.Clone() : null;
+      totalCount_ = other.totalCount_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3547,35 +2953,35 @@ namespace Blipper.Circle.V1 {
 
     /// <summary>Field number for the "users" field.</summary>
     public const int UsersFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Blipper.Shared.V1.UserInfo> _repeated_users_codec
-        = pb::FieldCodec.ForMessage(10, global::Blipper.Shared.V1.UserInfo.Parser);
-    private readonly pbc::RepeatedField<global::Blipper.Shared.V1.UserInfo> users_ = new pbc::RepeatedField<global::Blipper.Shared.V1.UserInfo>();
+    private static readonly pb::FieldCodec<global::Blipper.Proto.Shared.User> _repeated_users_codec
+        = pb::FieldCodec.ForMessage(10, global::Blipper.Proto.Shared.User.Parser);
+    private readonly pbc::RepeatedField<global::Blipper.Proto.Shared.User> users_ = new pbc::RepeatedField<global::Blipper.Proto.Shared.User>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Blipper.Shared.V1.UserInfo> Users {
+    public pbc::RepeatedField<global::Blipper.Proto.Shared.User> Users {
       get { return users_; }
     }
 
     /// <summary>Field number for the "memberships" field.</summary>
     public const int MembershipsFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::Blipper.Shared.V1.MembershipInfo> _repeated_memberships_codec
-        = pb::FieldCodec.ForMessage(18, global::Blipper.Shared.V1.MembershipInfo.Parser);
-    private readonly pbc::RepeatedField<global::Blipper.Shared.V1.MembershipInfo> memberships_ = new pbc::RepeatedField<global::Blipper.Shared.V1.MembershipInfo>();
+    private static readonly pb::FieldCodec<global::Blipper.Proto.Shared.MembershipInfo> _repeated_memberships_codec
+        = pb::FieldCodec.ForMessage(18, global::Blipper.Proto.Shared.MembershipInfo.Parser);
+    private readonly pbc::RepeatedField<global::Blipper.Proto.Shared.MembershipInfo> memberships_ = new pbc::RepeatedField<global::Blipper.Proto.Shared.MembershipInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Blipper.Shared.V1.MembershipInfo> Memberships {
+    public pbc::RepeatedField<global::Blipper.Proto.Shared.MembershipInfo> Memberships {
       get { return memberships_; }
     }
 
-    /// <summary>Field number for the "pagination" field.</summary>
-    public const int PaginationFieldNumber = 3;
-    private global::Blipper.Shared.V1.PaginationResponse pagination_;
+    /// <summary>Field number for the "total_count" field.</summary>
+    public const int TotalCountFieldNumber = 3;
+    private int totalCount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Blipper.Shared.V1.PaginationResponse Pagination {
-      get { return pagination_; }
+    public int TotalCount {
+      get { return totalCount_; }
       set {
-        pagination_ = value;
+        totalCount_ = value;
       }
     }
 
@@ -3596,7 +3002,7 @@ namespace Blipper.Circle.V1 {
       }
       if(!users_.Equals(other.users_)) return false;
       if(!memberships_.Equals(other.memberships_)) return false;
-      if (!object.Equals(Pagination, other.Pagination)) return false;
+      if (TotalCount != other.TotalCount) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3606,7 +3012,7 @@ namespace Blipper.Circle.V1 {
       int hash = 1;
       hash ^= users_.GetHashCode();
       hash ^= memberships_.GetHashCode();
-      if (pagination_ != null) hash ^= Pagination.GetHashCode();
+      if (TotalCount != 0) hash ^= TotalCount.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3627,9 +3033,9 @@ namespace Blipper.Circle.V1 {
     #else
       users_.WriteTo(output, _repeated_users_codec);
       memberships_.WriteTo(output, _repeated_memberships_codec);
-      if (pagination_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(Pagination);
+      if (TotalCount != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(TotalCount);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -3643,9 +3049,9 @@ namespace Blipper.Circle.V1 {
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       users_.WriteTo(ref output, _repeated_users_codec);
       memberships_.WriteTo(ref output, _repeated_memberships_codec);
-      if (pagination_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(Pagination);
+      if (TotalCount != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(TotalCount);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -3659,8 +3065,8 @@ namespace Blipper.Circle.V1 {
       int size = 0;
       size += users_.CalculateSize(_repeated_users_codec);
       size += memberships_.CalculateSize(_repeated_memberships_codec);
-      if (pagination_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Pagination);
+      if (TotalCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(TotalCount);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3676,11 +3082,8 @@ namespace Blipper.Circle.V1 {
       }
       users_.Add(other.users_);
       memberships_.Add(other.memberships_);
-      if (other.pagination_ != null) {
-        if (pagination_ == null) {
-          Pagination = new global::Blipper.Shared.V1.PaginationResponse();
-        }
-        Pagination.MergeFrom(other.Pagination);
+      if (other.TotalCount != 0) {
+        TotalCount = other.TotalCount;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3709,11 +3112,8 @@ namespace Blipper.Circle.V1 {
             memberships_.AddEntriesFrom(input, _repeated_memberships_codec);
             break;
           }
-          case 26: {
-            if (pagination_ == null) {
-              Pagination = new global::Blipper.Shared.V1.PaginationResponse();
-            }
-            input.ReadMessage(Pagination);
+          case 24: {
+            TotalCount = input.ReadInt32();
             break;
           }
         }
@@ -3743,11 +3143,8 @@ namespace Blipper.Circle.V1 {
             memberships_.AddEntriesFrom(ref input, _repeated_memberships_codec);
             break;
           }
-          case 26: {
-            if (pagination_ == null) {
-              Pagination = new global::Blipper.Shared.V1.PaginationResponse();
-            }
-            input.ReadMessage(Pagination);
+          case 24: {
+            TotalCount = input.ReadInt32();
             break;
           }
         }
@@ -3772,7 +3169,7 @@ namespace Blipper.Circle.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Blipper.Circle.V1.CircleReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Blipper.Proto.CircleService.CircleReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3792,8 +3189,8 @@ namespace Blipper.Circle.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UpdateMemberRoleRequest(UpdateMemberRoleRequest other) : this() {
-      circleId_ = other.circleId_;
       userId_ = other.userId_;
+      circleId_ = other.circleId_;
       newRole_ = other.newRole_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -3804,20 +3201,8 @@ namespace Blipper.Circle.V1 {
       return new UpdateMemberRoleRequest(this);
     }
 
-    /// <summary>Field number for the "circle_id" field.</summary>
-    public const int CircleIdFieldNumber = 1;
-    private string circleId_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string CircleId {
-      get { return circleId_; }
-      set {
-        circleId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
     /// <summary>Field number for the "user_id" field.</summary>
-    public const int UserIdFieldNumber = 2;
+    public const int UserIdFieldNumber = 1;
     private string userId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3828,12 +3213,24 @@ namespace Blipper.Circle.V1 {
       }
     }
 
-    /// <summary>Field number for the "new_role" field.</summary>
-    public const int NewRoleFieldNumber = 3;
-    private global::Blipper.Shared.V1.Role newRole_ = global::Blipper.Shared.V1.Role.Unspecified;
+    /// <summary>Field number for the "circle_id" field.</summary>
+    public const int CircleIdFieldNumber = 2;
+    private string circleId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Blipper.Shared.V1.Role NewRole {
+    public string CircleId {
+      get { return circleId_; }
+      set {
+        circleId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "new_role" field.</summary>
+    public const int NewRoleFieldNumber = 3;
+    private global::Blipper.Proto.Shared.Role newRole_ = global::Blipper.Proto.Shared.Role.Unspecified;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Blipper.Proto.Shared.Role NewRole {
       get { return newRole_; }
       set {
         newRole_ = value;
@@ -3855,8 +3252,8 @@ namespace Blipper.Circle.V1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (CircleId != other.CircleId) return false;
       if (UserId != other.UserId) return false;
+      if (CircleId != other.CircleId) return false;
       if (NewRole != other.NewRole) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -3865,9 +3262,9 @@ namespace Blipper.Circle.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (CircleId.Length != 0) hash ^= CircleId.GetHashCode();
       if (UserId.Length != 0) hash ^= UserId.GetHashCode();
-      if (NewRole != global::Blipper.Shared.V1.Role.Unspecified) hash ^= NewRole.GetHashCode();
+      if (CircleId.Length != 0) hash ^= CircleId.GetHashCode();
+      if (NewRole != global::Blipper.Proto.Shared.Role.Unspecified) hash ^= NewRole.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3886,15 +3283,15 @@ namespace Blipper.Circle.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (CircleId.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(CircleId);
-      }
       if (UserId.Length != 0) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(10);
         output.WriteString(UserId);
       }
-      if (NewRole != global::Blipper.Shared.V1.Role.Unspecified) {
+      if (CircleId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(CircleId);
+      }
+      if (NewRole != global::Blipper.Proto.Shared.Role.Unspecified) {
         output.WriteRawTag(24);
         output.WriteEnum((int) NewRole);
       }
@@ -3908,15 +3305,15 @@ namespace Blipper.Circle.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (CircleId.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(CircleId);
-      }
       if (UserId.Length != 0) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(10);
         output.WriteString(UserId);
       }
-      if (NewRole != global::Blipper.Shared.V1.Role.Unspecified) {
+      if (CircleId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(CircleId);
+      }
+      if (NewRole != global::Blipper.Proto.Shared.Role.Unspecified) {
         output.WriteRawTag(24);
         output.WriteEnum((int) NewRole);
       }
@@ -3930,13 +3327,13 @@ namespace Blipper.Circle.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (CircleId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(CircleId);
-      }
       if (UserId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(UserId);
       }
-      if (NewRole != global::Blipper.Shared.V1.Role.Unspecified) {
+      if (CircleId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CircleId);
+      }
+      if (NewRole != global::Blipper.Proto.Shared.Role.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) NewRole);
       }
       if (_unknownFields != null) {
@@ -3951,13 +3348,13 @@ namespace Blipper.Circle.V1 {
       if (other == null) {
         return;
       }
-      if (other.CircleId.Length != 0) {
-        CircleId = other.CircleId;
-      }
       if (other.UserId.Length != 0) {
         UserId = other.UserId;
       }
-      if (other.NewRole != global::Blipper.Shared.V1.Role.Unspecified) {
+      if (other.CircleId.Length != 0) {
+        CircleId = other.CircleId;
+      }
+      if (other.NewRole != global::Blipper.Proto.Shared.Role.Unspecified) {
         NewRole = other.NewRole;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -3980,15 +3377,15 @@ namespace Blipper.Circle.V1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            CircleId = input.ReadString();
-            break;
-          }
-          case 18: {
             UserId = input.ReadString();
             break;
           }
+          case 18: {
+            CircleId = input.ReadString();
+            break;
+          }
           case 24: {
-            NewRole = (global::Blipper.Shared.V1.Role) input.ReadEnum();
+            NewRole = (global::Blipper.Proto.Shared.Role) input.ReadEnum();
             break;
           }
         }
@@ -4011,15 +3408,15 @@ namespace Blipper.Circle.V1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            CircleId = input.ReadString();
-            break;
-          }
-          case 18: {
             UserId = input.ReadString();
             break;
           }
+          case 18: {
+            CircleId = input.ReadString();
+            break;
+          }
           case 24: {
-            NewRole = (global::Blipper.Shared.V1.Role) input.ReadEnum();
+            NewRole = (global::Blipper.Proto.Shared.Role) input.ReadEnum();
             break;
           }
         }
@@ -4044,7 +3441,7 @@ namespace Blipper.Circle.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Blipper.Circle.V1.CircleReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Blipper.Proto.CircleService.CircleReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4064,8 +3461,8 @@ namespace Blipper.Circle.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetMembershipRequest(GetMembershipRequest other) : this() {
-      circleId_ = other.circleId_;
       userId_ = other.userId_;
+      circleId_ = other.circleId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4075,20 +3472,8 @@ namespace Blipper.Circle.V1 {
       return new GetMembershipRequest(this);
     }
 
-    /// <summary>Field number for the "circle_id" field.</summary>
-    public const int CircleIdFieldNumber = 1;
-    private string circleId_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string CircleId {
-      get { return circleId_; }
-      set {
-        circleId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
     /// <summary>Field number for the "user_id" field.</summary>
-    public const int UserIdFieldNumber = 2;
+    public const int UserIdFieldNumber = 1;
     private string userId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4096,6 +3481,18 @@ namespace Blipper.Circle.V1 {
       get { return userId_; }
       set {
         userId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "circle_id" field.</summary>
+    public const int CircleIdFieldNumber = 2;
+    private string circleId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CircleId {
+      get { return circleId_; }
+      set {
+        circleId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -4114,8 +3511,8 @@ namespace Blipper.Circle.V1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (CircleId != other.CircleId) return false;
       if (UserId != other.UserId) return false;
+      if (CircleId != other.CircleId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4123,8 +3520,8 @@ namespace Blipper.Circle.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (CircleId.Length != 0) hash ^= CircleId.GetHashCode();
       if (UserId.Length != 0) hash ^= UserId.GetHashCode();
+      if (CircleId.Length != 0) hash ^= CircleId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4143,13 +3540,13 @@ namespace Blipper.Circle.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (CircleId.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(CircleId);
-      }
       if (UserId.Length != 0) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(10);
         output.WriteString(UserId);
+      }
+      if (CircleId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(CircleId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -4161,13 +3558,13 @@ namespace Blipper.Circle.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (CircleId.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(CircleId);
-      }
       if (UserId.Length != 0) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(10);
         output.WriteString(UserId);
+      }
+      if (CircleId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(CircleId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -4179,11 +3576,11 @@ namespace Blipper.Circle.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (CircleId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(CircleId);
-      }
       if (UserId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(UserId);
+      }
+      if (CircleId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CircleId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -4197,11 +3594,11 @@ namespace Blipper.Circle.V1 {
       if (other == null) {
         return;
       }
-      if (other.CircleId.Length != 0) {
-        CircleId = other.CircleId;
-      }
       if (other.UserId.Length != 0) {
         UserId = other.UserId;
+      }
+      if (other.CircleId.Length != 0) {
+        CircleId = other.CircleId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -4223,11 +3620,11 @@ namespace Blipper.Circle.V1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            CircleId = input.ReadString();
+            UserId = input.ReadString();
             break;
           }
           case 18: {
-            UserId = input.ReadString();
+            CircleId = input.ReadString();
             break;
           }
         }
@@ -4250,11 +3647,11 @@ namespace Blipper.Circle.V1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            CircleId = input.ReadString();
+            UserId = input.ReadString();
             break;
           }
           case 18: {
-            UserId = input.ReadString();
+            CircleId = input.ReadString();
             break;
           }
         }
@@ -4279,7 +3676,7 @@ namespace Blipper.Circle.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Blipper.Circle.V1.CircleReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Blipper.Proto.CircleService.CircleReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4300,7 +3697,8 @@ namespace Blipper.Circle.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListJoinRequestsRequest(ListJoinRequestsRequest other) : this() {
       circleId_ = other.circleId_;
-      pagination_ = other.pagination_ != null ? other.pagination_.Clone() : null;
+      page_ = other.page_;
+      pageSize_ = other.pageSize_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4322,15 +3720,27 @@ namespace Blipper.Circle.V1 {
       }
     }
 
-    /// <summary>Field number for the "pagination" field.</summary>
-    public const int PaginationFieldNumber = 2;
-    private global::Blipper.Shared.V1.PaginationRequest pagination_;
+    /// <summary>Field number for the "page" field.</summary>
+    public const int PageFieldNumber = 2;
+    private int page_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Blipper.Shared.V1.PaginationRequest Pagination {
-      get { return pagination_; }
+    public int Page {
+      get { return page_; }
       set {
-        pagination_ = value;
+        page_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "page_size" field.</summary>
+    public const int PageSizeFieldNumber = 3;
+    private int pageSize_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int PageSize {
+      get { return pageSize_; }
+      set {
+        pageSize_ = value;
       }
     }
 
@@ -4350,7 +3760,8 @@ namespace Blipper.Circle.V1 {
         return true;
       }
       if (CircleId != other.CircleId) return false;
-      if (!object.Equals(Pagination, other.Pagination)) return false;
+      if (Page != other.Page) return false;
+      if (PageSize != other.PageSize) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4359,7 +3770,8 @@ namespace Blipper.Circle.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (CircleId.Length != 0) hash ^= CircleId.GetHashCode();
-      if (pagination_ != null) hash ^= Pagination.GetHashCode();
+      if (Page != 0) hash ^= Page.GetHashCode();
+      if (PageSize != 0) hash ^= PageSize.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4382,9 +3794,13 @@ namespace Blipper.Circle.V1 {
         output.WriteRawTag(10);
         output.WriteString(CircleId);
       }
-      if (pagination_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(Pagination);
+      if (Page != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(Page);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(PageSize);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -4400,9 +3816,13 @@ namespace Blipper.Circle.V1 {
         output.WriteRawTag(10);
         output.WriteString(CircleId);
       }
-      if (pagination_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(Pagination);
+      if (Page != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(Page);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(PageSize);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -4417,8 +3837,11 @@ namespace Blipper.Circle.V1 {
       if (CircleId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(CircleId);
       }
-      if (pagination_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Pagination);
+      if (Page != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Page);
+      }
+      if (PageSize != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageSize);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -4435,11 +3858,11 @@ namespace Blipper.Circle.V1 {
       if (other.CircleId.Length != 0) {
         CircleId = other.CircleId;
       }
-      if (other.pagination_ != null) {
-        if (pagination_ == null) {
-          Pagination = new global::Blipper.Shared.V1.PaginationRequest();
-        }
-        Pagination.MergeFrom(other.Pagination);
+      if (other.Page != 0) {
+        Page = other.Page;
+      }
+      if (other.PageSize != 0) {
+        PageSize = other.PageSize;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -4464,11 +3887,12 @@ namespace Blipper.Circle.V1 {
             CircleId = input.ReadString();
             break;
           }
-          case 18: {
-            if (pagination_ == null) {
-              Pagination = new global::Blipper.Shared.V1.PaginationRequest();
-            }
-            input.ReadMessage(Pagination);
+          case 16: {
+            Page = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            PageSize = input.ReadInt32();
             break;
           }
         }
@@ -4494,11 +3918,12 @@ namespace Blipper.Circle.V1 {
             CircleId = input.ReadString();
             break;
           }
-          case 18: {
-            if (pagination_ == null) {
-              Pagination = new global::Blipper.Shared.V1.PaginationRequest();
-            }
-            input.ReadMessage(Pagination);
+          case 16: {
+            Page = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            PageSize = input.ReadInt32();
             break;
           }
         }
@@ -4523,7 +3948,7 @@ namespace Blipper.Circle.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Blipper.Circle.V1.CircleReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Blipper.Proto.CircleService.CircleReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4543,9 +3968,8 @@ namespace Blipper.Circle.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListJoinRequestsResponse(ListJoinRequestsResponse other) : this() {
-      users_ = other.users_.Clone();
-      memberships_ = other.memberships_.Clone();
-      pagination_ = other.pagination_ != null ? other.pagination_.Clone() : null;
+      requests_ = other.requests_.Clone();
+      totalCount_ = other.totalCount_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4555,37 +3979,26 @@ namespace Blipper.Circle.V1 {
       return new ListJoinRequestsResponse(this);
     }
 
-    /// <summary>Field number for the "users" field.</summary>
-    public const int UsersFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Blipper.Shared.V1.UserInfo> _repeated_users_codec
-        = pb::FieldCodec.ForMessage(10, global::Blipper.Shared.V1.UserInfo.Parser);
-    private readonly pbc::RepeatedField<global::Blipper.Shared.V1.UserInfo> users_ = new pbc::RepeatedField<global::Blipper.Shared.V1.UserInfo>();
+    /// <summary>Field number for the "requests" field.</summary>
+    public const int RequestsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Blipper.Proto.CircleService.ListJoinRequestsResponse.Types.JoinRequest> _repeated_requests_codec
+        = pb::FieldCodec.ForMessage(10, global::Blipper.Proto.CircleService.ListJoinRequestsResponse.Types.JoinRequest.Parser);
+    private readonly pbc::RepeatedField<global::Blipper.Proto.CircleService.ListJoinRequestsResponse.Types.JoinRequest> requests_ = new pbc::RepeatedField<global::Blipper.Proto.CircleService.ListJoinRequestsResponse.Types.JoinRequest>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Blipper.Shared.V1.UserInfo> Users {
-      get { return users_; }
+    public pbc::RepeatedField<global::Blipper.Proto.CircleService.ListJoinRequestsResponse.Types.JoinRequest> Requests {
+      get { return requests_; }
     }
 
-    /// <summary>Field number for the "memberships" field.</summary>
-    public const int MembershipsFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::Blipper.Shared.V1.MembershipInfo> _repeated_memberships_codec
-        = pb::FieldCodec.ForMessage(18, global::Blipper.Shared.V1.MembershipInfo.Parser);
-    private readonly pbc::RepeatedField<global::Blipper.Shared.V1.MembershipInfo> memberships_ = new pbc::RepeatedField<global::Blipper.Shared.V1.MembershipInfo>();
+    /// <summary>Field number for the "total_count" field.</summary>
+    public const int TotalCountFieldNumber = 2;
+    private int totalCount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Blipper.Shared.V1.MembershipInfo> Memberships {
-      get { return memberships_; }
-    }
-
-    /// <summary>Field number for the "pagination" field.</summary>
-    public const int PaginationFieldNumber = 3;
-    private global::Blipper.Shared.V1.PaginationResponse pagination_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Blipper.Shared.V1.PaginationResponse Pagination {
-      get { return pagination_; }
+    public int TotalCount {
+      get { return totalCount_; }
       set {
-        pagination_ = value;
+        totalCount_ = value;
       }
     }
 
@@ -4604,9 +4017,8 @@ namespace Blipper.Circle.V1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!users_.Equals(other.users_)) return false;
-      if(!memberships_.Equals(other.memberships_)) return false;
-      if (!object.Equals(Pagination, other.Pagination)) return false;
+      if(!requests_.Equals(other.requests_)) return false;
+      if (TotalCount != other.TotalCount) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4614,9 +4026,8 @@ namespace Blipper.Circle.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= users_.GetHashCode();
-      hash ^= memberships_.GetHashCode();
-      if (pagination_ != null) hash ^= Pagination.GetHashCode();
+      hash ^= requests_.GetHashCode();
+      if (TotalCount != 0) hash ^= TotalCount.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4635,11 +4046,10 @@ namespace Blipper.Circle.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      users_.WriteTo(output, _repeated_users_codec);
-      memberships_.WriteTo(output, _repeated_memberships_codec);
-      if (pagination_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(Pagination);
+      requests_.WriteTo(output, _repeated_requests_codec);
+      if (TotalCount != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(TotalCount);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -4651,11 +4061,10 @@ namespace Blipper.Circle.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      users_.WriteTo(ref output, _repeated_users_codec);
-      memberships_.WriteTo(ref output, _repeated_memberships_codec);
-      if (pagination_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(Pagination);
+      requests_.WriteTo(ref output, _repeated_requests_codec);
+      if (TotalCount != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(TotalCount);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -4667,10 +4076,9 @@ namespace Blipper.Circle.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += users_.CalculateSize(_repeated_users_codec);
-      size += memberships_.CalculateSize(_repeated_memberships_codec);
-      if (pagination_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Pagination);
+      size += requests_.CalculateSize(_repeated_requests_codec);
+      if (TotalCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(TotalCount);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -4684,13 +4092,9 @@ namespace Blipper.Circle.V1 {
       if (other == null) {
         return;
       }
-      users_.Add(other.users_);
-      memberships_.Add(other.memberships_);
-      if (other.pagination_ != null) {
-        if (pagination_ == null) {
-          Pagination = new global::Blipper.Shared.V1.PaginationResponse();
-        }
-        Pagination.MergeFrom(other.Pagination);
+      requests_.Add(other.requests_);
+      if (other.TotalCount != 0) {
+        TotalCount = other.TotalCount;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -4712,18 +4116,11 @@ namespace Blipper.Circle.V1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            users_.AddEntriesFrom(input, _repeated_users_codec);
+            requests_.AddEntriesFrom(input, _repeated_requests_codec);
             break;
           }
-          case 18: {
-            memberships_.AddEntriesFrom(input, _repeated_memberships_codec);
-            break;
-          }
-          case 26: {
-            if (pagination_ == null) {
-              Pagination = new global::Blipper.Shared.V1.PaginationResponse();
-            }
-            input.ReadMessage(Pagination);
+          case 16: {
+            TotalCount = input.ReadInt32();
             break;
           }
         }
@@ -4746,24 +4143,352 @@ namespace Blipper.Circle.V1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            users_.AddEntriesFrom(ref input, _repeated_users_codec);
+            requests_.AddEntriesFrom(ref input, _repeated_requests_codec);
             break;
           }
-          case 18: {
-            memberships_.AddEntriesFrom(ref input, _repeated_memberships_codec);
-            break;
-          }
-          case 26: {
-            if (pagination_ == null) {
-              Pagination = new global::Blipper.Shared.V1.PaginationResponse();
-            }
-            input.ReadMessage(Pagination);
+          case 16: {
+            TotalCount = input.ReadInt32();
             break;
           }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the ListJoinRequestsResponse message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class JoinRequest : pb::IMessage<JoinRequest>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<JoinRequest> _parser = new pb::MessageParser<JoinRequest>(() => new JoinRequest());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<JoinRequest> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Blipper.Proto.CircleService.ListJoinRequestsResponse.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public JoinRequest() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public JoinRequest(JoinRequest other) : this() {
+          userId_ = other.userId_;
+          circleId_ = other.circleId_;
+          requestedAt_ = other.requestedAt_ != null ? other.requestedAt_.Clone() : null;
+          user_ = other.user_ != null ? other.user_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public JoinRequest Clone() {
+          return new JoinRequest(this);
+        }
+
+        /// <summary>Field number for the "user_id" field.</summary>
+        public const int UserIdFieldNumber = 1;
+        private string userId_ = "";
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string UserId {
+          get { return userId_; }
+          set {
+            userId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "circle_id" field.</summary>
+        public const int CircleIdFieldNumber = 2;
+        private string circleId_ = "";
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string CircleId {
+          get { return circleId_; }
+          set {
+            circleId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "requested_at" field.</summary>
+        public const int RequestedAtFieldNumber = 3;
+        private global::Google.Protobuf.WellKnownTypes.Timestamp requestedAt_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Protobuf.WellKnownTypes.Timestamp RequestedAt {
+          get { return requestedAt_; }
+          set {
+            requestedAt_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "user" field.</summary>
+        public const int UserFieldNumber = 4;
+        private global::Blipper.Proto.Shared.User user_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Blipper.Proto.Shared.User User {
+          get { return user_; }
+          set {
+            user_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as JoinRequest);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(JoinRequest other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (UserId != other.UserId) return false;
+          if (CircleId != other.CircleId) return false;
+          if (!object.Equals(RequestedAt, other.RequestedAt)) return false;
+          if (!object.Equals(User, other.User)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (UserId.Length != 0) hash ^= UserId.GetHashCode();
+          if (CircleId.Length != 0) hash ^= CircleId.GetHashCode();
+          if (requestedAt_ != null) hash ^= RequestedAt.GetHashCode();
+          if (user_ != null) hash ^= User.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (UserId.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(UserId);
+          }
+          if (CircleId.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(CircleId);
+          }
+          if (requestedAt_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(RequestedAt);
+          }
+          if (user_ != null) {
+            output.WriteRawTag(34);
+            output.WriteMessage(User);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (UserId.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(UserId);
+          }
+          if (CircleId.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(CircleId);
+          }
+          if (requestedAt_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(RequestedAt);
+          }
+          if (user_ != null) {
+            output.WriteRawTag(34);
+            output.WriteMessage(User);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (UserId.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(UserId);
+          }
+          if (CircleId.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(CircleId);
+          }
+          if (requestedAt_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(RequestedAt);
+          }
+          if (user_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(User);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(JoinRequest other) {
+          if (other == null) {
+            return;
+          }
+          if (other.UserId.Length != 0) {
+            UserId = other.UserId;
+          }
+          if (other.CircleId.Length != 0) {
+            CircleId = other.CircleId;
+          }
+          if (other.requestedAt_ != null) {
+            if (requestedAt_ == null) {
+              RequestedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            RequestedAt.MergeFrom(other.RequestedAt);
+          }
+          if (other.user_ != null) {
+            if (user_ == null) {
+              User = new global::Blipper.Proto.Shared.User();
+            }
+            User.MergeFrom(other.User);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                UserId = input.ReadString();
+                break;
+              }
+              case 18: {
+                CircleId = input.ReadString();
+                break;
+              }
+              case 26: {
+                if (requestedAt_ == null) {
+                  RequestedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(RequestedAt);
+                break;
+              }
+              case 34: {
+                if (user_ == null) {
+                  User = new global::Blipper.Proto.Shared.User();
+                }
+                input.ReadMessage(User);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                UserId = input.ReadString();
+                break;
+              }
+              case 18: {
+                CircleId = input.ReadString();
+                break;
+              }
+              case 26: {
+                if (requestedAt_ == null) {
+                  RequestedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(RequestedAt);
+                break;
+              }
+              case 34: {
+                if (user_ == null) {
+                  User = new global::Blipper.Proto.Shared.User();
+                }
+                input.ReadMessage(User);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
 
   }
 
@@ -4782,7 +4507,7 @@ namespace Blipper.Circle.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Blipper.Circle.V1.CircleReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Blipper.Proto.CircleService.CircleReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4802,8 +4527,8 @@ namespace Blipper.Circle.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ApproveJoinRequestRequest(ApproveJoinRequestRequest other) : this() {
-      circleId_ = other.circleId_;
       userId_ = other.userId_;
+      circleId_ = other.circleId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4813,20 +4538,8 @@ namespace Blipper.Circle.V1 {
       return new ApproveJoinRequestRequest(this);
     }
 
-    /// <summary>Field number for the "circle_id" field.</summary>
-    public const int CircleIdFieldNumber = 1;
-    private string circleId_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string CircleId {
-      get { return circleId_; }
-      set {
-        circleId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
     /// <summary>Field number for the "user_id" field.</summary>
-    public const int UserIdFieldNumber = 2;
+    public const int UserIdFieldNumber = 1;
     private string userId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4834,6 +4547,18 @@ namespace Blipper.Circle.V1 {
       get { return userId_; }
       set {
         userId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "circle_id" field.</summary>
+    public const int CircleIdFieldNumber = 2;
+    private string circleId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CircleId {
+      get { return circleId_; }
+      set {
+        circleId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -4852,8 +4577,8 @@ namespace Blipper.Circle.V1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (CircleId != other.CircleId) return false;
       if (UserId != other.UserId) return false;
+      if (CircleId != other.CircleId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4861,8 +4586,8 @@ namespace Blipper.Circle.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (CircleId.Length != 0) hash ^= CircleId.GetHashCode();
       if (UserId.Length != 0) hash ^= UserId.GetHashCode();
+      if (CircleId.Length != 0) hash ^= CircleId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4881,13 +4606,13 @@ namespace Blipper.Circle.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (CircleId.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(CircleId);
-      }
       if (UserId.Length != 0) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(10);
         output.WriteString(UserId);
+      }
+      if (CircleId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(CircleId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -4899,13 +4624,13 @@ namespace Blipper.Circle.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (CircleId.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(CircleId);
-      }
       if (UserId.Length != 0) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(10);
         output.WriteString(UserId);
+      }
+      if (CircleId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(CircleId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -4917,11 +4642,11 @@ namespace Blipper.Circle.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (CircleId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(CircleId);
-      }
       if (UserId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(UserId);
+      }
+      if (CircleId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CircleId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -4935,11 +4660,11 @@ namespace Blipper.Circle.V1 {
       if (other == null) {
         return;
       }
-      if (other.CircleId.Length != 0) {
-        CircleId = other.CircleId;
-      }
       if (other.UserId.Length != 0) {
         UserId = other.UserId;
+      }
+      if (other.CircleId.Length != 0) {
+        CircleId = other.CircleId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -4961,11 +4686,11 @@ namespace Blipper.Circle.V1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            CircleId = input.ReadString();
+            UserId = input.ReadString();
             break;
           }
           case 18: {
-            UserId = input.ReadString();
+            CircleId = input.ReadString();
             break;
           }
         }
@@ -4988,11 +4713,11 @@ namespace Blipper.Circle.V1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            CircleId = input.ReadString();
+            UserId = input.ReadString();
             break;
           }
           case 18: {
-            UserId = input.ReadString();
+            CircleId = input.ReadString();
             break;
           }
         }
@@ -5017,7 +4742,7 @@ namespace Blipper.Circle.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Blipper.Circle.V1.CircleReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Blipper.Proto.CircleService.CircleReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5037,8 +4762,8 @@ namespace Blipper.Circle.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RejectJoinRequestRequest(RejectJoinRequestRequest other) : this() {
-      circleId_ = other.circleId_;
       userId_ = other.userId_;
+      circleId_ = other.circleId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -5048,20 +4773,8 @@ namespace Blipper.Circle.V1 {
       return new RejectJoinRequestRequest(this);
     }
 
-    /// <summary>Field number for the "circle_id" field.</summary>
-    public const int CircleIdFieldNumber = 1;
-    private string circleId_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string CircleId {
-      get { return circleId_; }
-      set {
-        circleId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
     /// <summary>Field number for the "user_id" field.</summary>
-    public const int UserIdFieldNumber = 2;
+    public const int UserIdFieldNumber = 1;
     private string userId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5069,6 +4782,18 @@ namespace Blipper.Circle.V1 {
       get { return userId_; }
       set {
         userId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "circle_id" field.</summary>
+    public const int CircleIdFieldNumber = 2;
+    private string circleId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CircleId {
+      get { return circleId_; }
+      set {
+        circleId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -5087,8 +4812,8 @@ namespace Blipper.Circle.V1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (CircleId != other.CircleId) return false;
       if (UserId != other.UserId) return false;
+      if (CircleId != other.CircleId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -5096,8 +4821,8 @@ namespace Blipper.Circle.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (CircleId.Length != 0) hash ^= CircleId.GetHashCode();
       if (UserId.Length != 0) hash ^= UserId.GetHashCode();
+      if (CircleId.Length != 0) hash ^= CircleId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -5116,13 +4841,13 @@ namespace Blipper.Circle.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (CircleId.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(CircleId);
-      }
       if (UserId.Length != 0) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(10);
         output.WriteString(UserId);
+      }
+      if (CircleId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(CircleId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -5134,13 +4859,13 @@ namespace Blipper.Circle.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (CircleId.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(CircleId);
-      }
       if (UserId.Length != 0) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(10);
         output.WriteString(UserId);
+      }
+      if (CircleId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(CircleId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -5152,11 +4877,11 @@ namespace Blipper.Circle.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (CircleId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(CircleId);
-      }
       if (UserId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(UserId);
+      }
+      if (CircleId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CircleId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -5170,11 +4895,11 @@ namespace Blipper.Circle.V1 {
       if (other == null) {
         return;
       }
-      if (other.CircleId.Length != 0) {
-        CircleId = other.CircleId;
-      }
       if (other.UserId.Length != 0) {
         UserId = other.UserId;
+      }
+      if (other.CircleId.Length != 0) {
+        CircleId = other.CircleId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -5196,11 +4921,11 @@ namespace Blipper.Circle.V1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            CircleId = input.ReadString();
+            UserId = input.ReadString();
             break;
           }
           case 18: {
-            UserId = input.ReadString();
+            CircleId = input.ReadString();
             break;
           }
         }
@@ -5223,11 +4948,11 @@ namespace Blipper.Circle.V1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            CircleId = input.ReadString();
+            UserId = input.ReadString();
             break;
           }
           case 18: {
-            UserId = input.ReadString();
+            CircleId = input.ReadString();
             break;
           }
         }

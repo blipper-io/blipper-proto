@@ -2,52 +2,43 @@ syntax = "proto3";
 
 package blipper.shared.v1;
 
-option csharp_namespace = "Blipper.Shared.V1";
+option csharp_namespace = "Blipper.Proto.Shared";
 
 option go_package = "github.com/blipper-io/blipper-proto/gen/shared";
 
 import "google/protobuf/timestamp.proto";
 
-// Common role definitions used across services
-enum Role {
-  ROLE_UNSPECIFIED = 0;
-  ROLE_MEMBER = 1;
-  ROLE_MODERATOR = 2;
-  ROLE_OWNER = 3;
-}
-
-// Common status definitions for membership
-enum MembershipStatus {
-  MEMBERSHIP_STATUS_UNSPECIFIED = 0;
-  MEMBERSHIP_STATUS_PENDING = 1;
-  MEMBERSHIP_STATUS_APPROVED = 2;
-  MEMBERSHIP_STATUS_REJECTED = 3;
-}
-
-// Shared pagination message
-message PaginationRequest {
-  int32 page_size = 1;
-  string page_token = 2;
-}
-
-message PaginationResponse {
-  string next_page_token = 1;
-  int32 total_count = 2;
-}
-
-// Basic user info shared between services
-message UserInfo {
+message User {
   string id = 1;
   string username = 2;
-  string display_name = 3;
-  string avatar_url = 4;
+  string email = 3;
+  string display_name = 4;
+  string bio = 5;
+  string avatar_url = 6;
+  google.protobuf.Timestamp created_at = 7;
+  google.protobuf.Timestamp updated_at = 8;
 }
 
-// Membership info shared between services
+message Circle {
+  string id = 1;
+  string name = 2;
+  string description = 3;
+  bool is_private = 4;
+  string creator_id = 5;
+  google.protobuf.Timestamp created_at = 6;
+  google.protobuf.Timestamp updated_at = 7;
+}
+
 message MembershipInfo {
   string user_id = 1;
   string circle_id = 2;
   Role role = 3;
-  MembershipStatus status = 4;
-  google.protobuf.Timestamp joined_at = 5;
+  google.protobuf.Timestamp joined_at = 4;
+}
+
+enum Role {
+  ROLE_UNSPECIFIED = 0;
+  ROLE_MEMBER = 1;
+  ROLE_MODERATOR = 2;
+  ROLE_ADMIN = 3;
 }

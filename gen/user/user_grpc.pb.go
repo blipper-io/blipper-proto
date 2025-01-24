@@ -23,13 +23,13 @@ import (
 const _ = grpc.SupportPackageIsVersion9
 
 const (
-	UserProtoService_CreateUser_FullMethodName     = "/blipper.v1.UserProtoService/CreateUser"
-	UserProtoService_GetUser_FullMethodName        = "/blipper.v1.UserProtoService/GetUser"
-	UserProtoService_UpdateUser_FullMethodName     = "/blipper.v1.UserProtoService/UpdateUser"
-	UserProtoService_DeleteUser_FullMethodName     = "/blipper.v1.UserProtoService/DeleteUser"
-	UserProtoService_UpdateProfile_FullMethodName  = "/blipper.v1.UserProtoService/UpdateProfile"
-	UserProtoService_UpdatePassword_FullMethodName = "/blipper.v1.UserProtoService/UpdatePassword"
-	UserProtoService_SearchUsers_FullMethodName    = "/blipper.v1.UserProtoService/SearchUsers"
+	UserProtoService_CreateUser_FullMethodName                = "/blipper.v1.UserProtoService/CreateUser"
+	UserProtoService_GetUser_FullMethodName                   = "/blipper.v1.UserProtoService/GetUser"
+	UserProtoService_UpdateUser_FullMethodName                = "/blipper.v1.UserProtoService/UpdateUser"
+	UserProtoService_DeleteUser_FullMethodName                = "/blipper.v1.UserProtoService/DeleteUser"
+	UserProtoService_CheckUsernameAvailability_FullMethodName = "/blipper.v1.UserProtoService/CheckUsernameAvailability"
+	UserProtoService_UpdateProfile_FullMethodName             = "/blipper.v1.UserProtoService/UpdateProfile"
+	UserProtoService_SearchUsers_FullMethodName               = "/blipper.v1.UserProtoService/SearchUsers"
 )
 
 // UserProtoServiceClient is the client API for UserProtoService service.
@@ -43,9 +43,9 @@ type UserProtoServiceClient interface {
 	GetUser(ctx context.Context, in *GetUserRequest, opts ...grpc.CallOption) (*shared.User, error)
 	UpdateUser(ctx context.Context, in *UpdateUserRequest, opts ...grpc.CallOption) (*shared.User, error)
 	DeleteUser(ctx context.Context, in *DeleteUserRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
+	CheckUsernameAvailability(ctx context.Context, in *CheckUsernameAvailabilityRequest, opts ...grpc.CallOption) (*CheckUsernameAvailabilityResponse, error)
 	// Profile management
 	UpdateProfile(ctx context.Context, in *UpdateProfileRequest, opts ...grpc.CallOption) (*shared.User, error)
-	UpdatePassword(ctx context.Context, in *UpdatePasswordRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
 	// Search and discovery
 	SearchUsers(ctx context.Context, in *SearchUsersRequest, opts ...grpc.CallOption) (*SearchUsersResponse, error)
 }
@@ -98,20 +98,20 @@ func (c *userProtoServiceClient) DeleteUser(ctx context.Context, in *DeleteUserR
 	return out, nil
 }
 
-func (c *userProtoServiceClient) UpdateProfile(ctx context.Context, in *UpdateProfileRequest, opts ...grpc.CallOption) (*shared.User, error) {
+func (c *userProtoServiceClient) CheckUsernameAvailability(ctx context.Context, in *CheckUsernameAvailabilityRequest, opts ...grpc.CallOption) (*CheckUsernameAvailabilityResponse, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
-	out := new(shared.User)
-	err := c.cc.Invoke(ctx, UserProtoService_UpdateProfile_FullMethodName, in, out, cOpts...)
+	out := new(CheckUsernameAvailabilityResponse)
+	err := c.cc.Invoke(ctx, UserProtoService_CheckUsernameAvailability_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *userProtoServiceClient) UpdatePassword(ctx context.Context, in *UpdatePasswordRequest, opts ...grpc.CallOption) (*emptypb.Empty, error) {
+func (c *userProtoServiceClient) UpdateProfile(ctx context.Context, in *UpdateProfileRequest, opts ...grpc.CallOption) (*shared.User, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
-	out := new(emptypb.Empty)
-	err := c.cc.Invoke(ctx, UserProtoService_UpdatePassword_FullMethodName, in, out, cOpts...)
+	out := new(shared.User)
+	err := c.cc.Invoke(ctx, UserProtoService_UpdateProfile_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
@@ -139,9 +139,9 @@ type UserProtoServiceServer interface {
 	GetUser(context.Context, *GetUserRequest) (*shared.User, error)
 	UpdateUser(context.Context, *UpdateUserRequest) (*shared.User, error)
 	DeleteUser(context.Context, *DeleteUserRequest) (*emptypb.Empty, error)
+	CheckUsernameAvailability(context.Context, *CheckUsernameAvailabilityRequest) (*CheckUsernameAvailabilityResponse, error)
 	// Profile management
 	UpdateProfile(context.Context, *UpdateProfileRequest) (*shared.User, error)
-	UpdatePassword(context.Context, *UpdatePasswordRequest) (*emptypb.Empty, error)
 	// Search and discovery
 	SearchUsers(context.Context, *SearchUsersRequest) (*SearchUsersResponse, error)
 	mustEmbedUnimplementedUserProtoServiceServer()
@@ -166,11 +166,11 @@ func (UnimplementedUserProtoServiceServer) UpdateUser(context.Context, *UpdateUs
 func (UnimplementedUserProtoServiceServer) DeleteUser(context.Context, *DeleteUserRequest) (*emptypb.Empty, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method DeleteUser not implemented")
 }
+func (UnimplementedUserProtoServiceServer) CheckUsernameAvailability(context.Context, *CheckUsernameAvailabilityRequest) (*CheckUsernameAvailabilityResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CheckUsernameAvailability not implemented")
+}
 func (UnimplementedUserProtoServiceServer) UpdateProfile(context.Context, *UpdateProfileRequest) (*shared.User, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method UpdateProfile not implemented")
-}
-func (UnimplementedUserProtoServiceServer) UpdatePassword(context.Context, *UpdatePasswordRequest) (*emptypb.Empty, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method UpdatePassword not implemented")
 }
 func (UnimplementedUserProtoServiceServer) SearchUsers(context.Context, *SearchUsersRequest) (*SearchUsersResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SearchUsers not implemented")
@@ -268,6 +268,24 @@ func _UserProtoService_DeleteUser_Handler(srv interface{}, ctx context.Context, 
 	return interceptor(ctx, in, info, handler)
 }
 
+func _UserProtoService_CheckUsernameAvailability_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(CheckUsernameAvailabilityRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(UserProtoServiceServer).CheckUsernameAvailability(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: UserProtoService_CheckUsernameAvailability_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(UserProtoServiceServer).CheckUsernameAvailability(ctx, req.(*CheckUsernameAvailabilityRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 func _UserProtoService_UpdateProfile_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(UpdateProfileRequest)
 	if err := dec(in); err != nil {
@@ -282,24 +300,6 @@ func _UserProtoService_UpdateProfile_Handler(srv interface{}, ctx context.Contex
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(UserProtoServiceServer).UpdateProfile(ctx, req.(*UpdateProfileRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _UserProtoService_UpdatePassword_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(UpdatePasswordRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(UserProtoServiceServer).UpdatePassword(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: UserProtoService_UpdatePassword_FullMethodName,
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(UserProtoServiceServer).UpdatePassword(ctx, req.(*UpdatePasswordRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -346,12 +346,12 @@ var UserProtoService_ServiceDesc = grpc.ServiceDesc{
 			Handler:    _UserProtoService_DeleteUser_Handler,
 		},
 		{
-			MethodName: "UpdateProfile",
-			Handler:    _UserProtoService_UpdateProfile_Handler,
+			MethodName: "CheckUsernameAvailability",
+			Handler:    _UserProtoService_CheckUsernameAvailability_Handler,
 		},
 		{
-			MethodName: "UpdatePassword",
-			Handler:    _UserProtoService_UpdatePassword_Handler,
+			MethodName: "UpdateProfile",
+			Handler:    _UserProtoService_UpdateProfile_Handler,
 		},
 		{
 			MethodName: "SearchUsers",

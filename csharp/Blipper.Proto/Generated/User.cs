@@ -28,41 +28,42 @@ namespace Blipper.Proto.UserService {
             "Zi9lbXB0eS5wcm90bxoTc2hhcmVkL3NoYXJlZC5wcm90byI0CiBDaGVja1Vz",
             "ZXJuYW1lQXZhaWxhYmlsaXR5UmVxdWVzdBIQCgh1c2VybmFtZRgBIAEoCSI5",
             "CiFDaGVja1VzZXJuYW1lQXZhaWxhYmlsaXR5UmVzcG9uc2USFAoMaXNfYXZh",
-            "aWxhYmxlGAEgASgIIkoKEUNyZWF0ZVVzZXJSZXF1ZXN0EhAKCHVzZXJuYW1l",
-            "GAEgASgJEg0KBWVtYWlsGAIgASgJEhQKDGRpc3BsYXlfbmFtZRgEIAEoCSIh",
-            "Cg5HZXRVc2VyUmVxdWVzdBIPCgd1c2VyX2lkGAEgASgJItQBChFVcGRhdGVV",
-            "c2VyUmVxdWVzdBIPCgd1c2VyX2lkGAEgASgJEhUKCHVzZXJuYW1lGAIgASgJ",
-            "SACIAQESEgoFZW1haWwYAyABKAlIAYgBARIZCgxkaXNwbGF5X25hbWUYBCAB",
-            "KAlIAogBARIQCgNiaW8YBSABKAlIA4gBARIXCgphdmF0YXJfdXJsGAYgASgJ",
-            "SASIAQFCCwoJX3VzZXJuYW1lQggKBl9lbWFpbEIPCg1fZGlzcGxheV9uYW1l",
-            "QgYKBF9iaW9CDQoLX2F2YXRhcl91cmwiJAoRRGVsZXRlVXNlclJlcXVlc3QS",
-            "DwoHdXNlcl9pZBgBIAEoCSKVAQoUVXBkYXRlUHJvZmlsZVJlcXVlc3QSDwoH",
-            "dXNlcl9pZBgBIAEoCRIZCgxkaXNwbGF5X25hbWUYAiABKAlIAIgBARIQCgNi",
-            "aW8YAyABKAlIAYgBARIXCgphdmF0YXJfdXJsGAQgASgJSAKIAQFCDwoNX2Rp",
-            "c3BsYXlfbmFtZUIGCgRfYmlvQg0KC19hdmF0YXJfdXJsIkQKElNlYXJjaFVz",
-            "ZXJzUmVxdWVzdBINCgVxdWVyeRgBIAEoCRIMCgRwYWdlGAIgASgFEhEKCXBh",
-            "Z2Vfc2l6ZRgDIAEoBSJSChNTZWFyY2hVc2Vyc1Jlc3BvbnNlEiYKBXVzZXJz",
-            "GAEgAygLMhcuYmxpcHBlci5zaGFyZWQudjEuVXNlchITCgt0b3RhbF9jb3Vu",
-            "dBgCIAEoBTK5BAoQVXNlclByb3RvU2VydmljZRJECgpDcmVhdGVVc2VyEh0u",
-            "YmxpcHBlci52MS5DcmVhdGVVc2VyUmVxdWVzdBoXLmJsaXBwZXIuc2hhcmVk",
-            "LnYxLlVzZXISPgoHR2V0VXNlchIaLmJsaXBwZXIudjEuR2V0VXNlclJlcXVl",
-            "c3QaFy5ibGlwcGVyLnNoYXJlZC52MS5Vc2VyEkQKClVwZGF0ZVVzZXISHS5i",
-            "bGlwcGVyLnYxLlVwZGF0ZVVzZXJSZXF1ZXN0GhcuYmxpcHBlci5zaGFyZWQu",
-            "djEuVXNlchJDCgpEZWxldGVVc2VyEh0uYmxpcHBlci52MS5EZWxldGVVc2Vy",
-            "UmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eRJ4ChlDaGVja1VzZXJu",
-            "YW1lQXZhaWxhYmlsaXR5EiwuYmxpcHBlci52MS5DaGVja1VzZXJuYW1lQXZh",
-            "aWxhYmlsaXR5UmVxdWVzdBotLmJsaXBwZXIudjEuQ2hlY2tVc2VybmFtZUF2",
-            "YWlsYWJpbGl0eVJlc3BvbnNlEkoKDVVwZGF0ZVByb2ZpbGUSIC5ibGlwcGVy",
-            "LnYxLlVwZGF0ZVByb2ZpbGVSZXF1ZXN0GhcuYmxpcHBlci5zaGFyZWQudjEu",
-            "VXNlchJOCgtTZWFyY2hVc2VycxIeLmJsaXBwZXIudjEuU2VhcmNoVXNlcnNS",
-            "ZXF1ZXN0Gh8uYmxpcHBlci52MS5TZWFyY2hVc2Vyc1Jlc3BvbnNlQiNaBS91",
-            "c2VyqgIZQmxpcHBlci5Qcm90by5Vc2VyU2VydmljZWIGcHJvdG8z"));
+            "aWxhYmxlGAEgASgIIlYKEUNyZWF0ZVVzZXJSZXF1ZXN0EgoKAmlkGAEgASgJ",
+            "EhAKCHVzZXJuYW1lGAIgASgJEg0KBWVtYWlsGAMgASgJEhQKDGRpc3BsYXlf",
+            "bmFtZRgEIAEoCSIhCg5HZXRVc2VyUmVxdWVzdBIPCgd1c2VyX2lkGAEgASgJ",
+            "ItQBChFVcGRhdGVVc2VyUmVxdWVzdBIPCgd1c2VyX2lkGAEgASgJEhUKCHVz",
+            "ZXJuYW1lGAIgASgJSACIAQESEgoFZW1haWwYAyABKAlIAYgBARIZCgxkaXNw",
+            "bGF5X25hbWUYBCABKAlIAogBARIQCgNiaW8YBSABKAlIA4gBARIXCgphdmF0",
+            "YXJfdXJsGAYgASgJSASIAQFCCwoJX3VzZXJuYW1lQggKBl9lbWFpbEIPCg1f",
+            "ZGlzcGxheV9uYW1lQgYKBF9iaW9CDQoLX2F2YXRhcl91cmwiJAoRRGVsZXRl",
+            "VXNlclJlcXVlc3QSDwoHdXNlcl9pZBgBIAEoCSKVAQoUVXBkYXRlUHJvZmls",
+            "ZVJlcXVlc3QSDwoHdXNlcl9pZBgBIAEoCRIZCgxkaXNwbGF5X25hbWUYAiAB",
+            "KAlIAIgBARIQCgNiaW8YAyABKAlIAYgBARIXCgphdmF0YXJfdXJsGAQgASgJ",
+            "SAKIAQFCDwoNX2Rpc3BsYXlfbmFtZUIGCgRfYmlvQg0KC19hdmF0YXJfdXJs",
+            "IkQKElNlYXJjaFVzZXJzUmVxdWVzdBINCgVxdWVyeRgBIAEoCRIMCgRwYWdl",
+            "GAIgASgFEhEKCXBhZ2Vfc2l6ZRgDIAEoBSJSChNTZWFyY2hVc2Vyc1Jlc3Bv",
+            "bnNlEiYKBXVzZXJzGAEgAygLMhcuYmxpcHBlci5zaGFyZWQudjEuVXNlchIT",
+            "Cgt0b3RhbF9jb3VudBgCIAEoBTK5BAoQVXNlclByb3RvU2VydmljZRJECgpD",
+            "cmVhdGVVc2VyEh0uYmxpcHBlci52MS5DcmVhdGVVc2VyUmVxdWVzdBoXLmJs",
+            "aXBwZXIuc2hhcmVkLnYxLlVzZXISPgoHR2V0VXNlchIaLmJsaXBwZXIudjEu",
+            "R2V0VXNlclJlcXVlc3QaFy5ibGlwcGVyLnNoYXJlZC52MS5Vc2VyEkQKClVw",
+            "ZGF0ZVVzZXISHS5ibGlwcGVyLnYxLlVwZGF0ZVVzZXJSZXF1ZXN0GhcuYmxp",
+            "cHBlci5zaGFyZWQudjEuVXNlchJDCgpEZWxldGVVc2VyEh0uYmxpcHBlci52",
+            "MS5EZWxldGVVc2VyUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eRJ4",
+            "ChlDaGVja1VzZXJuYW1lQXZhaWxhYmlsaXR5EiwuYmxpcHBlci52MS5DaGVj",
+            "a1VzZXJuYW1lQXZhaWxhYmlsaXR5UmVxdWVzdBotLmJsaXBwZXIudjEuQ2hl",
+            "Y2tVc2VybmFtZUF2YWlsYWJpbGl0eVJlc3BvbnNlEkoKDVVwZGF0ZVByb2Zp",
+            "bGUSIC5ibGlwcGVyLnYxLlVwZGF0ZVByb2ZpbGVSZXF1ZXN0GhcuYmxpcHBl",
+            "ci5zaGFyZWQudjEuVXNlchJOCgtTZWFyY2hVc2VycxIeLmJsaXBwZXIudjEu",
+            "U2VhcmNoVXNlcnNSZXF1ZXN0Gh8uYmxpcHBlci52MS5TZWFyY2hVc2Vyc1Jl",
+            "c3BvbnNlQiNaBS91c2VyqgIZQmxpcHBlci5Qcm90by5Vc2VyU2VydmljZWIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Blipper.Proto.Shared.SharedReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Blipper.Proto.UserService.CheckUsernameAvailabilityRequest), global::Blipper.Proto.UserService.CheckUsernameAvailabilityRequest.Parser, new[]{ "Username" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Blipper.Proto.UserService.CheckUsernameAvailabilityResponse), global::Blipper.Proto.UserService.CheckUsernameAvailabilityResponse.Parser, new[]{ "IsAvailable" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Blipper.Proto.UserService.CreateUserRequest), global::Blipper.Proto.UserService.CreateUserRequest.Parser, new[]{ "Username", "Email", "DisplayName" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Blipper.Proto.UserService.CreateUserRequest), global::Blipper.Proto.UserService.CreateUserRequest.Parser, new[]{ "Id", "Username", "Email", "DisplayName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Blipper.Proto.UserService.GetUserRequest), global::Blipper.Proto.UserService.GetUserRequest.Parser, new[]{ "UserId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Blipper.Proto.UserService.UpdateUserRequest), global::Blipper.Proto.UserService.UpdateUserRequest.Parser, new[]{ "UserId", "Username", "Email", "DisplayName", "Bio", "AvatarUrl" }, new[]{ "Username", "Email", "DisplayName", "Bio", "AvatarUrl" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Blipper.Proto.UserService.DeleteUserRequest), global::Blipper.Proto.UserService.DeleteUserRequest.Parser, new[]{ "UserId" }, null, null, null, null),
@@ -506,6 +507,7 @@ namespace Blipper.Proto.UserService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CreateUserRequest(CreateUserRequest other) : this() {
+      id_ = other.id_;
       username_ = other.username_;
       email_ = other.email_;
       displayName_ = other.displayName_;
@@ -518,8 +520,20 @@ namespace Blipper.Proto.UserService {
       return new CreateUserRequest(this);
     }
 
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 1;
+    private string id_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Id {
+      get { return id_; }
+      set {
+        id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "username" field.</summary>
-    public const int UsernameFieldNumber = 1;
+    public const int UsernameFieldNumber = 2;
     private string username_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -531,7 +545,7 @@ namespace Blipper.Proto.UserService {
     }
 
     /// <summary>Field number for the "email" field.</summary>
-    public const int EmailFieldNumber = 2;
+    public const int EmailFieldNumber = 3;
     private string email_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -569,6 +583,7 @@ namespace Blipper.Proto.UserService {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (Id != other.Id) return false;
       if (Username != other.Username) return false;
       if (Email != other.Email) return false;
       if (DisplayName != other.DisplayName) return false;
@@ -579,6 +594,7 @@ namespace Blipper.Proto.UserService {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (Id.Length != 0) hash ^= Id.GetHashCode();
       if (Username.Length != 0) hash ^= Username.GetHashCode();
       if (Email.Length != 0) hash ^= Email.GetHashCode();
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
@@ -600,12 +616,16 @@ namespace Blipper.Proto.UserService {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Username.Length != 0) {
+      if (Id.Length != 0) {
         output.WriteRawTag(10);
+        output.WriteString(Id);
+      }
+      if (Username.Length != 0) {
+        output.WriteRawTag(18);
         output.WriteString(Username);
       }
       if (Email.Length != 0) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(26);
         output.WriteString(Email);
       }
       if (DisplayName.Length != 0) {
@@ -622,12 +642,16 @@ namespace Blipper.Proto.UserService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Username.Length != 0) {
+      if (Id.Length != 0) {
         output.WriteRawTag(10);
+        output.WriteString(Id);
+      }
+      if (Username.Length != 0) {
+        output.WriteRawTag(18);
         output.WriteString(Username);
       }
       if (Email.Length != 0) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(26);
         output.WriteString(Email);
       }
       if (DisplayName.Length != 0) {
@@ -644,6 +668,9 @@ namespace Blipper.Proto.UserService {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (Id.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
+      }
       if (Username.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Username);
       }
@@ -664,6 +691,9 @@ namespace Blipper.Proto.UserService {
     public void MergeFrom(CreateUserRequest other) {
       if (other == null) {
         return;
+      }
+      if (other.Id.Length != 0) {
+        Id = other.Id;
       }
       if (other.Username.Length != 0) {
         Username = other.Username;
@@ -694,10 +724,14 @@ namespace Blipper.Proto.UserService {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            Username = input.ReadString();
+            Id = input.ReadString();
             break;
           }
           case 18: {
+            Username = input.ReadString();
+            break;
+          }
+          case 26: {
             Email = input.ReadString();
             break;
           }
@@ -725,10 +759,14 @@ namespace Blipper.Proto.UserService {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            Username = input.ReadString();
+            Id = input.ReadString();
             break;
           }
           case 18: {
+            Username = input.ReadString();
+            break;
+          }
+          case 26: {
             Email = input.ReadString();
             break;
           }

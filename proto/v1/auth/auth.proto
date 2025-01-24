@@ -13,6 +13,17 @@ service AuthService {
   rpc Logout(LogoutRequest) returns (google.protobuf.Empty);
   rpc RefreshToken(RefreshTokenRequest) returns (RefreshTokenResponse);
   rpc ValidateToken(ValidateTokenRequest) returns (ValidateTokenResponse);
+
+  rpc BlacklistToken(BlacklistTokenRequest) returns (google.protobuf.Empty);
+  rpc DeleteUser(DeleteUserRequest) returns (google.protobuf.Empty);
+}
+
+message DeleteUserRequest {
+  string user_id = 1;
+}
+
+message BlacklistTokenRequest {
+  string token = 1;
 }
 
 message RegisterRequest {

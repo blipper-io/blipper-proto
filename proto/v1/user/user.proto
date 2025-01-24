@@ -38,7 +38,6 @@ message CheckUsernameAvailabilityResponse {
 message CreateUserRequest {
  string username = 1;
  string email = 2;
- string password = 3;
  string display_name = 4;
 }
 

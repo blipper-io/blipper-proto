@@ -25,38 +25,36 @@ namespace Blipper.Proto.AuthService {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cg9hdXRoL2F1dGgucHJvdG8SD2JsaXBwZXIuYXV0aC52MRobZ29vZ2xlL3By",
-            "b3RvYnVmL2VtcHR5LnByb3RvGhNzaGFyZWQvc2hhcmVkLnByb3RvIkQKD1Jl",
-            "Z2lzdGVyUmVxdWVzdBIQCgh1c2VybmFtZRgBIAEoCRINCgVlbWFpbBgCIAEo",
-            "CRIQCghwYXNzd29yZBgDIAEoCSJmChBSZWdpc3RlclJlc3BvbnNlEhQKDGFj",
-            "Y2Vzc190b2tlbhgBIAEoCRIVCg1yZWZyZXNoX3Rva2VuGAIgASgJEiUKBHVz",
-            "ZXIYAyABKAsyFy5ibGlwcGVyLnNoYXJlZC52MS5Vc2VyIi8KDExvZ2luUmVx",
-            "dWVzdBINCgVlbWFpbBgBIAEoCRIQCghwYXNzd29yZBgCIAEoCSJjCg1Mb2dp",
-            "blJlc3BvbnNlEhQKDGFjY2Vzc190b2tlbhgBIAEoCRIVCg1yZWZyZXNoX3Rv",
-            "a2VuGAIgASgJEiUKBHVzZXIYAyABKAsyFy5ibGlwcGVyLnNoYXJlZC52MS5V",
-            "c2VyIiYKDUxvZ291dFJlcXVlc3QSFQoNcmVmcmVzaF90b2tlbhgBIAEoCSIs",
-            "ChNSZWZyZXNoVG9rZW5SZXF1ZXN0EhUKDXJlZnJlc2hfdG9rZW4YASABKAki",
-            "QwoUUmVmcmVzaFRva2VuUmVzcG9uc2USFAoMYWNjZXNzX3Rva2VuGAEgASgJ",
-            "EhUKDXJlZnJlc2hfdG9rZW4YAiABKAkiJQoUVmFsaWRhdGVUb2tlblJlcXVl",
-            "c3QSDQoFdG9rZW4YASABKAkiOgoVVmFsaWRhdGVUb2tlblJlc3BvbnNlEhAK",
-            "CGlzX3ZhbGlkGAEgASgIEg8KB3VzZXJfaWQYAiABKAkypQMKC0F1dGhTZXJ2",
-            "aWNlEk8KCFJlZ2lzdGVyEiAuYmxpcHBlci5hdXRoLnYxLlJlZ2lzdGVyUmVx",
-            "dWVzdBohLmJsaXBwZXIuYXV0aC52MS5SZWdpc3RlclJlc3BvbnNlEkYKBUxv",
-            "Z2luEh0uYmxpcHBlci5hdXRoLnYxLkxvZ2luUmVxdWVzdBoeLmJsaXBwZXIu",
-            "YXV0aC52MS5Mb2dpblJlc3BvbnNlEkAKBkxvZ291dBIeLmJsaXBwZXIuYXV0",
-            "aC52MS5Mb2dvdXRSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5ElsK",
-            "DFJlZnJlc2hUb2tlbhIkLmJsaXBwZXIuYXV0aC52MS5SZWZyZXNoVG9rZW5S",
-            "ZXF1ZXN0GiUuYmxpcHBlci5hdXRoLnYxLlJlZnJlc2hUb2tlblJlc3BvbnNl",
-            "El4KDVZhbGlkYXRlVG9rZW4SJS5ibGlwcGVyLmF1dGgudjEuVmFsaWRhdGVU",
-            "b2tlblJlcXVlc3QaJi5ibGlwcGVyLmF1dGgudjEuVmFsaWRhdGVUb2tlblJl",
-            "c3BvbnNlQiNaBS9hdXRoqgIZQmxpcHBlci5Qcm90by5BdXRoU2VydmljZWIG",
-            "cHJvdG8z"));
+            "b3RvYnVmL2VtcHR5LnByb3RvIkQKD1JlZ2lzdGVyUmVxdWVzdBIQCgh1c2Vy",
+            "bmFtZRgBIAEoCRINCgVlbWFpbBgCIAEoCRIQCghwYXNzd29yZBgDIAEoCSJQ",
+            "ChBSZWdpc3RlclJlc3BvbnNlEhQKDGFjY2Vzc190b2tlbhgBIAEoCRIVCg1y",
+            "ZWZyZXNoX3Rva2VuGAIgASgJEg8KB3VzZXJfaWQYAyABKAkiLwoMTG9naW5S",
+            "ZXF1ZXN0Eg0KBWVtYWlsGAEgASgJEhAKCHBhc3N3b3JkGAMgASgJIk0KDUxv",
+            "Z2luUmVzcG9uc2USFAoMYWNjZXNzX3Rva2VuGAEgASgJEhUKDXJlZnJlc2hf",
+            "dG9rZW4YAiABKAkSDwoHdXNlcl9pZBgDIAEoCSImCg1Mb2dvdXRSZXF1ZXN0",
+            "EhUKDXJlZnJlc2hfdG9rZW4YASABKAkiLAoTUmVmcmVzaFRva2VuUmVxdWVz",
+            "dBIVCg1yZWZyZXNoX3Rva2VuGAEgASgJIkMKFFJlZnJlc2hUb2tlblJlc3Bv",
+            "bnNlEhQKDGFjY2Vzc190b2tlbhgBIAEoCRIVCg1yZWZyZXNoX3Rva2VuGAIg",
+            "ASgJIiUKFFZhbGlkYXRlVG9rZW5SZXF1ZXN0Eg0KBXRva2VuGAEgASgJIjoK",
+            "FVZhbGlkYXRlVG9rZW5SZXNwb25zZRIQCghpc192YWxpZBgBIAEoCBIPCgd1",
+            "c2VyX2lkGAIgASgJMqUDCgtBdXRoU2VydmljZRJPCghSZWdpc3RlchIgLmJs",
+            "aXBwZXIuYXV0aC52MS5SZWdpc3RlclJlcXVlc3QaIS5ibGlwcGVyLmF1dGgu",
+            "djEuUmVnaXN0ZXJSZXNwb25zZRJGCgVMb2dpbhIdLmJsaXBwZXIuYXV0aC52",
+            "MS5Mb2dpblJlcXVlc3QaHi5ibGlwcGVyLmF1dGgudjEuTG9naW5SZXNwb25z",
+            "ZRJACgZMb2dvdXQSHi5ibGlwcGVyLmF1dGgudjEuTG9nb3V0UmVxdWVzdBoW",
+            "Lmdvb2dsZS5wcm90b2J1Zi5FbXB0eRJbCgxSZWZyZXNoVG9rZW4SJC5ibGlw",
+            "cGVyLmF1dGgudjEuUmVmcmVzaFRva2VuUmVxdWVzdBolLmJsaXBwZXIuYXV0",
+            "aC52MS5SZWZyZXNoVG9rZW5SZXNwb25zZRJeCg1WYWxpZGF0ZVRva2VuEiUu",
+            "YmxpcHBlci5hdXRoLnYxLlZhbGlkYXRlVG9rZW5SZXF1ZXN0GiYuYmxpcHBl",
+            "ci5hdXRoLnYxLlZhbGlkYXRlVG9rZW5SZXNwb25zZUIjWgUvYXV0aKoCGUJs",
+            "aXBwZXIuUHJvdG8uQXV0aFNlcnZpY2ViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Blipper.Proto.Shared.SharedReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Blipper.Proto.AuthService.RegisterRequest), global::Blipper.Proto.AuthService.RegisterRequest.Parser, new[]{ "Username", "Email", "Password" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Blipper.Proto.AuthService.RegisterResponse), global::Blipper.Proto.AuthService.RegisterResponse.Parser, new[]{ "AccessToken", "RefreshToken", "User" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Blipper.Proto.AuthService.RegisterResponse), global::Blipper.Proto.AuthService.RegisterResponse.Parser, new[]{ "AccessToken", "RefreshToken", "UserId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Blipper.Proto.AuthService.LoginRequest), global::Blipper.Proto.AuthService.LoginRequest.Parser, new[]{ "Email", "Password" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Blipper.Proto.AuthService.LoginResponse), global::Blipper.Proto.AuthService.LoginResponse.Parser, new[]{ "AccessToken", "RefreshToken", "User" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Blipper.Proto.AuthService.LoginResponse), global::Blipper.Proto.AuthService.LoginResponse.Parser, new[]{ "AccessToken", "RefreshToken", "UserId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Blipper.Proto.AuthService.LogoutRequest), global::Blipper.Proto.AuthService.LogoutRequest.Parser, new[]{ "RefreshToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Blipper.Proto.AuthService.RefreshTokenRequest), global::Blipper.Proto.AuthService.RefreshTokenRequest.Parser, new[]{ "RefreshToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Blipper.Proto.AuthService.RefreshTokenResponse), global::Blipper.Proto.AuthService.RefreshTokenResponse.Parser, new[]{ "AccessToken", "RefreshToken" }, null, null, null, null),
@@ -377,7 +375,7 @@ namespace Blipper.Proto.AuthService {
     public RegisterResponse(RegisterResponse other) : this() {
       accessToken_ = other.accessToken_;
       refreshToken_ = other.refreshToken_;
-      user_ = other.user_ != null ? other.user_.Clone() : null;
+      userId_ = other.userId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -411,15 +409,15 @@ namespace Blipper.Proto.AuthService {
       }
     }
 
-    /// <summary>Field number for the "user" field.</summary>
-    public const int UserFieldNumber = 3;
-    private global::Blipper.Proto.Shared.User user_;
+    /// <summary>Field number for the "user_id" field.</summary>
+    public const int UserIdFieldNumber = 3;
+    private string userId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Blipper.Proto.Shared.User User {
-      get { return user_; }
+    public string UserId {
+      get { return userId_; }
       set {
-        user_ = value;
+        userId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -440,7 +438,7 @@ namespace Blipper.Proto.AuthService {
       }
       if (AccessToken != other.AccessToken) return false;
       if (RefreshToken != other.RefreshToken) return false;
-      if (!object.Equals(User, other.User)) return false;
+      if (UserId != other.UserId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -450,7 +448,7 @@ namespace Blipper.Proto.AuthService {
       int hash = 1;
       if (AccessToken.Length != 0) hash ^= AccessToken.GetHashCode();
       if (RefreshToken.Length != 0) hash ^= RefreshToken.GetHashCode();
-      if (user_ != null) hash ^= User.GetHashCode();
+      if (UserId.Length != 0) hash ^= UserId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -477,9 +475,9 @@ namespace Blipper.Proto.AuthService {
         output.WriteRawTag(18);
         output.WriteString(RefreshToken);
       }
-      if (user_ != null) {
+      if (UserId.Length != 0) {
         output.WriteRawTag(26);
-        output.WriteMessage(User);
+        output.WriteString(UserId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -499,9 +497,9 @@ namespace Blipper.Proto.AuthService {
         output.WriteRawTag(18);
         output.WriteString(RefreshToken);
       }
-      if (user_ != null) {
+      if (UserId.Length != 0) {
         output.WriteRawTag(26);
-        output.WriteMessage(User);
+        output.WriteString(UserId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -519,8 +517,8 @@ namespace Blipper.Proto.AuthService {
       if (RefreshToken.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(RefreshToken);
       }
-      if (user_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(User);
+      if (UserId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(UserId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -540,11 +538,8 @@ namespace Blipper.Proto.AuthService {
       if (other.RefreshToken.Length != 0) {
         RefreshToken = other.RefreshToken;
       }
-      if (other.user_ != null) {
-        if (user_ == null) {
-          User = new global::Blipper.Proto.Shared.User();
-        }
-        User.MergeFrom(other.User);
+      if (other.UserId.Length != 0) {
+        UserId = other.UserId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -574,10 +569,7 @@ namespace Blipper.Proto.AuthService {
             break;
           }
           case 26: {
-            if (user_ == null) {
-              User = new global::Blipper.Proto.Shared.User();
-            }
-            input.ReadMessage(User);
+            UserId = input.ReadString();
             break;
           }
         }
@@ -608,10 +600,7 @@ namespace Blipper.Proto.AuthService {
             break;
           }
           case 26: {
-            if (user_ == null) {
-              User = new global::Blipper.Proto.Shared.User();
-            }
-            input.ReadMessage(User);
+            UserId = input.ReadString();
             break;
           }
         }
@@ -680,7 +669,7 @@ namespace Blipper.Proto.AuthService {
     }
 
     /// <summary>Field number for the "password" field.</summary>
-    public const int PasswordFieldNumber = 2;
+    public const int PasswordFieldNumber = 3;
     private string password_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -740,7 +729,7 @@ namespace Blipper.Proto.AuthService {
         output.WriteString(Email);
       }
       if (Password.Length != 0) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(26);
         output.WriteString(Password);
       }
       if (_unknownFields != null) {
@@ -758,7 +747,7 @@ namespace Blipper.Proto.AuthService {
         output.WriteString(Email);
       }
       if (Password.Length != 0) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(26);
         output.WriteString(Password);
       }
       if (_unknownFields != null) {
@@ -818,7 +807,7 @@ namespace Blipper.Proto.AuthService {
             Email = input.ReadString();
             break;
           }
-          case 18: {
+          case 26: {
             Password = input.ReadString();
             break;
           }
@@ -845,7 +834,7 @@ namespace Blipper.Proto.AuthService {
             Email = input.ReadString();
             break;
           }
-          case 18: {
+          case 26: {
             Password = input.ReadString();
             break;
           }
@@ -893,7 +882,7 @@ namespace Blipper.Proto.AuthService {
     public LoginResponse(LoginResponse other) : this() {
       accessToken_ = other.accessToken_;
       refreshToken_ = other.refreshToken_;
-      user_ = other.user_ != null ? other.user_.Clone() : null;
+      userId_ = other.userId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -927,15 +916,15 @@ namespace Blipper.Proto.AuthService {
       }
     }
 
-    /// <summary>Field number for the "user" field.</summary>
-    public const int UserFieldNumber = 3;
-    private global::Blipper.Proto.Shared.User user_;
+    /// <summary>Field number for the "user_id" field.</summary>
+    public const int UserIdFieldNumber = 3;
+    private string userId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Blipper.Proto.Shared.User User {
-      get { return user_; }
+    public string UserId {
+      get { return userId_; }
       set {
-        user_ = value;
+        userId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -956,7 +945,7 @@ namespace Blipper.Proto.AuthService {
       }
       if (AccessToken != other.AccessToken) return false;
       if (RefreshToken != other.RefreshToken) return false;
-      if (!object.Equals(User, other.User)) return false;
+      if (UserId != other.UserId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -966,7 +955,7 @@ namespace Blipper.Proto.AuthService {
       int hash = 1;
       if (AccessToken.Length != 0) hash ^= AccessToken.GetHashCode();
       if (RefreshToken.Length != 0) hash ^= RefreshToken.GetHashCode();
-      if (user_ != null) hash ^= User.GetHashCode();
+      if (UserId.Length != 0) hash ^= UserId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -993,9 +982,9 @@ namespace Blipper.Proto.AuthService {
         output.WriteRawTag(18);
         output.WriteString(RefreshToken);
       }
-      if (user_ != null) {
+      if (UserId.Length != 0) {
         output.WriteRawTag(26);
-        output.WriteMessage(User);
+        output.WriteString(UserId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -1015,9 +1004,9 @@ namespace Blipper.Proto.AuthService {
         output.WriteRawTag(18);
         output.WriteString(RefreshToken);
       }
-      if (user_ != null) {
+      if (UserId.Length != 0) {
         output.WriteRawTag(26);
-        output.WriteMessage(User);
+        output.WriteString(UserId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -1035,8 +1024,8 @@ namespace Blipper.Proto.AuthService {
       if (RefreshToken.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(RefreshToken);
       }
-      if (user_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(User);
+      if (UserId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(UserId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1056,11 +1045,8 @@ namespace Blipper.Proto.AuthService {
       if (other.RefreshToken.Length != 0) {
         RefreshToken = other.RefreshToken;
       }
-      if (other.user_ != null) {
-        if (user_ == null) {
-          User = new global::Blipper.Proto.Shared.User();
-        }
-        User.MergeFrom(other.User);
+      if (other.UserId.Length != 0) {
+        UserId = other.UserId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1090,10 +1076,7 @@ namespace Blipper.Proto.AuthService {
             break;
           }
           case 26: {
-            if (user_ == null) {
-              User = new global::Blipper.Proto.Shared.User();
-            }
-            input.ReadMessage(User);
+            UserId = input.ReadString();
             break;
           }
         }
@@ -1124,10 +1107,7 @@ namespace Blipper.Proto.AuthService {
             break;
           }
           case 26: {
-            if (user_ == null) {
-              User = new global::Blipper.Proto.Shared.User();
-            }
-            input.ReadMessage(User);
+            UserId = input.ReadString();
             break;
           }
         }

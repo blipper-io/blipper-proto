@@ -20,7 +20,6 @@ service UserProtoService {
  
  // Profile management
  rpc UpdateProfile(UpdateProfileRequest) returns (blipper.shared.v1.User);
- rpc UpdatePassword(UpdatePasswordRequest) returns (google.protobuf.Empty);
  
  // Search and discovery
  rpc SearchUsers(SearchUsersRequest) returns (SearchUsersResponse);
@@ -55,12 +54,6 @@ message UpdateProfileRequest {
  optional string display_name = 2;
  optional string bio = 3;
  optional string avatar_url = 4;
-}
-
-message UpdatePasswordRequest {
- string user_id = 1;
- string current_password = 2;
- string new_password = 3;
 }
 
 message SearchUsersRequest {

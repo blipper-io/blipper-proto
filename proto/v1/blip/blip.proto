@@ -99,9 +99,9 @@ message Blip {
   string circle_id = 4;
   repeated string media_urls = 5;
   optional string reblip_of = 6;                // If this is a reblip
-  google.protobuf.Timestamp created_at = 8;
-  BlipMetadata metadata = 10;
-  optional UserVoteStatus user_vote = 11;      // Present if user is authenticated
+  google.protobuf.Timestamp created_at = 7;
+  BlipMetadata metadata = 8;
+  optional UserVoteStatus user_vote = 9;      // Present if user is authenticated and has voted
 }
 
 message Comment {

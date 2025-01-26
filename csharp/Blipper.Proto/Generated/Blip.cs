@@ -49,9 +49,9 @@ namespace Blipper.Proto.BlipService {
             "Cg50cmVuZGluZ19zY29yZRgGIAEoASKrAgoEQmxpcBIKCgJpZBgBIAEoCRIP",
             "Cgdjb250ZW50GAIgASgJEhEKCWF1dGhvcl9pZBgDIAEoCRIRCgljaXJjbGVf",
             "aWQYBCABKAkSEgoKbWVkaWFfdXJscxgFIAMoCRIWCglyZWJsaXBfb2YYBiAB",
-            "KAlIAIgBARIuCgpjcmVhdGVkX2F0GAggASgLMhouZ29vZ2xlLnByb3RvYnVm",
-            "LlRpbWVzdGFtcBIvCghtZXRhZGF0YRgKIAEoCzIdLmJsaXBwZXIuYmxpcC52",
-            "MS5CbGlwTWV0YWRhdGESNwoJdXNlcl92b3RlGAsgASgLMh8uYmxpcHBlci5i",
+            "KAlIAIgBARIuCgpjcmVhdGVkX2F0GAcgASgLMhouZ29vZ2xlLnByb3RvYnVm",
+            "LlRpbWVzdGFtcBIvCghtZXRhZGF0YRgIIAEoCzIdLmJsaXBwZXIuYmxpcC52",
+            "MS5CbGlwTWV0YWRhdGESNwoJdXNlcl92b3RlGAkgASgLMh8uYmxpcHBlci5i",
             "bGlwLnYxLlVzZXJWb3RlU3RhdHVzSAGIAQFCDAoKX3JlYmxpcF9vZkIMCgpf",
             "dXNlcl92b3RlIr0CCgdDb21tZW50EgoKAmlkGAEgASgJEhYKDnBhcmVudF9i",
             "bGlwX2lkGAIgASgJEg8KB2NvbnRlbnQYAyABKAkSEQoJYXV0aG9yX2lkGAQg",
@@ -3190,7 +3190,7 @@ namespace Blipper.Proto.BlipService {
     }
 
     /// <summary>Field number for the "created_at" field.</summary>
-    public const int CreatedAtFieldNumber = 8;
+    public const int CreatedAtFieldNumber = 7;
     private global::Google.Protobuf.WellKnownTypes.Timestamp createdAt_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3202,7 +3202,7 @@ namespace Blipper.Proto.BlipService {
     }
 
     /// <summary>Field number for the "metadata" field.</summary>
-    public const int MetadataFieldNumber = 10;
+    public const int MetadataFieldNumber = 8;
     private global::Blipper.Proto.BlipService.BlipMetadata metadata_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3214,10 +3214,10 @@ namespace Blipper.Proto.BlipService {
     }
 
     /// <summary>Field number for the "user_vote" field.</summary>
-    public const int UserVoteFieldNumber = 11;
+    public const int UserVoteFieldNumber = 9;
     private global::Blipper.Proto.BlipService.UserVoteStatus userVote_;
     /// <summary>
-    /// Present if user is authenticated
+    /// Present if user is authenticated and has voted
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3308,15 +3308,15 @@ namespace Blipper.Proto.BlipService {
         output.WriteString(ReblipOf);
       }
       if (createdAt_ != null) {
-        output.WriteRawTag(66);
+        output.WriteRawTag(58);
         output.WriteMessage(CreatedAt);
       }
       if (metadata_ != null) {
-        output.WriteRawTag(82);
+        output.WriteRawTag(66);
         output.WriteMessage(Metadata);
       }
       if (userVote_ != null) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(74);
         output.WriteMessage(UserVote);
       }
       if (_unknownFields != null) {
@@ -3351,15 +3351,15 @@ namespace Blipper.Proto.BlipService {
         output.WriteString(ReblipOf);
       }
       if (createdAt_ != null) {
-        output.WriteRawTag(66);
+        output.WriteRawTag(58);
         output.WriteMessage(CreatedAt);
       }
       if (metadata_ != null) {
-        output.WriteRawTag(82);
+        output.WriteRawTag(66);
         output.WriteMessage(Metadata);
       }
       if (userVote_ != null) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(74);
         output.WriteMessage(UserVote);
       }
       if (_unknownFields != null) {
@@ -3486,21 +3486,21 @@ namespace Blipper.Proto.BlipService {
             ReblipOf = input.ReadString();
             break;
           }
-          case 66: {
+          case 58: {
             if (createdAt_ == null) {
               CreatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(CreatedAt);
             break;
           }
-          case 82: {
+          case 66: {
             if (metadata_ == null) {
               Metadata = new global::Blipper.Proto.BlipService.BlipMetadata();
             }
             input.ReadMessage(Metadata);
             break;
           }
-          case 90: {
+          case 74: {
             if (userVote_ == null) {
               UserVote = new global::Blipper.Proto.BlipService.UserVoteStatus();
             }
@@ -3550,21 +3550,21 @@ namespace Blipper.Proto.BlipService {
             ReblipOf = input.ReadString();
             break;
           }
-          case 66: {
+          case 58: {
             if (createdAt_ == null) {
               CreatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(CreatedAt);
             break;
           }
-          case 82: {
+          case 66: {
             if (metadata_ == null) {
               Metadata = new global::Blipper.Proto.BlipService.BlipMetadata();
             }
             input.ReadMessage(Metadata);
             break;
           }
-          case 90: {
+          case 74: {
             if (userVote_ == null) {
               UserVote = new global::Blipper.Proto.BlipService.UserVoteStatus();
             }

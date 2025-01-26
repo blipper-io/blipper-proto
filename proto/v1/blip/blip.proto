@@ -99,7 +99,6 @@ message Blip {
   string circle_id = 4;
   repeated string media_urls = 5;
   optional string reblip_of = 6;                // If this is a reblip
-  optional string parent_blip_id = 7;           // If this is a comment
   google.protobuf.Timestamp created_at = 8;
   BlipMetadata metadata = 10;
   optional UserVoteStatus user_vote = 11;      // Present if user is authenticated

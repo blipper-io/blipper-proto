@@ -65,6 +65,46 @@ namespace Blipper.Proto.BlipService {
     static readonly grpc::Marshaller<global::Blipper.Proto.BlipService.UpdateBlipRequest> __Marshaller_blipper_blip_v1_UpdateBlipRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Proto.BlipService.UpdateBlipRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Blipper.Proto.BlipService.UpdateBlipResponse> __Marshaller_blipper_blip_v1_UpdateBlipResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Proto.BlipService.UpdateBlipResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Blipper.Proto.BlipService.CreateCommentRequest> __Marshaller_blipper_blip_v1_CreateCommentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Proto.BlipService.CreateCommentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Blipper.Proto.BlipService.CreateCommentResponse> __Marshaller_blipper_blip_v1_CreateCommentResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Proto.BlipService.CreateCommentResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Blipper.Proto.BlipService.GetCommentsRequest> __Marshaller_blipper_blip_v1_GetCommentsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Proto.BlipService.GetCommentsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Blipper.Proto.BlipService.GetCommentsResponse> __Marshaller_blipper_blip_v1_GetCommentsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Proto.BlipService.GetCommentsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Blipper.Proto.BlipService.UpdateCommentRequest> __Marshaller_blipper_blip_v1_UpdateCommentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Proto.BlipService.UpdateCommentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Blipper.Proto.BlipService.UpdateCommentResponse> __Marshaller_blipper_blip_v1_UpdateCommentResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Proto.BlipService.UpdateCommentResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Blipper.Proto.BlipService.DeleteCommentRequest> __Marshaller_blipper_blip_v1_DeleteCommentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Proto.BlipService.DeleteCommentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Blipper.Proto.BlipService.VoteRequest> __Marshaller_blipper_blip_v1_VoteRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Proto.BlipService.VoteRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Blipper.Proto.BlipService.VoteResponse> __Marshaller_blipper_blip_v1_VoteResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Proto.BlipService.VoteResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Blipper.Proto.BlipService.GetVoteStatusRequest> __Marshaller_blipper_blip_v1_GetVoteStatusRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Proto.BlipService.GetVoteStatusRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Blipper.Proto.BlipService.GetVoteStatusResponse> __Marshaller_blipper_blip_v1_GetVoteStatusResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Proto.BlipService.GetVoteStatusResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Blipper.Proto.BlipService.GetCircleTimelineRequest> __Marshaller_blipper_blip_v1_GetCircleTimelineRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Proto.BlipService.GetCircleTimelineRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Blipper.Proto.BlipService.GetCircleTimelineResponse> __Marshaller_blipper_blip_v1_GetCircleTimelineResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Proto.BlipService.GetCircleTimelineResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Blipper.Proto.BlipService.GetUserTimelineRequest> __Marshaller_blipper_blip_v1_GetUserTimelineRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Proto.BlipService.GetUserTimelineRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Blipper.Proto.BlipService.GetUserTimelineResponse> __Marshaller_blipper_blip_v1_GetUserTimelineResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Proto.BlipService.GetUserTimelineResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Blipper.Proto.BlipService.GetTrendingFeedRequest> __Marshaller_blipper_blip_v1_GetTrendingFeedRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Proto.BlipService.GetTrendingFeedRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Blipper.Proto.BlipService.GetTrendingFeedResponse> __Marshaller_blipper_blip_v1_GetTrendingFeedResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Proto.BlipService.GetTrendingFeedResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Blipper.Proto.BlipService.GetPopularFeedRequest> __Marshaller_blipper_blip_v1_GetPopularFeedRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Proto.BlipService.GetPopularFeedRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Blipper.Proto.BlipService.GetPopularFeedResponse> __Marshaller_blipper_blip_v1_GetPopularFeedResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Blipper.Proto.BlipService.GetPopularFeedResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Blipper.Proto.BlipService.CreateBlipRequest, global::Blipper.Proto.BlipService.CreateBlipResponse> __Method_CreateBlip = new grpc::Method<global::Blipper.Proto.BlipService.CreateBlipRequest, global::Blipper.Proto.BlipService.CreateBlipResponse>(
@@ -106,6 +146,86 @@ namespace Blipper.Proto.BlipService {
         __Marshaller_blipper_blip_v1_UpdateBlipRequest,
         __Marshaller_blipper_blip_v1_UpdateBlipResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Blipper.Proto.BlipService.CreateCommentRequest, global::Blipper.Proto.BlipService.CreateCommentResponse> __Method_CreateComment = new grpc::Method<global::Blipper.Proto.BlipService.CreateCommentRequest, global::Blipper.Proto.BlipService.CreateCommentResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateComment",
+        __Marshaller_blipper_blip_v1_CreateCommentRequest,
+        __Marshaller_blipper_blip_v1_CreateCommentResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Blipper.Proto.BlipService.GetCommentsRequest, global::Blipper.Proto.BlipService.GetCommentsResponse> __Method_GetComments = new grpc::Method<global::Blipper.Proto.BlipService.GetCommentsRequest, global::Blipper.Proto.BlipService.GetCommentsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetComments",
+        __Marshaller_blipper_blip_v1_GetCommentsRequest,
+        __Marshaller_blipper_blip_v1_GetCommentsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Blipper.Proto.BlipService.UpdateCommentRequest, global::Blipper.Proto.BlipService.UpdateCommentResponse> __Method_UpdateComment = new grpc::Method<global::Blipper.Proto.BlipService.UpdateCommentRequest, global::Blipper.Proto.BlipService.UpdateCommentResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateComment",
+        __Marshaller_blipper_blip_v1_UpdateCommentRequest,
+        __Marshaller_blipper_blip_v1_UpdateCommentResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Blipper.Proto.BlipService.DeleteCommentRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteComment = new grpc::Method<global::Blipper.Proto.BlipService.DeleteCommentRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteComment",
+        __Marshaller_blipper_blip_v1_DeleteCommentRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Blipper.Proto.BlipService.VoteRequest, global::Blipper.Proto.BlipService.VoteResponse> __Method_Vote = new grpc::Method<global::Blipper.Proto.BlipService.VoteRequest, global::Blipper.Proto.BlipService.VoteResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "Vote",
+        __Marshaller_blipper_blip_v1_VoteRequest,
+        __Marshaller_blipper_blip_v1_VoteResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Blipper.Proto.BlipService.GetVoteStatusRequest, global::Blipper.Proto.BlipService.GetVoteStatusResponse> __Method_GetVoteStatus = new grpc::Method<global::Blipper.Proto.BlipService.GetVoteStatusRequest, global::Blipper.Proto.BlipService.GetVoteStatusResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetVoteStatus",
+        __Marshaller_blipper_blip_v1_GetVoteStatusRequest,
+        __Marshaller_blipper_blip_v1_GetVoteStatusResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Blipper.Proto.BlipService.GetCircleTimelineRequest, global::Blipper.Proto.BlipService.GetCircleTimelineResponse> __Method_GetCircleTimeline = new grpc::Method<global::Blipper.Proto.BlipService.GetCircleTimelineRequest, global::Blipper.Proto.BlipService.GetCircleTimelineResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetCircleTimeline",
+        __Marshaller_blipper_blip_v1_GetCircleTimelineRequest,
+        __Marshaller_blipper_blip_v1_GetCircleTimelineResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Blipper.Proto.BlipService.GetUserTimelineRequest, global::Blipper.Proto.BlipService.GetUserTimelineResponse> __Method_GetUserTimeline = new grpc::Method<global::Blipper.Proto.BlipService.GetUserTimelineRequest, global::Blipper.Proto.BlipService.GetUserTimelineResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetUserTimeline",
+        __Marshaller_blipper_blip_v1_GetUserTimelineRequest,
+        __Marshaller_blipper_blip_v1_GetUserTimelineResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Blipper.Proto.BlipService.GetTrendingFeedRequest, global::Blipper.Proto.BlipService.GetTrendingFeedResponse> __Method_GetTrendingFeed = new grpc::Method<global::Blipper.Proto.BlipService.GetTrendingFeedRequest, global::Blipper.Proto.BlipService.GetTrendingFeedResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetTrendingFeed",
+        __Marshaller_blipper_blip_v1_GetTrendingFeedRequest,
+        __Marshaller_blipper_blip_v1_GetTrendingFeedResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Blipper.Proto.BlipService.GetPopularFeedRequest, global::Blipper.Proto.BlipService.GetPopularFeedResponse> __Method_GetPopularFeed = new grpc::Method<global::Blipper.Proto.BlipService.GetPopularFeedRequest, global::Blipper.Proto.BlipService.GetPopularFeedResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetPopularFeed",
+        __Marshaller_blipper_blip_v1_GetPopularFeedRequest,
+        __Marshaller_blipper_blip_v1_GetPopularFeedResponse);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -142,6 +262,90 @@ namespace Blipper.Proto.BlipService {
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Blipper.Proto.BlipService.UpdateBlipResponse> UpdateBlip(global::Blipper.Proto.BlipService.UpdateBlipRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Comment operations
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Blipper.Proto.BlipService.CreateCommentResponse> CreateComment(global::Blipper.Proto.BlipService.CreateCommentRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Blipper.Proto.BlipService.GetCommentsResponse> GetComments(global::Blipper.Proto.BlipService.GetCommentsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Blipper.Proto.BlipService.UpdateCommentResponse> UpdateComment(global::Blipper.Proto.BlipService.UpdateCommentRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteComment(global::Blipper.Proto.BlipService.DeleteCommentRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Vote operations
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Blipper.Proto.BlipService.VoteResponse> Vote(global::Blipper.Proto.BlipService.VoteRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Blipper.Proto.BlipService.GetVoteStatusResponse> GetVoteStatus(global::Blipper.Proto.BlipService.GetVoteStatusRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Timeline operations
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Blipper.Proto.BlipService.GetCircleTimelineResponse> GetCircleTimeline(global::Blipper.Proto.BlipService.GetCircleTimelineRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Blipper.Proto.BlipService.GetUserTimelineResponse> GetUserTimeline(global::Blipper.Proto.BlipService.GetUserTimelineRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Feed operations
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Blipper.Proto.BlipService.GetTrendingFeedResponse> GetTrendingFeed(global::Blipper.Proto.BlipService.GetTrendingFeedRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Blipper.Proto.BlipService.GetPopularFeedResponse> GetPopularFeed(global::Blipper.Proto.BlipService.GetPopularFeedRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -275,6 +479,318 @@ namespace Blipper.Proto.BlipService {
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateBlip, null, options, request);
       }
+      /// <summary>
+      /// Comment operations
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Blipper.Proto.BlipService.CreateCommentResponse CreateComment(global::Blipper.Proto.BlipService.CreateCommentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateComment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Comment operations
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Blipper.Proto.BlipService.CreateCommentResponse CreateComment(global::Blipper.Proto.BlipService.CreateCommentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateComment, null, options, request);
+      }
+      /// <summary>
+      /// Comment operations
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Blipper.Proto.BlipService.CreateCommentResponse> CreateCommentAsync(global::Blipper.Proto.BlipService.CreateCommentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateCommentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Comment operations
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Blipper.Proto.BlipService.CreateCommentResponse> CreateCommentAsync(global::Blipper.Proto.BlipService.CreateCommentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateComment, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Blipper.Proto.BlipService.GetCommentsResponse GetComments(global::Blipper.Proto.BlipService.GetCommentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetComments(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Blipper.Proto.BlipService.GetCommentsResponse GetComments(global::Blipper.Proto.BlipService.GetCommentsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetComments, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Blipper.Proto.BlipService.GetCommentsResponse> GetCommentsAsync(global::Blipper.Proto.BlipService.GetCommentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetCommentsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Blipper.Proto.BlipService.GetCommentsResponse> GetCommentsAsync(global::Blipper.Proto.BlipService.GetCommentsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetComments, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Blipper.Proto.BlipService.UpdateCommentResponse UpdateComment(global::Blipper.Proto.BlipService.UpdateCommentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateComment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Blipper.Proto.BlipService.UpdateCommentResponse UpdateComment(global::Blipper.Proto.BlipService.UpdateCommentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateComment, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Blipper.Proto.BlipService.UpdateCommentResponse> UpdateCommentAsync(global::Blipper.Proto.BlipService.UpdateCommentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateCommentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Blipper.Proto.BlipService.UpdateCommentResponse> UpdateCommentAsync(global::Blipper.Proto.BlipService.UpdateCommentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateComment, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteComment(global::Blipper.Proto.BlipService.DeleteCommentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteComment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteComment(global::Blipper.Proto.BlipService.DeleteCommentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteComment, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteCommentAsync(global::Blipper.Proto.BlipService.DeleteCommentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteCommentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteCommentAsync(global::Blipper.Proto.BlipService.DeleteCommentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteComment, null, options, request);
+      }
+      /// <summary>
+      /// Vote operations
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Blipper.Proto.BlipService.VoteResponse Vote(global::Blipper.Proto.BlipService.VoteRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return Vote(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Vote operations
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Blipper.Proto.BlipService.VoteResponse Vote(global::Blipper.Proto.BlipService.VoteRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_Vote, null, options, request);
+      }
+      /// <summary>
+      /// Vote operations
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Blipper.Proto.BlipService.VoteResponse> VoteAsync(global::Blipper.Proto.BlipService.VoteRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return VoteAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Vote operations
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Blipper.Proto.BlipService.VoteResponse> VoteAsync(global::Blipper.Proto.BlipService.VoteRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_Vote, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Blipper.Proto.BlipService.GetVoteStatusResponse GetVoteStatus(global::Blipper.Proto.BlipService.GetVoteStatusRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetVoteStatus(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Blipper.Proto.BlipService.GetVoteStatusResponse GetVoteStatus(global::Blipper.Proto.BlipService.GetVoteStatusRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetVoteStatus, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Blipper.Proto.BlipService.GetVoteStatusResponse> GetVoteStatusAsync(global::Blipper.Proto.BlipService.GetVoteStatusRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetVoteStatusAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Blipper.Proto.BlipService.GetVoteStatusResponse> GetVoteStatusAsync(global::Blipper.Proto.BlipService.GetVoteStatusRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetVoteStatus, null, options, request);
+      }
+      /// <summary>
+      /// Timeline operations
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Blipper.Proto.BlipService.GetCircleTimelineResponse GetCircleTimeline(global::Blipper.Proto.BlipService.GetCircleTimelineRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetCircleTimeline(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Timeline operations
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Blipper.Proto.BlipService.GetCircleTimelineResponse GetCircleTimeline(global::Blipper.Proto.BlipService.GetCircleTimelineRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetCircleTimeline, null, options, request);
+      }
+      /// <summary>
+      /// Timeline operations
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Blipper.Proto.BlipService.GetCircleTimelineResponse> GetCircleTimelineAsync(global::Blipper.Proto.BlipService.GetCircleTimelineRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetCircleTimelineAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Timeline operations
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Blipper.Proto.BlipService.GetCircleTimelineResponse> GetCircleTimelineAsync(global::Blipper.Proto.BlipService.GetCircleTimelineRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetCircleTimeline, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Blipper.Proto.BlipService.GetUserTimelineResponse GetUserTimeline(global::Blipper.Proto.BlipService.GetUserTimelineRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetUserTimeline(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Blipper.Proto.BlipService.GetUserTimelineResponse GetUserTimeline(global::Blipper.Proto.BlipService.GetUserTimelineRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetUserTimeline, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Blipper.Proto.BlipService.GetUserTimelineResponse> GetUserTimelineAsync(global::Blipper.Proto.BlipService.GetUserTimelineRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetUserTimelineAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Blipper.Proto.BlipService.GetUserTimelineResponse> GetUserTimelineAsync(global::Blipper.Proto.BlipService.GetUserTimelineRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetUserTimeline, null, options, request);
+      }
+      /// <summary>
+      /// Feed operations
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Blipper.Proto.BlipService.GetTrendingFeedResponse GetTrendingFeed(global::Blipper.Proto.BlipService.GetTrendingFeedRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetTrendingFeed(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Feed operations
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Blipper.Proto.BlipService.GetTrendingFeedResponse GetTrendingFeed(global::Blipper.Proto.BlipService.GetTrendingFeedRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetTrendingFeed, null, options, request);
+      }
+      /// <summary>
+      /// Feed operations
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Blipper.Proto.BlipService.GetTrendingFeedResponse> GetTrendingFeedAsync(global::Blipper.Proto.BlipService.GetTrendingFeedRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetTrendingFeedAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Feed operations
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Blipper.Proto.BlipService.GetTrendingFeedResponse> GetTrendingFeedAsync(global::Blipper.Proto.BlipService.GetTrendingFeedRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetTrendingFeed, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Blipper.Proto.BlipService.GetPopularFeedResponse GetPopularFeed(global::Blipper.Proto.BlipService.GetPopularFeedRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetPopularFeed(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Blipper.Proto.BlipService.GetPopularFeedResponse GetPopularFeed(global::Blipper.Proto.BlipService.GetPopularFeedRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetPopularFeed, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Blipper.Proto.BlipService.GetPopularFeedResponse> GetPopularFeedAsync(global::Blipper.Proto.BlipService.GetPopularFeedRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetPopularFeedAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Blipper.Proto.BlipService.GetPopularFeedResponse> GetPopularFeedAsync(global::Blipper.Proto.BlipService.GetPopularFeedRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetPopularFeed, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override BlipServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -293,7 +809,17 @@ namespace Blipper.Proto.BlipService {
           .AddMethod(__Method_GetBlip, serviceImpl.GetBlip)
           .AddMethod(__Method_ListBlips, serviceImpl.ListBlips)
           .AddMethod(__Method_DeleteBlip, serviceImpl.DeleteBlip)
-          .AddMethod(__Method_UpdateBlip, serviceImpl.UpdateBlip).Build();
+          .AddMethod(__Method_UpdateBlip, serviceImpl.UpdateBlip)
+          .AddMethod(__Method_CreateComment, serviceImpl.CreateComment)
+          .AddMethod(__Method_GetComments, serviceImpl.GetComments)
+          .AddMethod(__Method_UpdateComment, serviceImpl.UpdateComment)
+          .AddMethod(__Method_DeleteComment, serviceImpl.DeleteComment)
+          .AddMethod(__Method_Vote, serviceImpl.Vote)
+          .AddMethod(__Method_GetVoteStatus, serviceImpl.GetVoteStatus)
+          .AddMethod(__Method_GetCircleTimeline, serviceImpl.GetCircleTimeline)
+          .AddMethod(__Method_GetUserTimeline, serviceImpl.GetUserTimeline)
+          .AddMethod(__Method_GetTrendingFeed, serviceImpl.GetTrendingFeed)
+          .AddMethod(__Method_GetPopularFeed, serviceImpl.GetPopularFeed).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -308,6 +834,16 @@ namespace Blipper.Proto.BlipService {
       serviceBinder.AddMethod(__Method_ListBlips, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Blipper.Proto.BlipService.ListBlipsRequest, global::Blipper.Proto.BlipService.ListBlipsResponse>(serviceImpl.ListBlips));
       serviceBinder.AddMethod(__Method_DeleteBlip, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Blipper.Proto.BlipService.DeleteBlipRequest, global::Blipper.Proto.BlipService.DeleteBlipResponse>(serviceImpl.DeleteBlip));
       serviceBinder.AddMethod(__Method_UpdateBlip, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Blipper.Proto.BlipService.UpdateBlipRequest, global::Blipper.Proto.BlipService.UpdateBlipResponse>(serviceImpl.UpdateBlip));
+      serviceBinder.AddMethod(__Method_CreateComment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Blipper.Proto.BlipService.CreateCommentRequest, global::Blipper.Proto.BlipService.CreateCommentResponse>(serviceImpl.CreateComment));
+      serviceBinder.AddMethod(__Method_GetComments, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Blipper.Proto.BlipService.GetCommentsRequest, global::Blipper.Proto.BlipService.GetCommentsResponse>(serviceImpl.GetComments));
+      serviceBinder.AddMethod(__Method_UpdateComment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Blipper.Proto.BlipService.UpdateCommentRequest, global::Blipper.Proto.BlipService.UpdateCommentResponse>(serviceImpl.UpdateComment));
+      serviceBinder.AddMethod(__Method_DeleteComment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Blipper.Proto.BlipService.DeleteCommentRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteComment));
+      serviceBinder.AddMethod(__Method_Vote, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Blipper.Proto.BlipService.VoteRequest, global::Blipper.Proto.BlipService.VoteResponse>(serviceImpl.Vote));
+      serviceBinder.AddMethod(__Method_GetVoteStatus, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Blipper.Proto.BlipService.GetVoteStatusRequest, global::Blipper.Proto.BlipService.GetVoteStatusResponse>(serviceImpl.GetVoteStatus));
+      serviceBinder.AddMethod(__Method_GetCircleTimeline, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Blipper.Proto.BlipService.GetCircleTimelineRequest, global::Blipper.Proto.BlipService.GetCircleTimelineResponse>(serviceImpl.GetCircleTimeline));
+      serviceBinder.AddMethod(__Method_GetUserTimeline, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Blipper.Proto.BlipService.GetUserTimelineRequest, global::Blipper.Proto.BlipService.GetUserTimelineResponse>(serviceImpl.GetUserTimeline));
+      serviceBinder.AddMethod(__Method_GetTrendingFeed, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Blipper.Proto.BlipService.GetTrendingFeedRequest, global::Blipper.Proto.BlipService.GetTrendingFeedResponse>(serviceImpl.GetTrendingFeed));
+      serviceBinder.AddMethod(__Method_GetPopularFeed, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Blipper.Proto.BlipService.GetPopularFeedRequest, global::Blipper.Proto.BlipService.GetPopularFeedResponse>(serviceImpl.GetPopularFeed));
     }
 
   }

@@ -5,6 +5,7 @@ option go_package = "/blip";
 option csharp_namespace = "Blipper.Proto.BlipService";
 
 import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
 
 service BlipService {
   rpc CreateBlip(CreateBlipRequest) returns (CreateBlipResponse);
@@ -12,18 +13,24 @@ service BlipService {
   rpc ListBlips(ListBlipsRequest) returns (ListBlipsResponse);
   rpc DeleteBlip(DeleteBlipRequest) returns (DeleteBlipResponse);
   rpc UpdateBlip(UpdateBlipRequest) returns (UpdateBlipResponse);
-}
 
-message Blip {
-  string id = 1;
-  string content = 2;
-  string author_id = 3;
-  string circle_id = 4;
-  repeated string media_urls = 5;
-  google.protobuf.Timestamp created_at = 6;
-  google.protobuf.Timestamp updated_at = 7;
-  optional string parent_id = 8;  // For replies
-  optional string shared_from_id = 9;  // For shared blips
+  // Comment operations
+  rpc CreateComment(CreateCommentRequest) returns (CreateCommentResponse);
+  rpc GetComments(GetCommentsRequest) returns (GetCommentsResponse);
+  rpc UpdateComment(UpdateCommentRequest) returns (UpdateCommentResponse);
+  rpc DeleteComment(DeleteCommentRequest) returns (google.protobuf.Empty);
+
+  // Vote operations
+  rpc Vote(VoteRequest) returns (VoteResponse);
+  rpc GetVoteStatus(GetVoteStatusRequest) returns (GetVoteStatusResponse);
+
+  // Timeline operations
+  rpc GetCircleTimeline(GetCircleTimelineRequest) returns (GetCircleTimelineResponse);
+  rpc GetUserTimeline(GetUserTimelineRequest) returns (GetUserTimelineResponse);
+
+  // Feed operations
+  rpc GetTrendingFeed(GetTrendingFeedRequest) returns (GetTrendingFeedResponse);
+  rpc GetPopularFeed(GetPopularFeedRequest) returns (GetPopularFeedResponse);
 }
 
 message CreateBlipRequest {
@@ -31,8 +38,7 @@ message CreateBlipRequest {
   string author_id = 2;
   string circle_id = 3;
   repeated string media_urls = 4;
-  optional string parent_id = 5;
-  optional string shared_from_id = 6;
+  optional int64 reblip_of = 5;
 }
 
 message CreateBlipResponse {
@@ -40,7 +46,7 @@ message CreateBlipResponse {
 }
 
 message GetBlipRequest {
-  string id = 1;
+  int64 id = 1;  // Snowflake ID
 }
 
 message GetBlipResponse {
@@ -60,14 +66,14 @@ message ListBlipsResponse {
 }
 
 message DeleteBlipRequest {
-  string id = 1;
+  int64 id = 1;  // Snowflake ID
   string author_id = 2;  // For authorization
 }
 
 message DeleteBlipResponse {}
 
 message UpdateBlipRequest {
-  string id = 1;
+  int64 id = 1;  // Snowflake ID
   string author_id = 2;  // For authorization
   string content = 3;
   repeated string media_urls = 4;
@@ -75,4 +81,159 @@ message UpdateBlipRequest {
 
 message UpdateBlipResponse {
   Blip blip = 1;
+}
+
+message BlipMetadata {
+  int64 upvotes = 1;
+  int64 downvotes = 2;
+  int64 comments_count = 3;
+  int64 reblip_count = 4;
+  google.protobuf.Timestamp last_activity = 5;
+  double trending_score = 6;
+}
+
+message Blip {
+  int64 id = 1;                                // Snowflake ID
+  string content = 2;
+  string author_id = 3;
+  string circle_id = 4;
+  repeated string media_urls = 5;
+  optional int64 reblip_of = 6;                // If this is a reblip
+  google.protobuf.Timestamp created_at = 7;
+  google.protobuf.Timestamp updated_at = 8;
+  BlipMetadata metadata = 9;
+  optional UserVoteStatus user_vote = 10;      // Present if user is authenticated
+}
+
+message Comment {
+  int64 id = 1;                                // Snowflake ID
+  int64 parent_blip_id = 2;
+  string content = 3;
+  string author_id = 4;
+  repeated string media_urls = 5;
+  google.protobuf.Timestamp created_at = 6;
+  google.protobuf.Timestamp updated_at = 7;
+  BlipMetadata metadata = 8;
+  optional UserVoteStatus user_vote = 9;       // Present if user is authenticated
+}
+
+message CreateCommentRequest {
+  int64 parent_blip_id = 1;
+  string content = 2;
+  string author_id = 3;
+  repeated string media_urls = 4;
+}
+
+message CreateCommentResponse {
+  Comment comment = 1;
+}
+
+message DeleteCommentRequest {
+  int64 id = 1;  // Snowflake ID
+  string author_id = 2;  // For authorization
+}
+
+message UpdateCommentRequest {
+  int64 id = 1;  // Snowflake ID
+  string author_id = 2;  // For authorization
+  string content = 3;
+  repeated string media_urls = 4;
+}
+
+message UpdateCommentResponse {
+  Comment comment = 1;
+}
+
+message GetCommentsRequest {
+  int64 parent_blip_id = 1;
+  int32 page_size = 2;
+  optional string page_token = 3;
+}
+
+message GetCommentsResponse {
+  repeated Comment comments = 1;
+  string next_page_token = 2;
+  int64 total_comments = 3;
+}
+
+message VoteRequest {
+  int64 target_id = 1;
+  TargetType target_type = 2;
+  VoteType vote_type = 3;
+  string user_id = 4;
+}
+
+message VoteResponse {
+  BlipMetadata updated_metadata = 1;
+  UserVoteStatus user_vote = 2;
+}
+
+message GetVoteStatusRequest {
+  int64 target_id = 1;
+  TargetType target_type = 2;
+  string user_id = 3;
+}
+
+message GetVoteStatusResponse {
+  UserVoteStatus user_vote = 1;
+}
+
+message GetCircleTimelineRequest {
+  string circle_id = 1;
+  optional int32 page_size = 2;
+  optional string page_token = 3;
+}
+
+message GetCircleTimelineResponse {
+  repeated Blip blips = 1;
+  string next_page_token = 2;
+}
+
+message GetUserTimelineRequest {
+  string user_id = 1;
+  optional int32 page_size = 2;
+  optional string page_token = 3;
+}
+
+message GetUserTimelineResponse {
+  repeated Blip blips = 1;
+  string next_page_token = 2;
+}
+
+message GetTrendingFeedRequest {
+  optional int32 page_size = 1;
+  optional string page_token = 2;
+}
+
+message GetTrendingFeedResponse {
+  repeated Blip blips = 1;
+  string next_page_token = 2;
+}
+
+message GetPopularFeedRequest {
+  string circle_id = 1;
+  optional int32 page_size = 2;
+  optional string page_token = 3;
+}
+
+message GetPopularFeedResponse {
+  repeated Blip blips = 1;
+  string next_page_token = 2;
+}
+
+enum VoteType {
+  VOTE_TYPE_UNSPECIFIED = 0;
+  VOTE_TYPE_UPVOTE = 1;
+  VOTE_TYPE_DOWNVOTE = 2;
+}
+
+enum TargetType {
+  TARGET_TYPE_UNSPECIFIED = 0;
+  TARGET_TYPE_BLIP = 1;
+  TARGET_TYPE_COMMENT = 2;
+}
+
+message UserVoteStatus {
+  VoteType vote_type = 1;
+  google.protobuf.Timestamp voted_at = 2;
 }

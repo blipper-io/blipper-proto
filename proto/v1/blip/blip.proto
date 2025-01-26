@@ -38,7 +38,7 @@ message CreateBlipRequest {
   string author_id = 2;
   string circle_id = 3;
   repeated string media_urls = 4;
-  optional int64 reblip_of = 5;
+  optional string reblip_of = 5;
 }
 
 message CreateBlipResponse {
@@ -46,7 +46,7 @@ message CreateBlipResponse {
 }
 
 message GetBlipRequest {
-  int64 id = 1;  // Snowflake ID
+  string id = 1;  // LUID
 }
 
 message GetBlipResponse {
@@ -66,14 +66,14 @@ message ListBlipsResponse {
 }
 
 message DeleteBlipRequest {
-  int64 id = 1;  // Snowflake ID
+  string id = 1;  // LUID
   string author_id = 2;  // For authorization
 }
 
 message DeleteBlipResponse {}
 
 message UpdateBlipRequest {
-  int64 id = 1;  // Snowflake ID
+  string id = 1;  // LUID
   string author_id = 2;  // For authorization
   string content = 3;
   repeated string media_urls = 4;
@@ -93,12 +93,12 @@ message BlipMetadata {
 }
 
 message Blip {
-  int64 id = 1;                                // Snowflake ID
+  string id = 1;                                // LUID
   string content = 2;
   string author_id = 3;
   string circle_id = 4;
   repeated string media_urls = 5;
-  optional int64 reblip_of = 6;                // If this is a reblip
+  optional string reblip_of = 6;                // If this is a reblip
   google.protobuf.Timestamp created_at = 7;
   google.protobuf.Timestamp updated_at = 8;
   BlipMetadata metadata = 9;
@@ -106,8 +106,8 @@ message Blip {
 }
 
 message Comment {
-  int64 id = 1;                                // Snowflake ID
-  int64 parent_blip_id = 2;
+  string id = 1;                                // LUID
+  string parent_blip_id = 2;
   string content = 3;
   string author_id = 4;
   repeated string media_urls = 5;
@@ -118,7 +118,7 @@ message Comment {
 }
 
 message CreateCommentRequest {
-  int64 parent_blip_id = 1;
+  string parent_blip_id = 1;
   string content = 2;
   string author_id = 3;
   repeated string media_urls = 4;
@@ -129,12 +129,12 @@ message CreateCommentResponse {
 }
 
 message DeleteCommentRequest {
-  int64 id = 1;  // Snowflake ID
+  string id = 1;  // LUID
   string author_id = 2;  // For authorization
 }
 
 message UpdateCommentRequest {
-  int64 id = 1;  // Snowflake ID
+  string id = 1;  // LUID
   string author_id = 2;  // For authorization
   string content = 3;
   repeated string media_urls = 4;
@@ -145,7 +145,7 @@ message UpdateCommentResponse {
 }
 
 message GetCommentsRequest {
-  int64 parent_blip_id = 1;
+  string parent_blip_id = 1;
   int32 page_size = 2;
   optional string page_token = 3;
 }
@@ -157,7 +157,7 @@ message GetCommentsResponse {
 }
 
 message VoteRequest {
-  int64 target_id = 1;
+  string target_id = 1;
   TargetType target_type = 2;
   VoteType vote_type = 3;
   string user_id = 4;
@@ -169,7 +169,7 @@ message VoteResponse {
 }
 
 message GetVoteStatusRequest {
-  int64 target_id = 1;
+  string target_id = 1;
   TargetType target_type = 2;
   string user_id = 3;
 }

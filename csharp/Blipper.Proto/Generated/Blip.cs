@@ -28,60 +28,60 @@ namespace Blipper.Proto.BlipService {
             "b3RvYnVmL3RpbWVzdGFtcC5wcm90bxobZ29vZ2xlL3Byb3RvYnVmL2VtcHR5",
             "LnByb3RvIoQBChFDcmVhdGVCbGlwUmVxdWVzdBIPCgdjb250ZW50GAEgASgJ",
             "EhEKCWF1dGhvcl9pZBgCIAEoCRIRCgljaXJjbGVfaWQYAyABKAkSEgoKbWVk",
-            "aWFfdXJscxgEIAMoCRIWCglyZWJsaXBfb2YYBSABKANIAIgBAUIMCgpfcmVi",
+            "aWFfdXJscxgEIAMoCRIWCglyZWJsaXBfb2YYBSABKAlIAIgBAUIMCgpfcmVi",
             "bGlwX29mIjkKEkNyZWF0ZUJsaXBSZXNwb25zZRIjCgRibGlwGAEgASgLMhUu",
             "YmxpcHBlci5ibGlwLnYxLkJsaXAiHAoOR2V0QmxpcFJlcXVlc3QSCgoCaWQY",
-            "ASABKAMiNgoPR2V0QmxpcFJlc3BvbnNlEiMKBGJsaXAYASABKAsyFS5ibGlw",
+            "ASABKAkiNgoPR2V0QmxpcFJlc3BvbnNlEiMKBGJsaXAYASABKAsyFS5ibGlw",
             "cGVyLmJsaXAudjEuQmxpcCKZAQoQTGlzdEJsaXBzUmVxdWVzdBIRCgljaXJj",
             "bGVfaWQYASABKAkSFgoJYXV0aG9yX2lkGAIgASgJSACIAQESFgoJcGFnZV9z",
             "aXplGAMgASgFSAGIAQESFwoKcGFnZV90b2tlbhgEIAEoCUgCiAEBQgwKCl9h",
             "dXRob3JfaWRCDAoKX3BhZ2Vfc2l6ZUINCgtfcGFnZV90b2tlbiJSChFMaXN0",
             "QmxpcHNSZXNwb25zZRIkCgVibGlwcxgBIAMoCzIVLmJsaXBwZXIuYmxpcC52",
             "MS5CbGlwEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSIyChFEZWxldGVCbGlw",
-            "UmVxdWVzdBIKCgJpZBgBIAEoAxIRCglhdXRob3JfaWQYAiABKAkiFAoSRGVs",
+            "UmVxdWVzdBIKCgJpZBgBIAEoCRIRCglhdXRob3JfaWQYAiABKAkiFAoSRGVs",
             "ZXRlQmxpcFJlc3BvbnNlIlcKEVVwZGF0ZUJsaXBSZXF1ZXN0EgoKAmlkGAEg",
-            "ASgDEhEKCWF1dGhvcl9pZBgCIAEoCRIPCgdjb250ZW50GAMgASgJEhIKCm1l",
+            "ASgJEhEKCWF1dGhvcl9pZBgCIAEoCRIPCgdjb250ZW50GAMgASgJEhIKCm1l",
             "ZGlhX3VybHMYBCADKAkiOQoSVXBkYXRlQmxpcFJlc3BvbnNlEiMKBGJsaXAY",
             "ASABKAsyFS5ibGlwcGVyLmJsaXAudjEuQmxpcCKrAQoMQmxpcE1ldGFkYXRh",
             "Eg8KB3Vwdm90ZXMYASABKAMSEQoJZG93bnZvdGVzGAIgASgDEhYKDmNvbW1l",
             "bnRzX2NvdW50GAMgASgDEhQKDHJlYmxpcF9jb3VudBgEIAEoAxIxCg1sYXN0",
             "X2FjdGl2aXR5GAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIW",
-            "Cg50cmVuZGluZ19zY29yZRgGIAEoASLbAgoEQmxpcBIKCgJpZBgBIAEoAxIP",
+            "Cg50cmVuZGluZ19zY29yZRgGIAEoASLbAgoEQmxpcBIKCgJpZBgBIAEoCRIP",
             "Cgdjb250ZW50GAIgASgJEhEKCWF1dGhvcl9pZBgDIAEoCRIRCgljaXJjbGVf",
             "aWQYBCABKAkSEgoKbWVkaWFfdXJscxgFIAMoCRIWCglyZWJsaXBfb2YYBiAB",
-            "KANIAIgBARIuCgpjcmVhdGVkX2F0GAcgASgLMhouZ29vZ2xlLnByb3RvYnVm",
+            "KAlIAIgBARIuCgpjcmVhdGVkX2F0GAcgASgLMhouZ29vZ2xlLnByb3RvYnVm",
             "LlRpbWVzdGFtcBIuCgp1cGRhdGVkX2F0GAggASgLMhouZ29vZ2xlLnByb3Rv",
             "YnVmLlRpbWVzdGFtcBIvCghtZXRhZGF0YRgJIAEoCzIdLmJsaXBwZXIuYmxp",
             "cC52MS5CbGlwTWV0YWRhdGESNwoJdXNlcl92b3RlGAogASgLMh8uYmxpcHBl",
             "ci5ibGlwLnYxLlVzZXJWb3RlU3RhdHVzSAGIAQFCDAoKX3JlYmxpcF9vZkIM",
-            "CgpfdXNlcl92b3RlIr0CCgdDb21tZW50EgoKAmlkGAEgASgDEhYKDnBhcmVu",
-            "dF9ibGlwX2lkGAIgASgDEg8KB2NvbnRlbnQYAyABKAkSEQoJYXV0aG9yX2lk",
+            "CgpfdXNlcl92b3RlIr0CCgdDb21tZW50EgoKAmlkGAEgASgJEhYKDnBhcmVu",
+            "dF9ibGlwX2lkGAIgASgJEg8KB2NvbnRlbnQYAyABKAkSEQoJYXV0aG9yX2lk",
             "GAQgASgJEhIKCm1lZGlhX3VybHMYBSADKAkSLgoKY3JlYXRlZF9hdBgGIAEo",
             "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLgoKdXBkYXRlZF9hdBgH",
             "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLwoIbWV0YWRhdGEY",
             "CCABKAsyHS5ibGlwcGVyLmJsaXAudjEuQmxpcE1ldGFkYXRhEjcKCXVzZXJf",
             "dm90ZRgJIAEoCzIfLmJsaXBwZXIuYmxpcC52MS5Vc2VyVm90ZVN0YXR1c0gA",
             "iAEBQgwKCl91c2VyX3ZvdGUiZgoUQ3JlYXRlQ29tbWVudFJlcXVlc3QSFgoO",
-            "cGFyZW50X2JsaXBfaWQYASABKAMSDwoHY29udGVudBgCIAEoCRIRCglhdXRo",
+            "cGFyZW50X2JsaXBfaWQYASABKAkSDwoHY29udGVudBgCIAEoCRIRCglhdXRo",
             "b3JfaWQYAyABKAkSEgoKbWVkaWFfdXJscxgEIAMoCSJCChVDcmVhdGVDb21t",
             "ZW50UmVzcG9uc2USKQoHY29tbWVudBgBIAEoCzIYLmJsaXBwZXIuYmxpcC52",
-            "MS5Db21tZW50IjUKFERlbGV0ZUNvbW1lbnRSZXF1ZXN0EgoKAmlkGAEgASgD",
+            "MS5Db21tZW50IjUKFERlbGV0ZUNvbW1lbnRSZXF1ZXN0EgoKAmlkGAEgASgJ",
             "EhEKCWF1dGhvcl9pZBgCIAEoCSJaChRVcGRhdGVDb21tZW50UmVxdWVzdBIK",
-            "CgJpZBgBIAEoAxIRCglhdXRob3JfaWQYAiABKAkSDwoHY29udGVudBgDIAEo",
+            "CgJpZBgBIAEoCRIRCglhdXRob3JfaWQYAiABKAkSDwoHY29udGVudBgDIAEo",
             "CRISCgptZWRpYV91cmxzGAQgAygJIkIKFVVwZGF0ZUNvbW1lbnRSZXNwb25z",
             "ZRIpCgdjb21tZW50GAEgASgLMhguYmxpcHBlci5ibGlwLnYxLkNvbW1lbnQi",
-            "ZwoSR2V0Q29tbWVudHNSZXF1ZXN0EhYKDnBhcmVudF9ibGlwX2lkGAEgASgD",
+            "ZwoSR2V0Q29tbWVudHNSZXF1ZXN0EhYKDnBhcmVudF9ibGlwX2lkGAEgASgJ",
             "EhEKCXBhZ2Vfc2l6ZRgCIAEoBRIXCgpwYWdlX3Rva2VuGAMgASgJSACIAQFC",
             "DQoLX3BhZ2VfdG9rZW4icgoTR2V0Q29tbWVudHNSZXNwb25zZRIqCghjb21t",
             "ZW50cxgBIAMoCzIYLmJsaXBwZXIuYmxpcC52MS5Db21tZW50EhcKD25leHRf",
             "cGFnZV90b2tlbhgCIAEoCRIWCg50b3RhbF9jb21tZW50cxgDIAEoAyKRAQoL",
-            "Vm90ZVJlcXVlc3QSEQoJdGFyZ2V0X2lkGAEgASgDEjAKC3RhcmdldF90eXBl",
+            "Vm90ZVJlcXVlc3QSEQoJdGFyZ2V0X2lkGAEgASgJEjAKC3RhcmdldF90eXBl",
             "GAIgASgOMhsuYmxpcHBlci5ibGlwLnYxLlRhcmdldFR5cGUSLAoJdm90ZV90",
             "eXBlGAMgASgOMhkuYmxpcHBlci5ibGlwLnYxLlZvdGVUeXBlEg8KB3VzZXJf",
             "aWQYBCABKAkiewoMVm90ZVJlc3BvbnNlEjcKEHVwZGF0ZWRfbWV0YWRhdGEY",
             "ASABKAsyHS5ibGlwcGVyLmJsaXAudjEuQmxpcE1ldGFkYXRhEjIKCXVzZXJf",
             "dm90ZRgCIAEoCzIfLmJsaXBwZXIuYmxpcC52MS5Vc2VyVm90ZVN0YXR1cyJs",
-            "ChRHZXRWb3RlU3RhdHVzUmVxdWVzdBIRCgl0YXJnZXRfaWQYASABKAMSMAoL",
+            "ChRHZXRWb3RlU3RhdHVzUmVxdWVzdBIRCgl0YXJnZXRfaWQYASABKAkSMAoL",
             "dGFyZ2V0X3R5cGUYAiABKA4yGy5ibGlwcGVyLmJsaXAudjEuVGFyZ2V0VHlw",
             "ZRIPCgd1c2VyX2lkGAMgASgJIksKFUdldFZvdGVTdGF0dXNSZXNwb25zZRIy",
             "Cgl1c2VyX3ZvdGUYASABKAsyHy5ibGlwcGVyLmJsaXAudjEuVXNlclZvdGVT",
@@ -207,7 +207,6 @@ namespace Blipper.Proto.BlipService {
   {
     private static readonly pb::MessageParser<CreateBlipRequest> _parser = new pb::MessageParser<CreateBlipRequest>(() => new CreateBlipRequest());
     private pb::UnknownFieldSet _unknownFields;
-    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<CreateBlipRequest> Parser { get { return _parser; } }
@@ -235,7 +234,6 @@ namespace Blipper.Proto.BlipService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CreateBlipRequest(CreateBlipRequest other) : this() {
-      _hasBits0 = other._hasBits0;
       content_ = other.content_;
       authorId_ = other.authorId_;
       circleId_ = other.circleId_;
@@ -299,29 +297,28 @@ namespace Blipper.Proto.BlipService {
 
     /// <summary>Field number for the "reblip_of" field.</summary>
     public const int ReblipOfFieldNumber = 5;
-    private readonly static long ReblipOfDefaultValue = 0L;
+    private readonly static string ReblipOfDefaultValue = "";
 
-    private long reblipOf_;
+    private string reblipOf_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long ReblipOf {
-      get { if ((_hasBits0 & 1) != 0) { return reblipOf_; } else { return ReblipOfDefaultValue; } }
+    public string ReblipOf {
+      get { return reblipOf_ ?? ReblipOfDefaultValue; }
       set {
-        _hasBits0 |= 1;
-        reblipOf_ = value;
+        reblipOf_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
     /// <summary>Gets whether the "reblip_of" field is set</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasReblipOf {
-      get { return (_hasBits0 & 1) != 0; }
+      get { return reblipOf_ != null; }
     }
     /// <summary>Clears the value of the "reblip_of" field</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearReblipOf() {
-      _hasBits0 &= ~1;
+      reblipOf_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -388,8 +385,8 @@ namespace Blipper.Proto.BlipService {
       }
       mediaUrls_.WriteTo(output, _repeated_mediaUrls_codec);
       if (HasReblipOf) {
-        output.WriteRawTag(40);
-        output.WriteInt64(ReblipOf);
+        output.WriteRawTag(42);
+        output.WriteString(ReblipOf);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -415,8 +412,8 @@ namespace Blipper.Proto.BlipService {
       }
       mediaUrls_.WriteTo(ref output, _repeated_mediaUrls_codec);
       if (HasReblipOf) {
-        output.WriteRawTag(40);
-        output.WriteInt64(ReblipOf);
+        output.WriteRawTag(42);
+        output.WriteString(ReblipOf);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -439,7 +436,7 @@ namespace Blipper.Proto.BlipService {
       }
       size += mediaUrls_.CalculateSize(_repeated_mediaUrls_codec);
       if (HasReblipOf) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(ReblipOf);
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ReblipOf);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -501,8 +498,8 @@ namespace Blipper.Proto.BlipService {
             mediaUrls_.AddEntriesFrom(input, _repeated_mediaUrls_codec);
             break;
           }
-          case 40: {
-            ReblipOf = input.ReadInt64();
+          case 42: {
+            ReblipOf = input.ReadString();
             break;
           }
         }
@@ -540,8 +537,8 @@ namespace Blipper.Proto.BlipService {
             mediaUrls_.AddEntriesFrom(ref input, _repeated_mediaUrls_codec);
             break;
           }
-          case 40: {
-            ReblipOf = input.ReadInt64();
+          case 42: {
+            ReblipOf = input.ReadString();
             break;
           }
         }
@@ -805,16 +802,16 @@ namespace Blipper.Proto.BlipService {
 
     /// <summary>Field number for the "id" field.</summary>
     public const int IdFieldNumber = 1;
-    private long id_;
+    private string id_ = "";
     /// <summary>
-    /// Snowflake ID
+    /// LUID
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long Id {
+    public string Id {
       get { return id_; }
       set {
-        id_ = value;
+        id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -841,7 +838,7 @@ namespace Blipper.Proto.BlipService {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Id != 0L) hash ^= Id.GetHashCode();
+      if (Id.Length != 0) hash ^= Id.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -860,9 +857,9 @@ namespace Blipper.Proto.BlipService {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Id != 0L) {
-        output.WriteRawTag(8);
-        output.WriteInt64(Id);
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -874,9 +871,9 @@ namespace Blipper.Proto.BlipService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Id != 0L) {
-        output.WriteRawTag(8);
-        output.WriteInt64(Id);
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -888,8 +885,8 @@ namespace Blipper.Proto.BlipService {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Id != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Id);
+      if (Id.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -903,7 +900,7 @@ namespace Blipper.Proto.BlipService {
       if (other == null) {
         return;
       }
-      if (other.Id != 0L) {
+      if (other.Id.Length != 0) {
         Id = other.Id;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -925,8 +922,8 @@ namespace Blipper.Proto.BlipService {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            Id = input.ReadInt64();
+          case 10: {
+            Id = input.ReadString();
             break;
           }
         }
@@ -948,8 +945,8 @@ namespace Blipper.Proto.BlipService {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            Id = input.ReadInt64();
+          case 10: {
+            Id = input.ReadString();
             break;
           }
         }
@@ -1792,16 +1789,16 @@ namespace Blipper.Proto.BlipService {
 
     /// <summary>Field number for the "id" field.</summary>
     public const int IdFieldNumber = 1;
-    private long id_;
+    private string id_ = "";
     /// <summary>
-    /// Snowflake ID
+    /// LUID
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long Id {
+    public string Id {
       get { return id_; }
       set {
-        id_ = value;
+        id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -1844,7 +1841,7 @@ namespace Blipper.Proto.BlipService {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Id != 0L) hash ^= Id.GetHashCode();
+      if (Id.Length != 0) hash ^= Id.GetHashCode();
       if (AuthorId.Length != 0) hash ^= AuthorId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1864,9 +1861,9 @@ namespace Blipper.Proto.BlipService {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Id != 0L) {
-        output.WriteRawTag(8);
-        output.WriteInt64(Id);
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
       }
       if (AuthorId.Length != 0) {
         output.WriteRawTag(18);
@@ -1882,9 +1879,9 @@ namespace Blipper.Proto.BlipService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Id != 0L) {
-        output.WriteRawTag(8);
-        output.WriteInt64(Id);
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
       }
       if (AuthorId.Length != 0) {
         output.WriteRawTag(18);
@@ -1900,8 +1897,8 @@ namespace Blipper.Proto.BlipService {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Id != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Id);
+      if (Id.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
       }
       if (AuthorId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(AuthorId);
@@ -1918,7 +1915,7 @@ namespace Blipper.Proto.BlipService {
       if (other == null) {
         return;
       }
-      if (other.Id != 0L) {
+      if (other.Id.Length != 0) {
         Id = other.Id;
       }
       if (other.AuthorId.Length != 0) {
@@ -1943,8 +1940,8 @@ namespace Blipper.Proto.BlipService {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            Id = input.ReadInt64();
+          case 10: {
+            Id = input.ReadString();
             break;
           }
           case 18: {
@@ -1970,8 +1967,8 @@ namespace Blipper.Proto.BlipService {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            Id = input.ReadInt64();
+          case 10: {
+            Id = input.ReadString();
             break;
           }
           case 18: {
@@ -2196,16 +2193,16 @@ namespace Blipper.Proto.BlipService {
 
     /// <summary>Field number for the "id" field.</summary>
     public const int IdFieldNumber = 1;
-    private long id_;
+    private string id_ = "";
     /// <summary>
-    /// Snowflake ID
+    /// LUID
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long Id {
+    public string Id {
       get { return id_; }
       set {
-        id_ = value;
+        id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -2273,7 +2270,7 @@ namespace Blipper.Proto.BlipService {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Id != 0L) hash ^= Id.GetHashCode();
+      if (Id.Length != 0) hash ^= Id.GetHashCode();
       if (AuthorId.Length != 0) hash ^= AuthorId.GetHashCode();
       if (Content.Length != 0) hash ^= Content.GetHashCode();
       hash ^= mediaUrls_.GetHashCode();
@@ -2295,9 +2292,9 @@ namespace Blipper.Proto.BlipService {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Id != 0L) {
-        output.WriteRawTag(8);
-        output.WriteInt64(Id);
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
       }
       if (AuthorId.Length != 0) {
         output.WriteRawTag(18);
@@ -2318,9 +2315,9 @@ namespace Blipper.Proto.BlipService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Id != 0L) {
-        output.WriteRawTag(8);
-        output.WriteInt64(Id);
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
       }
       if (AuthorId.Length != 0) {
         output.WriteRawTag(18);
@@ -2341,8 +2338,8 @@ namespace Blipper.Proto.BlipService {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Id != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Id);
+      if (Id.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
       }
       if (AuthorId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(AuthorId);
@@ -2363,7 +2360,7 @@ namespace Blipper.Proto.BlipService {
       if (other == null) {
         return;
       }
-      if (other.Id != 0L) {
+      if (other.Id.Length != 0) {
         Id = other.Id;
       }
       if (other.AuthorId.Length != 0) {
@@ -2392,8 +2389,8 @@ namespace Blipper.Proto.BlipService {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            Id = input.ReadInt64();
+          case 10: {
+            Id = input.ReadString();
             break;
           }
           case 18: {
@@ -2427,8 +2424,8 @@ namespace Blipper.Proto.BlipService {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            Id = input.ReadInt64();
+          case 10: {
+            Id = input.ReadString();
             break;
           }
           case 18: {
@@ -3057,7 +3054,6 @@ namespace Blipper.Proto.BlipService {
   {
     private static readonly pb::MessageParser<Blip> _parser = new pb::MessageParser<Blip>(() => new Blip());
     private pb::UnknownFieldSet _unknownFields;
-    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Blip> Parser { get { return _parser; } }
@@ -3085,7 +3081,6 @@ namespace Blipper.Proto.BlipService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Blip(Blip other) : this() {
-      _hasBits0 = other._hasBits0;
       id_ = other.id_;
       content_ = other.content_;
       authorId_ = other.authorId_;
@@ -3107,16 +3102,16 @@ namespace Blipper.Proto.BlipService {
 
     /// <summary>Field number for the "id" field.</summary>
     public const int IdFieldNumber = 1;
-    private long id_;
+    private string id_ = "";
     /// <summary>
-    /// Snowflake ID
+    /// LUID
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long Id {
+    public string Id {
       get { return id_; }
       set {
-        id_ = value;
+        id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -3169,32 +3164,31 @@ namespace Blipper.Proto.BlipService {
 
     /// <summary>Field number for the "reblip_of" field.</summary>
     public const int ReblipOfFieldNumber = 6;
-    private readonly static long ReblipOfDefaultValue = 0L;
+    private readonly static string ReblipOfDefaultValue = "";
 
-    private long reblipOf_;
+    private string reblipOf_;
     /// <summary>
     /// If this is a reblip
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long ReblipOf {
-      get { if ((_hasBits0 & 1) != 0) { return reblipOf_; } else { return ReblipOfDefaultValue; } }
+    public string ReblipOf {
+      get { return reblipOf_ ?? ReblipOfDefaultValue; }
       set {
-        _hasBits0 |= 1;
-        reblipOf_ = value;
+        reblipOf_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
     /// <summary>Gets whether the "reblip_of" field is set</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasReblipOf {
-      get { return (_hasBits0 & 1) != 0; }
+      get { return reblipOf_ != null; }
     }
     /// <summary>Clears the value of the "reblip_of" field</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearReblipOf() {
-      _hasBits0 &= ~1;
+      reblipOf_ = null;
     }
 
     /// <summary>Field number for the "created_at" field.</summary>
@@ -3280,7 +3274,7 @@ namespace Blipper.Proto.BlipService {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Id != 0L) hash ^= Id.GetHashCode();
+      if (Id.Length != 0) hash ^= Id.GetHashCode();
       if (Content.Length != 0) hash ^= Content.GetHashCode();
       if (AuthorId.Length != 0) hash ^= AuthorId.GetHashCode();
       if (CircleId.Length != 0) hash ^= CircleId.GetHashCode();
@@ -3308,9 +3302,9 @@ namespace Blipper.Proto.BlipService {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Id != 0L) {
-        output.WriteRawTag(8);
-        output.WriteInt64(Id);
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
       }
       if (Content.Length != 0) {
         output.WriteRawTag(18);
@@ -3326,8 +3320,8 @@ namespace Blipper.Proto.BlipService {
       }
       mediaUrls_.WriteTo(output, _repeated_mediaUrls_codec);
       if (HasReblipOf) {
-        output.WriteRawTag(48);
-        output.WriteInt64(ReblipOf);
+        output.WriteRawTag(50);
+        output.WriteString(ReblipOf);
       }
       if (createdAt_ != null) {
         output.WriteRawTag(58);
@@ -3355,9 +3349,9 @@ namespace Blipper.Proto.BlipService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Id != 0L) {
-        output.WriteRawTag(8);
-        output.WriteInt64(Id);
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
       }
       if (Content.Length != 0) {
         output.WriteRawTag(18);
@@ -3373,8 +3367,8 @@ namespace Blipper.Proto.BlipService {
       }
       mediaUrls_.WriteTo(ref output, _repeated_mediaUrls_codec);
       if (HasReblipOf) {
-        output.WriteRawTag(48);
-        output.WriteInt64(ReblipOf);
+        output.WriteRawTag(50);
+        output.WriteString(ReblipOf);
       }
       if (createdAt_ != null) {
         output.WriteRawTag(58);
@@ -3402,8 +3396,8 @@ namespace Blipper.Proto.BlipService {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Id != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Id);
+      if (Id.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
       }
       if (Content.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Content);
@@ -3416,7 +3410,7 @@ namespace Blipper.Proto.BlipService {
       }
       size += mediaUrls_.CalculateSize(_repeated_mediaUrls_codec);
       if (HasReblipOf) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(ReblipOf);
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ReblipOf);
       }
       if (createdAt_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreatedAt);
@@ -3442,7 +3436,7 @@ namespace Blipper.Proto.BlipService {
       if (other == null) {
         return;
       }
-      if (other.Id != 0L) {
+      if (other.Id.Length != 0) {
         Id = other.Id;
       }
       if (other.Content.Length != 0) {
@@ -3501,8 +3495,8 @@ namespace Blipper.Proto.BlipService {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            Id = input.ReadInt64();
+          case 10: {
+            Id = input.ReadString();
             break;
           }
           case 18: {
@@ -3521,8 +3515,8 @@ namespace Blipper.Proto.BlipService {
             mediaUrls_.AddEntriesFrom(input, _repeated_mediaUrls_codec);
             break;
           }
-          case 48: {
-            ReblipOf = input.ReadInt64();
+          case 50: {
+            ReblipOf = input.ReadString();
             break;
           }
           case 58: {
@@ -3572,8 +3566,8 @@ namespace Blipper.Proto.BlipService {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            Id = input.ReadInt64();
+          case 10: {
+            Id = input.ReadString();
             break;
           }
           case 18: {
@@ -3592,8 +3586,8 @@ namespace Blipper.Proto.BlipService {
             mediaUrls_.AddEntriesFrom(ref input, _repeated_mediaUrls_codec);
             break;
           }
-          case 48: {
-            ReblipOf = input.ReadInt64();
+          case 50: {
+            ReblipOf = input.ReadString();
             break;
           }
           case 58: {
@@ -3686,28 +3680,28 @@ namespace Blipper.Proto.BlipService {
 
     /// <summary>Field number for the "id" field.</summary>
     public const int IdFieldNumber = 1;
-    private long id_;
+    private string id_ = "";
     /// <summary>
-    /// Snowflake ID
+    /// LUID
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long Id {
+    public string Id {
       get { return id_; }
       set {
-        id_ = value;
+        id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
     /// <summary>Field number for the "parent_blip_id" field.</summary>
     public const int ParentBlipIdFieldNumber = 2;
-    private long parentBlipId_;
+    private string parentBlipId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long ParentBlipId {
+    public string ParentBlipId {
       get { return parentBlipId_; }
       set {
-        parentBlipId_ = value;
+        parentBlipId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -3828,8 +3822,8 @@ namespace Blipper.Proto.BlipService {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Id != 0L) hash ^= Id.GetHashCode();
-      if (ParentBlipId != 0L) hash ^= ParentBlipId.GetHashCode();
+      if (Id.Length != 0) hash ^= Id.GetHashCode();
+      if (ParentBlipId.Length != 0) hash ^= ParentBlipId.GetHashCode();
       if (Content.Length != 0) hash ^= Content.GetHashCode();
       if (AuthorId.Length != 0) hash ^= AuthorId.GetHashCode();
       hash ^= mediaUrls_.GetHashCode();
@@ -3855,13 +3849,13 @@ namespace Blipper.Proto.BlipService {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Id != 0L) {
-        output.WriteRawTag(8);
-        output.WriteInt64(Id);
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
       }
-      if (ParentBlipId != 0L) {
-        output.WriteRawTag(16);
-        output.WriteInt64(ParentBlipId);
+      if (ParentBlipId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(ParentBlipId);
       }
       if (Content.Length != 0) {
         output.WriteRawTag(26);
@@ -3898,13 +3892,13 @@ namespace Blipper.Proto.BlipService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Id != 0L) {
-        output.WriteRawTag(8);
-        output.WriteInt64(Id);
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
       }
-      if (ParentBlipId != 0L) {
-        output.WriteRawTag(16);
-        output.WriteInt64(ParentBlipId);
+      if (ParentBlipId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(ParentBlipId);
       }
       if (Content.Length != 0) {
         output.WriteRawTag(26);
@@ -3941,11 +3935,11 @@ namespace Blipper.Proto.BlipService {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Id != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Id);
+      if (Id.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
       }
-      if (ParentBlipId != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(ParentBlipId);
+      if (ParentBlipId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ParentBlipId);
       }
       if (Content.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Content);
@@ -3978,10 +3972,10 @@ namespace Blipper.Proto.BlipService {
       if (other == null) {
         return;
       }
-      if (other.Id != 0L) {
+      if (other.Id.Length != 0) {
         Id = other.Id;
       }
-      if (other.ParentBlipId != 0L) {
+      if (other.ParentBlipId.Length != 0) {
         ParentBlipId = other.ParentBlipId;
       }
       if (other.Content.Length != 0) {
@@ -4034,12 +4028,12 @@ namespace Blipper.Proto.BlipService {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            Id = input.ReadInt64();
+          case 10: {
+            Id = input.ReadString();
             break;
           }
-          case 16: {
-            ParentBlipId = input.ReadInt64();
+          case 18: {
+            ParentBlipId = input.ReadString();
             break;
           }
           case 26: {
@@ -4101,12 +4095,12 @@ namespace Blipper.Proto.BlipService {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            Id = input.ReadInt64();
+          case 10: {
+            Id = input.ReadString();
             break;
           }
-          case 16: {
-            ParentBlipId = input.ReadInt64();
+          case 18: {
+            ParentBlipId = input.ReadString();
             break;
           }
           case 26: {
@@ -4206,13 +4200,13 @@ namespace Blipper.Proto.BlipService {
 
     /// <summary>Field number for the "parent_blip_id" field.</summary>
     public const int ParentBlipIdFieldNumber = 1;
-    private long parentBlipId_;
+    private string parentBlipId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long ParentBlipId {
+    public string ParentBlipId {
       get { return parentBlipId_; }
       set {
-        parentBlipId_ = value;
+        parentBlipId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -4277,7 +4271,7 @@ namespace Blipper.Proto.BlipService {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (ParentBlipId != 0L) hash ^= ParentBlipId.GetHashCode();
+      if (ParentBlipId.Length != 0) hash ^= ParentBlipId.GetHashCode();
       if (Content.Length != 0) hash ^= Content.GetHashCode();
       if (AuthorId.Length != 0) hash ^= AuthorId.GetHashCode();
       hash ^= mediaUrls_.GetHashCode();
@@ -4299,9 +4293,9 @@ namespace Blipper.Proto.BlipService {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (ParentBlipId != 0L) {
-        output.WriteRawTag(8);
-        output.WriteInt64(ParentBlipId);
+      if (ParentBlipId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ParentBlipId);
       }
       if (Content.Length != 0) {
         output.WriteRawTag(18);
@@ -4322,9 +4316,9 @@ namespace Blipper.Proto.BlipService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (ParentBlipId != 0L) {
-        output.WriteRawTag(8);
-        output.WriteInt64(ParentBlipId);
+      if (ParentBlipId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ParentBlipId);
       }
       if (Content.Length != 0) {
         output.WriteRawTag(18);
@@ -4345,8 +4339,8 @@ namespace Blipper.Proto.BlipService {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (ParentBlipId != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(ParentBlipId);
+      if (ParentBlipId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ParentBlipId);
       }
       if (Content.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Content);
@@ -4367,7 +4361,7 @@ namespace Blipper.Proto.BlipService {
       if (other == null) {
         return;
       }
-      if (other.ParentBlipId != 0L) {
+      if (other.ParentBlipId.Length != 0) {
         ParentBlipId = other.ParentBlipId;
       }
       if (other.Content.Length != 0) {
@@ -4396,8 +4390,8 @@ namespace Blipper.Proto.BlipService {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            ParentBlipId = input.ReadInt64();
+          case 10: {
+            ParentBlipId = input.ReadString();
             break;
           }
           case 18: {
@@ -4431,8 +4425,8 @@ namespace Blipper.Proto.BlipService {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            ParentBlipId = input.ReadInt64();
+          case 10: {
+            ParentBlipId = input.ReadString();
             break;
           }
           case 18: {
@@ -4709,16 +4703,16 @@ namespace Blipper.Proto.BlipService {
 
     /// <summary>Field number for the "id" field.</summary>
     public const int IdFieldNumber = 1;
-    private long id_;
+    private string id_ = "";
     /// <summary>
-    /// Snowflake ID
+    /// LUID
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long Id {
+    public string Id {
       get { return id_; }
       set {
-        id_ = value;
+        id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -4761,7 +4755,7 @@ namespace Blipper.Proto.BlipService {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Id != 0L) hash ^= Id.GetHashCode();
+      if (Id.Length != 0) hash ^= Id.GetHashCode();
       if (AuthorId.Length != 0) hash ^= AuthorId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -4781,9 +4775,9 @@ namespace Blipper.Proto.BlipService {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Id != 0L) {
-        output.WriteRawTag(8);
-        output.WriteInt64(Id);
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
       }
       if (AuthorId.Length != 0) {
         output.WriteRawTag(18);
@@ -4799,9 +4793,9 @@ namespace Blipper.Proto.BlipService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Id != 0L) {
-        output.WriteRawTag(8);
-        output.WriteInt64(Id);
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
       }
       if (AuthorId.Length != 0) {
         output.WriteRawTag(18);
@@ -4817,8 +4811,8 @@ namespace Blipper.Proto.BlipService {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Id != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Id);
+      if (Id.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
       }
       if (AuthorId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(AuthorId);
@@ -4835,7 +4829,7 @@ namespace Blipper.Proto.BlipService {
       if (other == null) {
         return;
       }
-      if (other.Id != 0L) {
+      if (other.Id.Length != 0) {
         Id = other.Id;
       }
       if (other.AuthorId.Length != 0) {
@@ -4860,8 +4854,8 @@ namespace Blipper.Proto.BlipService {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            Id = input.ReadInt64();
+          case 10: {
+            Id = input.ReadString();
             break;
           }
           case 18: {
@@ -4887,8 +4881,8 @@ namespace Blipper.Proto.BlipService {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            Id = input.ReadInt64();
+          case 10: {
+            Id = input.ReadString();
             break;
           }
           case 18: {
@@ -4952,16 +4946,16 @@ namespace Blipper.Proto.BlipService {
 
     /// <summary>Field number for the "id" field.</summary>
     public const int IdFieldNumber = 1;
-    private long id_;
+    private string id_ = "";
     /// <summary>
-    /// Snowflake ID
+    /// LUID
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long Id {
+    public string Id {
       get { return id_; }
       set {
-        id_ = value;
+        id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -5029,7 +5023,7 @@ namespace Blipper.Proto.BlipService {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Id != 0L) hash ^= Id.GetHashCode();
+      if (Id.Length != 0) hash ^= Id.GetHashCode();
       if (AuthorId.Length != 0) hash ^= AuthorId.GetHashCode();
       if (Content.Length != 0) hash ^= Content.GetHashCode();
       hash ^= mediaUrls_.GetHashCode();
@@ -5051,9 +5045,9 @@ namespace Blipper.Proto.BlipService {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Id != 0L) {
-        output.WriteRawTag(8);
-        output.WriteInt64(Id);
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
       }
       if (AuthorId.Length != 0) {
         output.WriteRawTag(18);
@@ -5074,9 +5068,9 @@ namespace Blipper.Proto.BlipService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Id != 0L) {
-        output.WriteRawTag(8);
-        output.WriteInt64(Id);
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
       }
       if (AuthorId.Length != 0) {
         output.WriteRawTag(18);
@@ -5097,8 +5091,8 @@ namespace Blipper.Proto.BlipService {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Id != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Id);
+      if (Id.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
       }
       if (AuthorId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(AuthorId);
@@ -5119,7 +5113,7 @@ namespace Blipper.Proto.BlipService {
       if (other == null) {
         return;
       }
-      if (other.Id != 0L) {
+      if (other.Id.Length != 0) {
         Id = other.Id;
       }
       if (other.AuthorId.Length != 0) {
@@ -5148,8 +5142,8 @@ namespace Blipper.Proto.BlipService {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            Id = input.ReadInt64();
+          case 10: {
+            Id = input.ReadString();
             break;
           }
           case 18: {
@@ -5183,8 +5177,8 @@ namespace Blipper.Proto.BlipService {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            Id = input.ReadInt64();
+          case 10: {
+            Id = input.ReadString();
             break;
           }
           case 18: {
@@ -5462,13 +5456,13 @@ namespace Blipper.Proto.BlipService {
 
     /// <summary>Field number for the "parent_blip_id" field.</summary>
     public const int ParentBlipIdFieldNumber = 1;
-    private long parentBlipId_;
+    private string parentBlipId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long ParentBlipId {
+    public string ParentBlipId {
       get { return parentBlipId_; }
       set {
-        parentBlipId_ = value;
+        parentBlipId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -5535,7 +5529,7 @@ namespace Blipper.Proto.BlipService {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (ParentBlipId != 0L) hash ^= ParentBlipId.GetHashCode();
+      if (ParentBlipId.Length != 0) hash ^= ParentBlipId.GetHashCode();
       if (PageSize != 0) hash ^= PageSize.GetHashCode();
       if (HasPageToken) hash ^= PageToken.GetHashCode();
       if (_unknownFields != null) {
@@ -5556,9 +5550,9 @@ namespace Blipper.Proto.BlipService {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (ParentBlipId != 0L) {
-        output.WriteRawTag(8);
-        output.WriteInt64(ParentBlipId);
+      if (ParentBlipId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ParentBlipId);
       }
       if (PageSize != 0) {
         output.WriteRawTag(16);
@@ -5578,9 +5572,9 @@ namespace Blipper.Proto.BlipService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (ParentBlipId != 0L) {
-        output.WriteRawTag(8);
-        output.WriteInt64(ParentBlipId);
+      if (ParentBlipId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ParentBlipId);
       }
       if (PageSize != 0) {
         output.WriteRawTag(16);
@@ -5600,8 +5594,8 @@ namespace Blipper.Proto.BlipService {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (ParentBlipId != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(ParentBlipId);
+      if (ParentBlipId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ParentBlipId);
       }
       if (PageSize != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageSize);
@@ -5621,7 +5615,7 @@ namespace Blipper.Proto.BlipService {
       if (other == null) {
         return;
       }
-      if (other.ParentBlipId != 0L) {
+      if (other.ParentBlipId.Length != 0) {
         ParentBlipId = other.ParentBlipId;
       }
       if (other.PageSize != 0) {
@@ -5649,8 +5643,8 @@ namespace Blipper.Proto.BlipService {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            ParentBlipId = input.ReadInt64();
+          case 10: {
+            ParentBlipId = input.ReadString();
             break;
           }
           case 16: {
@@ -5680,8 +5674,8 @@ namespace Blipper.Proto.BlipService {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            ParentBlipId = input.ReadInt64();
+          case 10: {
+            ParentBlipId = input.ReadString();
             break;
           }
           case 16: {
@@ -6010,13 +6004,13 @@ namespace Blipper.Proto.BlipService {
 
     /// <summary>Field number for the "target_id" field.</summary>
     public const int TargetIdFieldNumber = 1;
-    private long targetId_;
+    private string targetId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long TargetId {
+    public string TargetId {
       get { return targetId_; }
       set {
-        targetId_ = value;
+        targetId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -6082,7 +6076,7 @@ namespace Blipper.Proto.BlipService {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (TargetId != 0L) hash ^= TargetId.GetHashCode();
+      if (TargetId.Length != 0) hash ^= TargetId.GetHashCode();
       if (TargetType != global::Blipper.Proto.BlipService.TargetType.Unspecified) hash ^= TargetType.GetHashCode();
       if (VoteType != global::Blipper.Proto.BlipService.VoteType.Unspecified) hash ^= VoteType.GetHashCode();
       if (UserId.Length != 0) hash ^= UserId.GetHashCode();
@@ -6104,9 +6098,9 @@ namespace Blipper.Proto.BlipService {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (TargetId != 0L) {
-        output.WriteRawTag(8);
-        output.WriteInt64(TargetId);
+      if (TargetId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(TargetId);
       }
       if (TargetType != global::Blipper.Proto.BlipService.TargetType.Unspecified) {
         output.WriteRawTag(16);
@@ -6130,9 +6124,9 @@ namespace Blipper.Proto.BlipService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (TargetId != 0L) {
-        output.WriteRawTag(8);
-        output.WriteInt64(TargetId);
+      if (TargetId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(TargetId);
       }
       if (TargetType != global::Blipper.Proto.BlipService.TargetType.Unspecified) {
         output.WriteRawTag(16);
@@ -6156,8 +6150,8 @@ namespace Blipper.Proto.BlipService {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (TargetId != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(TargetId);
+      if (TargetId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(TargetId);
       }
       if (TargetType != global::Blipper.Proto.BlipService.TargetType.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) TargetType);
@@ -6180,7 +6174,7 @@ namespace Blipper.Proto.BlipService {
       if (other == null) {
         return;
       }
-      if (other.TargetId != 0L) {
+      if (other.TargetId.Length != 0) {
         TargetId = other.TargetId;
       }
       if (other.TargetType != global::Blipper.Proto.BlipService.TargetType.Unspecified) {
@@ -6211,8 +6205,8 @@ namespace Blipper.Proto.BlipService {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            TargetId = input.ReadInt64();
+          case 10: {
+            TargetId = input.ReadString();
             break;
           }
           case 16: {
@@ -6246,8 +6240,8 @@ namespace Blipper.Proto.BlipService {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            TargetId = input.ReadInt64();
+          case 10: {
+            TargetId = input.ReadString();
             break;
           }
           case 16: {
@@ -6571,13 +6565,13 @@ namespace Blipper.Proto.BlipService {
 
     /// <summary>Field number for the "target_id" field.</summary>
     public const int TargetIdFieldNumber = 1;
-    private long targetId_;
+    private string targetId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long TargetId {
+    public string TargetId {
       get { return targetId_; }
       set {
-        targetId_ = value;
+        targetId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -6630,7 +6624,7 @@ namespace Blipper.Proto.BlipService {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (TargetId != 0L) hash ^= TargetId.GetHashCode();
+      if (TargetId.Length != 0) hash ^= TargetId.GetHashCode();
       if (TargetType != global::Blipper.Proto.BlipService.TargetType.Unspecified) hash ^= TargetType.GetHashCode();
       if (UserId.Length != 0) hash ^= UserId.GetHashCode();
       if (_unknownFields != null) {
@@ -6651,9 +6645,9 @@ namespace Blipper.Proto.BlipService {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (TargetId != 0L) {
-        output.WriteRawTag(8);
-        output.WriteInt64(TargetId);
+      if (TargetId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(TargetId);
       }
       if (TargetType != global::Blipper.Proto.BlipService.TargetType.Unspecified) {
         output.WriteRawTag(16);
@@ -6673,9 +6667,9 @@ namespace Blipper.Proto.BlipService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (TargetId != 0L) {
-        output.WriteRawTag(8);
-        output.WriteInt64(TargetId);
+      if (TargetId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(TargetId);
       }
       if (TargetType != global::Blipper.Proto.BlipService.TargetType.Unspecified) {
         output.WriteRawTag(16);
@@ -6695,8 +6689,8 @@ namespace Blipper.Proto.BlipService {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (TargetId != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(TargetId);
+      if (TargetId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(TargetId);
       }
       if (TargetType != global::Blipper.Proto.BlipService.TargetType.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) TargetType);
@@ -6716,7 +6710,7 @@ namespace Blipper.Proto.BlipService {
       if (other == null) {
         return;
       }
-      if (other.TargetId != 0L) {
+      if (other.TargetId.Length != 0) {
         TargetId = other.TargetId;
       }
       if (other.TargetType != global::Blipper.Proto.BlipService.TargetType.Unspecified) {
@@ -6744,8 +6738,8 @@ namespace Blipper.Proto.BlipService {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            TargetId = input.ReadInt64();
+          case 10: {
+            TargetId = input.ReadString();
             break;
           }
           case 16: {
@@ -6775,8 +6769,8 @@ namespace Blipper.Proto.BlipService {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            TargetId = input.ReadInt64();
+          case 10: {
+            TargetId = input.ReadString();
             break;
           }
           case 16: {
